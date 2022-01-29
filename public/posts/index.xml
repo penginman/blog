@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - Braindance</title>
+        <link>http://example.org/posts/</link>
+        <description>所有文章 | Braindance</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Aug 2021 17:21:24 &#43;0000</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>CISCN线上赛库存</title>
+    <link>http://example.org/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+    <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+    <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合]]></description>
+</item><item>
+    <title>用的顺手的网站</title>
+    <link>http://example.org/posts/%E7%94%A8%E7%9A%84%E9%A1%BA%E6%89%8B%E7%9A%84%E7%BD%91%E7%AB%99/</link>
+    <pubDate>Sat, 31 Jul 2021 08:52:16 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/%E7%94%A8%E7%9A%84%E9%A1%BA%E6%89%8B%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
+    <description><![CDATA[工具网站nginx配置生成 万词王 WantWords Learn Git Branching 视频解析接口https://vip.parwix.com:4433/player/?url= 云短信、]]></description>
+</item><item>
+    <title>ReadlezPHP&amp;EasySearch</title>
+    <link>http://example.org/posts/readlezphpeasysearch/</link>
+    <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/readlezphpeasysearch/</guid>
+    <description><![CDATA[ReadlezPHP源码找到time.php?source 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;?php #error_reporting(0); class HelloPhp { public $a; public $b; public function __construct(){ $this-&gt;a = &#34;Y-m-d h:i:s&#34;;]]></description>
+</item><item>
+    <title>极客大挑战 2019 FinalSQL</title>
+    <link>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</link>
+    <pubDate>Sun, 18 Apr 2021 19:11:51 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</guid>
+    <description><![CDATA[还是同一场比赛的界面 这次测试了下面的登陆框已经不能用了，无论怎么输入都是同一个回显：你可别被我逮住了，臭弟弟，测试上面的序号，注意此时的ur]]></description>
+</item><item>
+    <title>WUSTCTF2020 朴实无华</title>
+    <link>http://example.org/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
+    <pubDate>Fri, 16 Apr 2021 15:33:32 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
+    <description><![CDATA[进入页面直接报错 试试其他的地方，我的习惯是git泄露、请求头、robots.txt、hint.txt都看看。果然在robots下有内容 User-agent: * Disallow:]]></description>
+</item><item>
+    <title>SWPU2019 Web1</title>
+    <link>http://example.org/posts/swpu2019web1/</link>
+    <pubDate>Thu, 15 Apr 2021 09:55:17 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/swpu2019web1/</guid>
+    <description><![CDATA[一个登陆界面，再看下url地址为login.php，确认了使用的是php 直接查看源码，在源码中找到了register.php。先注册一个进去]]></description>
+</item><item>
+    <title>BUUCTF寒假刷题-Web</title>
+    <link>http://example.org/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+    <pubDate>Mon, 18 Jan 2021 16:58:56 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+    <description><![CDATA[寒假横向刷题（尽量） BUUCTF 💗🧡💛💚💙💜🤎🖤🤍 题都写这一个里面了，可以先用Ctrl+F搜索，还有部分是草稿还没有整理，不过我认为的思路已经整理出来]]></description>
+</item><item>
+    <title>GXYCTF2019 Ping Ping Ping</title>
+    <link>http://example.org/posts/gxyctf2019ping-ping-ping/</link>
+    <pubDate>Fri, 04 Dec 2020 20:24:50 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/gxyctf2019ping-ping-ping/</guid>
+    <description><![CDATA[[GXYCTF2019]Ping Ping Ping题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping 和]]></description>
+</item><item>
+    <title>DMCTF之Misc</title>
+    <link>http://example.org/posts/dmctf%E4%B9%8Bmisc/</link>
+    <pubDate>Tue, 01 Dec 2020 11:20:45 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/dmctf%E4%B9%8Bmisc/</guid>
+    <description><![CDATA[前言这次比赛是第一次做Mics的题awa。 MiscCheck_in真·有手就行 fakezip看到题目fakezip翻译：假的压缩包，所以猜应]]></description>
+</item><item>
+    <title>PicGo复制自定义链接</title>
+    <link>http://example.org/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+    <pubDate>Mon, 30 Nov 2020 09:54:11 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+    <description><![CDATA[前言现在博客里面的图片使用的是github+jsdelivr+PicGo图床。PicGo是一个开源的上传图片的软件，支持大部分图床的上传，只]]></description>
+</item></channel>
+</rss>

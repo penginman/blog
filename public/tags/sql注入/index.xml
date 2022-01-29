@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>sql注入 - 标签 - Braindance</title>
+        <link>http://example.org/tags/sql%E6%B3%A8%E5%85%A5/</link>
+        <description>sql注入 - 标签 - Braindance</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Aug 2021 17:21:24 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/sql%E6%B3%A8%E5%85%A5/" rel="self" type="application/rss+xml" /><item>
+    <title>CISCN线上赛库存</title>
+    <link>http://example.org/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+    <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+    <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合]]></description>
+</item><item>
+    <title>极客大挑战 2019 FinalSQL</title>
+    <link>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</link>
+    <pubDate>Sun, 18 Apr 2021 19:11:51 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</guid>
+    <description><![CDATA[还是同一场比赛的界面 这次测试了下面的登陆框已经不能用了，无论怎么输入都是同一个回显：你可别被我逮住了，臭弟弟，测试上面的序号，注意此时的ur]]></description>
+</item><item>
+    <title>SWPU2019 Web1</title>
+    <link>http://example.org/posts/swpu2019web1/</link>
+    <pubDate>Thu, 15 Apr 2021 09:55:17 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/swpu2019web1/</guid>
+    <description><![CDATA[一个登陆界面，再看下url地址为login.php，确认了使用的是php 直接查看源码，在源码中找到了register.php。先注册一个进去]]></description>
+</item><item>
+    <title>sql-labs(一)</title>
+    <link>http://example.org/posts/sql-labs1/</link>
+    <pubDate>Tue, 22 Sep 2020 10:50:08 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/sql-labs1/</guid>
+    <description><![CDATA[前言在线靶机地址：https://buuoj.cn/challenges#sqli-labs less-1​ 首先说明sql注入的大致步骤： 判断]]></description>
+</item></channel>
+</rss>

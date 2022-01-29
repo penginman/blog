@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">jsDelivr加速静态博客 - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="jsDelivr加速静态博客" />
+<meta property="og:description" content="前言​ 这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。 CDN的全称是Content" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-11T21:37:53+00:00" />
+<meta property="article:modified_time" content="2020-11-11T21:37:53+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="jsDelivr加速静态博客"/>
+<meta name="twitter:description" content="前言​ 这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。 CDN的全称是Content"/>
+<meta name="application-name" content="Braindance">
+<meta name="apple-mobile-web-app-title" content="Braindance">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" /><link rel="prev" href="http://example.org/posts/upload-labs2/" /><link rel="next" href="http://example.org/posts/upload-labs3/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "jsDelivr加速静态博客",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2\/"
+        },"genre": "posts","keywords": "jsdelivr","wordcount":  1677 ,
+        "url": "http:\/\/example.org\/posts\/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2\/","datePublished": "2020-11-11T21:37:53+00:00","dateModified": "2020-11-11T21:37:53+00:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Braindance">Braindance</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜些什么" id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Braindance">Braindance</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜些什么" id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#1-新建仓库">1. 新建仓库</a></li>
+    <li><a href="#2-克隆git仓库到本地">2. 克隆Git仓库到本地</a></li>
+    <li><a href="#3-上传需要加速的资源">3. 上传需要加速的资源</a></li>
+    <li><a href="#3-获取地址">3. 获取地址</a></li>
+    <li><a href="#4-引用链接">4. 引用链接</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">jsDelivr加速静态博客</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">作者</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/"><i class="far fa-folder fa-fw"></i>瞎折腾</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-11">2020-11-11</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-11-11">2020-11-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1677 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors" data-flag-title="jsDelivr加速静态博客">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#1-新建仓库">1. 新建仓库</a></li>
+    <li><a href="#2-克隆git仓库到本地">2. 克隆Git仓库到本地</a></li>
+    <li><a href="#3-上传需要加速的资源">3. 上传需要加速的资源</a></li>
+    <li><a href="#3-获取地址">3. 获取地址</a></li>
+    <li><a href="#4-引用链接">4. 引用链接</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2020-11-11T21:37:53" title="November 11, 2020">2020-11-11</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>​	这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。</p>
+<blockquote>
+<p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。——百度百科</p>
+</blockquote>
+<p>在犹豫要不要买的时候，发现了这个东西：<a href="https://www.jsdelivr.com/" target="_blank" rel="noopener noreffer">jsdelivr</a>，一个可以加速静态资源的免费CDN，官网上能看的出和WordPress有什么py关系还可以加速github的资源。hexo是静态博客，那么我就把博客要用到的js、css、还有博客用到的一些图片都放github然后引用。开搞</p>
+<h2 id="1-新建仓库" class="headerLink">
+    <a href="#1-%e6%96%b0%e5%bb%ba%e4%bb%93%e5%ba%93" class="header-mark"></a>1. 新建仓库</h2><p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111202508.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111202508.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111202508.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111202508.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111202508.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111202508.png"></p>
+<p>​	名字重了是因为我已经创建好了并且使用了以后才来写的博客。</p>
+<h2 id="2-克隆git仓库到本地" class="headerLink">
+    <a href="#2-%e5%85%8b%e9%9a%86git%e4%bb%93%e5%ba%93%e5%88%b0%e6%9c%ac%e5%9c%b0" class="header-mark"></a>2. 克隆Git仓库到本地</h2><p>​	在自己电脑建个文件夹然后打开git输入<code>git clone 你仓库的链接</code>，把刚刚创建的仓库拉倒本地方便上传到仓库。</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111203733.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111203733.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111203733.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111203733.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111203733.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111203733.png"></p>
+<p>廖雪峰老师的git教程我当时看了一遍，觉得非常棒，哈哈哈就是自己太菜了又给忘了，帖出来：<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000" target="_blank" rel="noopener noreffer">Git简介</a>。</p>
+<h2 id="3-上传需要加速的资源" class="headerLink">
+    <a href="#3-%e4%b8%8a%e4%bc%a0%e9%9c%80%e8%a6%81%e5%8a%a0%e9%80%9f%e7%9a%84%e8%b5%84%e6%ba%90" class="header-mark"></a>3. 上传需要加速的资源</h2><p>​	把需要上传的资源整理到刚刚拉下来的本地git仓库，上传。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git status                    //查看状态
+git add .                     //添加所有文件到暂存区
+git commit -m &#39;第一次提交&#39;      //把文件提交到仓库
+git push                      //推送至远程仓库
+</code></pre></td></tr></table>
+</div>
+</div><p>​	这里我说一下是怎么加速自己的博客的，因为博客加载的时候需要加载主题的各种js和css文件，然后因为服务器网渣所以加载时间很慢，使用加速的话就会加载的快。</p>
+<p>​	接下来是要上传哪些文件，我使用的是<code>butterfly</code>这个主题，<a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener noreffer">主题github</a>支持一下作者，直接在主题<code>theme/butterfly</code>文件夹下面找到资源文件夹<code>source</code>发现里面都是一些零碎的文件，但是在发布文件夹<code>public</code>下是一个完整的js和css，所以猜测生成的时候会把零碎的文件进行整合，然后主题配置文件里作者也写的很清楚</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111205045.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111205045.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111205045.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111205045.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111205045.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111205045.png">	穷人流下了不争气的泪。传！(真加速还得选好服务器)</p>
+<p>​	这里我的分析是：由于引用的不是本地的资源文件，所以可能会产生自己在本地修改了某项配置，但是网页没有生效，这里就需要时刻记着自己引用的是github上的资源，如果本地配置大改的话，github上的文件也要进行重新上传覆盖。</p>
+<p>​	做法：配置文件里找到引用的是本地资源的项，然后在生成网站的<code>public</code>文件下找到对应的资源文件。</p>
+<p>我列一下我在配置文件里修改的项：<code>main_css</code>、<code>main</code>、<code>utils</code>、<code>local_search</code>、<code>algolia_js</code>、<code>translate</code>，因为使用的是<code>Valine</code>评论，里面可以设置自定义表情，我也使用这个方法修改了。</p>
+<h2 id="3-获取地址" class="headerLink">
+    <a href="#3-%e8%8e%b7%e5%8f%96%e5%9c%b0%e5%9d%80" class="header-mark"></a>3. 获取地址</h2><p>​	官网首页很清楚的写明了如何获取资源链接</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201111211357.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201111211357.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201111211357.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201111211357.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201111211357.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201111211357.png"></p>
+<p>​	<code>https://cdn.jsdelivr.net/gh/user/repo@version/file</code>，<code>user</code>就是你的github用户名，<code>repo@version</code>，仓库加上版本号，<code>file</code>就是仓库下的路径。</p>
+<p>​	这里我没有说版本号是因为网上的教程讲到了仓库需要发布，但是我后面无意间发现不用发布直接<code>reop@分支名</code>，也可以访问到。并且我一开始也发布仓库了，但是后面想要修改已经上传的文件也出了一些问题，索性直接用简单的。</p>
+<p>​	贴一个我博客首页的壁纸链接：https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/top_img/83531406_p0.png</p>
+<p>​	这个壁纸有12M大小，而且链接也符合上面的格式，可以参考一下。</p>
+<h2 id="4-引用链接" class="headerLink">
+    <a href="#4-%e5%bc%95%e7%94%a8%e9%93%be%e6%8e%a5" class="header-mark"></a>4. 引用链接</h2><p>​	配置文件里可以找需要替换的资源，直接贴上链接就可以了，只不过以后别忘了<strong>你现在引用的是之前的上传的静态资源</strong>，别忘啦！别忘啦！别忘啦！</p>
+<p>​	我发现github能这样用以后就在上面整了图床，现在博客里的图片都开始在上传，之前用的路过图床，说的全球都有CDN加速，但是还是卡的一。</p>
+<p>​	还有我整理的<code>Valine</code>评论的自定义表情，大伙可以直接拿去用：<a href="https://cdn.jsdelivr.net/gh/guobang-yoo/CDN@master/emoji/" target="_blank" rel="noopener noreffer">图片地址</a>，<a href="https://cdn.jsdelivr.net/gh/guobang-yoo/CDN@master/emoji/valine.json" target="_blank" rel="noopener noreffer">emojimap</a>。完工</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-11-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/jsdelivr/">jsdelivr</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/upload-labs2/" class="prev" rel="prev" title="Upload-Labs(二)"><i class="fas fa-angle-left fa-fw"></i>Upload-Labs(二)</a>
+            <a href="/posts/upload-labs3/" class="next" rel="next" title="Upload-Labs(三)">Upload-Labs(三)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.0/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/topbar@1.0.1/topbar.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@2.4.0/dist/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.16/dist/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@13.1.0/dist/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.3.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/css/lightgallery.min.css"></div>
+</body>
+
+</html>

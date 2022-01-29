@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>黑幕实现 - 标签 - Braindance</title>
+        <link>http://example.org/tags/%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</link>
+        <description>黑幕实现 - 标签 - Braindance</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Nov 2020 10:13:07 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>萌娘百科黑幕实现</title>
+    <link>http://example.org/posts/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</link>
+    <pubDate>Fri, 20 Nov 2020 10:13:07 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>http://example.org/posts/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</guid>
+    <description><![CDATA[前言​ 老早就觉得萌娘百科里的黑幕很好玩，所以摸索着给自己博客加了一个。参考博客Re：萌娘百科上的黑幕实现。不过我改的方法有稍稍有点不同，是把]]></description>
+</item></channel>
+</rss>

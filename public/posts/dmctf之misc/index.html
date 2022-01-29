@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">DMCTF之Misc - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="DMCTF之Misc" />
+<meta property="og:description" content="前言这次比赛是第一次做Mics的题awa。 MiscCheck_in真·有手就行 fakezip看到题目fakezip翻译：假的压缩包，所以猜应" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/dmctf%E4%B9%8Bmisc/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-01T11:20:45+00:00" />
+<meta property="article:modified_time" content="2020-12-01T11:20:45+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DMCTF之Misc"/>
+<meta name="twitter:description" content="前言这次比赛是第一次做Mics的题awa。 MiscCheck_in真·有手就行 fakezip看到题目fakezip翻译：假的压缩包，所以猜应"/>
+<meta name="application-name" content="Braindance">
+<meta name="apple-mobile-web-app-title" content="Braindance">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/dmctf%E4%B9%8Bmisc/" /><link rel="prev" href="http://example.org/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" /><link rel="next" href="http://example.org/posts/gxyctf2019ping-ping-ping/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "DMCTF之Misc",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/dmctf%E4%B9%8Bmisc\/"
+        },"genre": "posts","keywords": "DMCTF2020, Misc","wordcount":  3848 ,
+        "url": "http:\/\/example.org\/posts\/dmctf%E4%B9%8Bmisc\/","datePublished": "2020-12-01T11:20:45+00:00","dateModified": "2020-12-01T11:20:45+00:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Braindance">Braindance</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜些什么" id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Braindance">Braindance</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜些什么" id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#check_in">Check_in</a></li>
+    <li><a href="#fakezip">fakezip</a></li>
+    <li><a href="#base-family">Base family</a></li>
+    <li><a href="#slienteye">SlientEye</a></li>
+    <li><a href="#编码之王">编码之王</a></li>
+    <li><a href="#jpgsteg">jpgsteg</a></li>
+    <li><a href="#collision">Collision</a></li>
+    <li><a href="#kaomoji">kaomoji</a></li>
+    <li><a href="#archpr">ARCHPR</a></li>
+    <li><a href="#outguess">outguess</a></li>
+    <li><a href="#whitespace">Whitespace</a></li>
+    <li><a href="#steghide">Steghide</a></li>
+    <li><a href="#sstv">SSTV</a></li>
+    <li><a href="#simpleqrcode">SimpleQrcode</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">DMCTF之Misc</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">作者</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/ctf/"><i class="far fa-folder fa-fw"></i>CTF</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-01">2020-12-01</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-12-01">2020-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3848 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/posts/dmctf%E4%B9%8Bmisc/" class="leancloud_visitors" data-flag-title="DMCTF之Misc">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#check_in">Check_in</a></li>
+    <li><a href="#fakezip">fakezip</a></li>
+    <li><a href="#base-family">Base family</a></li>
+    <li><a href="#slienteye">SlientEye</a></li>
+    <li><a href="#编码之王">编码之王</a></li>
+    <li><a href="#jpgsteg">jpgsteg</a></li>
+    <li><a href="#collision">Collision</a></li>
+    <li><a href="#kaomoji">kaomoji</a></li>
+    <li><a href="#archpr">ARCHPR</a></li>
+    <li><a href="#outguess">outguess</a></li>
+    <li><a href="#whitespace">Whitespace</a></li>
+    <li><a href="#steghide">Steghide</a></li>
+    <li><a href="#sstv">SSTV</a></li>
+    <li><a href="#simpleqrcode">SimpleQrcode</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2020-12-01T11:20:45" title="December 1, 2020">2020-12-01</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h1 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h1><p>这次比赛是第一次做Mics的题awa。</p>
+<h1 id="misc" class="headerLink">
+    <a href="#misc" class="header-mark"></a>Misc</h1><h2 id="check_in" class="headerLink">
+    <a href="#check_in" class="header-mark"></a>Check_in</h2><p>真·有手就行</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130102716.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130102716.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130102716.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130102716.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130102716.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130102716.png"></p>
+<h2 id="fakezip" class="headerLink">
+    <a href="#fakezip" class="header-mark"></a>fakezip</h2><p>看到题目<strong>fakezip</strong>翻译：假的压缩包，所以猜应该是伪加密，贴一个原理的博客：<a href="https://blog.csdn.net/u011377996/article/details/79286958" target="_blank" rel="noopener noreffer">zip伪加密</a>，使用010 Editor打开压缩包，</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130103932.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130103932.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130103932.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130103932.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130103932.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130103932.png"></p>
+<p>找到01修改为00，再解压压缩包，虽然提示了压缩包错误但是直接无视，获得一个flag.txt</p>
+<p>打开以后内容是：<code>♬♩¶♯♬♭♬♫♫♪♬∮♬♭‖♭♬♭♬∮♬♭‖♭♬♭♫♫♯=</code>，音符加密虽然是第一次听说，但是百度还是可以简单找到：<a href="https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue" target="_blank" rel="noopener noreffer">文本加密为音乐符号</a></p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130104321.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130104321.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130104321.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130104321.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130104321.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130104321.png"></p>
+<h2 id="base-family" class="headerLink">
+    <a href="#base-family" class="header-mark"></a>Base family</h2><p>题目给出了是base家族，所以base所有种类都试一遍。base常见的种类有：<code>base16</code>、<code>base32</code>、<code>base58</code>、<code>base64</code>、<code>base91</code>。还有几种没听过的base种类可以在这个网站找到：<a href="http://ctf.ssleye.com/" target="_blank" rel="noopener noreffer">CTF在线工具</a>。</p>
+<p><strong>原层</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">XUZbB{fp}U)=ql[n%GCbk9RZ7!XD$D)f1G{011LN(TSlXCJT:4nxQ[8Y#I:=k.Qi4t3/S!,N/%[I}^8jjP|0&amp;whvi88gpQce(2lKt9ZHiT^g1.nZH,k=kjTT16pHJ_DrW,Td&#34;^w$Q8+8T])e.llK?*z`gS:+C]llUG:z1=ekEN}8DmJf&amp;GP&lt;Rk:o_Jk&lt;J.zp8%H0g7sYSTJ9p.&#34;duRBGj`g0!I+xjm(fh)]IF:&gt;omN8=m+Xp(X0:U*8Sj5|8p._o[i0:%.qu}%_=&lt;D
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>base91解码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">3G6MzYGwFwTsqcb3MWzTdQBTHZWBZ2LUBprZ3P62T2nsbt1R7o6a7PEsXsBvSFvoexeZJEkhW9Wv1VusvpWK1nfWsVHDypW2j3MMEygzSYLmwxKV5kNwWomvXc5ohX2Jgj6bMRnu6JXkasXdbbw3Aw8Pvh6vWwPfTZ4mpkpNU9fDhyNi1bciCZMXeLiCWL67BVupHPobQcFWkpftgLPggB8wgwW
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>base58解码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">JZVFSMSZPJMXQTTKMMZVS2TDGVGXUQJTJZKFM3KONJCTEWL2MN4U26SNGJGVIWJQJZ5GWMK2NJNGSTTNKV5E2RDDGNHFOWJTJZCFSNCNPJGTCWTKKF4U42SFGNGXUWJRJZVFSMSNKRNGWTL2IUZFS6TDGVHDEUJ5
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>base32解码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">NjY2YzYxNjc3Yjc5MzA3NTVmNjE2YzcyMzM2MTY0Nzk1ZjZiNmUzMDc3NWY3NDY4MzM1ZjQyNjE3MzY1NjY2MTZkMzE2Yzc5N2Q=
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>base64解码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">666c61677b7930755f616c72336164795f6b6e30775f7468335f4261736566616d316c797d
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>hex解码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">flag{y0u_alr3ady_kn0w_th3_Basefam1ly}
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="slienteye" class="headerLink">
+    <a href="#slienteye" class="header-mark"></a>SlientEye</h2><p>根据题目直接百度<strong>SlientEye</strong>，下载以后打开图片&ndash;&gt;decode：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130105145.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130105145.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130105145.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130105145.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130105145.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130105145.png"></p>
+<p>参数啥的都没动，密码为默认密码，直接Decode，得到一个flag.txt：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="ni">&amp;#102;&amp;#108;&amp;#97;&amp;#103;&amp;#123;&amp;#110;&amp;#49;&amp;#95;&amp;#98;&amp;#117;&amp;#95;&amp;#106;&amp;#49;&amp;#97;&amp;#110;&amp;#103;&amp;#95;&amp;#119;&amp;#117;&amp;#95;&amp;#100;&amp;#51;&amp;#125;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>再去百度搜到一篇博客：<a href="https://www.cnblogs.com/philipding/p/10153094.html" target="_blank" rel="noopener noreffer">&amp;#x开头的是什么编码?</a>，<del>我点开一看，哦，原来是</del>entity code实体编码，<del>我啪的一下就</del>把flag.txt改为flag.html，<del>很快啊，然后是一个左正蹬、一个右鞭腿、一个左刺拳</del>打开flag.html获得flag：<strong>flag{n1_bu_j1ang_wu_d3}</strong></p>
+<h2 id="编码之王" class="headerLink">
+    <a href="#%e7%bc%96%e7%a0%81%e4%b9%8b%e7%8e%8b" class="header-mark"></a>编码之王</h2><p>下载文件打开后一堆社会主义核心价值观，前面提到的：<a href="http://ctf.ssleye.com/" target="_blank" rel="noopener noreffer">CTF在线工具</a>就有核心价值观编码，下面放密文，上面是解码内容。</p>
+<p>解出来以后看到第一句：<code>如是我闻:</code>，&ndash;&gt;<a href="http://www.keyfc.net/bbs/tools/tudoucode.aspx" target="_blank" rel="noopener noreffer">与佛论禅</a></p>
+<p>再解之后看第一句：<code>新佛曰：</code>。&ndash;&gt;<a href="http://hi.pcmoe.net/buddha.html" target="_blank" rel="noopener noreffer">新与佛论禅</a></p>
+<p>解完以后直接出了一堆由：<code>[、]、!、+、(、)</code>组成的符号，还是百度找到了这种编码叫JSfuck，可以直接浏览器控制台console输出获得flag</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130110943.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130110943.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130110943.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130110943.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130110943.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130110943.png"></p>
+<h2 id="jpgsteg" class="headerLink">
+    <a href="#jpgsteg" class="header-mark"></a>jpgsteg</h2><p>题目即是用到的工具，百度下载软件，使用jphide.exe打开图片<code>Tap code.jpg</code>，选择seek功能解密，密码为123456（我蒙的）：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111311.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111311.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111311.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111311.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111311.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111311.png"></p>
+<p>成功解密后获得一个文档，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">... ....
+.. ...
+.. ...
+. .
+... ..
+. .
+..... .....
+.. ....
+... ...
+.. ..
+
+</code></pre></td></tr></table>
+</div>
+</div><p>这里我思索了好久，刚开始以为是摩斯密码，但是又对不上号，最后找到了一个名为敲击码的，正好一行中的<code>.</code>分成两部分代表坐标</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111538.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111538.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111538.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111538.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111538.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111538.png"></p>
+<p>解码得到：<code>ohhamazing</code> ，加上括号就是：<strong>flag{ohhamazing}</strong></p>
+<p>事后多看了一眼图片命名：<code>Tap code.jpg</code>。这用啥解密不就在脸上写着的<del>wosabi \0/</del>。。。</p>
+<h2 id="collision" class="headerLink">
+    <a href="#collision" class="header-mark"></a>Collision</h2><p>打开压缩包发现都是加密，但是原始大小都为4，只有CRC不一样：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201102424.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201102424.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201102424.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201102424.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201102424.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201102424.png"></p>
+<p>所以很有可能是四位数据的CRC32碰撞，就去网上找了一个python脚本：<a href="https://blog.csdn.net/weixin_45396639/article/details/103393759" target="_blank" rel="noopener noreffer">crc32碰撞 ctf python</a>作者原创的脚本：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">binascii</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="k">def</span> <span class="nf">crc</span><span class="p">(</span><span class="n">_crc</span><span class="p">):</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span>
+    <span class="n">_input</span> <span class="o">=</span> <span class="n">_crc</span>
+    <span class="n">_input</span> <span class="o">=</span> <span class="s2">&#34;0X&#34;</span> <span class="o">+</span> <span class="n">_input</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">h</span> <span class="o">+</span> <span class="n">m</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+                    <span class="c1"># print(str(binascii.crc32(s)), _input)</span>
+                    <span class="k">if</span> <span class="nb">hex</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">crc32</span><span class="p">(</span><span class="n">s</span><span class="p">))</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">_input</span><span class="o">.</span><span class="n">upper</span><span class="p">():</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">_crc</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+                        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>  <span class="c1">#直接退出，不进行接下来的碰撞了，一般在做题的时候，碰撞不会重复</span>
+                    <span class="n">l</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">crc32</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;四字节碰撞!!!&#34;</span><span class="p">)</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;你可能需要多个线程同时进行碰撞，请输入线程数：&#34;</span><span class="p">))</span>
+    <span class="n">_thread</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">_args</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;输入参数&#34;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+        <span class="n">_args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="c1"># print(_args)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">crc</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">_args</span><span class="p">[</span><span class="n">i</span><span class="p">],))</span>
+        <span class="n">_thread</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c1">#如果在这里开始线程会出一点小bug，虽然不要紧，但是不好看，不信的话你们自己试试</span>
+    <span class="c1"># print(_thread)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="n">_thread</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="n">_thread</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+    <span class="nb">input</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">crc32</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>使用python的多线程，因为是5个文件，开了5个线程，然后分别输入CRC码，压缩文件原来的CRC码为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ff92876d
+6c4a558b
+77e8fd00
+1e59a66e
+d1f4eb9a
+</code></pre></td></tr></table>
+</div>
+</div><p>碰撞以后获得的明文：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">1on}
+32co
+llis
+flag
+{crc
+</code></pre></td></tr></table>
+</div>
+</div><p>根据flag的结构拼接一下：<strong>flag{crc32collis1on}</strong></p>
+<h2 id="kaomoji" class="headerLink">
+    <a href="#kaomoji" class="header-mark"></a>kaomoji</h2><p>题目的压缩包解压以后得到一个<strong>flag.zip</strong>压缩包和<strong>secret.txt</strong>，flag.zip中也含有secret.txt，将外面没有加密的secret.txt使用<strong>winrar</strong>压缩（需要和原来的压缩软件一致哒）以后对比flag.zip里的文件发现CRC码相同的：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201103227.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201103227.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201103227.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201103227.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201103227.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201103227.png"></p>
+<p>配合ARCHPR使用明文攻击，获得加密密钥： <strong>[b00df998 5bdbbde6 485fa1f8]</strong></p>
+<p>我在进行明文攻击时虽然没有跑出来压缩包的密码，但是获得了上面的密钥，也是可以解压加密的压缩包的（具体原理不清楚）。解压明文攻击解开获得的压缩包<strong>flag_decrypted.zip</strong>，打开flag.txt是颜文字表情加密，直接复制到浏览器console控制台运行获得flag：flag{kaomoj1_1s_cut3}</p>
+<h2 id="archpr" class="headerLink">
+    <a href="#archpr" class="header-mark"></a>ARCHPR</h2><p>题目根据提示：<strong>This file was encrypted by me with a four-digit password, try to crack it!</strong></p>
+<p>密码只是用了4位数字加密，可以使用ARCHPR 进行爆破，获得一个flag.png和hint.txt，hint.txt如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-hint.txt" data-lang="hint.txt">The flag is hidden by a kind of magic called LSB. Try to find it if you can find it. The key is given to you. After decryption, change it to lowercase.
+
+key: .--. .- ... ... .-- --- .-. -..
+</code></pre></td></tr></table>
+</div>
+</div><p>提示中提到了使用LSB隐写，密码是一段摩斯密码，摩斯密码解密后得到密文：<code>password</code>，使用LSB（<a href="https://github.com/livz/cloacked-pixel" target="_blank" rel="noopener noreffer">项目地址</a>）脚本执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">python lsb.py extract flag.png 1.txt password
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>1.txt</strong>中就包含了解密以后的flag：<strong>flag{th1s_15_f1agggggg}</strong></p>
+<h2 id="outguess" class="headerLink">
+    <a href="#outguess" class="header-mark"></a>outguess</h2><p>​	看题目找工具，使用outguess参考<a href="https://blog.csdn.net/weixin_43877387/article/details/103123858" target="_blank" rel="noopener noreffer">隐写工具outguess 的下载安装及使用</a>，在kali中安装以后执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">outguess -r flag.jpg hide.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>获得hide.txt文件的内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Qb lbh xabj NRF? Gur xrl vf f3phe1gl, tb naq penpx vg!
+
+
+Encrypted data: U2FsdGVkX1/nmu9u2Ho1dD9kQWv7L5a6bsUrWxBkVp68txdFL4v/givGGYy7dBU+
+</code></pre></td></tr></table>
+</div>
+</div><p>上面一段使用<strong>凯撒密码</strong>移动13位获得：<strong>Do you know AES? The key is s3cur1ty, go and crack it!</strong></p>
+<p>其实这里和别人讨论以后才知道他们使用的是叫ROT13，相应的还搜到了ROT5、ROT13、ROT18、ROT47，百度百科看了以后就是凯撒密码的变种。所以下面一段的密文使用AES进行解密，密码是<code>s3cur1ty</code>，获得flag：<strong>flag{y0u_ar3_awes0m3}</strong></p>
+<p>解密网站：https://tool.oschina.net/encrypt</p>
+<h2 id="whitespace" class="headerLink">
+    <a href="#whitespace" class="header-mark"></a>Whitespace</h2><p>题目即提示，Whitespace进行一波搜索以后了解到是一种用空白符编程的语言，在压缩包里面摸了好久，在注释里发现空白编码：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201104847.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201104847.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201104847.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201104847.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201104847.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201104847.png"></p>
+<p>这也让我想到自己在网上下工具的压缩包时，网站经常在注释里附上密码，通常都是网站的网址。</p>
+<p>在<a href="https://vii5ard.github.io/whitespace" target="_blank" rel="noopener noreffer">whitespace</a>网站中粘贴密文点上面的<code>run</code>：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105235.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105235.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105235.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105235.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105235.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105235.png"></p>
+<p>解密获得：<strong>password is BlindWaterMark!</strong></p>
+<p>输入解压以后获得两张看着相同的罗翔老师.png图片和一个hint.txt：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-hint.txt" data-lang="hint.txt">Do you see any difference between the two pictures?
+Get to know its secrets and tell you quietly that you need to know a knowledge called Manchester coding.
+
+
+上传文档
+你看这两幅画有什么不同吗？
+了解它的秘密，悄悄地告诉你，你需要知道一门叫做曼彻斯特编码的知识。
+</code></pre></td></tr></table>
+</div>
+</div><p>根据提示找出图片的不同和曼切斯特编码。图片看着相同但是经过加密，在网上搜索了一波了解到了<strong>盲水印</strong>技术，使用盲水印解密图片，项目地址：https://github.com/chishaxie/BlindWaterMark，执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">python bwn.py decode 2.png 1.png 3.png 
+</code></pre></td></tr></table>
+</div>
+</div><p>获得解密图片：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105728.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105728.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105728.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105728.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105728.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105728.png"></p>
+<p>图片中的内容为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">296969a5695
+6696a6a9a69
+5669595a566
+965696666aa
+69596a9666a
+a6a6569955a
+5a66aa69a56
+9566a6a6aa6
+</code></pre></td></tr></table>
+</div>
+</div><p>就百度曼切斯特编码解码，找到一篇博客：<a href="https://blog.csdn.net/weixin_30416871/article/details/98566881" target="_blank" rel="noopener noreffer">一些CTF编码脚本</a>，在里面找到了这两段：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105901.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105901.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105901.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105901.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105901.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105901.png"></p>
+<p>心里一顿狂喜，因为都是<code>2965a</code>这个几个字符组成的，应该就是找对了。根据博客代码自行修改脚本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">import sys
+s = &#39;296969a56956696a6a9a695669595a566965696666aa69596a9666aa6a6569955a5a66aa69a569566a6a6aa6&#39;  #这是前面图片里的内容
+
+s=bin(int(s,16))
+r=&#34;&#34;
+for i in range(len(s)/2):
+    if s[i*2:i*2+2] == &#39;10&#39;:
+        r += &#39;1&#39;
+    else:
+        r += &#39;0&#39;
+print hex(int(r,2))[2:-1].decode(&#39;hex&#39;)
+</code></pre></td></tr></table>
+</div>
+</div><p>执行脚本后获得flag：<strong>flag{ab1de_by_th3_law}</strong></p>
+<h2 id="steghide" class="headerLink">
+    <a href="#steghide" class="header-mark"></a>Steghide</h2><p>题目即工具。参考博客<a href="https://www.jianshu.com/p/c3679f805a0c" target="_blank" rel="noopener noreffer">隐写工具Steghide</a>，在kali中安装Steghide后执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">steghide.exe extract -sf trump.jpg
+</code></pre></td></tr></table>
+</div>
+</div><p>会提示<code>Enter passphrase:</code>直接回车表示空密码，获得flag.txt，打开以后里面都是由<code>¿ ¡ .</code>组成的密文，和<strong>Ook</strong>的另一种编码：<strong>short Ook</strong>类似也是只用<code>? ! .</code>组成，把叹号和问号全部替换反过来<code>¡---&gt;!  ¿---&gt;?</code>，替换之后在线解码：https://www.splitbrain.org/services/ook，获得flag：<strong>flag{y0u_ar3_clev3r}</strong></p>
+<h2 id="sstv" class="headerLink">
+    <a href="#sstv" class="header-mark"></a>SSTV</h2><p>题目既是工具。搜索SSTV百度百科：</p>
+<blockquote>
+<p>慢扫描电视（Slow-scan television）是业余无线电爱好者的一种主要图片传输方法，慢扫描电视通过无线电传输和接收单色或彩色静态图片。</p>
+</blockquote>
+<p>了解到是一种无线电传递图片的方法，搜到的博客<a href="https://blog.csdn.net/zkf0100007/article/details/83387790" target="_blank" rel="noopener noreffer">慢扫描电视 SSTV</a>和B站的视频<a href="https://www.bilibili.com/video/BV1ea4y1J787" target="_blank" rel="noopener noreffer">慢扫描电视SSTV</a>，下载MMSSTV软件，把output.wav音频调制麦克风输出，我使用的方法是在声音设置里把立体声混音打开并且设为默认设备，然后电脑里播放的声音就会被录制到。等待图片绘制成功，获得flag：<strong>DMCTF{SSTV,yyds?}</strong></p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201111538.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201111538.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201111538.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201111538.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201111538.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201111538.png"></p>
+<h2 id="simpleqrcode" class="headerLink">
+    <a href="#simpleqrcode" class="header-mark"></a>SimpleQrcode</h2><p>​	下载题目是一个gif图片都是二维码，使用使用stegSovle中的Frame Browser功能，一帧一帧播放，一帧一扫，有几帧图片是少了二维码的上边，有一张是少了右边，可以参考第一张完整的图片，把上面截取拼接上去，扫码后17张图片对应的内容（根据代码行号）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">DM
+CT
+F{
+Qr
+Co
+de
+_1
+s_
+so
+_i
+nt
+er
+es
+ti
+ng
+!!
+!}
+</code></pre></td></tr></table>
+</div>
+</div><p>参考下题目标题和flag格式，拼接后获得flag：<strong>DMCTF{QrCode_1s_so_interesting!!!}</strong></p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-12-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/dmctf2020/">DMCTF2020</a>,&nbsp;<a href="/tags/misc/">Misc</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" class="prev" rel="prev" title="PicGo复制自定义链接"><i class="fas fa-angle-left fa-fw"></i>PicGo复制自定义链接</a>
+            <a href="/posts/gxyctf2019ping-ping-ping/" class="next" rel="next" title="GXYCTF2019 Ping Ping Ping">GXYCTF2019 Ping Ping Ping<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.0/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/topbar@1.0.1/topbar.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@2.4.0/dist/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.16/dist/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@13.1.0/dist/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.3.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/css/lightgallery.min.css"></div>
+</body>
+
+</html>

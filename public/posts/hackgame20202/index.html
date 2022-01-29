@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Hackgame2020(二) - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="Hackgame2020(二)" />
+<meta property="og:description" content="一闪而过的Flag​ 根据题目信息程序每次运行时隐约可见黑色控制台上有 flag 一闪而过，我想到了应该能看程序的代码啥的找到，但是天下武功，唯快不破，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/hackgame20202/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-05T09:29:22+00:00" />
+<meta property="article:modified_time" content="2020-11-05T09:29:22+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hackgame2020(二)"/>
+<meta name="twitter:description" content="一闪而过的Flag​ 根据题目信息程序每次运行时隐约可见黑色控制台上有 flag 一闪而过，我想到了应该能看程序的代码啥的找到，但是天下武功，唯快不破，"/>
+<meta name="application-name" content="Braindance">
+<meta name="apple-mobile-web-app-title" content="Braindance">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/hackgame20202/" /><link rel="prev" href="http://example.org/posts/xss-lab1/" /><link rel="next" href="http://example.org/posts/upload-labs1/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hackgame2020(二)",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/hackgame20202\/"
+        },"genre": "posts","keywords": "Hackergame 2020, Java安全","wordcount":  1460 ,
+        "url": "http:\/\/example.org\/posts\/hackgame20202\/","datePublished": "2020-11-05T09:29:22+00:00","dateModified": "2020-11-05T09:29:22+00:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Braindance">Braindance</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜些什么" id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Braindance">Braindance</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜些什么" id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一闪而过的flag">一闪而过的Flag</a></li>
+        <li><a href="#从零开始的记账工具人">从零开始的记账工具人</a></li>
+        <li><a href="#超简单的世界模拟器">超简单的世界模拟器</a></li>
+        <li><a href="#蝴蝶效应">蝴蝶效应</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hackgame2020(二)</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">作者</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/ctf/"><i class="far fa-folder fa-fw"></i>CTF</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-05">2020-11-05</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-11-05">2020-11-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1460 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/hackgame20202/" class="leancloud_visitors" data-flag-title="Hackgame2020(二)">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一闪而过的flag">一闪而过的Flag</a></li>
+        <li><a href="#从零开始的记账工具人">从零开始的记账工具人</a></li>
+        <li><a href="#超简单的世界模拟器">超简单的世界模拟器</a></li>
+        <li><a href="#蝴蝶效应">蝴蝶效应</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2020-11-05T09:29:22" title="November 5, 2020">2020-11-05</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h3 id="一闪而过的flag" class="headerLink">
+    <a href="#%e4%b8%80%e9%97%aa%e8%80%8c%e8%bf%87%e7%9a%84flag" class="header-mark"></a>一闪而过的Flag</h3><p>​	根据题目信息<strong>程序每次运行时隐约可见黑色控制台上有 flag 一闪而过</strong>，我想到了应该能看程序的代码啥的找到，但是<del>天下武功，唯快不破</del>，下载 运行 截图一气呵成。</p>
+<p>​	<img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/B7TOUA.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/B7TOUA.png, https://s1.ax1x.com/2020/11/09/B7TOUA.png 1.5x, https://s1.ax1x.com/2020/11/09/B7TOUA.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/B7TOUA.png"
+        title="https://s1.ax1x.com/2020/11/09/B7TOUA.png"></p>
+<p>​	接下来让我康康哪一位是<del>瞎子</del>，包括答案里也是满满的嘲讽。</p>
+<p><strong>参考答案：flag{Are_you_eyes1ght_g00D?_can_you_dIst1nguish_1iI?}</strong></p>
+<h3 id="从零开始的记账工具人" class="headerLink">
+    <a href="#%e4%bb%8e%e9%9b%b6%e5%bc%80%e5%a7%8b%e7%9a%84%e8%ae%b0%e8%b4%a6%e5%b7%a5%e5%85%b7%e4%ba%ba" class="header-mark"></a>从零开始的记账工具人</h3><p>​	<del>npy</del>给了我一张账单，让我计算账单上面的金额，flag就是由金额组成的。本以为是一个简单的Excel的表格函数解决，打开我傻了。</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/05/B2Flxf.png"
+        data-srcset="https://s1.ax1x.com/2020/11/05/B2Flxf.png, https://s1.ax1x.com/2020/11/05/B2Flxf.png 1.5x, https://s1.ax1x.com/2020/11/05/B2Flxf.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/05/B2Flxf.png"
+        title="https://s1.ax1x.com/2020/11/05/B2Flxf.png"></p>
+<p>​	原来是搞这个大小写金额的转换，没见过Excel有这种操作就去百度，转了一大圈，网上只有数字转大写金额的，没有反过来的。还去了github上找代码，发现运行的结果和自己想要的还是有些出入。卡了有足足半天，之后自己写了一个Java代码跑了一遍，代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Scanner</span> <span class="n">sn</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">x</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">cnt</span><span class="o">=</span><span class="n">0</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">result</span><span class="o">=</span><span class="n">0</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">cnt</span><span class="o">++!=</span><span class="n">1000</span><span class="o">){</span>
+            <span class="n">str</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">tonum</span><span class="o">(</span><span class="n">str</span><span class="o">)*</span><span class="n">x</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">tonum</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">){</span>
+        <span class="kt">int</span> <span class="n">len</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">res</span><span class="o">=</span><span class="n">0</span><span class="o">,</span><span class="n">temp</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">result</span><span class="o">=</span><span class="n">0</span><span class="o">;</span>
+        <span class="n">len</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="k">switch</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)){</span>
+                <span class="k">case</span> <span class="sc">&#39;壹&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">1</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;贰&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">2</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;叁&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">3</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;肆&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">4</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;伍&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">5</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;陆&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">6</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;柒&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">7</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;捌&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">8</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;玖&#39;</span><span class="o">:</span> <span class="n">temp</span><span class="o">=</span><span class="n">9</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+
+                <span class="k">case</span> <span class="sc">&#39;零&#39;</span><span class="o">:</span> <span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;拾&#39;</span><span class="o">:</span> <span class="n">res</span><span class="o">+=</span><span class="n">temp</span><span class="o">*</span><span class="n">10</span><span class="o">;</span><span class="n">temp</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;佰&#39;</span><span class="o">:</span> <span class="n">res</span><span class="o">+=</span><span class="n">temp</span><span class="o">*</span><span class="n">100</span><span class="o">;</span><span class="n">temp</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;元&#39;</span><span class="o">:</span> <span class="n">res</span><span class="o">+=</span><span class="n">temp</span><span class="o">;</span><span class="n">temp</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;角&#39;</span><span class="o">:</span> <span class="n">res</span><span class="o">+=</span><span class="n">temp</span><span class="o">*</span><span class="n">0</span><span class="o">.</span><span class="na">1</span><span class="o">;</span><span class="n">temp</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;分&#39;</span><span class="o">:</span> <span class="n">res</span><span class="o">+=</span><span class="n">temp</span><span class="o">*</span><span class="n">0</span><span class="o">.</span><span class="na">01</span><span class="o">;</span><span class="n">temp</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="k">break</span><span class="o">;</span>
+                <span class="k">case</span> <span class="sc">&#39;整&#39;</span><span class="o">:</span> <span class="k">break</span><span class="o">;</span>
+                <span class="k">default</span><span class="o">:</span>
+                    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;这个认不出来&#34;</span> <span class="o">+</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p>​	程序用的控制台输入，直接表格两列从头拉倒尾粘贴，出答案。程序的思路就是把金额大写当做字符串处理，每一位用<code>switch</code>判断数字或是个、十、百、千那一位上的数字。</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/05/B2F7ee.png"
+        data-srcset="https://s1.ax1x.com/2020/11/05/B2F7ee.png, https://s1.ax1x.com/2020/11/05/B2F7ee.png 1.5x, https://s1.ax1x.com/2020/11/05/B2F7ee.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/05/B2F7ee.png"
+        title="https://s1.ax1x.com/2020/11/05/B2F7ee.png"></p>
+<p>​	Java渣轻喷。</p>
+<p><strong>参考答案：flag{19115.33}</strong></p>
+<h3 id="超简单的世界模拟器" class="headerLink">
+    <a href="#%e8%b6%85%e7%ae%80%e5%8d%95%e7%9a%84%e4%b8%96%e7%95%8c%e6%a8%a1%e6%8b%9f%e5%99%a8" class="header-mark"></a>超简单的世界模拟器</h3><p>​	这道题下面有两道小题</p>
+<h3 id="蝴蝶效应" class="headerLink">
+    <a href="#%e8%9d%b4%e8%9d%b6%e6%95%88%e5%ba%94" class="header-mark"></a>蝴蝶效应</h3><p>​	先看有意思的一个漫画</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/05/B2k9eg.png"
+        data-srcset="https://s1.ax1x.com/2020/11/05/B2k9eg.png, https://s1.ax1x.com/2020/11/05/B2k9eg.png 1.5x, https://s1.ax1x.com/2020/11/05/B2k9eg.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/05/B2k9eg.png"
+        title="https://s1.ax1x.com/2020/11/05/B2k9eg.png"></p>
+<p>​	一个人用石头模拟了一整个宇宙，斯巴拉西。</p>
+<p>​	打开题目以后是一个终端，然提示等待你输入一个<strong>15*15矩阵</strong>（只能有0和1组成），看到这挺懵的，但是题目里有一个重要信息<strong>生命游戏</strong>，百度百科看了一下这个<a href="https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/2926434?fr=aladdin" target="_blank" rel="noopener noreffer">生命游戏</a>，游戏的规则大致就是：<strong>一个细胞会根据周围的细胞数量判断存活和死亡</strong>，然后细胞会不断演算，这个和前面的漫画有异曲同工之妙。</p>
+<p>​	返回终端里面一片白中间有几个框框<img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/05/B2ZFBT.png"
+        data-srcset="https://s1.ax1x.com/2020/11/05/B2ZFBT.png, https://s1.ax1x.com/2020/11/05/B2ZFBT.png 1.5x, https://s1.ax1x.com/2020/11/05/B2ZFBT.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/05/B2ZFBT.png"
+        title="https://s1.ax1x.com/2020/11/05/B2ZFBT.png">，题目中</p>
+<blockquote>
+<p>如果被特殊标注的正方形内的细胞被“清除”，你将会得到对应的 flag：</p>
+<p>“清除”任意一个正方形，你将会得到第一个 flag。同时“清除”两个正方形，你将会得到第二个 flag。</p>
+</blockquote>
+<p>​	用细胞去碰框框就是了，正好也看到了一个知乎的提问：<a href="https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/2926434?fr=aladdin" target="_blank" rel="noopener noreffer"><em>生命游戏</em>(Game of Life)有哪些图形? - 知乎</a>，看了看内容更有趣了。</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/05/B2elzn.png"
+        data-srcset="https://s1.ax1x.com/2020/11/05/B2elzn.png, https://s1.ax1x.com/2020/11/05/B2elzn.png 1.5x, https://s1.ax1x.com/2020/11/05/B2elzn.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/05/B2elzn.png"
+        title="https://s1.ax1x.com/2020/11/05/B2elzn.png"></p>
+<p>​	大师我悟了，就是提供一个初始的<strong>15*15矩阵</strong>，根据<strong>生命游戏</strong>的规则进行演算，然后去消除黑框框。我臭屁完了直接贴图形</p>
+<ul>
+<li>第一关</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">000000000000000
+000000000000000
+000000000000000
+000000000000000
+000000000000000
+000000000000000
+000000000011000
+000000000111100
+000000000110110
+000000000001100
+000000000000000
+000000000000000
+000000000000000
+000000000000000
+000000000000000
+</code></pre></td></tr></table>
+</div>
+</div><p>​	第一关打上面的黑框，刚好在上面15行的范围内，用一个<strong>轻量级飞船</strong>直线打过去即可。</p>
+<ul>
+<li>第二关</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">000000000000000
+000000000000000
+000000000000000
+000000000000000
+000000000011000
+000000000111100
+000000000110110
+000000000001100
+000000000000000
+001100000000000
+011110000000000
+011011000001100
+000110000011110
+000000000011011
+000000000000110
+</code></pre></td></tr></table>
+</div>
+</div><p>​	第二关我期初试了试<strong>滑翔者</strong>放在右上角以便能打到最远距离，但是和第二个都是擦肩而过。于是我就乱试乱拼凑，最后拼出来一个<strong>三飞船</strong>，正好把两个黑框都给消了。</p>
+<p><strong>参考答案：</strong></p>
+<p><strong>1. flag{D0_Y0U_l1k3_g4me_0f_l1fe?_d5e1c80641}</strong></p>
+<p><strong>2. flag{1s_th3_e55ence_0f_0ur_un1ver5e_ju5t_c0mputat1on?_ea3e769cb8}</strong></p>
+<p>完工。</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-11-05</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hackergame-2020/">Hackergame 2020</a>,&nbsp;<a href="/tags/java%E5%AE%89%E5%85%A8/">Java安全</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/xss-lab1/" class="prev" rel="prev" title="XSS-Lab (一)"><i class="fas fa-angle-left fa-fw"></i>XSS-Lab (一)</a>
+            <a href="/posts/upload-labs1/" class="next" rel="next" title="Upload-Labs(一)">Upload-Labs(一)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.0/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/topbar@1.0.1/topbar.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@2.4.0/dist/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.16/dist/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@13.1.0/dist/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.3.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/css/lightgallery.min.css"></div>
+</body>
+
+</html>

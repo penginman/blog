@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Upload-Labs(三) - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="Upload-Labs(三)" />
+<meta property="og:description" content="前言​ 继续接着上一次的Upload-labs往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/upload-labs3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-16T16:04:30+00:00" />
+<meta property="article:modified_time" content="2020-11-16T16:04:30+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Upload-Labs(三)"/>
+<meta name="twitter:description" content="前言​ 继续接着上一次的Upload-labs往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久"/>
+<meta name="application-name" content="Braindance">
+<meta name="apple-mobile-web-app-title" content="Braindance">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/upload-labs3/" /><link rel="prev" href="http://example.org/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" /><link rel="next" href="http://example.org/posts/upload-labs4/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Upload-Labs(三)",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/upload-labs3\/"
+        },"genre": "posts","keywords": "文件上传漏洞","wordcount":  2178 ,
+        "url": "http:\/\/example.org\/posts\/upload-labs3\/","datePublished": "2020-11-16T16:04:30+00:00","dateModified": "2020-11-16T16:04:30+00:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Braindance">Braindance</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜些什么" id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Braindance">Braindance</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜些什么" id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#pass-11">Pass-11</a></li>
+    <li><a href="#pass-12">Pass-12</a></li>
+    <li><a href="#pass-13">Pass-13</a></li>
+    <li><a href="#pass-14">Pass-14</a></li>
+    <li><a href="#pass-15">Pass-15</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Upload-Labs(三)</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">作者</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/drops/"><i class="far fa-folder fa-fw"></i>DROPS</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-16">2020-11-16</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-11-16">2020-11-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2178 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/posts/upload-labs3/" class="leancloud_visitors" data-flag-title="Upload-Labs(三)">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#pass-11">Pass-11</a></li>
+    <li><a href="#pass-12">Pass-12</a></li>
+    <li><a href="#pass-13">Pass-13</a></li>
+    <li><a href="#pass-14">Pass-14</a></li>
+    <li><a href="#pass-15">Pass-15</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2020-11-16T16:04:30" title="November 16, 2020">2020-11-16</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>​	继续接着上一次的<code>Upload-labs</code>往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久的关，不过也学到了感觉很牛的姿势，所以到时候专门开一篇只讲16。</p>
+<p>​	在线靶机地址：</p>
+<ul>
+<li><a href="https://buuoj.cn/challenges#Upload-Labs-Linux" target="_blank" rel="noopener noreffer">linux环境</a></li>
+<li><a href="https://buuoj.cn/challenges#[Windows]Upload-Labs-Windows" target="_blank" rel="noopener noreffer">windows环境</a></li>
+</ul>
+<h2 id="pass-11" class="headerLink">
+    <a href="#pass-11" class="header-mark"></a>Pass-11</h2><p>​	(这题使用了windows环境)</p>
+<p>​	源码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$is_upload</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="nv">$msg</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;submit&#39;</span><span class="p">])){</span>
+    <span class="nv">$ext_arr</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;jpg&#39;</span><span class="p">,</span><span class="s1">&#39;png&#39;</span><span class="p">,</span><span class="s1">&#39;gif&#39;</span><span class="p">);</span>
+    <span class="nv">$file_ext</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;upload_file&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">],</span><span class="nx">strrpos</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;upload_file&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">],</span><span class="s2">&#34;.&#34;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">in_array</span><span class="p">(</span><span class="nv">$file_ext</span><span class="p">,</span><span class="nv">$ext_arr</span><span class="p">)){</span>
+        <span class="nv">$temp_file</span> <span class="o">=</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;upload_file&#39;</span><span class="p">][</span><span class="s1">&#39;tmp_name&#39;</span><span class="p">];</span>
+        <span class="nv">$img_path</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;save_path&#39;</span><span class="p">]</span><span class="o">.</span><span class="s2">&#34;/&#34;</span><span class="o">.</span><span class="nx">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span><span class="o">.</span><span class="nx">date</span><span class="p">(</span><span class="s2">&#34;YmdHis&#34;</span><span class="p">)</span><span class="o">.</span><span class="s2">&#34;.&#34;</span><span class="o">.</span><span class="nv">$file_ext</span><span class="p">;</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nx">move_uploaded_file</span><span class="p">(</span><span class="nv">$temp_file</span><span class="p">,</span><span class="nv">$img_path</span><span class="p">)){</span>
+            <span class="nv">$is_upload</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nv">$msg</span> <span class="o">=</span> <span class="s1">&#39;上传出错！&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+        <span class="nv">$msg</span> <span class="o">=</span> <span class="s2">&#34;只允许上传.jpg|.png|.gif类型文件！&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​	分析代码发现是一个白名单验证，但是和之前不同点在于路径中使用了<code>$_GET['save_path']</code>，本题提示也写道</p>
+<p><code>本pass上传路径可控！</code>，就是通过这个GET变量控制上传路径。</p>
+<p>​	这一关的突破方法需要有一些条件：php版本需要低于<code>5.3.29</code>（我使用的是php版本5.3.17的本地靶机），另一个条件是<code>magic_quotes_gpc</code>需要为关闭状态。<code>magic_quotes_gpc</code>的作用官方文档写道：</p>
+<blockquote>
+<p><strong>Warning</strong> 本特性已自 PHP 5.3.0 起<em>废弃</em>并将自 PHP 5.4.0 起<em>移除</em>。</p>
+<p>​      为 GPC (Get/Post/Cookie) 操作设置 magic_quotes 状态。      当 magic_quotes 为 on，所有的 ' (单引号)、&quot; (双引号)、\（反斜杠）和 NUL&rsquo;s 被一个反斜杠自动转义。</p>
+</blockquote>
+<p>​	使用bp抓包并添加<code>0x00截断</code>，在GET请求中可以使用url编码的截断：<code>%00</code>。贴个自己参考的博客，<a href="https://www.cnblogs.com/milantgh/p/3612978.html" target="_blank" rel="noopener noreffer">截断上传原理剖析</a>。个人对于这道题的分析就是，上面文件的代码执行到第8行的时候，获取到了<code>$_GET['save_path']</code>变量的值，但是我们在这个变量后面添加了<code>0x00截断</code>，所以后面的代码便不会执行，文件也就不会被重命名。</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png"></p>
+<p>​	文件成功上传，然后访问的时候记得改一下路径，因为文件名已经截断，所以访问路径由<code>..../upload/233.php�/5120201115205501.jpg</code>变为<code>..../upload/233.php</code>。完工</p>
+<h2 id="pass-12" class="headerLink">
+    <a href="#pass-12" class="header-mark"></a>Pass-12</h2><p>​	（windows环境）</p>
+<p>​	这题和上一题差不多一样，就是把<code>$_GET['save_path']</code>变成了<code>$_POST['save_path']</code>。由GET请求改成了POST请求，但是抓包修改的地方就不一样了，需要通过<strong>16进制修改</strong></p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png"></p>
+<p>​	这里我命名为<code>233.phpa</code>是因为方便我在Hex表中找到这句话的位置和修改数据。<code>a</code>的16进制是<code>61</code>，需要改成截断的值：<code>00</code></p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png"></p>
+<p>​	上传成功以后打开图片，和上一题一样，需要把路径中已经截断的后面删除掉。完工</p>
+<h2 id="pass-13" class="headerLink">
+    <a href="#pass-13" class="header-mark"></a>Pass-13</h2><p>​	（Linux环境）</p>
+<p>​	源码中有关的函数解释：</p>
+<blockquote>
+<p><a href="https://segmentfault.com/a/1190000008305573" target="_blank" rel="noopener noreffer">PHP中pack、unpack的详细用法</a></p>
+<p><a href="https://www.php.net/manual/zh/function.fread.php" target="_blank" rel="noopener noreffer">fread()</a></p>
+<p><a href="https://www.php.net/fclose" target="_blank" rel="noopener noreffer">fclose()</a></p>
+<p><a href="https://www.php.net/intval" target="_blank" rel="noopener noreffer">intval()</a></p>
+</blockquote>
+<p>​	这道题和前面题目都不一样了：</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png"></p>
+<p>​	题目说道需要<strong>上传图片马</strong>，然后使用<strong>文件包含漏洞</strong>进行测试，那么我们就先制作图片马。</p>
+<p>​	查看本题的提示<code>本pass检查图标内容开头2个字节！</code>，意思就是只检测文件前面两个字节的标识，贴一个<a href="https://blog.csdn.net/qq_37414405/article/details/84660148" target="_blank" rel="noopener noreffer">各种格式图片文件头标识分析</a>，所以这道题只用在上传的文件头部的两个字节处粘贴对应<strong>文件的头标识</strong>即可绕过检测。</p>
+<p>​	以GIF的文件头GIF89a 为例，创建文件notepad++编辑打开输入<code>GIF89a&lt;?php phpinfo(); ?&gt;</code>，后缀名无所谓了，因为题目只检测前两个字节即可上传。</p>
+<p>​	<strong>还有一种方法制作图片马</strong>：使用windows的<code>copy /b</code>指令，把两个文件进行<del>无缝</del>拼接，可以使用一张正常的图片加一个php文件进行拼接，即可正常上传。参考博客：<a href="https://blog.csdn.net/gaoshi66/article/details/83653143" target="_blank" rel="noopener noreffer">windows窗口命令——(copy/b)文件无缝拼接隐藏</a>。</p>
+<p>​	别忘了题目中说道了需要<strong>三种后缀都上传成功才算过关！</strong></p>
+<p>​	<strong>上传以后需要使用文件包含进行判定是否执行</strong>，先在新标签页面中打开图片，url中记下图片在服务器中的目录和名称（我的图片名称为8220201116071327.gif），点击<strong>2</strong>的链接进入<code>include.php</code>进行文件包含：网址输入<code>https://...../include.php?file=./upload/8220201116071327.gif</code>，找到php成功执行的页面。这里还有一个小知识点我学到的就是：<a href="https://www.cnblogs.com/xc90/articles/10257402.html" target="_blank" rel="noopener noreffer">路径中的'.&lsquo;和&rsquo;..&lsquo;还有&rsquo;./&lsquo;和&rsquo;../&lsquo;都是什么意思</a>。完工</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png"></p>
+<h2 id="pass-14" class="headerLink">
+    <a href="#pass-14" class="header-mark"></a>Pass-14</h2><p>​	（Linux环境）</p>
+<p>​	这题提示写道<code>本pass使用getimagesize()检查是否为图片文件！</code>，和上一题不一样的地方就是使用了<code>getimagesize()</code>函数，这个函数的官方文档<a href="https://www.php.net/manual/zh/function.getimagesize.php" target="_blank" rel="noopener noreffer">getimagesize()</a>，所以这道题就不能用13题的加<strong>文件的头标识</strong>方法绕过，这次要使用上一题中的<code>copy /b</code>指令用一张正常的图片进行拼接还是可以通过的。</p>
+<p>​	PS：听同学说<code>getimagesize()</code>不过是检测了前八个字节，不过我没试。</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png"
+        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png"></p>
+<p>​	因为是拼接的，所以要直接摸到图片最底部查看成功。完工</p>
+<h2 id="pass-15" class="headerLink">
+    <a href="#pass-15" class="header-mark"></a>Pass-15</h2><p>​	（Linux环境）</p>
+<p>​	13、14、15题都是对<strong>文件的头标识</strong>进行了检测，只不过第十四关使用的是getimagesize函数，第十五关使用的是exif_imagetype函数,函数返回值内容不一样而已。使用<code>copy /b</code>制作的图片马可以直接通过。</p>
+<p>​	网上搜集过来的资料</p>
+<blockquote>
+<p>png 文件头  89504E470D0A1A0A</p>
+<p>jpg 文件头 89504E470D0A1A0A</p>
+<p>gif 文件头 474946383961</p>
+</blockquote>
+<p>​	这几个字节应该都是够长的可以绕过这三个函数，所以验证了同学说的不同的函数检测的文件头长度是不一样的。完工</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-11-16</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/">文件上传漏洞</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" class="prev" rel="prev" title="jsDelivr加速静态博客"><i class="fas fa-angle-left fa-fw"></i>jsDelivr加速静态博客</a>
+            <a href="/posts/upload-labs4/" class="next" rel="next" title="Upload-Labs之Pass-16">Upload-Labs之Pass-16<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.0/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/topbar@1.0.1/topbar.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@2.4.0/dist/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.16/dist/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@13.1.0/dist/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.3.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/css/lightgallery.min.css"></div>
+</body>
+
+</html>

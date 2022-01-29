@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Upload-Labs(二) - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="Upload-Labs(二)" />
+<meta property="og:description" content="前言​ 这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/upload-labs2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-09T20:12:27+00:00" />
+<meta property="article:modified_time" content="2020-11-09T20:12:27+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Upload-Labs(二)"/>
+<meta name="twitter:description" content="前言​ 这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"/>
+<meta name="application-name" content="Braindance">
+<meta name="apple-mobile-web-app-title" content="Braindance">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/upload-labs2/" /><link rel="prev" href="http://example.org/posts/upload-labs1/" /><link rel="next" href="http://example.org/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Upload-Labs(二)",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/upload-labs2\/"
+        },"genre": "posts","keywords": "文件上传漏洞","wordcount":  3332 ,
+        "url": "http:\/\/example.org\/posts\/upload-labs2\/","datePublished": "2020-11-09T20:12:27+00:00","dateModified": "2020-11-09T20:12:27+00:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Braindance">Braindance</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜些什么" id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Braindance">Braindance</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜些什么" id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#pass-06">Pass-06</a></li>
+    <li><a href="#pass-07">Pass-07</a></li>
+    <li><a href="#pass-08">Pass-08</a></li>
+    <li><a href="#pass-09">Pass-09</a></li>
+    <li><a href="#pass-10">Pass-10</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Upload-Labs(二)</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">作者</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/drops/"><i class="far fa-folder fa-fw"></i>DROPS</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-09">2020-11-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-11-09">2020-11-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3332 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id="/posts/upload-labs2/" class="leancloud_visitors" data-flag-title="Upload-Labs(二)">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#pass-06">Pass-06</a></li>
+    <li><a href="#pass-07">Pass-07</a></li>
+    <li><a href="#pass-08">Pass-08</a></li>
+    <li><a href="#pass-09">Pass-09</a></li>
+    <li><a href="#pass-10">Pass-10</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2020-11-09T20:12:27" title="November 9, 2020">2020-11-09</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>​	这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$is_upload = false;
+$msg = null;
+if (isset($_POST[&#39;submit&#39;])) {
+    if (file_exists(UPLOAD_PATH)) {
+    //这里下面是过滤
+        $deny_ext = array(&#34;.php&#34;,&#34;.php5&#34;,&#34;.php4&#34;,&#34;.html&#34;, ......);
+        $file_name = trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name = deldot($file_name);//删除文件名末尾的点
+        $file_ext = strrchr($file_name, &#39;.&#39;);
+        $file_ext = strtolower($file_ext); //转换为小写
+        $file_ext = str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);//去除字符串::$DATA
+        $file_ext = trim($file_ext); //首尾去空
+
+	//这里下面是移动文件。
+    	if (!in_array($file_ext, $deny_ext)) {
+            $temp_file = $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+            $img_path = UPLOAD_PATH.&#39;/&#39;.$file_name;
+            if (move_uploaded_file($temp_file, $img_path)) {
+                $is_upload = true;
+            } else {
+                $msg = &#39;上传出错！&#39;;
+            }
+        } else {
+            $msg = &#39;此文件类型不允许上传！&#39;;
+        }
+   
+    } else {
+        $msg = UPLOAD_PATH . &#39;文件夹不存在,请手工创建！&#39;;
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>过滤部分：</p>
+<ul>
+<li>
+<p><code>$deny_ext</code>是一个过滤的后缀数组，只要是在里面的后缀都是被禁止上传的。</p>
+</li>
+<li>
+<p><code>$file_name = trim($FILES['upload_file']['name'])</code>这段代码有两个点需要说：</p>
+<ol>
+<li><code>$FILES['upload_file']['name']</code>是获取上传文件的名称，PHP中$FILES是一个预定义的数组，用来获取通过 POST 方法上传文件的相关信息。如果为单个文件上传，那么 $FILES 为二维数组；如果为多个文件上传，那么 $FILES 为三维数组。贴一个参考的博客：<a href="https://www.cnblogs.com/laijinquan/p/8682282.html" target="_blank" rel="noopener noreffer">PHP $_FILES函数详解</a>。</li>
+<li><code>trim()</code>函数的作用就是去除文件名称前后的空格换行符等。</li>
+</ol>
+</li>
+<li>
+<p><code>$file_name = deldot($file_name)</code>这个注释中很清楚，是删除文章末尾的点。</p>
+</li>
+<li>
+<p><code>$file_ext = strrchr($file_name, '.')</code>中<code>strrchr(string s1,char c1)</code>函数查找字符或字符串c1在另一个字符串s1中最后一次出现的位置，并返回从该位置到字符串结尾的所有字符。说白了就是获取文件的后缀名。</p>
+</li>
+<li>
+<p><code>$file_ext = strtolower($file_ext)</code>注释上转换小写。</p>
+</li>
+<li>
+<p><code>$file_ext = str_ireplace('::$DATA', '', $file_ext)</code>去除字符串::$DATA。第八题讲了原理</p>
+</li>
+</ul>
+<p>上传部分：</p>
+<ul>
+<li><code>in_array($file_ext, $deny_ext)</code>判断文件的后缀(第一个参数)是不是在黑名单数组(第二个参数)中。</li>
+<li><code>$_FILES['upload_file']['tmp_name']</code>文件被上传后在服务端储存的临时文件名，一般是系统默认。可以在php.ini的upload_tmp_dir 指定。</li>
+<li><code>$img_path = UPLOAD_PATH.'/'.$file_name</code>这个变量是设置需要保存到的路径</li>
+<li><code>move_uploaded_file($temp_file, $img_path)</code>本函数检查并确保指定的文件(第一个参数)是合法的上传文件(即通过 PHP 的 HTTP POST 上传机制所上传的)。如果文件合法，则将其移动为由指定的文件路径(第二个参数)。</li>
+</ul>
+<h2 id="pass-06" class="headerLink">
+    <a href="#pass-06" class="header-mark"></a>Pass-06</h2><p>源码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$is_upload = false;
+$msg = null;
+if (isset($_POST[&#39;submit&#39;])) {
+    if (file_exists(UPLOAD_PATH)) {
+        $deny_ext = array(&#34;.php&#34;,&#34;.php5&#34;,&#34;.php4&#34;,&#34;.php3&#34;,&#34;.php2&#34;,&#34;.html&#34;,&#34;.htm&#34;,&#34;.phtml&#34;,&#34;.pht&#34;,&#34;.pHp&#34;,&#34;.pHp5&#34;,&#34;.pHp4&#34;,&#34;.pHp3&#34;,&#34;.pHp2&#34;,&#34;.Html&#34;,&#34;.Htm&#34;,&#34;.pHtml&#34;,&#34;.jsp&#34;,&#34;.jspa&#34;,&#34;.jspx&#34;,&#34;.jsw&#34;,&#34;.jsv&#34;,&#34;.jspf&#34;,&#34;.jtml&#34;,&#34;.jSp&#34;,&#34;.jSpx&#34;,&#34;.jSpa&#34;,&#34;.jSw&#34;,&#34;.jSv&#34;,&#34;.jSpf&#34;,&#34;.jHtml&#34;,&#34;.asp&#34;,&#34;.aspx&#34;,&#34;.asa&#34;,&#34;.asax&#34;,&#34;.ascx&#34;,&#34;.ashx&#34;,&#34;.asmx&#34;,&#34;.cer&#34;,&#34;.aSp&#34;,&#34;.aSpx&#34;,&#34;.aSa&#34;,&#34;.aSax&#34;,&#34;.aScx&#34;,&#34;.aShx&#34;,&#34;.aSmx&#34;,&#34;.cEr&#34;,&#34;.sWf&#34;,&#34;.swf&#34;,&#34;.htaccess&#34;);
+        $file_name = $_FILES[&#39;upload_file&#39;][&#39;name&#39;];
+        $file_name = deldot($file_name);//删除文件名末尾的点
+        $file_ext = strrchr($file_name, &#39;.&#39;);
+        $file_ext = strtolower($file_ext); //转换为小写
+        $file_ext = str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);//去除字符串::$DATA
+        
+        if (!in_array($file_ext, $deny_ext)) {
+            $temp_file = $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+            $img_path = UPLOAD_PATH.&#39;/&#39;.date(&#34;YmdHis&#34;).rand(1000,9999).$file_ext;
+            if (move_uploaded_file($temp_file,$img_path)) {
+                $is_upload = true;
+            } else {
+                $msg = &#39;上传出错！&#39;;
+            }
+        } else {
+            $msg = &#39;此文件不允许上传&#39;;
+        }
+    } else {
+        $msg = UPLOAD_PATH . &#39;文件夹不存在,请手工创建！&#39;;
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>​	看源码发现少了<code>trim()</code>函数<strong>对文件名前后的空格处理</strong>，所以我们可以在上传文件时在后缀名后面添加空格使其成为.php  (有空格)绕过黑名单数组。</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/Bb9jQe.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/Bb9jQe.png, https://s1.ax1x.com/2020/11/09/Bb9jQe.png 1.5x, https://s1.ax1x.com/2020/11/09/Bb9jQe.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/Bb9jQe.png"
+        title="https://s1.ax1x.com/2020/11/09/Bb9jQe.png"></p>
+<p>​	上传以后访问文件执行成功。完工</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/Bb9xLd.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/Bb9xLd.png, https://s1.ax1x.com/2020/11/09/Bb9xLd.png 1.5x, https://s1.ax1x.com/2020/11/09/Bb9xLd.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/Bb9xLd.png"
+        title="https://s1.ax1x.com/2020/11/09/Bb9xLd.png"></p>
+<p>​	这里说明一下，我前面是在<a href="https://buuoj.cn/" target="_blank" rel="noopener noreffer">BUUCTF</a>在线靶场上做的linux环境下的题目，但是这道题用了上面的方法怎么都访问不到，所以我在本地windows环境上搭建了一个靶机进行上传(而且后面有道题必须是在windows环境下才可以通过)。在github上下载的源码题目比在线靶场上的题目多了一道，对应的题目为 在线靶机pass-06&ndash;&gt;github下载的pass-07。默认使用的都是linux环境下的题目，有改变会提前说明。</p>
+<p>​</p>
+<h2 id="pass-07" class="headerLink">
+    <a href="#pass-07" class="header-mark"></a>Pass-07</h2><p>源码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$is_upload = false;
+$msg = null;
+if (isset($_POST[&#39;submit&#39;])) {
+    if (file_exists(UPLOAD_PATH)) {
+        $deny_ext = array(&#34;.php&#34;,&#34;.php5&#34;,&#34;.php4&#34;,&#34;.php3&#34;,&#34;.php2&#34;,&#34;.html&#34;,&#34;.htm&#34;,&#34;.phtml&#34;,&#34;.pht&#34;,&#34;.pHp&#34;,&#34;.pHp5&#34;,&#34;.pHp4&#34;,&#34;.pHp3&#34;,&#34;.pHp2&#34;,&#34;.Html&#34;,&#34;.Htm&#34;,&#34;.pHtml&#34;,&#34;.jsp&#34;,&#34;.jspa&#34;,&#34;.jspx&#34;,&#34;.jsw&#34;,&#34;.jsv&#34;,&#34;.jspf&#34;,&#34;.jtml&#34;,&#34;.jSp&#34;,&#34;.jSpx&#34;,&#34;.jSpa&#34;,&#34;.jSw&#34;,&#34;.jSv&#34;,&#34;.jSpf&#34;,&#34;.jHtml&#34;,&#34;.asp&#34;,&#34;.aspx&#34;,&#34;.asa&#34;,&#34;.asax&#34;,&#34;.ascx&#34;,&#34;.ashx&#34;,&#34;.asmx&#34;,&#34;.cer&#34;,&#34;.aSp&#34;,&#34;.aSpx&#34;,&#34;.aSa&#34;,&#34;.aSax&#34;,&#34;.aScx&#34;,&#34;.aShx&#34;,&#34;.aSmx&#34;,&#34;.cEr&#34;,&#34;.sWf&#34;,&#34;.swf&#34;,&#34;.htaccess&#34;);
+        $file_name = trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_ext = strrchr($file_name, &#39;.&#39;);
+        $file_ext = strtolower($file_ext); //转换为小写
+        $file_ext = str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);//去除字符串::$DATA
+        $file_ext = trim($file_ext); //首尾去空
+        
+        if (!in_array($file_ext, $deny_ext)) {
+            $temp_file = $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+            $img_path = UPLOAD_PATH.&#39;/&#39;.$file_name;
+            if (move_uploaded_file($temp_file, $img_path)) {
+                $is_upload = true;
+            } else {
+                $msg = &#39;上传出错！&#39;;
+            }
+        } else {
+            $msg = &#39;此文件类型不允许上传！&#39;;
+        }
+    } else {
+        $msg = UPLOAD_PATH . &#39;文件夹不存在,请手工创建！&#39;;
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>​	这道题少了<strong>删除文件名末尾的点</strong>，我们可以通过构造<strong>2333.php. .</strong>(末尾加 点 空格 点)，被解析后文件后缀就会成为&quot;. &ldquo;(一个点一个空格)，可以绕过黑名单，访问的文件名是<code>2333.php. .</code></p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/BbCOkq.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/BbCOkq.png, https://s1.ax1x.com/2020/11/09/BbCOkq.png 1.5x, https://s1.ax1x.com/2020/11/09/BbCOkq.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/BbCOkq.png"
+        title="https://s1.ax1x.com/2020/11/09/BbCOkq.png"></p>
+<p>​	我又参考了其他博客，讲到windows环境下可以利用系统会自动删除后缀中最后的一个&rdquo;.&quot;，尝试在windows靶机上测试<strong>只添加一个点</strong>，访问的文件名为<code>2333.php、2333.php.</code>都可以，因为windows会删除最后一个点。</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/BbMywV.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/BbMywV.png, https://s1.ax1x.com/2020/11/09/BbMywV.png 1.5x, https://s1.ax1x.com/2020/11/09/BbMywV.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/BbMywV.png"
+        title="https://s1.ax1x.com/2020/11/09/BbMywV.png"></p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/BbKXq0.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/BbKXq0.png, https://s1.ax1x.com/2020/11/09/BbKXq0.png 1.5x, https://s1.ax1x.com/2020/11/09/BbKXq0.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/BbKXq0.png"
+        title="https://s1.ax1x.com/2020/11/09/BbKXq0.png"></p>
+<p>​	两种方式第一个在linux环境下的php服务器上，第二个在windows环境下的php服务器上，上传后都可以成功访问文件。完工</p>
+<h2 id="pass-08" class="headerLink">
+    <a href="#pass-08" class="header-mark"></a>Pass-08</h2><p>源码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$is_upload = false;
+$msg = null;
+if (isset($_POST[&#39;submit&#39;])) {
+    if (file_exists(UPLOAD_PATH)) {
+        $deny_ext = array(&#34;.php&#34;,&#34;.php5&#34;,&#34;.php4&#34;,&#34;.php3&#34;,&#34;.php2&#34;,&#34;.html&#34;,&#34;.htm&#34;,&#34;.phtml&#34;,&#34;.pht&#34;,&#34;.pHp&#34;,&#34;.pHp5&#34;,&#34;.pHp4&#34;,&#34;.pHp3&#34;,&#34;.pHp2&#34;,&#34;.Html&#34;,&#34;.Htm&#34;,&#34;.pHtml&#34;,&#34;.jsp&#34;,&#34;.jspa&#34;,&#34;.jspx&#34;,&#34;.jsw&#34;,&#34;.jsv&#34;,&#34;.jspf&#34;,&#34;.jtml&#34;,&#34;.jSp&#34;,&#34;.jSpx&#34;,&#34;.jSpa&#34;,&#34;.jSw&#34;,&#34;.jSv&#34;,&#34;.jSpf&#34;,&#34;.jHtml&#34;,&#34;.asp&#34;,&#34;.aspx&#34;,&#34;.asa&#34;,&#34;.asax&#34;,&#34;.ascx&#34;,&#34;.ashx&#34;,&#34;.asmx&#34;,&#34;.cer&#34;,&#34;.aSp&#34;,&#34;.aSpx&#34;,&#34;.aSa&#34;,&#34;.aSax&#34;,&#34;.aScx&#34;,&#34;.aShx&#34;,&#34;.aSmx&#34;,&#34;.cEr&#34;,&#34;.sWf&#34;,&#34;.swf&#34;,&#34;.htaccess&#34;,&#34;.ini&#34;);
+        $file_name = trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name = deldot($file_name);//删除文件名末尾的点
+        $file_ext = strrchr($file_name, &#39;.&#39;);
+        $file_ext = strtolower($file_ext); //转换为小写
+        $file_ext = trim($file_ext); //首尾去空
+        
+        if (!in_array($file_ext, $deny_ext)) {
+            $temp_file = $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+            $img_path = UPLOAD_PATH.&#39;/&#39;.date(&#34;YmdHis&#34;).rand(1000,9999).$file_ext;
+            if (move_uploaded_file($temp_file, $img_path)) {
+                $is_upload = true;
+            } else {
+                $msg = &#39;上传出错！&#39;;
+            }
+        } else {
+            $msg = &#39;此文件类型不允许上传！&#39;;
+        }
+    } else {
+        $msg = UPLOAD_PATH . &#39;文件夹不存在,请手工创建！&#39;;
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>​	审查代码发现少了对<code>::$DATA</code>字符串的处理，这里就要用到前面提到的windows环境了，贴一下原理：</p>
+<blockquote>
+<p>php在window的时候如果文件名+&quot;::$DATA&quot;会把::$DATA之后的数据当成文件流处理,不会检测后缀名.且保持&quot;::$DATA&quot;之前的文件名</p>
+</blockquote>
+<p>​	直接上传的时候抓包在文件名后面添加<code>::$DATA</code>。</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/BbP84P.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/BbP84P.png, https://s1.ax1x.com/2020/11/09/BbP84P.png 1.5x, https://s1.ax1x.com/2020/11/09/BbP84P.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/BbP84P.png"
+        title="https://s1.ax1x.com/2020/11/09/BbP84P.png"></p>
+<p>​	上传访问。完工</p>
+<h2 id="pass-09" class="headerLink">
+    <a href="#pass-09" class="header-mark"></a>Pass-09</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$is_upload = false;
+$msg = null;
+if (isset($_POST[&#39;submit&#39;])) {
+    if (file_exists(UPLOAD_PATH)) {
+        $deny_ext = array(&#34;.php&#34;,&#34;.php5&#34;,&#34;.php4&#34;,&#34;.php3&#34;,&#34;.php2&#34;,&#34;.html&#34;,&#34;.htm&#34;,&#34;.phtml&#34;,&#34;.pht&#34;,&#34;.pHp&#34;,&#34;.pHp5&#34;,&#34;.pHp4&#34;,&#34;.pHp3&#34;,&#34;.pHp2&#34;,&#34;.Html&#34;,&#34;.Htm&#34;,&#34;.pHtml&#34;,&#34;.jsp&#34;,&#34;.jspa&#34;,&#34;.jspx&#34;,&#34;.jsw&#34;,&#34;.jsv&#34;,&#34;.jspf&#34;,&#34;.jtml&#34;,&#34;.jSp&#34;,&#34;.jSpx&#34;,&#34;.jSpa&#34;,&#34;.jSw&#34;,&#34;.jSv&#34;,&#34;.jSpf&#34;,&#34;.jHtml&#34;,&#34;.asp&#34;,&#34;.aspx&#34;,&#34;.asa&#34;,&#34;.asax&#34;,&#34;.ascx&#34;,&#34;.ashx&#34;,&#34;.asmx&#34;,&#34;.cer&#34;,&#34;.aSp&#34;,&#34;.aSpx&#34;,&#34;.aSa&#34;,&#34;.aSax&#34;,&#34;.aScx&#34;,&#34;.aShx&#34;,&#34;.aSmx&#34;,&#34;.cEr&#34;,&#34;.sWf&#34;,&#34;.swf&#34;,&#34;.htaccess&#34;);
+        $file_name = trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name = deldot($file_name);//删除文件名末尾的点
+        $file_ext = strrchr($file_name, &#39;.&#39;);
+        $file_ext = strtolower($file_ext); //转换为小写
+        $file_ext = str_ireplace(&#39;::$DATA&#39;, &#39;&#39;, $file_ext);//去除字符串::$DATA
+        $file_ext = trim($file_ext); //首尾去空
+        
+        if (!in_array($file_ext, $deny_ext)) {
+            $temp_file = $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+            $img_path = UPLOAD_PATH.&#39;/&#39;.$file_name;
+            if (move_uploaded_file($temp_file, $img_path)) {
+                $is_upload = true;
+            } else {
+                $msg = &#39;上传出错！&#39;;
+            }
+        } else {
+            $msg = &#39;此文件类型不允许上传！&#39;;
+        }
+    } else {
+        $msg = UPLOAD_PATH . &#39;文件夹不存在,请手工创建！&#39;;
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>​	这次题目和第七题差不多，代码会先剔除文件名前后的空格，然后删除末尾的点，再通过<code>strrchr()</code>函数截取后缀名转换小写。</p>
+<p>​	所以和第七题一样构造<strong>2333.php. .</strong>(末尾加 点 空格 点)，被处理后的文件名后缀就成了一个点&quot;.&quot;，铁定不在黑名单后缀里，实现绕过后缀检查。</p>
+<p>​	但是这道题<strong>只能使用windows环境</strong>，因为执行了<code>deldot()</code>函数删除了最后一个点之后，文件名成了<code>2333.php.</code>，而linux环境下因为不会自动删除最后一个点而不能访问成功。</p>
+<p>​	图前面有了就不贴了。</p>
+<h2 id="pass-10" class="headerLink">
+    <a href="#pass-10" class="header-mark"></a>Pass-10</h2><p>源码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$is_upload = false;
+$msg = null;
+if (isset($_POST[&#39;submit&#39;])) {
+    if (file_exists(UPLOAD_PATH)) {
+        $deny_ext = array(&#34;php&#34;,&#34;php5&#34;,&#34;php4&#34;,&#34;php3&#34;,&#34;php2&#34;,&#34;html&#34;,&#34;htm&#34;,&#34;phtml&#34;,&#34;pht&#34;,&#34;jsp&#34;,&#34;jspa&#34;,&#34;jspx&#34;,&#34;jsw&#34;,&#34;jsv&#34;,&#34;jspf&#34;,&#34;jtml&#34;,&#34;asp&#34;,&#34;aspx&#34;,&#34;asa&#34;,&#34;asax&#34;,&#34;ascx&#34;,&#34;ashx&#34;,&#34;asmx&#34;,&#34;cer&#34;,&#34;swf&#34;,&#34;htaccess&#34;);
+
+        $file_name = trim($_FILES[&#39;upload_file&#39;][&#39;name&#39;]);
+        $file_name = str_ireplace($deny_ext,&#34;&#34;, $file_name);
+        $temp_file = $_FILES[&#39;upload_file&#39;][&#39;tmp_name&#39;];
+        $img_path =  UPLOAD_PATH.&#39;/&#39;.$file_name;        
+        if (move_uploaded_file($temp_file, $img_path)) {
+            $is_upload = true;
+        } else {
+            $msg = &#39;上传出错！&#39;;
+        }
+    } else {
+        $msg = UPLOAD_PATH . &#39;文件夹不存在,请手工创建！&#39;;
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>​	这道题和前面不同的是<code>$file_name = str_ireplace($deny_ext,&quot;&quot;, $file_name)</code>，对于这个函数：<code>str_ireplace(find,replace,string,count)</code>，find是要查找的值，replace是要替换成的值，string是被搜索的字符串，count 可选。一个变量，对替换数进行计数。所以这行代码的作用就是把文件名中所有包含在黑名单后缀里的字符串替换成空串，但是这个函数只会执行一次，所以我们可以构造一个双写绕过，即构造文件名<code>2333.pphphp</code>，只有一个&quot;php&quot;字符串被匹配到并被替换成空串，剩下的文件名就成了<code>2333.php</code>。</p>
+<p><img
+        class="lazyload"
+        data-src="https://s1.ax1x.com/2020/11/09/Bb8yPf.png"
+        data-srcset="https://s1.ax1x.com/2020/11/09/Bb8yPf.png, https://s1.ax1x.com/2020/11/09/Bb8yPf.png 1.5x, https://s1.ax1x.com/2020/11/09/Bb8yPf.png 2x"
+        data-sizes="auto"
+        alt="https://s1.ax1x.com/2020/11/09/Bb8yPf.png"
+        title="https://s1.ax1x.com/2020/11/09/Bb8yPf.png"></p>
+<p>上传并访问文件。完工</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-11-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/">文件上传漏洞</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/upload-labs1/" class="prev" rel="prev" title="Upload-Labs(一)"><i class="fas fa-angle-left fa-fw"></i>Upload-Labs(一)</a>
+            <a href="/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" class="next" rel="next" title="jsDelivr加速静态博客">jsDelivr加速静态博客<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.0/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/topbar@1.0.1/topbar.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@2.4.0/dist/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.16/dist/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twemoji@13.1.0/dist/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.3.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/css/lightgallery.min.css"></div>
+</body>
+
+</html>
