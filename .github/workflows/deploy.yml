@@ -28,10 +28,9 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: guobang-yoo/guobang-yoo.github.io
           publish_branch: master
           publish_dir: ./public
