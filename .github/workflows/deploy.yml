@@ -36,19 +36,6 @@ jobs:
           external_repository: guobang-yoo/guobang-yoo.github.io
           publish_branch: master
           publish_dir: ./public
-<<<<<<< HEAD
-
-      - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@main
-        env:
-            SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-            ARGS: "-rltgoDzvO --delete"
-            SOURCE: "./public/"
-            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-            REMOTE_USER: ${{ secrets.REMOTE_USER }}
-            TARGET: ${{ secrets.REMOTE_TARGET }}
-            EXCLUDE: "/dist/, /node_modules/"
-=======
           
       - name: pull github pages
         uses: appleboy/ssh-action@master
@@ -61,4 +48,3 @@ jobs:
             git pull
           
           
->>>>>>> 03709ed1cc2ad2edec6d85a7be703ac716bb8583
