@@ -36,15 +36,15 @@ jobs:
           external_repository: guobang-yoo/guobang-yoo.github.io
           publish_branch: master
           publish_dir: ./public
-
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+          
+      - name: pull github pages
+        uses: appleboy/ssh-action@master
         with:
-          server: ${{ secrets.REMOTE_HOST }}
+          host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.USER_PASSWD }}
-          local-dir: ./public/
-          server-dir: ${{ secrets.REMOTE_DIR }}
-          dangerous-clean-slate: true
+          script: |
+            cd /var/www/html/blog.braindance.top
+            git pull
           
           
