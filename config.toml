@@ -101,7 +101,8 @@ theme = "DoIt"
     rss = 10
     [params.home.profile]
       enable = true
-      gravatarEmail = "2250926180@qq.com"
+      avatarURL = "https://s4.ax1x.com/2022/02/01/HkWwQS.png"
+      # gravatarEmail = "2250926180@qq.com"
       title = "Braindance"
       subtitle = "为世界上所有的美好而战"
       social = true
