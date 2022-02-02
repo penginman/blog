@@ -202,7 +202,7 @@ theme = "DoIt"
     # 缩略图 URL
     thumbnailUrl = ""
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
       id = "UA-176925141-1"
