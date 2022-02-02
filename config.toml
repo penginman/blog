@@ -188,6 +188,28 @@ theme = "DoIt"
         # 可以在你的项目下相同路径存放你自己的数据文件:
         # "assets/data/emoji/"
         emoji = "all.yml"
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+    so = "" # 360 search
+    sogou = ""
+  [params.seo]
+    # 图片 URL
+    image = ""
+    # 缩略图 URL
+    thumbnailUrl = ""
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = "UA-176925141-1"
+      # 是否匿名化用户 IP
+      anonymizeIP = true
+    [params.analytics.baidu]
+      id = "3b1ab845351bb3a8ee808b639bca6ce5"
 
 [menu]
   [[menu.main]]

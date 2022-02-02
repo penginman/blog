@@ -3,25 +3,25 @@
         <title>流水账 - 分类 - Braindance</title>
         <link>http://example.org/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</link>
         <description>流水账 - 分类 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 02 Sep 2020 22:05:34 &#43;0000</lastBuildDate><atom:link href="http://example.org/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 02 Sep 2020 22:05:34 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/" rel="self" type="application/rss+xml" /><item>
     <title>搭窝过程(二)</title>
     <link>http://example.org/posts/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</link>
-    <pubDate>Wed, 02 Sep 2020 22:05:34 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Wed, 02 Sep 2020 22:05:34 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</guid>
     <description><![CDATA[​ 服务器到手了肯定不能闲着，既然有了国外的服务器，第一个想法就是去整一个魔法，我姐也因为网络问题，经常让我帮忙下载国外的资料，这次整一个就能]]></description>
 </item><item>
     <title>造窝过程(一)</title>
     <link>http://example.org/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/</link>
-    <pubDate>Wed, 02 Sep 2020 11:14:35 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Wed, 02 Sep 2020 11:14:35 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/</guid>
     <description><![CDATA[备案劝退 很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭建过一个，觉得IP访问太暴露了就想去备案，结果阿里云的备案过程真的是把我给整吐了]]></description>
 </item><item>
     <title>第一篇文章</title>
     <link>http://example.org/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
-    <pubDate>Wed, 26 Aug 2020 16:40:03 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Wed, 26 Aug 2020 16:40:03 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
     <description><![CDATA[第一篇文章的内容 刚把博客搭成，然后看了看markdown的语法，以后慢慢往上面加吧。]]></description>
 </item></channel>

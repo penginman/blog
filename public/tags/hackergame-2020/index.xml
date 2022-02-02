@@ -3,18 +3,18 @@
         <title>Hackergame 2020 - 标签 - Braindance</title>
         <link>http://example.org/tags/hackergame-2020/</link>
         <description>Hackergame 2020 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 05 Nov 2020 09:29:22 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/hackergame-2020/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 05 Nov 2020 09:29:22 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/hackergame-2020/" rel="self" type="application/rss+xml" /><item>
     <title>Hackgame2020(二)</title>
     <link>http://example.org/posts/hackgame20202/</link>
-    <pubDate>Thu, 05 Nov 2020 09:29:22 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Thu, 05 Nov 2020 09:29:22 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/hackgame20202/</guid>
     <description><![CDATA[一闪而过的Flag​ 根据题目信息程序每次运行时隐约可见黑色控制台上有 flag 一闪而过，我想到了应该能看程序的代码啥的找到，但是天下武功，唯快不破，]]></description>
 </item><item>
     <title>Hackgame2020(一)</title>
     <link>http://example.org/posts/hackgame20201/</link>
-    <pubDate>Sun, 01 Nov 2020 18:33:40 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Sun, 01 Nov 2020 18:33:40 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/hackgame20201/</guid>
     <description><![CDATA[前言比赛地址：https://hack.lug.ustc.edu.cn/ web签到题​ 第一题是flag提取器，打开题目以后页面是一个提取器下]]></description>
 </item></channel>

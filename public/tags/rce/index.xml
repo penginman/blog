@@ -3,32 +3,32 @@
         <title>RCE - 标签 - Braindance</title>
         <link>http://example.org/tags/rce/</link>
         <description>RCE - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 16 Apr 2021 15:33:32 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/rce/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 16 Apr 2021 15:33:32 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/rce/" rel="self" type="application/rss+xml" /><item>
     <title>WUSTCTF2020 朴实无华</title>
     <link>http://example.org/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
-    <pubDate>Fri, 16 Apr 2021 15:33:32 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Fri, 16 Apr 2021 15:33:32 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
     <description><![CDATA[进入页面直接报错 试试其他的地方，我的习惯是git泄露、请求头、robots.txt、hint.txt都看看。果然在robots下有内容 User-agent: * Disallow:]]></description>
 </item><item>
     <title>GXYCTF2019 Ping Ping Ping</title>
     <link>http://example.org/posts/gxyctf2019ping-ping-ping/</link>
-    <pubDate>Fri, 04 Dec 2020 20:24:50 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Fri, 04 Dec 2020 20:24:50 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/gxyctf2019ping-ping-ping/</guid>
     <description><![CDATA[[GXYCTF2019]Ping Ping Ping题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping 和]]></description>
 </item><item>
     <title>DMCTF之Web</title>
     <link>http://example.org/posts/dmctf%E4%B9%8Bweb/</link>
-    <pubDate>Sun, 29 Nov 2020 23:17:50 &#43;0000</pubDate><author>
-        <name>作者</name>
+    <pubDate>Sun, 29 Nov 2020 23:17:50 &#43;0800</pubDate><author>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/dmctf%E4%B9%8Bweb/</guid>
     <description><![CDATA[前言比赛地址：http://dmctf.vaala.cloud:81 这次先写Web题目部分，我最后的排名： Webweak_type源码： 1 2]]></description>
 </item><item>
     <title>极客大挑战 2019 RCE ME</title>
     <link>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
-        <name>作者</name>
+        <name>Braindance</name>
     </author><guid>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
     <description><![CDATA[[极客大挑战 2019]RCE ME源码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过]]></description>
 </item></channel>
