@@ -6,6 +6,11 @@ cover: 'https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/202011161600
 date: 2020-11-30 09:54:11
 ---
 
+2022年2月3日22:41:32
+
+**！！！！！**
+
+**建议直接看文章末尾，我发现我就是个笨比。**
 
 # 前言
 
@@ -49,7 +54,9 @@ PicGo上传成功以后可以自动复制url，但是默认复制的图片链接
 
 软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了`$filename`变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是`png`格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接<kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd>，把图片链接贴里面就彳亍了。<span class='heimu'>~~白嫖真爽~~</span>
 
-## 2022-1-31 11:43:48
+---
+
+2022-1-31 11:43:48
 
 这时候发现自定义链接直接用markdown格式就更好了
 
@@ -57,3 +64,18 @@ PicGo上传成功以后可以自动复制url，但是默认复制的图片链接
 ![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)
 ```
 
+---
+
+# 最简单修改
+
+前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。
+
+![image-20220203224558136](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/202202032246055.png)
+
+直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的
+
+```other
+https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master
+```
+
+然后返回的链接就会把原来的`raw.github.com/xxxxxx`给替代了。
