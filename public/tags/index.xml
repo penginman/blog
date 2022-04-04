@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - Braindance</title>
-        <link>http://example.org/tags/</link>
+        <link>https://www.braindance.top/tags/</link>
         <description>Tags - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 31 Jan 2022 11:31:54 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 31 Jan 2022 11:31:54 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/" rel="self" type="application/rss+xml" /><item>
     <title>博客搬迁</title>
-    <link>http://example.org/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
+    <link>https://www.braindance.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
     <pubDate>Mon, 31 Jan 2022 11:31:54 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
+    </author><guid>https://www.braindance.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>php原生类</title>
-    <link>http://example.org/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</link>
+    <link>https://www.braindance.top/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</link>
     <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</guid>
+    </author><guid>https://www.braindance.top/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>sql注入</title>
-    <link>http://example.org/tags/sql%E6%B3%A8%E5%85%A5/</link>
+    <link>https://www.braindance.top/tags/sql%E6%B3%A8%E5%85%A5/</link>
     <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/sql%E6%B3%A8%E5%85%A5/</guid>
+    </author><guid>https://www.braindance.top/tags/sql%E6%B3%A8%E5%85%A5/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Web</title>
-    <link>http://example.org/tags/web/</link>
+    <link>https://www.braindance.top/tags/web/</link>
     <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/web/</guid>
+    </author><guid>https://www.braindance.top/tags/web/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>SSI注入</title>
-    <link>http://example.org/tags/ssi%E6%B3%A8%E5%85%A5/</link>
+    <link>https://www.braindance.top/tags/ssi%E6%B3%A8%E5%85%A5/</link>
     <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/ssi%E6%B3%A8%E5%85%A5/</guid>
+    </author><guid>https://www.braindance.top/tags/ssi%E6%B3%A8%E5%85%A5/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>反序列化</title>
-    <link>http://example.org/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+    <link>https://www.braindance.top/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
     <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+    </author><guid>https://www.braindance.top/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>RCE</title>
-    <link>http://example.org/tags/rce/</link>
+    <link>https://www.braindance.top/tags/rce/</link>
     <pubDate>Fri, 16 Apr 2021 15:33:32 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/rce/</guid>
+    </author><guid>https://www.braindance.top/tags/rce/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>无列名注入</title>
-    <link>http://example.org/tags/%E6%97%A0%E5%88%97%E5%90%8D%E6%B3%A8%E5%85%A5/</link>
+    <link>https://www.braindance.top/tags/%E6%97%A0%E5%88%97%E5%90%8D%E6%B3%A8%E5%85%A5/</link>
     <pubDate>Thu, 15 Apr 2021 09:55:17 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/%E6%97%A0%E5%88%97%E5%90%8D%E6%B3%A8%E5%85%A5/</guid>
+    </author><guid>https://www.braindance.top/tags/%E6%97%A0%E5%88%97%E5%90%8D%E6%B3%A8%E5%85%A5/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>BUUCTF_Web</title>
-    <link>http://example.org/tags/buuctf_web/</link>
+    <link>https://www.braindance.top/tags/buuctf_web/</link>
     <pubDate>Mon, 18 Jan 2021 16:58:56 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/buuctf_web/</guid>
+    </author><guid>https://www.braindance.top/tags/buuctf_web/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>DMCTF2020</title>
-    <link>http://example.org/tags/dmctf2020/</link>
+    <link>https://www.braindance.top/tags/dmctf2020/</link>
     <pubDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/tags/dmctf2020/</guid>
+    </author><guid>https://www.braindance.top/tags/dmctf2020/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

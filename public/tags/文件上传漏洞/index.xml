@@ -1,42 +1,42 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>文件上传漏洞 - 标签 - Braindance</title>
-        <link>http://example.org/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/</link>
+        <link>https://www.braindance.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/</link>
         <description>文件上传漏洞 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 19 Nov 2020 08:47:19 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 19 Nov 2020 08:47:19 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" rel="self" type="application/rss+xml" /><item>
     <title>Upload-Labs的最后几道题</title>
-    <link>http://example.org/posts/upload-labs5/</link>
+    <link>https://www.braindance.top/posts/upload-labs5/</link>
     <pubDate>Thu, 19 Nov 2020 08:47:19 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/upload-labs5/</guid>
+    </author><guid>https://www.braindance.top/posts/upload-labs5/</guid>
     <description><![CDATA[Pass-17​ （windows环境，php版本5.2.17，题号是18题） 源码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 $is_upload = false; $msg = null;]]></description>
 </item><item>
     <title>Upload-Labs之Pass-16</title>
-    <link>http://example.org/posts/upload-labs4/</link>
+    <link>https://www.braindance.top/posts/upload-labs4/</link>
     <pubDate>Mon, 16 Nov 2020 22:50:25 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/upload-labs4/</guid>
+    </author><guid>https://www.braindance.top/posts/upload-labs4/</guid>
     <description><![CDATA[前言​ 我在这道题上花了快一天的时间，但是也学到了不少姿势，觉得东西应该足够多，而且参考了的博客发现这道题算是有歧义的，不知道作者想要考察的点]]></description>
 </item><item>
     <title>Upload-Labs(三)</title>
-    <link>http://example.org/posts/upload-labs3/</link>
+    <link>https://www.braindance.top/posts/upload-labs3/</link>
     <pubDate>Mon, 16 Nov 2020 16:04:30 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/upload-labs3/</guid>
+    </author><guid>https://www.braindance.top/posts/upload-labs3/</guid>
     <description><![CDATA[前言​ 继续接着上一次的Upload-labs往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久]]></description>
 </item><item>
     <title>Upload-Labs(二)</title>
-    <link>http://example.org/posts/upload-labs2/</link>
+    <link>https://www.braindance.top/posts/upload-labs2/</link>
     <pubDate>Mon, 09 Nov 2020 20:12:27 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/upload-labs2/</guid>
+    </author><guid>https://www.braindance.top/posts/upload-labs2/</guid>
     <description><![CDATA[前言​ 这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18]]></description>
 </item><item>
     <title>Upload-Labs(一)</title>
-    <link>http://example.org/posts/upload-labs1/</link>
+    <link>https://www.braindance.top/posts/upload-labs1/</link>
     <pubDate>Sun, 08 Nov 2020 19:23:16 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/upload-labs1/</guid>
+    </author><guid>https://www.braindance.top/posts/upload-labs1/</guid>
     <description><![CDATA[介绍 大部分的网站和应用系统都有上传功能，而程序员在开发任意文件上传功能时，并未考虑文件格式后缀的合法性校验或者是否只在前端通过js进行后缀检]]></description>
 </item></channel>
 </rss>

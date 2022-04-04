@@ -1,0 +1,254 @@
+---
+title: "Vue学习笔记"
+date: 2022-03-07T18:16:47+08:00
+draft: false
+---
+
+# 理解MVVM
+
+Vue参考的MVVM模型
+
+![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16466499314121646649931302.png)
+
+
+M：模型(Model) ：data中的数据
+V：视图(View) ：模板代码
+VM：视图模型(ViewModel)：Vue实例
+观察发现：
+
+1. data中所有的属性，最后都出现在了vm身上。
+2. vm身上所有的属性及Vue原型上所有属性，在Vue模板中都可以直接使用。
+
+# 数据代理
+
+## 回顾Object.defineProperty方法
+
+```vue
+let number = 18
+object.defineProperty(person,'age',{
+ value:18,
+ enumerable:true，//控制属性是否可以枚举，默认值是false
+ writable:true，//控制属性是否可以被修改，默认值是false
+ configurable:true //控制属性是否可以被删除，默认值是false
+//当有人读取person的age属性时，get函数（getter)就会被调用，且返回值就是age的值
+get(){
+	return number
+},
+//当有人修改person的age属性时，set函数(setter)就会被调用，且会收到修改的具体值
+set(value){
+	number = value
+}
+})
+```
+
+## 数据代理
+
+何为数据代理？通过一个对象来修改另一个对象。
+
+例如，obj={x:100}
+
+obj2={y:200}
+
+使用Object.defineProperty方法，设置obj2的x属性get和set方法与obj绑定
+
+```vue
+Object.defineProperty(obj2,'x',{
+get(){
+return obj.x
+},
+set(value){
+obj.x = value
+}
+})
+```
+
+在script标签里设置的data属性值，绑定的是vm中的_data属性
+
+![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16467060352831646706034381.png)
+
+**Vue中的数据代理：**
+通过vm对象来代理data对象中属性的操作（读/写）
+**Vue中数据代理的好处：**
+更加方便的操作data中的数据
+**基本原理：**
+通过0bject.defineProperty()把data对象中所有属性添加到vm上。为每一个添加到vm上的属性，都指定一个getter/setter。在getter/setter内部去操作（读/写）data中对应的属性。
+
+# 事件处理
+
+## 事件的基本使用：
+
+1. 使用**v-on:xxx** 或 **@xxx** 绑定事件，其中xxx是事件名；
+2. 事件的回调需要配置在methods对象中，最终会在vm上；
+3. methods中配置的函数，不要用箭头函数！否则this就不是vm了；
+4. methods中配置的函数，都是被Vue所管理的函数，this的指向是vm 或 组件实例对象；
+5. @click="demo" 和 @click="demo($event)"效果一致，但后者可以传参；
+5. @click="yyy"，其中yyy可以写一些简单的语句 
+
+## 事件修饰符
+
+使用示例
+
+```html
+<a href="xxx" @click.prevent="showInfo">
+```
+
+event事件中可以使用e.preventDefault()阻止默认事件，vue中可以使用@click.**prevent**='xxx'的修饰方式使用该方法。
+
+**扫盲：**
+
+事件冒泡 ：当一个元素接收到事件的时候 会把他接收到的事件传给自己的父级，一直到window 。（注意这里传递的仅仅是事件 并不传递所绑定的事件函数。所以如果父级没有绑定事件函数，就算传递了事件 也不会有什么表现 但事件确实传递了。）
+
+事件捕获和事件冒泡：DOM2级事件’规定的事件流包含3个阶段，**事件捕获阶段、处于目标阶段、事件冒泡阶段**。首先发生的事件捕获为截获事件提供机会，然后是实际的目标接收事件，最后一个阶段是事件冒泡阶段，可以在这个阶段对事件做出响应。https://www.cnblogs.com/christineqing/p/7607113.html
+
+![](https://images2017.cnblogs.com/blog/1174211/201712/1174211-20171201225153933-1205737719.png)
+
+
+
+**Vue中的事件修饰符：**
+1.prevent：阻止默认事件（常用）；
+2.stop：阻止事件冒泡（常用）；
+3.once：事件只触发一次（常用）；
+4.capture：使用事件的捕获模式（捕获阶段就执行函数）；
+5.self：只有event.target是当前操作的元素时才触发事件；
+6.passive：事件的默认行为立即执行，无需等待事件回调执行完毕（比如scroll和wheel事件，wheel回调函数很麻烦的时候，可以使用passive优先执行滚轮默认行为）；
+
+## 键盘事件
+
+使用方法示例
+
+```vue
+<input @keydown.enter="showInfo">
+```
+
+* Vue中常用的按键别名：
+  回车 => enter
+  删除 => delete（捕获“删除”和“退格）
+  退出 => esc
+  空格 => space
+  换行 => tab（特殊，必须配合keydown去使用）
+  上 => up
+  下 => down
+  左 => left
+  右 => right
+* Vue未提供别名的按键，可以使用按键原始的key值去绑定，但注意要keyab-case（驼峰命名改为短横线命名）
+* 系统修饰键（用法特殊）：ctrl、alt、shift、meta
+
+1. 配合keyup使用：按下修饰键的同时，再按下其他键，随后释放其他键，事件才被触发。
+2. 配合keydown使用：正常触发事件。
+
+* 也可以使用keyCode去指定具体的按键（不推荐）
+* Vue.config.keyCodes.自定义键名 = 键去定制按键别名
+
+## 小tips
+
+修饰符可以连续写比如`@click.prevent.stop`和`@keydown.ctrl.y`
+
+# 计算属性
+
+vue中绑定的数据修改时，vue会重新解析模板。
+
+使用示例
+
+```
+computed{
+ fullName:{
+ 	get(){
+ 		return firstName + lastName
+ 	}
+ }
+}
+```
+
+
+
+计算属性**定义**：根据**已有的属性**进行一些计算加工生成的新属性就叫计算属性。使用配置项`computed`，计算属性最终会在`vm`对象身上，但是不在`_data`里。
+
+原理：底层借助了Objcet.defineproperty方法提供的gtter和setter。
+
+计算属性的值使用getter调用，多次调用会使用**缓存**，getter什么时候调用？
+
+1. 初次读取计算属性时
+2. 所依赖的数据发生改变时
+
+如果计算属性要被修改，必须使用set函数响应修改，切记set函数中要修改依赖的属性
+
+## 简写
+
+确定只读取不修改可以使用简写模式。示例
+
+```
+fullNmae(){
+	return 
+}
+```
+
+# 监视属性
+
+配置对象`watch:{}`，代码示例
+
+```
+watch：{
+	isHot:{
+		immediate:true，//初始化时让handler调用一下
+		//handler什么时候调用？当isHot发生改变时。
+		handler(newValue,oldValue){
+			console.log("isHot被修改了',newValue,oldValue)
+			}
+		}
+	}
+```
+
+监视属性也可以监视**计算属性**，监视属性的另一种写法
+
+```
+vm.$wathc('变量名',{配置项同上
+
+})
+```
+
+# 深度监视
+
+Vue中的watch默认不监测对象内部值的改变，配置`deep:true`可以监测对象内部值的改变。Vue自身可以监测对象内部值的改变，但是Vue提供的watch默认不可以，使用watch的时候根据数据的具体结构，决定是否采用深度监视。
+
+有简写形式
+
+# 监视属性vs计算属性
+
+还是要看具体需求。
+
+1. computed能完成的功能，watch都可以完成。
+2. watch能完成的功能，computed不一定能完成，例如：watch可以进行异步操作。
+
+两个重要的小原则：
+
+1. 所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm 或 组件实例对象。
+2. 所有不被Vue所管理的函数（定时器的回调函数、ajax的回调函数等），最好写成箭函数，这样this的指向才是vm或组件实例对象。
+
+# 绑定样式
+
+1. class样式
+   写法：class="xxx" xxx可以是字符串、对象、数组。
+   字符串写法适用于：类名不确定，要动态获取。
+   对象写法适用于：要绑定多个样式，个数不确定，名字也不确定。
+   数组写法适用于：要绑定多个样式，个数确定，名字也确定，但不确定用不用。
+2. style样式
+   :style="{fontSize：xxx}"其中xxx是动态值。
+   :style="[a,b]"其中a、b是样式对象。
+
+# 条件渲染
+
+`v-if`写法：
+(1).v-if="表达式"
+(2)v-else-if="表达式"
+(3).v-else="表达式"
+适用于：切换频率**较低**的场景。
+特点：不展示的DOM元素直接被移除。
+注意：v-if可以和:v-else-if、v-else一起使用，但要求结构不能被“打断”。
+
+`v-show`写法：v-show="表达武"
+适用于：切换频率**较高**的场景。
+特点：不展示的DOM元素未被移除，仅仅是使用样式隐藏掉。
+
+备注：使用v-if的时，元素可能无法获取到，而使用v-show一定可以获取到。
+
+还有一个点if和template配合使用保持原来的html结构

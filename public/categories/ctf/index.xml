@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>CTF - 分类 - Braindance</title>
-        <link>http://example.org/categories/ctf/</link>
+        <link>https://www.braindance.top/categories/ctf/</link>
         <description>CTF - 分类 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/ctf/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/ctf/" rel="self" type="application/rss+xml" /><item>
     <title>CISCN线上赛库存</title>
-    <link>http://example.org/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+    <link>https://www.braindance.top/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
     <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+    </author><guid>https://www.braindance.top/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
     <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合]]></description>
 </item><item>
     <title>ReadlezPHP&amp;EasySearch</title>
-    <link>http://example.org/posts/readlezphpeasysearch/</link>
+    <link>https://www.braindance.top/posts/readlezphpeasysearch/</link>
     <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/readlezphpeasysearch/</guid>
+    </author><guid>https://www.braindance.top/posts/readlezphpeasysearch/</guid>
     <description><![CDATA[ReadlezPHP源码找到time.php?source 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;?php #error_reporting(0); class HelloPhp { public $a; public $b; public function __construct(){ $this-&gt;a = &#34;Y-m-d h:i:s&#34;;]]></description>
 </item><item>
     <title>极客大挑战 2019 FinalSQL</title>
-    <link>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</link>
+    <link>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</link>
     <pubDate>Sun, 18 Apr 2021 19:11:51 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</guid>
+    </author><guid>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</guid>
     <description><![CDATA[还是同一场比赛的界面 这次测试了下面的登陆框已经不能用了，无论怎么输入都是同一个回显：你可别被我逮住了，臭弟弟，测试上面的序号，注意此时的ur]]></description>
 </item><item>
     <title>WUSTCTF2020 朴实无华</title>
-    <link>http://example.org/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
+    <link>https://www.braindance.top/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
     <pubDate>Fri, 16 Apr 2021 15:33:32 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
+    </author><guid>https://www.braindance.top/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
     <description><![CDATA[进入页面直接报错 试试其他的地方，我的习惯是git泄露、请求头、robots.txt、hint.txt都看看。果然在robots下有内容 User-agent: * Disallow:]]></description>
 </item><item>
     <title>SWPU2019 Web1</title>
-    <link>http://example.org/posts/swpu2019web1/</link>
+    <link>https://www.braindance.top/posts/swpu2019web1/</link>
     <pubDate>Thu, 15 Apr 2021 09:55:17 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/swpu2019web1/</guid>
+    </author><guid>https://www.braindance.top/posts/swpu2019web1/</guid>
     <description><![CDATA[一个登陆界面，再看下url地址为login.php，确认了使用的是php 直接查看源码，在源码中找到了register.php。先注册一个进去]]></description>
 </item><item>
     <title>BUUCTF寒假刷题-Web</title>
-    <link>http://example.org/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+    <link>https://www.braindance.top/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
     <pubDate>Mon, 18 Jan 2021 16:58:56 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+    </author><guid>https://www.braindance.top/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
     <description><![CDATA[寒假横向刷题（尽量） BUUCTF 💗🧡💛💚💙💜🤎🖤🤍 题都写这一个里面了，可以先用Ctrl+F搜索，还有部分是草稿还没有整理，不过我认为的思路已经整理出来]]></description>
 </item><item>
     <title>DMCTF之Misc</title>
-    <link>http://example.org/posts/dmctf%E4%B9%8Bmisc/</link>
+    <link>https://www.braindance.top/posts/dmctf%E4%B9%8Bmisc/</link>
     <pubDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/dmctf%E4%B9%8Bmisc/</guid>
+    </author><guid>https://www.braindance.top/posts/dmctf%E4%B9%8Bmisc/</guid>
     <description><![CDATA[前言这次比赛是第一次做Mics的题awa。 MiscCheck_in真·有手就行 fakezip看到题目fakezip翻译：假的压缩包，所以猜应]]></description>
 </item><item>
     <title>DMCTF之Web</title>
-    <link>http://example.org/posts/dmctf%E4%B9%8Bweb/</link>
+    <link>https://www.braindance.top/posts/dmctf%E4%B9%8Bweb/</link>
     <pubDate>Sun, 29 Nov 2020 23:17:50 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/dmctf%E4%B9%8Bweb/</guid>
+    </author><guid>https://www.braindance.top/posts/dmctf%E4%B9%8Bweb/</guid>
     <description><![CDATA[前言比赛地址：http://dmctf.vaala.cloud:81 这次先写Web题目部分，我最后的排名： Webweak_type源码： 1 2]]></description>
 </item><item>
     <title>Hackgame2020(二)</title>
-    <link>http://example.org/posts/hackgame20202/</link>
+    <link>https://www.braindance.top/posts/hackgame20202/</link>
     <pubDate>Thu, 05 Nov 2020 09:29:22 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/hackgame20202/</guid>
+    </author><guid>https://www.braindance.top/posts/hackgame20202/</guid>
     <description><![CDATA[一闪而过的Flag​ 根据题目信息程序每次运行时隐约可见黑色控制台上有 flag 一闪而过，我想到了应该能看程序的代码啥的找到，但是天下武功，唯快不破，]]></description>
 </item><item>
     <title>Hackgame2020(一)</title>
-    <link>http://example.org/posts/hackgame20201/</link>
+    <link>https://www.braindance.top/posts/hackgame20201/</link>
     <pubDate>Sun, 01 Nov 2020 18:33:40 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>http://example.org/posts/hackgame20201/</guid>
+    </author><guid>https://www.braindance.top/posts/hackgame20201/</guid>
     <description><![CDATA[前言比赛地址：https://hack.lug.ustc.edu.cn/ web签到题​ 第一题是flag提取器，打开题目以后页面是一个提取器下]]></description>
 </item></channel>
 </rss>
