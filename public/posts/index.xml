@@ -25,6 +25,20 @@
     </author><guid>https://www.braindance.top/posts/css%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[选择器 element p 选择所有 &lt;p&gt; 元素。 element.class p.intro 选择 class=&ldquo;intro&rdquo; 的所有 &lt;p&gt; 元素。 element,element div, p 选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。 element element div p 选择 &lt;div&gt; 元素内的所有 &lt;p&gt; 元素。 element&gt;element div &gt; p 选择父元素是 &lt;div&gt;]]></description>
 </item><item>
+    <title>2021年度总结</title>
+    <link>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+    <pubDate>Mon, 07 Feb 2022 11:04:02 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[已经二月才写年度总结的估计只有我把，纯纯的懒狗一条。 个人总结学业因为加入了学校组织的DROPS集训队，整个人都把精力投入在里面了，然后把自己]]></description>
+</item><item>
+    <title>2021年度日记</title>
+    <link>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</link>
+    <pubDate>Thu, 03 Feb 2022 09:47:43 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</guid>
+    <description><![CDATA[新年快乐🤗年度总结被拖到了农历的年。。。确实是自己懒得离谱（确实懒嗷，这篇文章写了四天了）。年前想写但是又想迁移博客，所以没干，年后家里又置]]></description>
+</item><item>
     <title>博客搬迁</title>
     <link>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
     <pubDate>Mon, 31 Jan 2022 11:31:54 &#43;0800</pubDate><author>
@@ -39,6 +53,13 @@
     </author><guid>https://www.braindance.top/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
     <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合]]></description>
 </item><item>
+    <title>用的顺手的网站</title>
+    <link>https://www.braindance.top/posts/%E7%94%A8%E7%9A%84%E9%A1%BA%E6%89%8B%E7%9A%84%E7%BD%91%E7%AB%99/</link>
+    <pubDate>Sat, 31 Jul 2021 08:52:16 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/%E7%94%A8%E7%9A%84%E9%A1%BA%E6%89%8B%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
+    <description><![CDATA[工具网站nginx配置生成 万词王 WantWords Learn Git Branching 视频解析接口https://vip.parwix.com:4433/player/?url= 云短信、]]></description>
+</item><item>
     <title>ReadlezPHP&amp;EasySearch</title>
     <link>https://www.braindance.top/posts/readlezphpeasysearch/</link>
     <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</pubDate><author>
@@ -52,26 +73,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</guid>
     <description><![CDATA[还是同一场比赛的界面 这次测试了下面的登陆框已经不能用了，无论怎么输入都是同一个回显：你可别被我逮住了，臭弟弟，测试上面的序号，注意此时的ur]]></description>
-</item><item>
-    <title>WUSTCTF2020 朴实无华</title>
-    <link>https://www.braindance.top/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
-    <pubDate>Fri, 16 Apr 2021 15:33:32 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
-    <description><![CDATA[进入页面直接报错 试试其他的地方，我的习惯是git泄露、请求头、robots.txt、hint.txt都看看。果然在robots下有内容 User-agent: * Disallow:]]></description>
-</item><item>
-    <title>SWPU2019 Web1</title>
-    <link>https://www.braindance.top/posts/swpu2019web1/</link>
-    <pubDate>Thu, 15 Apr 2021 09:55:17 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/swpu2019web1/</guid>
-    <description><![CDATA[一个登陆界面，再看下url地址为login.php，确认了使用的是php 直接查看源码，在源码中找到了register.php。先注册一个进去]]></description>
-</item><item>
-    <title>BUUCTF寒假刷题-Web</title>
-    <link>https://www.braindance.top/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
-    <pubDate>Mon, 18 Jan 2021 16:58:56 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
-    <description><![CDATA[寒假横向刷题（尽量） BUUCTF 💗🧡💛💚💙💜🤎🖤🤍 题都写这一个里面了，可以先用Ctrl+F搜索，还有部分是草稿还没有整理，不过我认为的思路已经整理出来]]></description>
 </item></channel>
 </rss>
