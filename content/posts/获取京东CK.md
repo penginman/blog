@@ -12,7 +12,7 @@ draft: false
 >
 > XXX为占位符
 
-CK提交地址：http://42.192.83.222:2332
+CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 
 # PC端获取CK
 
@@ -34,11 +34,11 @@ CK提交地址：http://42.192.83.222:2332
 
 登陆成功以后
 
-按F12打开开发者工具选择**Network（网络）**，在下方**名称（Name）**里随便找有完整cookie的。在右边**标头（header）**下的cookie中找到如**`pt_key=XXX; pt_pin=XXX;`**格式的就是需要的cookie。
+按F12打开开发者工具选择**Network（网络）**，在下方**名称（Name）**里随便找有完整cookie的。在右边**标头（header）**下的cookie中找到如`pt_key=XXX; pt_pin=XXX;`格式的就是需要的cookie。
 
 ![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652105174078QQ%E5%9B%BE%E7%89%8720220509220548.png)
 
-然后在http://42.192.83.222:2332中提交CK，服务器建议`腾讯云`，变量组为`JD_COOKIE`，备注填个我能认出来你的，CK失效的时候我会根据这个通知你，或者你自己记得一个月要来提交一次。
+然后在[http://42.192.83.222:2332](http://42.192.83.222:2332)中提交CK，服务器建议`腾讯云`，变量组为`JD_COOKIE`，备注填个我能认出来你的，CK失效的时候我会根据这个通知你，或者你自己记得一个月要来提交一次。
 
 ![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16521053935521652105392592.png)
 
@@ -55,13 +55,13 @@ copy(CookieValue);
 
 控制台里有输出就算成功了，会直接复制到剪切板。
 
-如果看不懂我说的，看看这篇文章方法更全：https://w37fhy.cn/2379.html
+如果看不懂我说的，看看这篇文章方法更全：[https://w37fhy.cn/2379.html](https://w37fhy.cn/2379.html)
 
 # 手机端获取CK(Android)
 
-下载apk：https://www.aliyundrive.com/s/rbjgkpBY9eb
+下载apk：[https://www.aliyundrive.com/s/rbjgkpBY9eb](https://www.aliyundrive.com/s/rbjgkpBY9eb)
 
-打开以后直接登陆，登陆完成以后会直接弹出抓取结果，然后复制CK提交到网页http://42.192.83.222:2332中即可。
+打开以后直接登陆，登陆完成以后会直接弹出抓取结果，然后复制CK提交到网页[http://42.192.83.222:2332](http://42.192.83.222:2332)中即可。
 
 ![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652107556707QQ%E6%88%AA%E5%9B%BE20220509224405.png)
 
