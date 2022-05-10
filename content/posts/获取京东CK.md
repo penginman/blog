@@ -1,6 +1,8 @@
 ---
 title: "获取京东CK教程"
 date: 2022-05-09T21:40:49+08:00
+categories: ['瞎折腾']
+tags: ['京东薅羊毛']
 draft: false
 ---
 
@@ -34,7 +36,9 @@ CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 
 登陆成功以后
 
-按F12打开开发者工具选择**Network（网络）**，在下方**名称（Name）**里随便找有完整cookie的。在右边**标头（header）**下的cookie中找到如`pt_key=XXX; pt_pin=XXX;`格式的就是需要的cookie。
+按F12打开开发者工具选择**Network（网络）**，请注意要拦截所有的请求（只要能找到cookie就可），在下方**名称（Name）**里随便选一个找有完整cookie的。在右边**标头（header）**下的cookie中找到如`pt_key=XXX; pt_pin=XXX;`格式的就是需要的cookie。
+
+> **如果你的名称列表里面是空的**，随便点一个页面中的其他按钮，浏览器就会捕获请求
 
 ![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652105174078QQ%E5%9B%BE%E7%89%8720220509220548.png)
 
@@ -67,4 +71,19 @@ copy(CookieValue);
 
 完工。
 
-如果觉得我说的很啰嗦就是因为最近在写毕业论文，废话文学了属于是。
+# 额外服务(一对一通知)
+
+可以每天看自己的资产，有商品领取提醒，cookie失效的时候可以及时收到通知。
+
+以下内容使用微信打开，或者复制到浏览器打开（虽然是二维码，但是会动态刷新，所以自行打开）
+
+[//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg](//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg)
+
+关注微信公众号
+
+![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652154472985E}{9OJS7T2454WO88}[9KK6.png)
+
+扫码关注以后，提示已经**订阅应用京东**，然后点击下面我的--->我的UID，会返回你唯一的UID，我只能通过这个UID来通知你你的账号信息。请提交的时候备注附上，格式如`@@你的UID`
+
+>  如果觉得我说的很啰嗦就是因为最近在写毕业论文，废话文学了属于是。
+
