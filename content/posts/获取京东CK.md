@@ -6,23 +6,41 @@ tags: ['京东薅羊毛']
 draft: false
 ---
 
-## 获取京东CK
+获取京东CK(cookie)并提交到上车面板。教程分为不啰嗦版本和详细版本。
 
-获取京东CK(cookie)并提交到上车面板。教程分为三部分分别是，PC端获取CK，接受一对一薅羊毛通知，最后是安装APP获取CK。
-
-> cookie的格式为：pt_key=XXX; pt_pin=XXX;
+> 提交的cookie的格式为：pt_key=XXX; pt_pin=XXX;
 >
-> XXX为占位符
 
 CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 
-## PC端获取CK
+## 不啰嗦版本
+
+1. [多快好省，购物上京东！](http://plogin.m.jd.com/login/login)登录，验证码能通过的！！实在折磨请用下面[Android方法](#Android手机端获取CK)
+
+   > 如果你要登陆**多个号**请使用浏览器无痕模式（谷歌浏览器快捷键<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>），不要退出登录！！不要退出登录！！不要退出登录！！退出登录会使cookie失效！！抓完直接关掉再打开个无痕即可
+
+2. F12打开开发者工具。按照以下步骤抓CK
+
+![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652160176277QQ%E5%9B%BE%E7%89%8720220510132212.png)
+
+3. 获取[一对一通知](#一对一通知)UID，可以多个账号对应一个UID，自行琢磨。
+4. 在页面中第一行提交CK。第二行提交备注格式为`备注@@获取的UID`
+
+说明一下中间的`@@`不能去掉，是分隔符。备注是用来标注你的哪个京东号，比如`小号1@@UUUIIIIDDDD1`、`小号2@UUUIIIDDD2`。
+
+![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16521053935521652105392592.png)
+
+如果在操作中遇到其他问题，看看详细版本。
+
+## 详细版本
+
+### PC端获取CK
 
 登陆地址：[多快好省，购物上京东！](http://plogin.m.jd.com/login/login)
 
 > 首先告知。
 >
-> 如果你有多个号登陆，请使用浏览器的无痕浏览，或是更换浏览器抓取，因为京东的cookie在登出以后就会失效。
+> 如果你有**多个号**登陆，请使用浏览器的无痕浏览，或是更换浏览器抓取，因为京东的cookie在登出以后就会失效。
 >
 > 使用无痕浏览登陆抓完直接关闭，再打开新的无痕浏览抓下一个。
 >
@@ -40,7 +58,7 @@ CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 
 > **如果你的名称列表里面是空的**，随便点一个页面中的其他按钮，浏览器就会捕获请求
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652105174078QQ%E5%9B%BE%E7%89%8720220509220548.png)
+![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652160176277QQ%E5%9B%BE%E7%89%8720220510132212.png)
 
 然后在[http://42.192.83.222:2332](http://42.192.83.222:2332)中提交CK，服务器建议`腾讯云`，变量组为`JD_COOKIE`，备注可以选择下方的[一对一通知](#一对一通知)方式，CK失效的时候我会根据这个通知你，或者你自己记得一个月要来提交一次。
 
@@ -61,11 +79,21 @@ copy(CookieValue);
 
 如果看不懂我说的，看看这篇文章方法更全：[https://w37fhy.cn/2379.html](https://w37fhy.cn/2379.html)
 
+### Android手机端获取CK
+
+下载apk：[https://www.aliyundrive.com/s/rbjgkpBY9eb](https://www.aliyundrive.com/s/rbjgkpBY9eb)
+
+打开以后直接登陆，登陆完成以后会直接弹出抓取结果，然后复制CK提交到网页[http://42.192.83.222:2332](http://42.192.83.222:2332)中，别忘了备注。
+
+![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652107556707QQ%E6%88%AA%E5%9B%BE20220509224405.png)
+
+完工。
+
 ## 一对一通知
 
 可以每天看自己的资产，有商品领取提醒，cookie失效的时候可以及时收到通知。
 
-以下内容使用微信打开，或者复制到浏览器打开（虽然是二维码，但是会动态刷新，所以自行打开）
+以下内容使用微信打开，或者复制到浏览器打开（里面虽然是二维码，但是会动态刷新，所以自行打开）
 
 [//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg](//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg)
 
@@ -73,17 +101,7 @@ copy(CookieValue);
 
 ![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652154472985E}{9OJS7T2454WO88}[9KK6.png)
 
-扫码关注以后，提示已经**订阅应用京东**，然后点击下面我的--->我的UID，会返回你唯一的UID，我只能通过这个UID来通知你你的账号信息。请提交的时候附上备注，格式如`你的备注@@你的UID`。
-
-## 手机端获取CK(Android)
-
-下载apk：[https://www.aliyundrive.com/s/rbjgkpBY9eb](https://www.aliyundrive.com/s/rbjgkpBY9eb)
-
-打开以后直接登陆，登陆完成以后会直接弹出抓取结果，然后复制CK提交到网页[http://42.192.83.222:2332](http://42.192.83.222:2332)中即可。
-
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652107556707QQ%E6%88%AA%E5%9B%BE20220509224405.png)
-
-完工。
+扫码关注以后，提示已经**订阅应用京东**，然后点击下面我的--->我的UID，会返回你唯一的UID，我只能通过这个UID来通知你你的账号信息。请提交的时候附上备注，格式如`备注@@获取的UID`。
 
 >  如果觉得我说的很啰嗦就是因为最近在写毕业论文，废话文学了属于是。
 
