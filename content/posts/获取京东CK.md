@@ -21,14 +21,14 @@ CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 
 2. F12打开开发者工具。按照以下步骤抓CK
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652160176277QQ%E5%9B%BE%E7%89%8720220510132212.png)
+![](https://img.braindance.top/artical/2022/05/23/a6de8b0d47c1f9e6da9901fa6302b9d1.png)
 
 3. 获取[一对一通知(点我跳转)](#一对一通知)UID进行通知，可以多个账号对应一个UID，自行琢磨。晚上21.30消息通知。
 4. 在页面中第一行提交CK。第二行提交备注格式为`备注@@获取的UID`
 
 说明一下中间的`@@`不能去掉，是分隔符。备注是用来标注你的哪个京东号，比如`小号1@@UUUIIIIDDDD1`、`小号2@UUUIIIDDD2`。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16521053935521652105392592.png)
+![](https://img.braindance.top/artical/2022/05/23/95099e1284b0a1f8468ab07484669b73.png)
 
 如果在操作中遇到其他问题，看看详细版本。
 
@@ -46,11 +46,11 @@ CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 >
 > 京东cookie手机登陆方式有效期为一个月左右。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16521042625541652104262122.png)
+![](https://img.braindance.top/artical/2022/05/23/60ca438912915bd3d85e120c7ff2b3c9.png)
 
 输入手机号，获取验证码登陆。如果是手势验证码，失败很多次别灰心，~~手稳一点~~，是可以验证通过的。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652104507214QQ%E5%9B%BE%E7%89%8720220509215454.png)
+![](https://img.braindance.top/artical/2022/05/23/158385932aae43828c986635aca1640b.png)
 
 登陆成功以后
 
@@ -58,11 +58,11 @@ CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 
 > **如果你的名称列表里面是空的**，随便点一个页面中的其他按钮，浏览器就会捕获请求
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652160176277QQ%E5%9B%BE%E7%89%8720220510132212.png)
+![](https://img.braindance.top/artical/2022/05/23/a6de8b0d47c1f9e6da9901fa6302b9d1.png)
 
 然后在[http://42.192.83.222:2332](http://42.192.83.222:2332)中提交CK，服务器建议`腾讯云`，变量组为`JD_COOKIE`，备注可以选择下方的[一对一通知](#一对一通知)方式，CK失效的时候我会根据这个通知你，或者你自己记得一个月要来提交一次。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16521053935521652105392592.png)
+![](https://img.braindance.top/artical/2022/05/23/95099e1284b0a1f8468ab07484669b73.png)
 
 完工。
 
@@ -99,7 +99,7 @@ copy(CookieValue);
 
 关注微信公众号
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652154472985E}{9OJS7T2454WO88}[9KK6.png)
+![](https://img.braindance.top/artical/2022/05/23/0a327072bd48649d1d45835d577d6812.png)
 
 扫码关注以后，提示已经**订阅应用京东**，然后点击下面我的--->我的UID，会返回你唯一的UID，我只能通过这个UID来通知你你的账号信息。请提交的时候附上备注，格式如`备注@@获取的UID`。
 
