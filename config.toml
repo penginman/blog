@@ -159,7 +159,7 @@ theme = "DoIt"
       Twitter = true
 
   [params.cdn]
-    data = "jsdelivr.yml"
+    # data = "jsdelivr.yml"
 
   [params.page.comment]
     enable = true
