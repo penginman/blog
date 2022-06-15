@@ -4,11 +4,11 @@
         <link>https://www.braindance.top/tags/%E5%9B%BE%E5%BA%8A/</link>
         <description>图床 - 标签 - Braindance</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 01 May 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E5%9B%BE%E5%BA%8A/" rel="self" type="application/rss+xml" /><item>
-    <title>获取京东CK教程</title>
-    <link>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB-/</link>
+    <title>博客图床迁移</title>
+    <link>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB-/</guid>
+    </author><guid>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
     <description><![CDATA[起因原来博客的图片使用Jsdelivr和github的方式存储访问，但是最近Jsdelivr频繁的被墙，感觉可能在未来的不久会失效，毕竟好多]]></description>
 </item><item>
     <title>PicGo复制自定义链接</title>
