@@ -13,6 +13,10 @@ draft: false
 
 CK提交地址：[http://42.192.83.222:2332](http://42.192.83.222:2332)
 
+## 最新方式（看这个！！）
+
+访问[http://jd.braindance.top](http://jd.braindance.top/)，使用手机验证码登陆，系统自动添加、更新失效cookie，登陆成功以后扫码关注通知应用。
+
 ## 不啰嗦版本
 
 1. [多快好省，购物上京东！](https://m.jd.com)登录，验证码能通过的！！实在折磨请用下面[Android方法](#Android手机端获取CK)
@@ -85,7 +89,7 @@ copy(CookieValue);
 
 打开以后直接登陆，登陆完成以后会直接弹出抓取结果，然后复制CK提交到网页[http://42.192.83.222:2332](http://42.192.83.222:2332)中，别忘了备注。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/1652107556707QQ%E6%88%AA%E5%9B%BE20220509224405.png)
+![](https://img.braindance.top/artical/2022/05/23/1652107556707QQ%E6%88%AA%E5%9B%BE20220509224405.png)
 
 完工。
 
