@@ -4,7 +4,7 @@ date: 2022-03-07T18:16:47+08:00
 draft: false
 ---
 
-# 理解MVVM
+## 理解MVVM
 
 Vue参考的MVVM模型
 
@@ -19,9 +19,9 @@ VM：视图模型(ViewModel)：Vue实例
 1. data中所有的属性，最后都出现在了vm身上。
 2. vm身上所有的属性及Vue原型上所有属性，在Vue模板中都可以直接使用。
 
-# 数据代理
+## 数据代理
 
-## 回顾Object.defineProperty方法
+### 回顾Object.defineProperty方法
 
 ```vue
 let number = 18
@@ -41,7 +41,7 @@ set(value){
 })
 ```
 
-## 数据代理
+### 数据代理
 
 何为数据代理？通过一个对象来修改另一个对象。
 
@@ -73,9 +73,9 @@ obj.x = value
 **基本原理：**
 通过0bject.defineProperty()把data对象中所有属性添加到vm上。为每一个添加到vm上的属性，都指定一个getter/setter。在getter/setter内部去操作（读/写）data中对应的属性。
 
-# 事件处理
+## 事件处理
 
-## 事件的基本使用：
+事件的基本使用：
 
 1. 使用**v-on:xxx** 或 **@xxx** 绑定事件，其中xxx是事件名；
 2. 事件的回调需要配置在methods对象中，最终会在vm上；
@@ -139,11 +139,11 @@ event事件中可以使用e.preventDefault()阻止默认事件，vue中可以使
 * 也可以使用keyCode去指定具体的按键（不推荐）
 * Vue.config.keyCodes.自定义键名 = 键去定制按键别名
 
-## 小tips
+### 小tips
 
 修饰符可以连续写比如`@click.prevent.stop`和`@keydown.ctrl.y`
 
-# 计算属性
+## 计算属性
 
 vue中绑定的数据修改时，vue会重新解析模板。
 
@@ -172,7 +172,7 @@ computed{
 
 如果计算属性要被修改，必须使用set函数响应修改，切记set函数中要修改依赖的属性
 
-## 简写
+### 简写
 
 确定只读取不修改可以使用简写模式。示例
 
@@ -182,7 +182,7 @@ fullNmae(){
 }
 ```
 
-# 监视属性
+## 监视属性
 
 配置对象`watch:{}`，代码示例
 
@@ -206,13 +206,13 @@ vm.$wathc('变量名',{配置项同上
 })
 ```
 
-# 深度监视
+## 深度监视
 
 Vue中的watch默认不监测对象内部值的改变，配置`deep:true`可以监测对象内部值的改变。Vue自身可以监测对象内部值的改变，但是Vue提供的watch默认不可以，使用watch的时候根据数据的具体结构，决定是否采用深度监视。
 
 有简写形式
 
-# 监视属性vs计算属性
+## 监视属性vs计算属性
 
 还是要看具体需求。
 
@@ -224,7 +224,7 @@ Vue中的watch默认不监测对象内部值的改变，配置`deep:true`可以�
 1. 所被Vue管理的函数，最好写成普通函数，这样this的指向才是vm 或 组件实例对象。
 2. 所有不被Vue所管理的函数（定时器的回调函数、ajax的回调函数等），最好写成箭函数，这样this的指向才是vm或组件实例对象。
 
-# 绑定样式
+## 绑定样式
 
 1. class样式
    写法：class="xxx" xxx可以是字符串、对象、数组。
@@ -235,7 +235,7 @@ Vue中的watch默认不监测对象内部值的改变，配置`deep:true`可以�
    :style="{fontSize：xxx}"其中xxx是动态值。
    :style="[a,b]"其中a、b是样式对象。
 
-# 条件渲染
+## 条件渲染
 
 `v-if`写法：
 (1).v-if="表达式"
@@ -253,7 +253,7 @@ Vue中的watch默认不监测对象内部值的改变，配置`deep:true`可以�
 
 还有一个点if和template配合使用保持原来的html结构
 
-# 列表渲染
+## 列表渲染
 
 v-for指令：
 
@@ -261,7 +261,7 @@ v-for指令：
 2. 语法：v-for="(item,index)in xxx'":key="yyy"
 3. 可遍历：数组、对象、字符串（用的很少）、指定次数(用的很少)
 
-# key的作用和原理
+key的作用和原理
 
 面试题：react、vue中的key有什么作用？(key的内部原理)
 
@@ -288,3 +288,109 @@ v-for指令：
 3. 开发中如何选择key？
    最好使用每条数据的唯一标识作为key，比如id、手机号、身份证号、学号等唯一值。
    如果不存在对数据的逆序添加、逆序则除等破坏顺序操作，仅用于渲染列表用于展示，使用index作为key是没有问题的。
+
+![](https://img.braindance.top/artical/2022/06/15/684dd822cdc7d26d5e587df6a93c9a0d.png) 
+
+## 列表排序&过滤
+
+能用computed的就不用watch
+
+## 监测数据的原理
+
+### 对象的检测
+
+首先对data数据进行加工，设置响应式的getter和setter，大概的核心代码如下
+
+```javascript
+let data = {
+  name:"xx",
+  address:"dd"
+}
+
+const obs = new Observer(data)
+
+let vm={}
+vm._data = data = obs
+
+function Observer(obj){
+  //汇总对象里的属性形成一个数组
+  keys = Object.keys(obj)
+  //遍历
+  keys.forEach(k => {
+    Object.defineProperties(this,k,{
+      get(){
+        return obj[k]
+      },
+      set(val){
+        //Vue重新模板解析
+        obj[k] = val
+      }
+    })
+  });
+}
+```
+
+并且Vue底层使用递归的方式对所有嵌套的对象属性都进行了数据监测方法的加工。
+
+Vue提供了一个API的set方法`Vue.set()`或`vm.$set()`，可以为已经创建的对象添加响应式的属性。传入参数列表：target，key，val。局限性：**target对象不能是Vue实例或者Vue实例的根数据对象**。
+
+### 数据的检测
+
+通过**包裹**数组中更新元素的方法实现，本质上做了两件事
+
+1. 调用原型中的数组更新方法
+2. Vue重新进行模板解析，更新页面
+
+Vue包裹的7种方法：
+
+- `push()`
+- `pop()`
+- `shift()`
+- `unshift()`
+- `splice()`
+- `sort()`
+- `reverse()`
+
+也可以使用Vue提供的API：`Vue.set()`或`vm.$set()`
+
+## 收集表单数据
+
+根据`<input>`标签的类型不同，v-model收集的值也不同，分为以下几种情况
+
+* text类型。收集的是value属性
+* radio类型。收集的同样是value属性，但是需要给标签配置value值并成组
+* checkbox类型。如果没有配置value属性，收集的是选项框的`checked`属性。如果配置了value属性，根据v-model绑定属性的初始值不同有两种情况：1.绑定属性初始值为**非数组**，收集的是checked属性。2.绑定属性为数组，收集的就是value组成的数组
+
+v-model的三个常用修饰符：
+
+* lazy。输入框失去焦点时收集数据
+* number。输入字符串为有效数字
+* trim。过滤首尾空格
+
+## 过滤器
+
+对数据进行格式化显示。语法：
+
+注册过滤器：全局注册Vue.filter(name,callback) 或 局部注册new Vue{filters{}}
+
+使用过滤器：{{xxx | filter}} 或 v-bind:属性 = xxx | filter
+
+过滤器可以接受多个参数，第一个默认是管道符前的数据。多个管道符可以串联（按顺序调用）
+
+## 内置指令
+
+v-bind：单项绑定解析表达式可以简写为`:xxx`
+
+v-model：双向绑定数据
+
+v-for：遍历数组/字符串/对象
+
+v-on：绑定事件监听，可以简写为`@`
+
+v-if（v-else）：条件渲染
+
+v-show：控制节点是否展示
+
+v-test：所在节点渲染文本内容。和插值语法区别，前者会直接替换掉节点里的内容，插值语法不会。
+
+v-html：向所在节点渲染包含html结构的内容。指令可以识别html结构。但是要注意XSS攻击
