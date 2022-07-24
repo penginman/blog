@@ -2,7 +2,7 @@
 title: Upload-Labs的最后几道题
 categories: ['DROPS']
 tags: ['文件上传漏洞']
-cover: 'https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201119174619.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201119174619.jpg'
 date: 2020-11-19 08:47:19
 ---
 
@@ -66,7 +66,7 @@ if __name__=="__main__":
 
 ​	第一次用python的我在这里知道了`pip`。这道题因为要不断的上传和访问文件，所以对在线靶场不友好，所以才选择了本地环境解题。完工
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119090033.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png)
 
 
 
@@ -118,15 +118,15 @@ if (isset($_POST['submit'])) {
 
 ​	源码第七行使用了**POST**来接受文件的命名，前面有类似题的是使用了**0x00截断上传**，后面也同样是`move_uploaded_file`移动文件的函数，还使用了黑名单验证，方法就很明确，使用**截断上传**。别忘了截断上传需要的特定条件：php版本需要低于`5.3.29`、`magic_quotes_gpc`需要为关闭状态。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164220.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png)
 
 ​	同样是命名为`phpa`方便在十六进制表里修改为`00`
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119162729.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png)
 
 ​	打开图片把url链接`http://upload-labs/upload/upload-19.php�`修改一下即可。完工
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164458.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png)
 
 ​	其实这道题还有一个思路，因为题目使用了**黑名单验证**，分析源码没有设置大小写过滤，所以也可以使用大小写方法通过如`Php`，不演示了。
 
@@ -178,15 +178,15 @@ if(!empty($_FILES['upload_file'])){
 
 所以我们可以构造一个这样的数组用于绕过：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119170734.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png)
 
 ​	数组[2]用于绕过白名单，文件名为：`数组[0].数组[1]`，但是数组[1]是空的所以只剩下`数组[0].`（后面有个点）
 
 ​	别忘了还要绕过**MIME**
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172340.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png)
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172415.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png)
 
 完工
 

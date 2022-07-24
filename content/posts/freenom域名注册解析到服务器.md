@@ -3,7 +3,7 @@ title: Freenom域名注册解析到服务器
 date: 2020-09-02 12:25:37
 categories: ['服务器']
 tag: ['免费域名']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201111120849.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120849.png
 ---
 
 ### **1.官网**
@@ -44,7 +44,7 @@ cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/2020111112084
 
 
 
-![](https://raw.githubusercontent.com/guobang-yoo/PicBed/master/20201029160037.png)
+![](https://raw.githubusercontent.com/penginman/PicBed/master/20201029160037.png)
 
 ![BJCpV0.png](https://s1.ax1x.com/2020/10/29/BJCpV0.png)
 

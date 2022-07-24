@@ -2,7 +2,7 @@
 title: Upload-Labs之Pass-16
 categories: ['DROPS']
 tags: ['文件上传漏洞']
-cover: 'https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201116224711.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116224711.jpg'
 date: 2020-11-16 22:50:25
 ---
 
@@ -91,13 +91,13 @@ if (isset($_POST['submit'])){
 
 ​	需要准备只含有一句话木马的文件并命名为.jpg格式。直接上传。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116200050.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116200050.png)
 
 #### 文件包含验证
 
 ​	上传以后我使用的在线靶场网页中题目部分直接消失了，这就说明函数执行过程中出错导致页面也没有正常返回。然后就可以使用`inclue.php`文件包含访问刚刚上传的文件
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116200401.png)	
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116200401.png)	
 
 ### 其他格式
 
@@ -119,7 +119,7 @@ if (isset($_POST['submit'])){
 
 ​	上传一个使用`copy /b`指令制作的图片马，之前文章第13题用过。假设上传的图片马为**yoo.gif**，上传成功以后再下载下载的文件名为**2119840023.gif**。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116203245.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116203245.png)
 
 #### 	文件比较
 
@@ -129,7 +129,7 @@ if (isset($_POST['submit'])){
 
 ​	上传以后进行文件包含，代码执行成功。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116204104.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116204104.png)
 
 ​	为了验证我们的想法，我们可以刚刚把上传的图片再下载下载，查看插入的代码是否逃过了二次渲染（废话执行成功了代码肯定在）。
 
@@ -139,7 +139,7 @@ if (isset($_POST['submit'])){
 
 ​	这题自己原来打算模仿gif的方法修改图片，但是上传以后下载，对比文件十六进制不同的时候我傻了
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116204635.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116204635.png)
 
 ​	这不同还是一段一段的，根本不可能模仿gif的方法，上面那一段相同的还是图片的**头标识**部分，修改的话就不是png格式图片，更过不了。
 
@@ -406,7 +406,7 @@ imagepng($img,'./1.png');
 
 ​	使用脚本处理**1.jpg**插入php代码，执行命令`php jpg_payload.php 1.jpg`。php命令执行方法上面有。执行成功以后应该如图所示：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116212640.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116212640.png)
 
 ​	执行的目录下会多出一个名为`payload_1.jpg`的文件，这就是制作好的图片马。大佬的源码我是修改了一下的，可以修改上面的第25行代码，自定义插入想要的代码。
 
@@ -414,7 +414,7 @@ imagepng($img,'./1.png');
 
 ​	上传以后同样先确定图片的名称和地址，适用文件包含进行验证
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116215008.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116215008.png)
 
 ​	如果如图所示，我们的图片马就上传成功了。**需要提醒：有些图片不行可能需要多换几个图片试一试！！！**
 

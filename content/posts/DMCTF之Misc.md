@@ -2,7 +2,7 @@
 title: DMCTF之Misc
 categories: ['CTF']
 tags: ['DMCTF2020','Misc']
-cover: 'https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201120232221.png'
+cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232221.png'
 date: 2020-12-01 11:20:45
 ---
 
@@ -17,19 +17,19 @@ date: 2020-12-01 11:20:45
 
 真·有手就行
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130102716.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png)
 
 ## fakezip
 
 看到题目**fakezip**翻译：假的压缩包，所以猜应该是伪加密，贴一个原理的博客：[zip伪加密](https://blog.csdn.net/u011377996/article/details/79286958)，使用010 Editor打开压缩包，
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130103932.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png)
 
 找到01修改为00，再解压压缩包，虽然提示了压缩包错误但是直接无视，获得一个flag.txt
 
 打开以后内容是：`♬♩¶♯♬♭♬♫♫♪♬∮♬♭‖♭♬♭♬∮♬♭‖♭♬♭♫♫♯=`，音符加密虽然是第一次听说，但是百度还是可以简单找到：[文本加密为音乐符号](https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue)
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130104321.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png)
 
 ## Base family
 
@@ -75,7 +75,7 @@ flag{y0u_alr3ady_kn0w_th3_Basefam1ly}
 
 根据题目直接百度**SlientEye**，下载以后打开图片-->decode：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130105145.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png)
 
 参数啥的都没动，密码为默认密码，直接Decode，得到一个flag.txt：
 
@@ -95,13 +95,13 @@ flag{y0u_alr3ady_kn0w_th3_Basefam1ly}
 
 解完以后直接出了一堆由：`[、]、!、+、(、)`组成的符号，还是百度找到了这种编码叫JSfuck，可以直接浏览器控制台console输出获得flag
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130110943.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png)
 
 ## jpgsteg
 
 题目即是用到的工具，百度下载软件，使用jphide.exe打开图片`Tap code.jpg`，选择seek功能解密，密码为123456（我蒙的）：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111311.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png)
 
 成功解密后获得一个文档，内容如下：
 
@@ -121,7 +121,7 @@ flag{y0u_alr3ady_kn0w_th3_Basefam1ly}
 
 这里我思索了好久，刚开始以为是摩斯密码，但是又对不上号，最后找到了一个名为敲击码的，正好一行中的`.`分成两部分代表坐标
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130111538.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png)
 
 解码得到：`ohhamazing` ，加上括号就是：**flag{ohhamazing}**
 
@@ -131,7 +131,7 @@ flag{y0u_alr3ady_kn0w_th3_Basefam1ly}
 
 打开压缩包发现都是加密，但是原始大小都为4，只有CRC不一样：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201102424.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png)
 
 所以很有可能是四位数据的CRC32碰撞，就去网上找了一个python脚本：[crc32碰撞 ctf python](https://blog.csdn.net/weixin_45396639/article/details/103393759)作者原创的脚本：
 
@@ -212,7 +212,7 @@ flag
 
 题目的压缩包解压以后得到一个**flag.zip**压缩包和**secret.txt**，flag.zip中也含有secret.txt，将外面没有加密的secret.txt使用**winrar**压缩（需要和原来的压缩软件一致哒）以后对比flag.zip里的文件发现CRC码相同的：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201103227.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png)
 
 配合ARCHPR使用明文攻击，获得加密密钥： **[b00df998 5bdbbde6 485fa1f8\]**
 
@@ -265,13 +265,13 @@ Encrypted data: U2FsdGVkX1/nmu9u2Ho1dD9kQWv7L5a6bsUrWxBkVp68txdFL4v/givGGYy7dBU+
 
 题目即提示，Whitespace进行一波搜索以后了解到是一种用空白符编程的语言，在压缩包里面摸了好久，在注释里发现空白编码：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201104847.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png)
 
 这也让我想到自己在网上下工具的压缩包时，网站经常在注释里附上密码，通常都是网站的网址。
 
 在[whitespace](https://vii5ard.github.io/whitespace)网站中粘贴密文点上面的`run`：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105235.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png)
 
 解密获得：**password is BlindWaterMark!**
 
@@ -295,7 +295,7 @@ python bwn.py decode 2.png 1.png 3.png
 
 获得解密图片：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105728.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png)
 
 图片中的内容为：
 
@@ -312,7 +312,7 @@ a6a6569955a
 
 就百度曼切斯特编码解码，找到一篇博客：[一些CTF编码脚本](https://blog.csdn.net/weixin_30416871/article/details/98566881)，在里面找到了这两段：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201105901.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png)
 
 心里一顿狂喜，因为都是`2965a`这个几个字符组成的，应该就是找对了。根据博客代码自行修改脚本
 
@@ -350,7 +350,7 @@ steghide.exe extract -sf trump.jpg
 
 了解到是一种无线电传递图片的方法，搜到的博客[慢扫描电视 SSTV](https://blog.csdn.net/zkf0100007/article/details/83387790)和B站的视频[慢扫描电视SSTV](https://www.bilibili.com/video/BV1ea4y1J787)，下载MMSSTV软件，把output.wav音频调制麦克风输出，我使用的方法是在声音设置里把立体声混音打开并且设为默认设备，然后电脑里播放的声音就会被录制到。等待图片绘制成功，获得flag：**DMCTF{SSTV,yyds?}**
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201201111538.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png)
 
 ## SimpleQrcode
 

@@ -3,7 +3,7 @@ title: Let_s_Encrypt 免费Https证书
 date: 2020-09-03 15:30:37
 categories: ['服务器']
 tag: ['Https证书']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201111120852.jpg
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120852.jpg
 ---
 
 参考文章:[Let's Encrypt，免费好用的 HTTPS 证书][Let's Encrypt，免费好用的 HTTPS 证书]

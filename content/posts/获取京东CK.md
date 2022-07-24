@@ -99,7 +99,7 @@ copy(CookieValue);
 
 以下内容使用微信打开，或者复制到浏览器打开（里面虽然是二维码，但是会动态刷新，所以自行打开）
 
-[//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg](//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg)
+[//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg](http://wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg)
 
 关注微信公众号
 

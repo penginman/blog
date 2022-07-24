@@ -229,30 +229,30 @@
 <p>​	使用bp抓包并添加<code>0x00截断</code>，在GET请求中可以使用url编码的截断：<code>%00</code>。贴个自己参考的博客，<a href="https://www.cnblogs.com/milantgh/p/3612978.html" target="_blank" rel="noopener noreffer">截断上传原理剖析</a>。个人对于这道题的分析就是，上面文件的代码执行到第8行的时候，获取到了<code>$_GET['save_path']</code>变量的值，但是我们在这个变量后面添加了<code>0x00截断</code>，所以后面的代码便不会执行，文件也就不会被重命名。</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png"></p>
 <p>​	文件成功上传，然后访问的时候记得改一下路径，因为文件名已经截断，所以访问路径由<code>..../upload/233.php�/5120201115205501.jpg</code>变为<code>..../upload/233.php</code>。完工</p>
 <h2 id="pass-12" class="headerLink">
     <a href="#pass-12" class="header-mark"></a>Pass-12</h2><p>​	（windows环境）</p>
 <p>​	这题和上一题差不多一样，就是把<code>$_GET['save_path']</code>变成了<code>$_POST['save_path']</code>。由GET请求改成了POST请求，但是抓包修改的地方就不一样了，需要通过<strong>16进制修改</strong></p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115210935.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115210935.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115210935.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115210935.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115210935.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115210935.png"></p>
 <p>​	这里我命名为<code>233.phpa</code>是因为方便我在Hex表中找到这句话的位置和修改数据。<code>a</code>的16进制是<code>61</code>，需要改成截断的值：<code>00</code></p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211024.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211024.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211024.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211024.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211024.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211024.png"></p>
 <p>​	上传成功以后打开图片，和上一题一样，需要把路径中已经截断的后面删除掉。完工</p>
 <h2 id="pass-13" class="headerLink">
     <a href="#pass-13" class="header-mark"></a>Pass-13</h2><p>​	（Linux环境）</p>
@@ -266,11 +266,11 @@
 <p>​	这道题和前面题目都不一样了：</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png"></p>
 <p>​	题目说道需要<strong>上传图片马</strong>，然后使用<strong>文件包含漏洞</strong>进行测试，那么我们就先制作图片马。</p>
 <p>​	查看本题的提示<code>本pass检查图标内容开头2个字节！</code>，意思就是只检测文件前面两个字节的标识，贴一个<a href="https://blog.csdn.net/qq_37414405/article/details/84660148" target="_blank" rel="noopener noreffer">各种格式图片文件头标识分析</a>，所以这道题只用在上传的文件头部的两个字节处粘贴对应<strong>文件的头标识</strong>即可绕过检测。</p>
 <p>​	以GIF的文件头GIF89a 为例，创建文件notepad++编辑打开输入<code>GIF89a&lt;?php phpinfo(); ?&gt;</code>，后缀名无所谓了，因为题目只检测前两个字节即可上传。</p>
@@ -279,22 +279,22 @@
 <p>​	<strong>上传以后需要使用文件包含进行判定是否执行</strong>，先在新标签页面中打开图片，url中记下图片在服务器中的目录和名称（我的图片名称为8220201116071327.gif），点击<strong>2</strong>的链接进入<code>include.php</code>进行文件包含：网址输入<code>https://...../include.php?file=./upload/8220201116071327.gif</code>，找到php成功执行的页面。这里还有一个小知识点我学到的就是：<a href="https://www.cnblogs.com/xc90/articles/10257402.html" target="_blank" rel="noopener noreffer">路径中的'.&lsquo;和&rsquo;..&lsquo;还有&rsquo;./&lsquo;和&rsquo;../&lsquo;都是什么意思</a>。完工</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png"></p>
 <h2 id="pass-14" class="headerLink">
     <a href="#pass-14" class="header-mark"></a>Pass-14</h2><p>​	（Linux环境）</p>
 <p>​	这题提示写道<code>本pass使用getimagesize()检查是否为图片文件！</code>，和上一题不一样的地方就是使用了<code>getimagesize()</code>函数，这个函数的官方文档<a href="https://www.php.net/manual/zh/function.getimagesize.php" target="_blank" rel="noopener noreffer">getimagesize()</a>，所以这道题就不能用13题的加<strong>文件的头标识</strong>方法绕过，这次要使用上一题中的<code>copy /b</code>指令用一张正常的图片进行拼接还是可以通过的。</p>
 <p>​	PS：听同学说<code>getimagesize()</code>不过是检测了前八个字节，不过我没试。</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png"></p>
 <p>​	因为是拼接的，所以要直接摸到图片最底部查看成功。完工</p>
 <h2 id="pass-15" class="headerLink">
     <a href="#pass-15" class="header-mark"></a>Pass-15</h2><p>​	（Linux环境）</p>

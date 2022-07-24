@@ -2,7 +2,7 @@
 title: PicGo复制自定义链接
 categories: ['瞎折腾']
 tags: ['PicGo上传','图床']
-cover: 'https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201116160027.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116160027.jpg'
 date: 2020-11-30 09:54:11
 ---
 
@@ -34,21 +34,21 @@ date: 2020-11-30 09:54:11
 
 软件界面：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130095609.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png)
 
 # 起因
 
 PicGo上传成功以后可以自动复制url，但是默认复制的图片链接是github提供的，github在国内又经常抽风，图片通常都是无法访问的，所以我使用了jsdelivr提供的链接访问图片，PicGo也提供了自定义链接，但是规定必须包含`$url`参数，也就是默认的url地址：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130093835.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png)
 
 起初是把jsdelivr的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。
 
 # 解决方法
 
-在软件设置的配置文件里找到了`customLink`，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130094455.png)
+在软件设置的配置文件里找到了`customLink`，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png)
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130094651.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png)
 
 # 结语
 
@@ -70,12 +70,12 @@ PicGo上传成功以后可以自动复制url，但是默认复制的图片链接
 
 前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。
 
-![image-20220203224558136](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/202202032246055.png)
+![image-20220203224558136](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png)
 
 直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的
 
 ```other
-https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master
+https://cdn.jsdelivr.net/gh/penginman/PicBed@master
 ```
 
 然后返回的链接就会把原来的`raw.github.com/xxxxxx`给替代了。

@@ -3,7 +3,7 @@ title: Hackgame2020(一)
 categories: ['CTF']
 tags: ['web','Hackergame 2020','代码审计']
 date: 2020-11-01 18:33:40
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201111120831.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120831.png
 ---
 
 ## 前言
@@ -94,7 +94,7 @@ F12开始翻网页资源
 
 >2. 第一个以信鸽为载体的 IP 网络标准的 RFC 文档中推荐使用的 MTU (Maximum Transmission Unit) 是多少毫克？
 
-​	卡了我好一会，没听过信鸽传输，贴上最后找到答案的[博客](https://blog.csdn.net/qq_31621387/article/details/77690642)，以及一篇信鸽传输的[历史发展](sohu.com/a/309403082_354973)，长见识了。
+​	卡了我好一会，没听过信鸽传输，贴上最后找到答案的[博客](https://blog.csdn.net/qq_31621387/article/details/77690642)，以及一篇信鸽传输的[历史发展](http://sohu.com/a/309403082_354973)，长见识了。
 
 **参考答案：256**
 

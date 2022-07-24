@@ -3,12 +3,12 @@ title: 极客大挑战 2019 FinalSQL
 date: 2021-04-18 19:11:51
 categories:  ['CTF']
 tags: ['sql注入']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201120232228.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232228.png
 ---
 
 还是同一场比赛的界面
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210416224503.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416224503.png)
 
 这次测试了下面的登陆框已经不能用了，无论怎么输入都是同一个回显：**你可别被我逮住了，臭弟弟**，测试上面的序号，注意此时的url中有`?id=`猜测是一个注入点，输入单引号一直报错，但是输入2-1时成功回显，判断是一个**数字型**注入，数字型注入最多遇到的就是结合盲注，接下来是测试盲注的过滤。
 

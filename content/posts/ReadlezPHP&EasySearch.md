@@ -3,7 +3,7 @@ title: ReadlezPHP&EasySearch
 date: 2021-04-20 17:12:43
 categories: ['CTF']
 tags: ['反序列化','SSI注入']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201120223513.jpg
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120223513.jpg
 ---
 
 # ReadlezPHP
@@ -12,7 +12,7 @@ cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/2020112022351
 
 源码找到`time.php?source`
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210420175641.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210420175641.png)
 
 ```php
 <?php
@@ -67,11 +67,11 @@ time.php?data=O:8:"HelloPhp":2:{s:1:"a";s:9:"phpinfo()";s:1:"b";s:6:"assert";}
 
 页面查找flag，在environment中找到flag
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210420175822.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210420175822.png)
 
 # EasySearch
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210420171541.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210420171541.png)
 
 进入页面以后试了试sql注入发现没用。第一步是看了wp找到的：使用扫描器扫描到`index.php.swp`文件：
 
@@ -132,7 +132,7 @@ while True:
 
 分析源码登陆以后会创建一个欢迎页，使用POST请求，抓包可以在响应头里找到创建文件的位置和名称。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210417102904.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210417102904.png)
 
 看了看文件后缀是一格没有见过的：`shtml`，然后学到到了shtml有一种漏洞：[SSI注入漏洞](https://blog.csdn.net/qq_40657585/article/details/84260844)
 

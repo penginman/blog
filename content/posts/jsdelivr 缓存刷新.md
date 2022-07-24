@@ -3,7 +3,7 @@ title: jsdelivr 缓存刷新
 date: 2020-11-20 22:02:46
 categories: ['瞎折腾']
 tags: ['jsdelivr']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201116160039.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116160039.png
 ---
 
 ## 前言
@@ -22,6 +22,6 @@ cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/2020111616003
 
 访问资源就会进行刷新，然后页面会返回刷新信息：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201120222419.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201120222419.png)
 
 <span class='heimu'>划水</span>收工。

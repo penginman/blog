@@ -33,7 +33,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: guobang-yoo/guobang-yoo.github.io
+          external_repository: penginman/penginman.github.io
           publish_branch: master
           publish_dir: ./public
           

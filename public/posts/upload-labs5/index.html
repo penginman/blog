@@ -267,11 +267,11 @@
 </div><p>​	第一次用python的我在这里知道了<code>pip</code>。这道题因为要不断的上传和访问文件，所以对在线靶场不友好，所以才选择了本地环境解题。完工</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119090033.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119090033.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119090033.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119090033.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119090033.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119090033.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"></p>
 <h2 id="pass-18失手" class="headerLink">
     <a href="#pass-18%e5%a4%b1%e6%89%8b" class="header-mark"></a>Pass-18（失手）</h2><p>​	18题失手了没有思路，如果使用<code>include.php</code>文件包含的话还可以，看了看网上大部分的博客都是敷敷衍衍过去的，找到了一篇稍微有点思路的，使用的是<code>apache2.2.x的解析漏洞</code>，这个漏洞的思路就是，apache服务器在解析有多个后缀名的文件时，从最后一个开始向前扫描，如果不认识就跳过，直到遇到一个认识的文件后缀，就把这个文件以这个能识别的后缀解析。</p>
 <p><a href="https://blog.csdn.net/qq_32434307/article/details/79480316" target="_blank" rel="noopener noreffer">Apache文件解析漏洞</a></p>
@@ -339,27 +339,27 @@
 </div><p>​	源码第七行使用了<strong>POST</strong>来接受文件的命名，前面有类似题的是使用了<strong>0x00截断上传</strong>，后面也同样是<code>move_uploaded_file</code>移动文件的函数，还使用了黑名单验证，方法就很明确，使用<strong>截断上传</strong>。别忘了截断上传需要的特定条件：php版本需要低于<code>5.3.29</code>、<code>magic_quotes_gpc</code>需要为关闭状态。</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164220.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164220.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164220.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164220.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164220.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164220.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"></p>
 <p>​	同样是命名为<code>phpa</code>方便在十六进制表里修改为<code>00</code></p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119162729.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119162729.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119162729.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119162729.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119162729.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119162729.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"></p>
 <p>​	打开图片把url链接<code>http://upload-labs/upload/upload-19.php�</code>修改一下即可。完工</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164458.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164458.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164458.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164458.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164458.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119164458.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"></p>
 <p>​	其实这道题还有一个思路，因为题目使用了<strong>黑名单验证</strong>，分析源码没有设置大小写过滤，所以也可以使用大小写方法通过如<code>Php</code>，不演示了。</p>
 <h2 id="pass-20" class="headerLink">
     <a href="#pass-20" class="header-mark"></a>Pass-20</h2><p>（LInux环境，php7.2.21）</p>
@@ -440,27 +440,27 @@
 <p>所以我们可以构造一个这样的数组用于绕过：</p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119170734.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119170734.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119170734.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119170734.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119170734.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119170734.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"></p>
 <p>​	数组[2]用于绕过白名单，文件名为：<code>数组[0].数组[1]</code>，但是数组[1]是空的所以只剩下<code>数组[0].</code>（后面有个点）</p>
 <p>​	别忘了还要绕过<strong>MIME</strong></p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172340.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172340.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172340.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172340.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172340.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172340.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"></p>
 <p><img
         class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172415.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172415.png, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172415.png 1.5x, https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172415.png 2x"
+        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172415.png"
-        title="https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201119172415.png"></p>
+        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"
+        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"></p>
 <p>完工</p>
 <h2 id="最后" class="headerLink">
     <a href="#%e6%9c%80%e5%90%8e" class="header-mark"></a>最后</h2><p>​	Upload labs的20道题大部分完成了，有两道题没完成，但是也学到了不少东西，这些天再抽空写一个总结吧。射射观看。</p>

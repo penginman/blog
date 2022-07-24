@@ -3,7 +3,7 @@ title: GXYCTF2019 Ping Ping Ping
 date: 2020-12-04 20:24:50
 categories: ['DROPS']
 tags: ['Web','BUUCTF_Web','RCE']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201120223448.jpg 
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120223448.jpg 
 ---
 
 # [GXYCTF2019]Ping Ping Ping
@@ -65,7 +65,7 @@ $IFS$1 //$1改成$加其他数字貌似都行
 
 这个payload的时候文件都已经输出了，我最后在网页源码找到了，原来是被注释了<span class='heimu'>我是傻逼</span>。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201205110806.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205110806.png)
 
 **最后记录下学到的姿势和这道题目的其他思路**：
 

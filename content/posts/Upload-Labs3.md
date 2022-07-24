@@ -2,7 +2,7 @@
 title: Upload-Labs(三)
 categories: ['DROPS']
 tags: ['文件上传漏洞']
-cover: 'https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201116160237.png'
+cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116160237.png'
 date: 2020-11-16 16:04:30
 ---
 
@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
 
 ​	使用bp抓包并添加`0x00截断`，在GET请求中可以使用url编码的截断：`%00`。贴个自己参考的博客，[截断上传原理剖析](https://www.cnblogs.com/milantgh/p/3612978.html)。个人对于这道题的分析就是，上面文件的代码执行到第8行的时候，获取到了`$_GET['save_path']`变量的值，但是我们在这个变量后面添加了`0x00截断`，所以后面的代码便不会执行，文件也就不会被重命名。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115204109.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png)
 
 ​	文件成功上传，然后访问的时候记得改一下路径，因为文件名已经截断，所以访问路径由`..../upload/233.php�/5120201115205501.jpg`变为`..../upload/233.php`。完工
 
@@ -66,11 +66,11 @@ if(isset($_POST['submit'])){
 
 ​	这题和上一题差不多一样，就是把`$_GET['save_path']`变成了`$_POST['save_path']`。由GET请求改成了POST请求，但是抓包修改的地方就不一样了，需要通过**16进制修改**
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115210935.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115210935.png)
 
 ​	这里我命名为`233.phpa`是因为方便我在Hex表中找到这句话的位置和修改数据。`a`的16进制是`61`，需要改成截断的值：`00`
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211024.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211024.png)
 
 ​	上传成功以后打开图片，和上一题一样，需要把路径中已经截断的后面删除掉。完工
 
@@ -92,7 +92,7 @@ if(isset($_POST['submit'])){
 
 ​	这道题和前面题目都不一样了：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201115211509.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png)
 
 ​	题目说道需要**上传图片马**，然后使用**文件包含漏洞**进行测试，那么我们就先制作图片马。
 
@@ -106,7 +106,7 @@ if(isset($_POST['submit'])){
 
 ​	**上传以后需要使用文件包含进行判定是否执行**，先在新标签页面中打开图片，url中记下图片在服务器中的目录和名称（我的图片名称为8220201116071327.gif），点击**2**的链接进入`include.php`进行文件包含：网址输入`https://...../include.php?file=./upload/8220201116071327.gif`，找到php成功执行的页面。这里还有一个小知识点我学到的就是：[路径中的'.'和'..'还有'./'和'../'都是什么意思](https://www.cnblogs.com/xc90/articles/10257402.html)。完工
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116152417.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png)
 
 
 
@@ -118,7 +118,7 @@ if(isset($_POST['submit'])){
 
 ​	PS：听同学说`getimagesize()`不过是检测了前八个字节，不过我没试。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201116155407.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png)
 
 ​	因为是拼接的，所以要直接摸到图片最底部查看成功。完工
 

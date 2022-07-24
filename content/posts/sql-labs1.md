@@ -3,7 +3,7 @@ title: sql-labs(一)
 date: 2020-09-22 10:50:08
 categories: ['DROPS']
 tags: ['sql注入']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201111120858.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120858.png
 ---
 
 ## 前言

@@ -3,12 +3,12 @@ title: WUSTCTF2020 朴实无华
 date: 2021-04-16 15:33:32
 categories: ['CTF']
 tags: ['RCE']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201120232246.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232246.png
 ---
 
 进入页面直接报错
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210416103737.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416103737.png)
 
 试试其他的地方，我的习惯是git泄露、请求头、robots.txt、hint.txt都看看。果然在robots下有内容
 
@@ -17,7 +17,7 @@ cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/2020112023224
 
 访问`fAke_f1agggg.php`并且抓包，在响应头里有提示。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210416105630.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416105630.png)
 
 访问`fl4g.php`才正式开始，源码如下：
 

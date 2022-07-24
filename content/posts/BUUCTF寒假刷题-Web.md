@@ -3,7 +3,7 @@ title: BUUCTF寒假刷题-Web
 date: 2021-01-18 16:58:56
 categories: ['CTF']
 tags: ['web','BUUCTF_Web']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201120223242.jpg
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120223242.jpg
 ---
 
 寒假横向刷题（尽量）
@@ -17,7 +17,7 @@ cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/2020112022324
 
 进到靶机一个硕大的滑稽，查看源码有提示source.php
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120101413.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120101413.png)
 
 ```
 <?php
@@ -103,7 +103,7 @@ hint.php%3F..%2F..%2F..%2F..%2F..%2Fffffllllaaaagggg
 
 # [强网杯 2019]随便注
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120094248.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120094248.png)
 
 根据题目尝试sql注入，单引号报错，单引号加注释无报错，说明存在sql注入，当测试输入select时返回过滤的黑名单：
 
@@ -121,7 +121,7 @@ return preg_match("/select|update|delete|drop|insert|where|\./i",$inject);
 1';show databases;
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120095211.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120095211.png)
 
 查看当前库下的表
 
@@ -129,7 +129,7 @@ return preg_match("/select|update|delete|drop|insert|where|\./i",$inject);
 1';show tables;
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120095339.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120095339.png)
 
 查看两张表字段
 
@@ -137,7 +137,7 @@ return preg_match("/select|update|delete|drop|insert|where|\./i",$inject);
 1';show columns from words;
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120095607.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120095607.png)
 
 还有一种查看表的语句，在windows系统下，反单引号（`）是数据库、表、索引、列和别名用的引用符
 
@@ -145,7 +145,7 @@ return preg_match("/select|update|delete|drop|insert|where|\./i",$inject);
 1';desc `1919810931114514`;
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120095839.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120095839.png)
 
 找到了flag在的字段，接下来就是如何获取该字段的值。顺带一提，根据表的结构，初步判断默认查询的是**word**表中的字段，而flag在**1919810931114514**表中。
 
@@ -209,7 +209,7 @@ char(115,101,108,101,99,116)
 
 # [极客大挑战 2019]EasySQL
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120101528.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120101528.png)
 
 用户名密码，尝试万能密码。
 
@@ -224,7 +224,7 @@ char(115,101,108,101,99,116)
 
 # [极客大挑战 2019]Havefun
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120101733.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120101733.png)
 
 直接源码找到php代码。payload
 
@@ -236,7 +236,7 @@ char(115,101,108,101,99,116)
 
 # [SUCTF 2019]EasySQL
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120102317.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120102317.png)
 
 单引号无报错，尝试堆叠注入可以回显。
 
@@ -311,19 +311,19 @@ PD9waHAKZWNobyAiQ2FuIHlvdSBmaW5kIG91dCB0aGUgZmxhZz8iOwovL2ZsYWd7OTAyNTIyNDgtMjY3
 
 # [极客大挑战 2019]Secret File
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120103724.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120103724.png)
 
 查看源码，又一个背景是黑色的超链接跳转到 Archive_room.php。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120103842.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120103842.png)
 
 查看源码SECRET跳转的是action.php。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120103907.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120103907.png)
 
 但是跳转以后是url地址为end.php，所以中间跳过了一个页面，使用bp抓包查看。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120104246.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120104246.png)
 
 stristr()函数返回字符串中子串第一次出现位置之后的内容，简而言之还是过滤。
 
@@ -345,7 +345,7 @@ PCFET0NUWVBFIGh0bWw+Cgo8aHRtbD4KCiAgICA8aGVhZD4KICAgICAgICA8bWV0YSBjaGFyc2V0PSJ1
 
 顶端の告诫：用 sqlmap 是没有灵魂的
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210120104703.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210120104703.png)
 
 尝试万能密码（其实没卵用）
 
@@ -398,7 +398,7 @@ id,username,password
 
 # [ACTF2020 新生赛]Exec
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121090002.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121090002.png)
 
 肯定是尝试管道符
 
@@ -446,7 +446,7 @@ id,username,password
 /error?msg={{handler.settings}}
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121091616.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121091616.png)
 
 获得cookie_secret的值为
 
@@ -456,7 +456,7 @@ eb326d39-cd67-47bd-b2d3-71125996417b
 
 根据hints.txt的url验证一下是如何加密的。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121092122.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121092122.png)
 
 选中的蓝色部分是`/hints.txt`加密后的md5值。推断出filehash格式以后直接访问flag文件，payload：
 
@@ -468,7 +468,7 @@ eb326d39-cd67-47bd-b2d3-71125996417b
 
 # [极客大挑战 2019]Knife
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121092431.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121092431.png)
 
 一句话直接连。
 
@@ -476,7 +476,7 @@ eb326d39-cd67-47bd-b2d3-71125996417b
 
 # [RoarCTF 2019]Easy Calc
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121092956.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121092956.png)
 
 一个计算器随便试一试，当输入字母时会报错。查看网页源码，在script中发现了运行计算器的php文件：**calc.php**，但是也有一句很重要的注释
 
@@ -484,7 +484,7 @@ eb326d39-cd67-47bd-b2d3-71125996417b
 <!--I've set up WAF to ensure security.-->
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121093233.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121093233.png)
 
 php的正则表达式中并没有过滤字母的条件，所以我们输入字母被过滤是因为**WAF**，接下来是参考网上的wp自己的理解
 
@@ -514,7 +514,7 @@ php会输出一个值a，说明已经绕过了WAF。这里使用的是WAF和php�
 
 # [极客大挑战 2019]Http
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121104213.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121104213.png)
 
 查看源码在"氛围"这两个字上有隐藏的跳转Secret.php。进入以后页面显示
 
@@ -555,7 +555,7 @@ Connection: close
 
 # [极客大挑战 2019]PHP
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121105104.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121105104.png)
 
 源码备份在`www.zip`中。下载以后有五个文件
 
@@ -654,7 +654,7 @@ O:4:"Name":2:{s:14:"%00Name%00username";s:5:"admin";s:14:"%00Name%00password";s:
 
 # [极客大挑战 2019]Upload
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121111429.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121111429.png)
 
 先尝试上传一个gif图片马内容为
 
@@ -676,7 +676,7 @@ GIF89a
 
 可以上传，文件在/upload目录下。尝试修改后缀上传，phtml上传成功，可以执行php和script代码，使用蚁剑连接。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121112135.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121112135.png)
 
 ---
 
@@ -684,7 +684,7 @@ GIF89a
 
 # [极客大挑战 2019]BabySQL
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210128113412.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210128113412.png)
 
 尝试万能密码，发现报错了：1=1#' and password='123'，也许是or被过滤了或者删掉了，尝试大小写无果，但是尝试双写通过了。需要注意的是爆表，爆数据库的语句中有**information**这个词，其中的**for**也会被过滤。其他过滤的词我遇到的有：union，select、from、where、and。
 
@@ -710,7 +710,7 @@ GIF89a
 
 # [ACTF2020 新生赛]Upload
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210128114257.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210128114257.png)
 
 指针放在灯泡上护显示上传文件的，图片马
 
@@ -808,7 +808,7 @@ if(0==$str){
 
 # [HCTF 2018]admin
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210202182820.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210202182820.png)
 
 可以在注释里找到
 
@@ -821,7 +821,7 @@ if(0==$str){
 
 修改密码抓到的包：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210202183647.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210202183647.png)
 
 感觉并没有什么下手的地方，唯一的就是session可能和身份有关。
 
@@ -958,7 +958,7 @@ cookie: session=加密内容
 
 
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210306103214.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210306103214.png)
 
 
 
@@ -980,7 +980,7 @@ payload
 
 # [极客大挑战 2019]BuyFlag
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210121104213.png)网站题直接去看源码，在源码也搜索php有两个：index.php、pay.php。前者是首页，直接看后面的那个，打开就有提示
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210121104213.png)网站题直接去看源码，在源码也搜索php有两个：index.php、pay.php。前者是首页，直接看后面的那个，打开就有提示
 
 > Only Cuit's students can buy the FLAG
 
@@ -1024,7 +1024,7 @@ password=404a&money=10e10
 
 # [SUCTF 2019]CheckIn
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210201103750.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210201103750.png)
 
 知识点
 
@@ -1060,7 +1060,7 @@ GIF89a
 
 # [BJDCTF2020]Easy MD5
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210201105021.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210201105021.png)
 
 参考：
 
@@ -1105,9 +1105,9 @@ select * from 'admin' where password=''or'6É].é!r,ùíb.‘
 
 自己进行的测试：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210201113825.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210201113825.png)
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210201113839.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210201113839.png)
 
 所以真正的解法是只要sql语句的格式为password='xxxxxxxx' or '1xxxx'，即hex包含字符串"276f722731"（'or'1），其实or后面开头只要是数字即可，1-9的hex范围为31-39。
 
@@ -1130,7 +1130,7 @@ for ($i = 0;;) {
 
 自己写了一个python程序，放在学生服务器上跑了一个下午加一个晚上，出了两个答案，好家伙从1跑到52亿：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210203094304.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210203094304.png)
 
 ```
  找到了md5(2413633098): 
@@ -1333,7 +1333,7 @@ echo serialize($f);
 
 # [CISCN2019 华北赛区 Day2 Web1]Hack World
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210307171921.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210307171921.png)
 
 很明显的sql注入，随便尝试一些语句有
 
@@ -1385,7 +1385,7 @@ for x in range(1, 50):
 
 # [极客大挑战 2019]HardSQL
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210307173126.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210307173126.png)
 
 还是sql注入题。尝试在输入框里输入`#`、`--+`时被拦下了，但是在url中使用%23通过了。尝试了union但是被过滤了，使用双写也不通过，和这道题同类型的题前面有Baby SQL、Easy SQL，考点还剩下的有盲注、报错注入、堆叠注入。尝试报错注入可以使用，我参考的[十种MySQL报错注入](https://www.cnblogs.com/wocalieshenmegui/p/5917967.html)。还需要注意空格是会被拦下的，url编码也不能通过，所以在语句中的表名需要使用`()`隔开，具体payload如下：
 
@@ -1431,11 +1431,11 @@ dc295a017f}
 
 # [网鼎杯 2018]Fakebook
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210307174819.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210307174819.png)
 
 是一个展示自己博客网址的列表，先随便注册一个
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210307175313.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210307175313.png)
 
 我填的是baidu的网址23333。这时的url是：
 
@@ -1453,7 +1453,7 @@ http://2cefe2a5-4e68-44ce-870c-3628c2500cd3.node3.buuoj.cn/view.php?no=1
 
 先使用上面的语句查看回显点。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210307180356.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210307180356.png)
 
 找的了位置2的回显点，可以把函数替换在2的位置上。
 
@@ -1523,7 +1523,7 @@ echo serialize($s);
 
 部分图
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308102316.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308102316.png)
 
 最下面有对于payload的限制：
 
@@ -1597,7 +1597,7 @@ O:11:"FileHandler":3:{S:5:"\00*\00op";i:2;S:11:"\00*\00filename";S:22:"/var/www/
 
 # [MRCTF2020]你传你🐎呢
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308104930.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308104930.png)
 
 测试后缀，php、phtml都被过滤了，htaccess可以，先传上特供的`.htaccess`
 
@@ -1605,15 +1605,15 @@ O:11:"FileHandler":3:{S:5:"\00*\00op";i:2;S:11:"\00*\00filename";S:22:"/var/www/
 SetHandler application/x-httpd-php
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308105247.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308105247.png)
 
 传图片马，我一直用的是GIF马，几次尝试都没通过，后来修改了`Content-Type: image/jpeg`可以了，说明Content-Type是GIF还不行，接下来直接传图片码
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308105652.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308105652.png)
 
 根据地址访问图片马的地址，使用system读文件还没成，用蚁剑连了执行执行ret=127,disable_function了
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308110126.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308110126.png)
 
 不过根目录下的flag文件还是可以正常读取，至于disable_function可以参考[【极客大挑战 2019】RCE ME](https://braindance.tk/2020/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DRCE%20ME/)。
 
@@ -1621,11 +1621,11 @@ SetHandler application/x-httpd-php
 
 # [BJDCTF 2nd]fake google
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308110510.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308110510.png)
 
 就一个输入框，随便输入一个去看看，跳转以后
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308110545.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308110545.png)
 
 注释里有提示ssti，应该是模板注入，就在网上搜一个ssti的payload试试[SSTI (服务器模板注入)](https://blog.csdn.net/qq_40657585/article/details/83657220)
 
@@ -1639,13 +1639,13 @@ SetHandler application/x-httpd-php
 ?name={% for c in [].__class__.__base__.__subclasses__() %}{% if c.__name__=='catch_warnings' %}{{ c.__init__.__globals__['__builtins__'].open('/flag', 'r').read() }}{% endif %}{% endfor %}
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308110717.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308110717.png)
 
 ---
 
 # [GYCTF2020]Blacklist
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308110821.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308110821.png)
 
 sql注入，先试一试堆叠注入，可以执行，尝试select的时候返回了过滤内容
 
@@ -1676,13 +1676,13 @@ words
 -1';handler FlagHere open;handler FlagHere read first;handler FlagHere close
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308111414.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308111414.png)
 
 ---
 
 # [强网杯 2019]高明的黑客
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210308112326.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210308112326.png)
 
 下载源码以后一堆不可读的源码，但是里面有很多shell，看不懂所以找了wp，思路就是用脚本匹配文件中的shell，然后传参试一试每一个shell是否能用，抄脚本
 
@@ -1916,13 +1916,13 @@ echo $host."\n";
 
 执行指令时会创建一个sandbox文件夹，访问`$sandbox$/1.php`，POST传参
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310110615.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310110615.png)
 
 ```
 _=system('cat /flag');
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310110726.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310110726.png)
 
 
 
@@ -1932,7 +1932,7 @@ _=system('cat /flag');
 
 是java写的web程序
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310110821.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310110821.png)
 
 考点是**WEB-INF/web.xml泄露**
 
@@ -1952,7 +1952,7 @@ _=system('cat /flag');
 
 重点不在登陆界面，而是那个Help按钮，可以下载文件。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310110934.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310110934.png)
 
 首先尝试去读web.xml文档，添加POST请求
 
@@ -2019,7 +2019,7 @@ filename=WEB-INF/classes/com/wm/ctf/FlagController.class
 
 class文件源码好多不可见字符
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310112205.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310112205.png)
 
 我选中的那段就是flag在的地方，看到了`==`就应该意识到是base64编码，但是base64编码里没有`<`这个字符，所以flag的密文就是
 
@@ -2982,7 +2982,7 @@ Content-Type: application/xml;
 
 成功读取文件
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210302110439.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210302110439.png)
 
 把路径改为/flag，获得flag
 
@@ -3007,13 +3007,13 @@ Content-Type: application/xml;
 
 我选的是这个`፼`数值是1w，直接传传不过去，使用url编码一次再传。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210302113544.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210302113544.png)
 
 ---
 
 # [BJDCTF2020]Cookie is so stable
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210304092035.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210304092035.png)
 
 这道题和The mystery of ip的网站一样，还有可能是ssti，hint.php的注释里有
 
@@ -3045,11 +3045,11 @@ Cookie: PHPSESSID=dba9ac7cbddf1983cbac508b01f8cdf2; user=1
 
 我同样在题目的源码中找到了`render()`方法和`Twig_Environment`配置信息
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210302160322.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210302160322.png)
 
 然后payload的具体原理在的`Environment.php`中,贴一下和payload相关部分：
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210302160722.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210302160722.png)
 
 1. 先执行`{{_self.env.registerUndefinedFilterCallback("exec")}}`调用了`registerUndefinedFilterCallback()`函数(图中884行)，注册了一个未定义的函数到`filterCallbacks`全局变量中
 2. 接着执行`{{_self.env.getFilter("whoami")}}`调用了`getFilter()`函数，并传入变量`$name`值为执行的命令，当函数执行到图中代码875行时，进入循环执行了`call_user_func()`，这个函数大伙肯定不陌生：call_user_func 可以把第一个参数作为回调函数调用，调用的参数来源就是第一步中注册的`filterCallbacks`全局变量，里边已经躺好了一个刚刚注册的`exec`，至此就形成了payload
@@ -3060,9 +3060,9 @@ Cookie: PHPSESSID=dba9ac7cbddf1983cbac508b01f8cdf2; user=1
 
 现在(2021年3月2日16:32:44)刚好做完题，想回到BUU上整理过程，发现502了，然后去群里就看到了
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210302163452.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210302163452.png)
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210302163636.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210302163636.png)
 
 挺草的记一下。
 
@@ -3175,7 +3175,7 @@ echo "\n".$cos("abc");
 
 发现有register就去注册个试试呗
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210309102253.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210309102253.png)
 
 注册成功就跳转到update.php界面了，是个修改信息的，查看源码，修改信息有手机号
 
@@ -3260,17 +3260,17 @@ O:7:"profile":2:{s:4:"file";s:56:"a:2:{s:8:"nickname";s:15:"where";s:5:"photo";s
 
 这种格式的，假如我们的payload是修改上面的upload，在一个字符串总长度s如上面的56读取所有变长的hacker以后，到了我们的payload地方，正常把我们构造的upload读取为对象，而后面真正的upload字符串就被舍去了。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310103923.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310103923.png)
 
 报错是因为nickname我们传入的是数组形式的，源代码里直接对数组进行操作肯定是报错的，但是我们需要的只有photo正常即可，可以看到后面我们文件更新成功了。
 
 查看页面的图片内容
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310103720.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310103720.png)
 
 base64解码
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310103747.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310103747.png)
 
 
 
@@ -3278,7 +3278,7 @@ base64解码
 
 # [SUCTF 2019]Pythonginx
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310100334.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310100334.png)
 
 整理一下源码
 
@@ -3309,7 +3309,7 @@ def getUrl():
 
 所以我们只需要找出随便一个host里字符的其他unicode值，这个值在经过编码以后还可以变成原来的字母。其他wp都找的是最后的字母`c`，那么我就找第一个字母`s`验证一下，贴一个unicode的网站：https://www.compart.com/en/unicode/U+0073，进入网站以后可以搜索，然后下面有相关的字符，**需要多试几个**。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310102326.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310102326.png)
 
 我选出的是这个字符`𝐬`，我们先使用url编码一下防止参数出现错误，尝试读一下passwd：
 
@@ -3319,7 +3319,7 @@ def getUrl():
 
 
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310102513.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310102513.png)
 
 flag并不在其中，并且也不再根目录下，根据题目中有`nginx`应该是一个指路的，去读一读nginx的配置文件。从师傅那学到的nginx配置文件所在位置，以后说不定自己也用得到：
 
@@ -3343,7 +3343,7 @@ flag并不在其中，并且也不再根目录下，根据题目中有`nginx`应
 /getUrl?url=file://%F0%9D%90%ACuctf.cc/../../../../../usr/local/nginx/conf/nginx.conf
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310103257.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310103257.png)
 
 读flag
 
@@ -3351,7 +3351,7 @@ flag并不在其中，并且也不再根目录下，根据题目中有`nginx`应
 /getUrl?url=file://%F0%9D%90%ACuctf.cc/../../../../../usr/fffffflag
 ```
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310103323.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310103323.png)
 
 
 
@@ -3377,11 +3377,11 @@ https://i.blackhat.com/USA-19/Thursday/us-19-Birch-HostSplit-Exploitable-Antipat
 
 尝试输入flag会显示
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310175019.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310175019.png)
 
 只能有`woofers`和`meowers`可以通过，尝试了下php的`filter`伪协议读文件
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310175611.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310175611.png)
 
 读出来了，但是解密以后狗狗和猫猫这两个网页没啥作用：
 
@@ -3418,7 +3418,7 @@ if( strpos( $file, "woofers" ) !==  false || strpos( $file, "meowers" ) !==  fal
 
 读出来以后解密即可获得flag
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20210310181106.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210310181106.png)
 
 搜索的时候学到了一个其他的截断
 

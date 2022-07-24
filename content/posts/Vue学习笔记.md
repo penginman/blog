@@ -8,7 +8,7 @@ draft: false
 
 Vue参考的MVVM模型
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16466499314121646649931302.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/16466499314121646649931302.png)
 
 
 M：模型(Model) ：data中的数据
@@ -64,7 +64,7 @@ obj.x = value
 
 在script标签里设置的data属性值，绑定的是vm中的_data属性
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/16467060352831646706034381.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/16467060352831646706034381.png)
 
 **Vue中的数据代理：**
 通过vm对象来代理data对象中属性的操作（读/写）

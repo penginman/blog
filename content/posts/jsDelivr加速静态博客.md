@@ -2,7 +2,7 @@
 title: jsDelivr加速静态博客
 categories: ['瞎折腾']
 tags: ['jsdelivr']
-cover: 'https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201111213620.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111213620.jpg'
 date: 2020-11-11 21:37:53
 ---
 
@@ -19,7 +19,7 @@ date: 2020-11-11 21:37:53
 
 
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111202508.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed/artical/20201111202508.png)
 
 ​	名字重了是因为我已经创建好了并且使用了以后才来写的博客。
 
@@ -27,7 +27,7 @@ date: 2020-11-11 21:37:53
 
 ​	在自己电脑建个文件夹然后打开git输入`git clone 你仓库的链接`，把刚刚创建的仓库拉倒本地方便上传到仓库。
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111203733.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed/artical/20201111203733.png)
 
 廖雪峰老师的git教程我当时看了一遍，觉得非常棒，哈哈哈就是自己太菜了又给忘了，帖出来：[Git简介](https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000)。
 
@@ -48,7 +48,7 @@ git push                      //推送至远程仓库
 
 ​	接下来是要上传哪些文件，我使用的是`butterfly`这个主题，[主题github](https://github.com/jerryc127/hexo-theme-butterfly)支持一下作者，直接在主题`theme/butterfly`文件夹下面找到资源文件夹`source`发现里面都是一些零碎的文件，但是在发布文件夹`public`下是一个完整的js和css，所以猜测生成的时候会把零碎的文件进行整合，然后主题配置文件里作者也写的很清楚
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed/artical/20201111205045.png)	穷人流下了不争气的泪。传！(真加速还得选好服务器)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed/artical/20201111205045.png)	穷人流下了不争气的泪。传！(真加速还得选好服务器)
 
 ​	这里我的分析是：由于引用的不是本地的资源文件，所以可能会产生自己在本地修改了某项配置，但是网页没有生效，这里就需要时刻记着自己引用的是github上的资源，如果本地配置大改的话，github上的文件也要进行重新上传覆盖。
 
@@ -62,13 +62,13 @@ git push                      //推送至远程仓库
 
 ​	官网首页很清楚的写明了如何获取资源链接
 
-![](https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/artical/20201111211357.png)
+![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201111211357.png)
 
 ​	`https://cdn.jsdelivr.net/gh/user/repo@version/file`，`user`就是你的github用户名，`repo@version`，仓库加上版本号，`file`就是仓库下的路径。
 
 ​	这里我没有说版本号是因为网上的教程讲到了仓库需要发布，但是我后面无意间发现不用发布直接`reop@分支名`，也可以访问到。并且我一开始也发布仓库了，但是后面想要修改已经上传的文件也出了一些问题，索性直接用简单的。
 
-​	贴一个我博客首页的壁纸链接：https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/top_img/83531406_p0.png
+​	贴一个我博客首页的壁纸链接：https://cdn.jsdelivr.net/gh/penginman/PicBed@master/top_img/83531406_p0.png
 
 ​	这个壁纸有12M大小，而且链接也符合上面的格式，可以参考一下。
 
@@ -80,7 +80,7 @@ git push                      //推送至远程仓库
 
 ​	我发现github能这样用以后就在上面整了图床，现在博客里的图片都开始在上传，之前用的路过图床，说的全球都有CDN加速，但是还是卡的一。
 
-​	还有我整理的`Valine`评论的自定义表情，大伙可以直接拿去用：[图片地址](https://cdn.jsdelivr.net/gh/guobang-yoo/CDN@master/emoji/)，[emojimap](https://cdn.jsdelivr.net/gh/guobang-yoo/CDN@master/emoji/valine.json)。完工
+​	还有我整理的`Valine`评论的自定义表情，大伙可以直接拿去用：[图片地址](https://cdn.jsdelivr.net/gh/penginman/CDN@master/emoji/)，[emojimap](https://cdn.jsdelivr.net/gh/penginman/CDN@master/emoji/valine.json)。完工
 
 
 

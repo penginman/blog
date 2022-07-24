@@ -2,7 +2,7 @@
 title: Hackgame2020(二)
 categories: ['CTF']
 tags: ['Hackergame 2020','Java安全']
-cover: https://cdn.jsdelivr.net/gh/guobang-yoo/PicBed@master/cover/20201111123547.png
+cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111123547.png
 date: 2020-11-05 09:29:22
 ---
 
