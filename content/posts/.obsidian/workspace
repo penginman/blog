@@ -4,30 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a2944b8839036bf1",
+        "id": "60361726e00b3b47",
         "type": "leaf",
-        "dimension": 80.10139416983523,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "javascript学习笔记.md",
+            "file": "[SWPU2019]Web1.md",
             "mode": "source",
             "source": false
           }
-        },
-        "group": "38e47a5b8666dbe1"
-      },
-      {
-        "id": "1b573ae2b5b1c980",
-        "type": "leaf",
-        "dimension": 19.898605830164765,
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "javascript学习笔记.md"
-          }
-        },
-        "group": "38e47a5b8666dbe1"
+        }
       }
     ],
     "direction": "vertical"
@@ -46,7 +32,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "~",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -92,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "javascript学习笔记.md",
+                "file": "[SWPU2019]Web1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "javascript学习笔记.md",
+                "file": "[SWPU2019]Web1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "javascript学习笔记.md"
+                "file": "[SWPU2019]Web1.md"
               }
             }
           }
@@ -143,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1b573ae2b5b1c980",
+  "active": "60361726e00b3b47",
   "lastOpenFiles": [
-    "获取京东CK.md",
-    "BUUCTF寒假刷题-Web.md",
-    "[极客大挑战 2019]FinalSQL.md",
-    "[极客大挑战 2019]RCE ME.md",
-    "CSS学习.md",
-    "2021年度总结.md",
+    "萌娘百科黑幕实现.md",
+    "Drawing 2022-07-31 19.00.06.excalidraw.md",
+    "未命名.md",
     "Vue学习笔记.md",
+    "javascript学习笔记.md",
+    "Chevereto-搭建一个自己的图床.md",
     "博客搬迁.md",
-    "2022-07-15.md",
-    "造窝过程-(一).md"
+    "用的顺手的网站.md",
+    "Upload-Labs4.md",
+    "XSS-Lab1.md"
   ]
 }

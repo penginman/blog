@@ -3,9 +3,16 @@
         <title>Braindance</title>
         <link>https://www.braindance.top/</link>
         <description>Braindance&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 09 May 2022 21:40:49 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 10 Aug 2022 18:39:26 &#43;0800</lastBuildDate>
             <atom:link href="https://www.braindance.top/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>近期总结</title>
+    <link>https://www.braindance.top/posts/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</link>
+    <pubDate>Wed, 10 Aug 2022 18:39:26 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[水一篇文章，写写最近干了啥 Onenav一直想找一个导航页的网站，自己天天用书签栏用的找不到太烦了。之前用过webstack主题的网站，本来是]]></description>
+</item><item>
     <title>获取京东CK教程</title>
     <link>https://www.braindance.top/posts/%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Cck/</link>
     <pubDate>Mon, 09 May 2022 21:40:49 &#43;0800</pubDate><author>
@@ -68,12 +75,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
     <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合]]></description>
-</item><item>
-    <title>用的顺手的网站</title>
-    <link>https://www.braindance.top/posts/%E7%94%A8%E7%9A%84%E9%A1%BA%E6%89%8B%E7%9A%84%E7%BD%91%E7%AB%99/</link>
-    <pubDate>Sat, 31 Jul 2021 08:52:16 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/%E7%94%A8%E7%9A%84%E9%A1%BA%E6%89%8B%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
-    <description><![CDATA[工具网站nginx配置生成 万词王 WantWords Learn Git Branching 视频解析接口https://vip.parwix.com:4433/player/?url= 云短信、]]></description>
 </item></channel>
 </rss>
