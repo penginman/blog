@@ -15,5 +15,6 @@ comment: false
 new Artitalk({
     appId: 'H5pU3QETsLbYLkqlfnyorODT-MdYXbMMI', // Your LeanCloud appId
     appKey: 'pnp2YDSEGbfnNsN6HASSMl50' // Your LeanCloud appKey
+    serverURL: 'artitalk.penginman.com'
 })
 </script>
