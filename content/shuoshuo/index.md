@@ -1,12 +1,11 @@
 ---
 title: "说说"
 date: 2022-08-28T12:07:56+08:00
-draft: true
+draft: false
 comment: false
 ---
-
-
 <!-- 引用 artitalk -->
+
 <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
 
 <!-- 存放说说的容器 -->
@@ -18,4 +17,3 @@ new Artitalk({
     appKey: 'pnp2YDSEGbfnNsN6HASSMl50' // Your LeanCloud appKey
 })
 </script>
-
