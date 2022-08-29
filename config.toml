@@ -191,7 +191,7 @@ theme = "DoIt"
     # DoIt 新增 | 0.2.12 Twikoo 评论系统设置
     [params.page.comment.twikoo]
       enable = true
-      envId = "http://42.192.83.222:2342"
+      envId = "https://my-twikoo-inky.vercel.app"
       region = ""
       path = ""
       visitor = true
