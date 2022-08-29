@@ -191,7 +191,7 @@ theme = "DoIt"
     # DoIt 新增 | 0.2.12 Twikoo 评论系统设置
     [params.page.comment.twikoo]
       enable = true
-      envId = "http://penginman.com:2331/"
+      envId = "https://twikoo.penginman.com/"
       region = ""
       path = ""
       visitor = true
