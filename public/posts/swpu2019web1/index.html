@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -69,14 +69,8 @@
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
                 </a></div>
         </div>
     </div>
@@ -106,14 +100,8 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
             </a></div>
     </div>
 </header>
@@ -133,7 +121,9 @@
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/ctf/"><i class="far fa-folder fa-fw"></i>CTF</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-15">2021-04-15</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2021-04-15">2021-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 908 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/swpu2019web1/" class="leancloud_visitors" data-flag-title="SWPU2019 Web1">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"></span>&nbsp;次阅读
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/posts/swpu2019web1/" class="comment_count" data-flag-title="SWPU2019 Web1">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -150,37 +140,41 @@
                         本文最后更新于 <span class="timeago" datetime="2021-04-15T09:55:17" title="April 15, 2021">2021-04-15</span>，文中内容可能已过时。</div>
                 </div>
             </div><p>一个登陆界面，再看下url地址为login.php，确认了使用的是php</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png">
+    </a></p>
 <p>直接查看源码，在源码中找到了register.php。先注册一个进去看一看。</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091705.png">
+    </a></p>
 <p>是一个发布广告的信息页，发布广告时需要输入广告的标题和内容，联想一下之前做过的发布文章的，应该是sql注入，输入广告标题输入一个单引号<code>'</code>试一试</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091924.png">
+    </a></p>
 <p>广告详情中出现了数据库报错</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png">猜测应该是二次注入，发布时加上一些转义字符没有出现错误，但是查看详情时再次从数据库中取出带有payload的数据，可以执行sql语句。而且上面的单引号测试出来了是<strong>字符型单引号闭合</strong>。</p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091959.png">
+    </a>猜测应该是二次注入，发布时加上一些转义字符没有出现错误，但是查看详情时再次从数据库中取出带有payload的数据，可以执行sql语句。而且上面的单引号测试出来了是<strong>字符型单引号闭合</strong>。</p>
 <p>接下来是尝试过滤。我试出来的有空格（使用<code>/**/</code>绕过）、or，and（可以使用&amp;&amp;，||），同时or被过滤，就说明保存数据库表名的库<strong>information_schema</strong>没有办法查询，并且<strong>orderby</strong>也不能使用，需要使用其他办法获取表内容。</p>
 <p>测试一下当前表的字段数，从1开始加，一直会报字段数不匹配，直到尝试到22。还需要主义的是执行的sql语句后面的 <code>LIMIT 0,1</code>需要闭合，所以最后添加了一个单引号</p>
 <div class="highlight"><div class="chroma">
@@ -191,13 +185,14 @@
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="s1">&#39;/**/union/**/select/**/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22&#39;</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div><p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png"></p>
+</div><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png">
+    </a></p>
 <p>说明回显位是2和3。</p>
 <p>由于没有办法查询表名，所以需要我们自己猜测，CTF比赛中常见的表名就是flag、users、举办方的缩写啥的。<del>这种没有办法查询表名的题目表名应该都不会设置太难</del></p>
 <p>测试的语句</p>
@@ -212,37 +207,41 @@
 </div><p>当测到<code>users</code>表时返回了当前字段数不匹配的错误，说名users里有多个字段，肯定没有办法显示在一列中。所以接下来是猜users表的字段数。</p>
 <p>首先讲解一波<strong>无列名注入</strong>。</p>
 <p>先来个正常表（flag）的查询</p>
-<p><img
-        class="lazyload"
-        data-src="D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png"
-        data-srcset="D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png, D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png 1.5x, D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png 2x"
-        data-sizes="auto"
-        alt="D:\DROPS\CTF比赛题解\BUUCTF\Web\[SWPU2019]Web1\20210415094632.png"
-        title="D:\DROPS\CTF比赛题解\BUUCTF\Web\[SWPU2019]Web1\20210415094632.png"></p>
+<p><a class="lightgallery" href="D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png" title="D:\DROPS\CTF比赛题解\BUUCTF\Web\[SWPU2019]Web1\20210415094632.png" data-thumbnail="D:\DROPS\CTF比赛题解\BUUCTF\Web\[SWPU2019]Web1\20210415094632.png">
+        <img
+            class="lazyload"
+            data-src="D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png"
+            data-srcset="D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png, D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png 1.5x, D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png 2x"
+            data-sizes="auto"
+            alt="D:\DROPS\CTF比赛题解\BUUCTF\Web\[SWPU2019]Web1\20210415094632.png">
+    </a></p>
 <p>我们知道在sql语句查询的时候，可以给列名起别名形如</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094059.png">
+    </a></p>
 <p>使用联合查询的时候，只要前后表的字段数相同，前面查询的就会成为表名</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094238.png">
+    </a></p>
 <p>所以当我们不知道flag表的字段，并且想要查询里面的内容时，比如我想查询flag表的flag字段，可以构造</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415094814.png">
+    </a></p>
 <p>需要为子查询的结果再起一个别名（图中为<code>x</code>），这样我们就不用列名查询到了字段。总结一下思路就是：自己构造一个表名并且联合查询想要查询的表名，再使用<code>group_concat</code>函数输出自己构造的表名。</p>
 <p>所以测试users表的字段数时，就通过形如上图的格式，改变联合查询的字段数判断。</p>
 <p>最终的payload：</p>
@@ -282,8 +281,8 @@
     <div class="post-nav"><a href="/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/" class="prev" rel="prev" title="BUUCTF寒假刷题-Web"><i class="fas fa-angle-left fa-fw"></i>BUUCTF寒假刷题-Web</a>
             <a href="/posts/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/" class="next" rel="next" title="WUSTCTF2020 朴实无华">WUSTCTF2020 朴实无华<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="valine" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
@@ -312,7 +311,7 @@
 			})();
 		</script></div>
 
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"//img.braindance.top/CDN/emoji/","emojiMaps":{"2233_卖萌":"2233/卖萌n.png","2233_吃惊":"2233/吃惊n.png","2233_吐魂":"2233/吐魂.png","2233_喝水":"2233/喝水.png","2233_困惑":"2233/困惑n.png","2233_大哭":"2233/大哭.png","2233_大笑":"2233/大笑n.png","2233_委屈":"2233/委屈.png","2233_怒":"2233/怒.png","2233_无言":"2233/无言.png","2233_汗":"2233/汗n.png","2233_疑问":"2233/疑问n.png","2233_第一":"2233/第一.png","2233_耶":"2233/耶.png","2233_郁闷":"2233/郁闷.png","tv_doge":"xiaodianshi/doge.gif","tv_亲亲":"xiaodianshi/亲亲.gif","tv_偷笑":"xiaodianshi/偷笑.gif","tv_再见":"xiaodianshi/再见.gif","tv_发怒":"xiaodianshi/发怒.gif","tv_发财":"xiaodianshi/发财.gif","tv_可爱":"xiaodianshi/可爱.gif","tv_吐血":"xiaodianshi/吐血.gif","tv_呆":"xiaodianshi/呆.gif","tv_呕吐":"xiaodianshi/呕吐.gif","tv_困":"xiaodianshi/困.gif","tv_坏笑":"xiaodianshi/坏笑.gif","tv_大佬":"xiaodianshi/大佬.gif","tv_大哭":"xiaodianshi/大哭.gif","tv_委屈":"xiaodianshi/委屈.gif","tv_害羞":"xiaodianshi/害羞.gif","tv_尴尬":"xiaodianshi/尴尬.gif","tv_微笑":"xiaodianshi/微笑.gif","tv_思考":"xiaodianshi/思考.gif","tv_打脸":"xiaodianshi/打脸.gif","tv_抓狂":"xiaodianshi/抓狂.gif","tv_抠鼻子":"xiaodianshi/抠鼻子.gif","tv_斜眼笑":"xiaodianshi/斜眼笑.gif","tv_晕":"xiaodianshi/晕.gif","tv_流汗":"xiaodianshi/流汗.gif","tv_流鼻血":"xiaodianshi/流鼻血.gif","tv_点赞":"xiaodianshi/点赞.gif","tv_生气":"xiaodianshi/生气.gif","tv_生病":"xiaodianshi/生病.gif","tv_疑问":"xiaodianshi/疑问.gif","tv_白眼":"xiaodianshi/白眼.gif","tv_睡着":"xiaodianshi/睡着.gif","tv_笑哭":"xiaodianshi/笑哭.gif","tv_腼腆":"xiaodianshi/腼腆.gif","tv_色":"xiaodianshi/色.gif","tv_调皮":"xiaodianshi/调皮.gif","tv_鄙视":"xiaodianshi/鄙视.gif","tv_闭嘴":"xiaodianshi/闭嘴.gif","tv_难过":"xiaodianshi/难过.gif","tv_馋":"xiaodianshi/馋.gif","tv_黑人问号":"xiaodianshi/黑人问号.gif","tv_鼓掌":"xiaodianshi/鼓掌.gif","蛆音娘_OK":"quyinniang/OK.png","蛆音娘_die":"quyinniang/die.png","蛆音娘_偷看":"quyinniang/偷看.png","蛆音娘_卖萌":"quyinniang/卖萌.png","蛆音娘_吃惊":"quyinniang/吃惊q.png","蛆音娘_吃瓜群众":"quyinniang/吃瓜群众.png","蛆音娘_吐血":"quyinniang/吐血.png","蛆音娘_哭泣":"quyinniang/哭泣q.png","蛆音娘_哼":"quyinniang/哼.png","蛆音娘_大笑":"quyinniang/大笑.png","蛆音娘_害怕":"quyinniang/害怕.png","蛆音娘_扶额":"quyinniang/扶额.png","蛆音娘_摇头":"quyinniang/摇头.png","蛆音娘_无语":"quyinniang/无语q.png","蛆音娘_机智":"quyinniang/机智.png","蛆音娘_滑稽":"quyinniang/滑稽.png","蛆音娘_生气":"quyinniang/生气.png","蛆音娘_疑问":"quyinniang/疑问.png","蛆音娘_睡觉觉":"quyinniang/睡觉觉.png","蛆音娘_肥皂":"quyinniang/肥皂.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"serverURLs":"https://shaendlk.api.lncldglobal.com","visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/valine/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"http://42.192.83.222:2342","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

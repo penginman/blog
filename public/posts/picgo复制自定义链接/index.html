@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -69,14 +69,8 @@
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
                 </a></div>
         </div>
     </div>
@@ -106,14 +100,8 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
             </a></div>
     </div>
 </header>
@@ -133,7 +121,9 @@
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/"><i class="far fa-folder fa-fw"></i>瞎折腾</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-30">2020-11-30</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-11-30">2020-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 857 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" class="leancloud_visitors" data-flag-title="PicGo复制自定义链接">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"></span>&nbsp;次阅读
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" class="comment_count" data-flag-title="PicGo复制自定义链接">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -170,40 +160,44 @@
 </blockquote>
 <p>项目地址：<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener noreffer">PicGo</a></p>
 <p>软件界面：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png">
+    </a></p>
 <h1 id="起因" class="headerLink">
     <a href="#%e8%b5%b7%e5%9b%a0" class="header-mark"></a>起因</h1><p>PicGo上传成功以后可以自动复制url，但是默认复制的图片链接是github提供的，github在国内又经常抽风，图片通常都是无法访问的，所以我使用了jsdelivr提供的链接访问图片，PicGo也提供了自定义链接，但是规定必须包含<code>$url</code>参数，也就是默认的url地址：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png">
+    </a></p>
 <p>起初是把jsdelivr的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。</p>
 <h1 id="解决方法" class="headerLink">
-    <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95" class="header-mark"></a>解决方法</h1><p>在软件设置的配置文件里找到了<code>customLink</code>，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。<img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png"></p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png"></p>
+    <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95" class="header-mark"></a>解决方法</h1><p>在软件设置的配置文件里找到了<code>customLink</code>，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png">
+    </a></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png">
+    </a></p>
 <h1 id="结语" class="headerLink">
-    <a href="#%e7%bb%93%e8%af%ad" class="header-mark"></a>结语</h1><p>软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了<code>$filename</code>变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是<code>png</code>格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接<!-- raw HTML omitted -->Crtl<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Shift<!-- raw HTML omitted -->+<!-- raw HTML omitted -->i<!-- raw HTML omitted -->，把图片链接贴里面就彳亍了。<!-- raw HTML omitted --><del>白嫖真爽</del><!-- raw HTML omitted --></p>
+    <a href="#%e7%bb%93%e8%af%ad" class="header-mark"></a>结语</h1><p>软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了<code>$filename</code>变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是<code>png</code>格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接<kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd>，把图片链接贴里面就彳亍了。<span class='heimu'><del>白嫖真爽</del></span></p>
 <hr>
 <p>2022-1-31 11:43:48</p>
 <p>这时候发现自定义链接直接用markdown格式就更好了</p>
@@ -218,13 +212,14 @@
 </div><hr>
 <h1 id="最简单修改" class="headerLink">
     <a href="#%e6%9c%80%e7%ae%80%e5%8d%95%e4%bf%ae%e6%94%b9" class="header-mark"></a>最简单修改</h1><p>前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png"
-        title="image-20220203224558136"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png" title="image-20220203224558136" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png">
+    </a></p>
 <p>直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -263,8 +258,8 @@
     <div class="post-nav"><a href="/posts/dmctf%E4%B9%8Bweb/" class="prev" rel="prev" title="DMCTF之Web"><i class="fas fa-angle-left fa-fw"></i>DMCTF之Web</a>
             <a href="/posts/dmctf%E4%B9%8Bmisc/" class="next" rel="next" title="DMCTF之Misc">DMCTF之Misc<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="valine" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
@@ -293,7 +288,7 @@
 			})();
 		</script></div>
 
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"//img.braindance.top/CDN/emoji/","emojiMaps":{"2233_卖萌":"2233/卖萌n.png","2233_吃惊":"2233/吃惊n.png","2233_吐魂":"2233/吐魂.png","2233_喝水":"2233/喝水.png","2233_困惑":"2233/困惑n.png","2233_大哭":"2233/大哭.png","2233_大笑":"2233/大笑n.png","2233_委屈":"2233/委屈.png","2233_怒":"2233/怒.png","2233_无言":"2233/无言.png","2233_汗":"2233/汗n.png","2233_疑问":"2233/疑问n.png","2233_第一":"2233/第一.png","2233_耶":"2233/耶.png","2233_郁闷":"2233/郁闷.png","tv_doge":"xiaodianshi/doge.gif","tv_亲亲":"xiaodianshi/亲亲.gif","tv_偷笑":"xiaodianshi/偷笑.gif","tv_再见":"xiaodianshi/再见.gif","tv_发怒":"xiaodianshi/发怒.gif","tv_发财":"xiaodianshi/发财.gif","tv_可爱":"xiaodianshi/可爱.gif","tv_吐血":"xiaodianshi/吐血.gif","tv_呆":"xiaodianshi/呆.gif","tv_呕吐":"xiaodianshi/呕吐.gif","tv_困":"xiaodianshi/困.gif","tv_坏笑":"xiaodianshi/坏笑.gif","tv_大佬":"xiaodianshi/大佬.gif","tv_大哭":"xiaodianshi/大哭.gif","tv_委屈":"xiaodianshi/委屈.gif","tv_害羞":"xiaodianshi/害羞.gif","tv_尴尬":"xiaodianshi/尴尬.gif","tv_微笑":"xiaodianshi/微笑.gif","tv_思考":"xiaodianshi/思考.gif","tv_打脸":"xiaodianshi/打脸.gif","tv_抓狂":"xiaodianshi/抓狂.gif","tv_抠鼻子":"xiaodianshi/抠鼻子.gif","tv_斜眼笑":"xiaodianshi/斜眼笑.gif","tv_晕":"xiaodianshi/晕.gif","tv_流汗":"xiaodianshi/流汗.gif","tv_流鼻血":"xiaodianshi/流鼻血.gif","tv_点赞":"xiaodianshi/点赞.gif","tv_生气":"xiaodianshi/生气.gif","tv_生病":"xiaodianshi/生病.gif","tv_疑问":"xiaodianshi/疑问.gif","tv_白眼":"xiaodianshi/白眼.gif","tv_睡着":"xiaodianshi/睡着.gif","tv_笑哭":"xiaodianshi/笑哭.gif","tv_腼腆":"xiaodianshi/腼腆.gif","tv_色":"xiaodianshi/色.gif","tv_调皮":"xiaodianshi/调皮.gif","tv_鄙视":"xiaodianshi/鄙视.gif","tv_闭嘴":"xiaodianshi/闭嘴.gif","tv_难过":"xiaodianshi/难过.gif","tv_馋":"xiaodianshi/馋.gif","tv_黑人问号":"xiaodianshi/黑人问号.gif","tv_鼓掌":"xiaodianshi/鼓掌.gif","蛆音娘_OK":"quyinniang/OK.png","蛆音娘_die":"quyinniang/die.png","蛆音娘_偷看":"quyinniang/偷看.png","蛆音娘_卖萌":"quyinniang/卖萌.png","蛆音娘_吃惊":"quyinniang/吃惊q.png","蛆音娘_吃瓜群众":"quyinniang/吃瓜群众.png","蛆音娘_吐血":"quyinniang/吐血.png","蛆音娘_哭泣":"quyinniang/哭泣q.png","蛆音娘_哼":"quyinniang/哼.png","蛆音娘_大笑":"quyinniang/大笑.png","蛆音娘_害怕":"quyinniang/害怕.png","蛆音娘_扶额":"quyinniang/扶额.png","蛆音娘_摇头":"quyinniang/摇头.png","蛆音娘_无语":"quyinniang/无语q.png","蛆音娘_机智":"quyinniang/机智.png","蛆音娘_滑稽":"quyinniang/滑稽.png","蛆音娘_生气":"quyinniang/生气.png","蛆音娘_疑问":"quyinniang/疑问.png","蛆音娘_睡觉觉":"quyinniang/睡觉觉.png","蛆音娘_肥皂":"quyinniang/肥皂.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"serverURLs":"https://shaendlk.api.lncldglobal.com","visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/valine/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"http://42.192.83.222:2342","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -69,14 +69,8 @@
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
                 </a></div>
         </div>
     </div>
@@ -106,14 +100,8 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
             </a></div>
     </div>
 </header>
@@ -154,7 +142,9 @@
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/ctf/"><i class="far fa-folder fa-fw"></i>CTF</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1881 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/hackgame20201/" class="leancloud_visitors" data-flag-title="Hackgame2020(一)">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"></span>&nbsp;次阅读
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/posts/hackgame20201/" class="comment_count" data-flag-title="Hackgame2020(一)">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -196,84 +186,93 @@
 <h1 id="web" class="headerLink">
     <a href="#web" class="header-mark"></a>web</h1><h3 id="签到题" class="headerLink">
     <a href="#%e7%ad%be%e5%88%b0%e9%a2%98" class="header-mark"></a>签到题</h3><p>​	第一题是flag提取器，打开题目以后页面是一个提取器下面一个<code>进度条</code>和一个<code>提取</code>按钮。</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwJbJs.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwJbJs.png, https://s1.ax1x.com/2020/11/01/BwJbJs.png 1.5x, https://s1.ax1x.com/2020/11/01/BwJbJs.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwJbJs.png"
-        title="BwJbJs.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwJbJs.png" title="BwJbJs.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwJbJs.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwJbJs.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwJbJs.png, https://s1.ax1x.com/2020/11/01/BwJbJs.png 1.5x, https://s1.ax1x.com/2020/11/01/BwJbJs.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwJbJs.png">
+    </a></p>
 <p>​	随便拉了拉进度条发现初始是<code>0</code>末尾是<code>1.5</code>，然后中间的数值都是小数</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwYAQx.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwYAQx.png, https://s1.ax1x.com/2020/11/01/BwYAQx.png 1.5x, https://s1.ax1x.com/2020/11/01/BwYAQx.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwYAQx.png"
-        title="BwYAQx.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwYAQx.png" title="BwYAQx.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwYAQx.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwYAQx.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwYAQx.png, https://s1.ax1x.com/2020/11/01/BwYAQx.png 1.5x, https://s1.ax1x.com/2020/11/01/BwYAQx.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwYAQx.png">
+    </a></p>
 <p>​	我猜的题目可能是想让数值为<code>1</code>时能提取到flag。</p>
 <p>​	F12查看源代码，定位到进度条的标签，查看属性</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwYoX6.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwYoX6.png, https://s1.ax1x.com/2020/11/01/BwYoX6.png 1.5x, https://s1.ax1x.com/2020/11/01/BwYoX6.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwYoX6.png"
-        title="https://s1.ax1x.com/2020/11/01/BwYoX6.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwYoX6.png" title="https://s1.ax1x.com/2020/11/01/BwYoX6.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwYoX6.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwYoX6.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwYoX6.png, https://s1.ax1x.com/2020/11/01/BwYoX6.png 1.5x, https://s1.ax1x.com/2020/11/01/BwYoX6.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwYoX6.png">
+    </a></p>
 <p>​	确实和猜测一样最大最小值分别是<code>0</code>、<code>1.5</code>，注意到<code>step</code>值为<code>0.00001</code>，就是这个属性让我们拖动进度条时，递增的值是小数，想精准得到<code>1</code>个flag，就把网页上的<code>step</code>值改为<code>1</code>。然后随便拖动一下进度条得到<code>1</code>，点击<code>提取</code>按钮，完工。</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwNVaD.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwNVaD.png, https://s1.ax1x.com/2020/11/01/BwNVaD.png 1.5x, https://s1.ax1x.com/2020/11/01/BwNVaD.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwNVaD.png"
-        title="https://s1.ax1x.com/2020/11/01/BwNVaD.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwNVaD.png" title="https://s1.ax1x.com/2020/11/01/BwNVaD.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwNVaD.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwNVaD.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwNVaD.png, https://s1.ax1x.com/2020/11/01/BwNVaD.png 1.5x, https://s1.ax1x.com/2020/11/01/BwNVaD.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwNVaD.png">
+    </a></p>
 <h3 id="2048" class="headerLink">
     <a href="#2048" class="header-mark"></a>2048</h3><p>​	打开题目是一个<code>2048</code>的小游戏，第一个想法就是玩<code>2048</code>达到一定分数以后会获得flag（<del>可恶这个比赛怎么知道最近我天天在玩2048的</del>）,但是想比赛不可能让选手在线玩游戏吧，尤其对于我这种<del>逃课废物</del>是不可能努力哒！</p>
 <p>F12开始翻网页资源</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwUONF.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwUONF.png, https://s1.ax1x.com/2020/11/01/BwUONF.png 1.5x, https://s1.ax1x.com/2020/11/01/BwUONF.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwUONF.png"
-        title="https://s1.ax1x.com/2020/11/01/BwUONF.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwUONF.png" title="https://s1.ax1x.com/2020/11/01/BwUONF.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwUONF.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwUONF.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwUONF.png, https://s1.ax1x.com/2020/11/01/BwUONF.png 1.5x, https://s1.ax1x.com/2020/11/01/BwUONF.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwUONF.png">
+    </a></p>
 <p>​	还好上次<del>摸鱼</del>课题做了一个网页版的2048，略微能看懂一点点结构，第一个<code>animframe_polyfill</code>应该就是管动画效果的，<code>keynpard...</code>这个肯定是相应按键的，<code>local_storage_manager</code>应该是保存游戏的，<code>game_manager</code>感觉就是管理整个游戏的主要文件。</p>
 <p>​	打开<code>game_manager</code>粗略的看了下变量，<code>score</code> 分数、<code>over、won、keepPlaying</code>游戏状态，想赢游戏肯定是和<code>score、won</code>有关，直接Ctrl+F搜索整个文档这两个变量出现的位置。</p>
 <p>发现了</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwdGdK.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwdGdK.png, https://s1.ax1x.com/2020/11/01/BwdGdK.png 1.5x, https://s1.ax1x.com/2020/11/01/BwdGdK.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwdGdK.png"
-        title="https://s1.ax1x.com/2020/11/01/BwdGdK.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwdGdK.png" title="https://s1.ax1x.com/2020/11/01/BwdGdK.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwdGdK.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwdGdK.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwdGdK.png, https://s1.ax1x.com/2020/11/01/BwdGdK.png 1.5x, https://s1.ax1x.com/2020/11/01/BwdGdK.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwdGdK.png">
+    </a></p>
 <p>​	只有这里修改了<code>won</code>的状态，前面还有个<code>16384</code>这个应该就是获得胜利需要得到的分数，这个分数对于我来说还是简简单单（<del>小声bb</del><a href="https://s1.ax1x.com/2020/11/01/BwUdte.jpg" target="_blank" rel="noopener noreffer">截图为证</a>），直接让<code>if</code>里面的语句为真就可以获胜，直接修改<code>if(1) self.won = true</code>，保存文件，按一个方向键让语句执行到，完工。</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwwpTK.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwwpTK.png, https://s1.ax1x.com/2020/11/01/BwwpTK.png 1.5x, https://s1.ax1x.com/2020/11/01/BwwpTK.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwwpTK.png"
-        title="https://s1.ax1x.com/2020/11/01/BwwpTK.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwwpTK.png" title="https://s1.ax1x.com/2020/11/01/BwwpTK.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwwpTK.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwwpTK.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwwpTK.png, https://s1.ax1x.com/2020/11/01/BwwpTK.png 1.5x, https://s1.ax1x.com/2020/11/01/BwwpTK.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwwpTK.png">
+    </a></p>
 <h1 id="general" class="headerLink">
     <a href="#general" class="header-mark"></a>general</h1><h3 id="猫咪问题" class="headerLink">
     <a href="#%e7%8c%ab%e5%92%aa%e9%97%ae%e9%a2%98" class="header-mark"></a>猫咪问题++</h3><p>​	秉着前面题都是简单题，试着做了一下，看到题目提示的有往年的问题题解</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwLtDs.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwLtDs.png, https://s1.ax1x.com/2020/11/01/BwLtDs.png 1.5x, https://s1.ax1x.com/2020/11/01/BwLtDs.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwLtDs.png"
-        title="https://s1.ax1x.com/2020/11/01/BwLtDs.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwLtDs.png" title="https://s1.ax1x.com/2020/11/01/BwLtDs.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwLtDs.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwLtDs.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwLtDs.png, https://s1.ax1x.com/2020/11/01/BwLtDs.png 1.5x, https://s1.ax1x.com/2020/11/01/BwLtDs.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwLtDs.png">
+    </a></p>
 <p>​	题意思很明显的书考验同学的搜题技巧。那就开工。</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwLD8U.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwLD8U.png, https://s1.ax1x.com/2020/11/01/BwLD8U.png 1.5x, https://s1.ax1x.com/2020/11/01/BwLD8U.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwLD8U.png"
-        title="https://s1.ax1x.com/2020/11/01/BwLD8U.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwLD8U.png" title="https://s1.ax1x.com/2020/11/01/BwLD8U.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwLD8U.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwLD8U.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwLD8U.png, https://s1.ax1x.com/2020/11/01/BwLD8U.png 1.5x, https://s1.ax1x.com/2020/11/01/BwLD8U.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwLD8U.png">
+    </a></p>
 <h4 id="第一题" class="headerLink">
     <a href="#%e7%ac%ac%e4%b8%80%e9%a2%98" class="header-mark"></a>第一题</h4><blockquote>
 <ol>
@@ -284,13 +283,14 @@
 </blockquote>
 <p>​	本人只认识几个，那就一个一个搜呗。我的模式是：百度<code>xxx标志</code>然后第二条就是百度图片的搜索结果，大致辨别一下，然后再百度<code>xxx是哺乳动物吗</code>，妥妥的<del>胎儿</del>教学。</p>
 <p>​	一个比较有印象就是<code>FreeDOS</code>这个标志就离谱，什么玩意</p>
-<p><img
-        class="lazyload"
-        data-src="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg"
-        data-srcset="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg, https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg 1.5x, https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg 2x"
-        data-sizes="auto"
-        alt="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg"
-        title="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg"></p>
+<p><a class="lightgallery" href="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg" title="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg" data-thumbnail="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg">
+        <img
+            class="lazyload"
+            data-src="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg"
+            data-srcset="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg, https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg 1.5x, https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg 2x"
+            data-sizes="auto"
+            alt="https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg">
+    </a></p>
 <p><strong>参考答案 ：12</strong></p>
 <h4 id="第二题" class="headerLink">
     <a href="#%e7%ac%ac%e4%ba%8c%e9%a2%98" class="header-mark"></a>第二题</h4><blockquote>
@@ -323,13 +323,14 @@
 </ol>
 </blockquote>
 <p>​	直接百度地图搜图书馆，然后全景地图房门口，视野拉到L型灌木那。</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/01/BwvkdA.png"
-        data-srcset="https://s1.ax1x.com/2020/11/01/BwvkdA.png, https://s1.ax1x.com/2020/11/01/BwvkdA.png 1.5x, https://s1.ax1x.com/2020/11/01/BwvkdA.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/01/BwvkdA.png"
-        title="https://s1.ax1x.com/2020/11/01/BwvkdA.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/01/BwvkdA.png" title="https://s1.ax1x.com/2020/11/01/BwvkdA.png" data-thumbnail="https://s1.ax1x.com/2020/11/01/BwvkdA.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/01/BwvkdA.png"
+            data-srcset="https://s1.ax1x.com/2020/11/01/BwvkdA.png, https://s1.ax1x.com/2020/11/01/BwvkdA.png 1.5x, https://s1.ax1x.com/2020/11/01/BwvkdA.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/01/BwvkdA.png">
+    </a></p>
 <p><strong>参考答案：9</strong></p>
 <h4 id="第五题" class="headerLink">
     <a href="#%e7%ac%ac%e4%ba%94%e9%a2%98" class="header-mark"></a>第五题</h4><blockquote>
@@ -368,8 +369,8 @@
     <div class="post-nav"><a href="/posts/sql-labs1/" class="prev" rel="prev" title="sql-labs(一)"><i class="fas fa-angle-left fa-fw"></i>sql-labs(一)</a>
             <a href="/posts/xss-lab1/" class="next" rel="next" title="XSS-Lab (一)">XSS-Lab (一)<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="valine" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
@@ -398,7 +399,7 @@
 			})();
 		</script></div>
 
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"//img.braindance.top/CDN/emoji/","emojiMaps":{"2233_卖萌":"2233/卖萌n.png","2233_吃惊":"2233/吃惊n.png","2233_吐魂":"2233/吐魂.png","2233_喝水":"2233/喝水.png","2233_困惑":"2233/困惑n.png","2233_大哭":"2233/大哭.png","2233_大笑":"2233/大笑n.png","2233_委屈":"2233/委屈.png","2233_怒":"2233/怒.png","2233_无言":"2233/无言.png","2233_汗":"2233/汗n.png","2233_疑问":"2233/疑问n.png","2233_第一":"2233/第一.png","2233_耶":"2233/耶.png","2233_郁闷":"2233/郁闷.png","tv_doge":"xiaodianshi/doge.gif","tv_亲亲":"xiaodianshi/亲亲.gif","tv_偷笑":"xiaodianshi/偷笑.gif","tv_再见":"xiaodianshi/再见.gif","tv_发怒":"xiaodianshi/发怒.gif","tv_发财":"xiaodianshi/发财.gif","tv_可爱":"xiaodianshi/可爱.gif","tv_吐血":"xiaodianshi/吐血.gif","tv_呆":"xiaodianshi/呆.gif","tv_呕吐":"xiaodianshi/呕吐.gif","tv_困":"xiaodianshi/困.gif","tv_坏笑":"xiaodianshi/坏笑.gif","tv_大佬":"xiaodianshi/大佬.gif","tv_大哭":"xiaodianshi/大哭.gif","tv_委屈":"xiaodianshi/委屈.gif","tv_害羞":"xiaodianshi/害羞.gif","tv_尴尬":"xiaodianshi/尴尬.gif","tv_微笑":"xiaodianshi/微笑.gif","tv_思考":"xiaodianshi/思考.gif","tv_打脸":"xiaodianshi/打脸.gif","tv_抓狂":"xiaodianshi/抓狂.gif","tv_抠鼻子":"xiaodianshi/抠鼻子.gif","tv_斜眼笑":"xiaodianshi/斜眼笑.gif","tv_晕":"xiaodianshi/晕.gif","tv_流汗":"xiaodianshi/流汗.gif","tv_流鼻血":"xiaodianshi/流鼻血.gif","tv_点赞":"xiaodianshi/点赞.gif","tv_生气":"xiaodianshi/生气.gif","tv_生病":"xiaodianshi/生病.gif","tv_疑问":"xiaodianshi/疑问.gif","tv_白眼":"xiaodianshi/白眼.gif","tv_睡着":"xiaodianshi/睡着.gif","tv_笑哭":"xiaodianshi/笑哭.gif","tv_腼腆":"xiaodianshi/腼腆.gif","tv_色":"xiaodianshi/色.gif","tv_调皮":"xiaodianshi/调皮.gif","tv_鄙视":"xiaodianshi/鄙视.gif","tv_闭嘴":"xiaodianshi/闭嘴.gif","tv_难过":"xiaodianshi/难过.gif","tv_馋":"xiaodianshi/馋.gif","tv_黑人问号":"xiaodianshi/黑人问号.gif","tv_鼓掌":"xiaodianshi/鼓掌.gif","蛆音娘_OK":"quyinniang/OK.png","蛆音娘_die":"quyinniang/die.png","蛆音娘_偷看":"quyinniang/偷看.png","蛆音娘_卖萌":"quyinniang/卖萌.png","蛆音娘_吃惊":"quyinniang/吃惊q.png","蛆音娘_吃瓜群众":"quyinniang/吃瓜群众.png","蛆音娘_吐血":"quyinniang/吐血.png","蛆音娘_哭泣":"quyinniang/哭泣q.png","蛆音娘_哼":"quyinniang/哼.png","蛆音娘_大笑":"quyinniang/大笑.png","蛆音娘_害怕":"quyinniang/害怕.png","蛆音娘_扶额":"quyinniang/扶额.png","蛆音娘_摇头":"quyinniang/摇头.png","蛆音娘_无语":"quyinniang/无语q.png","蛆音娘_机智":"quyinniang/机智.png","蛆音娘_滑稽":"quyinniang/滑稽.png","蛆音娘_生气":"quyinniang/生气.png","蛆音娘_疑问":"quyinniang/疑问.png","蛆音娘_睡觉觉":"quyinniang/睡觉觉.png","蛆音娘_肥皂":"quyinniang/肥皂.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"serverURLs":"https://shaendlk.api.lncldglobal.com","visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/valine/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"http://42.192.83.222:2342","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

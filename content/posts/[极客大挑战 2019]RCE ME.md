@@ -1,9 +1,9 @@
 ---
 title: 极客大挑战 2019 RCE ME
+date: 2020-12-05 20:42:00
 categories: ['DROPS']
 tags: ['Web','BUUCTF_Web','RCE','disable_function绕过']
 cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232544.png
-date: 2020-12-5 20:42:00
 ---
 
 # [极客大挑战 2019]RCE ME
@@ -75,11 +75,9 @@ echo urlencode(~'eval($_POST[\'a\'])');
 
 **利用环境变量LD_PRELOAD来绕过**
 
->php的mail函数在执行过程中会默认调用系统程序/usr/sbin/sendmail，如果我们能劫持sendmail程序，再用mail函数来触发就能实现我们的目的
->
+> php的mail函数在执行过程中会默认调用系统程序/usr/sbin/sendmail，如果我们能劫持sendmail程序，再用mail函数来触发就能实现我们的目的
 > 
->
->LD_PRELOAD是Linux系统的下一个有趣的环境变量：“它允许你定义在程序运行前优先加载的动态链接库。这个功能主要就是用来有选择性的载入不同动态链接库中的相同函数。通过这个环境变量，我们可以在主程序和其动态链接库的中间加载别的动态链接库，甚至覆盖正常的函数库。一方面，我们可以以此功能来使用自己的或是更好的函数（无需别人的源码），而另一方面，我们也可以以向别人的程序注入程序，从而达到特定的目的。
+> LD_PRELOAD是Linux系统的下一个有趣的环境变量：“它允许你定义在程序运行前优先加载的动态链接库。这个功能主要就是用来有选择性的载入不同动态链接库中的相同函数。通过这个环境变量，我们可以在主程序和其动态链接库的中间加载别的动态链接库，甚至覆盖正常的函数库。一方面，我们可以以此功能来使用自己的或是更好的函数（无需别人的源码），而另一方面，我们也可以以向别人的程序注入程序，从而达到特定的目的。
 
 正好蚁剑的插件中就有一个名为：[as_bypass_php_disable_functions](https://github.com/Medicean/as_bypass_php_disable_functions)的插件，可以选择在插件市场安装或是手动安装（github有步骤）。安装以后右键shell选择加载插件：
 
@@ -89,7 +87,7 @@ echo urlencode(~'eval($_POST[\'a\'])');
 
 ![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png)
 
->在这里我还遇到了问题，使用原来的shell执行插件功能以后，终端还是没有权限，但是我尝试了自己又上传了一个一句话木马，用这个新的一句话木马执行插件才成功，具体原因我也不清楚，如果有师傅知道原因求告知。
+> 在这里我还遇到了问题，使用原来的shell执行插件功能以后，终端还是没有权限，但是我尝试了自己又上传了一个一句话木马，用这个新的一句话木马执行插件才成功，具体原因我也不清楚，如果有师傅知道原因求告知。
 
 上传一句话木马233.php：
 
@@ -111,4 +109,3 @@ echo urlencode(~'eval($_POST[\'a\'])');
 ![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png)
 
 flag{a216900e-2427-48f7-9323-f65d0a3abdbf}
-

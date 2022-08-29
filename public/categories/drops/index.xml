@@ -3,7 +3,14 @@
         <title>DROPS - 分类 - Braindance</title>
         <link>https://www.braindance.top/categories/drops/</link>
         <description>DROPS - 分类 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 04 Dec 2020 20:24:50 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/drops/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Dec 2020 20:42:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/drops/" rel="self" type="application/rss+xml" /><item>
+    <title>极客大挑战 2019 RCE ME</title>
+    <link>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+    <pubDate>Sat, 05 Dec 2020 20:42:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+    <description><![CDATA[[极客大挑战 2019]RCE ME源码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过]]></description>
+</item><item>
     <title>GXYCTF2019 Ping Ping Ping</title>
     <link>https://www.braindance.top/posts/gxyctf2019ping-ping-ping/</link>
     <pubDate>Fri, 04 Dec 2020 20:24:50 &#43;0800</pubDate><author>
@@ -59,12 +66,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/sql-labs1/</guid>
     <description><![CDATA[前言在线靶机地址：https://buuoj.cn/challenges#sqli-labs less-1​ 首先说明sql注入的大致步骤： 判断]]></description>
-</item><item>
-    <title>极客大挑战 2019 RCE ME</title>
-    <link>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
-    <description><![CDATA[[极客大挑战 2019]RCE ME源码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过]]></description>
 </item></channel>
 </rss>

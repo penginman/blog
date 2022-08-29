@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -69,14 +69,8 @@
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
                 </a></div>
         </div>
     </div>
@@ -106,14 +100,8 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
             </a></div>
     </div>
 </header>
@@ -142,7 +130,9 @@
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/drops/"><i class="far fa-folder fa-fw"></i>DROPS</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-22">2020-09-22</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-09-22">2020-09-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1135 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/sql-labs1/" class="leancloud_visitors" data-flag-title="sql-labs(一)">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"></span>&nbsp;次阅读
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/posts/sql-labs1/" class="comment_count" data-flag-title="sql-labs(一)">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -178,44 +168,48 @@
 <li>构造sql语句</li>
 </ul>
 <p>​	根据题目提示，说明是一个单引号注入题目，构造一个带单引号的语句<code>?id=1'</code>，发现数据库报错</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/04/BgERNd.png"
-        data-srcset="https://s1.ax1x.com/2020/11/04/BgERNd.png, https://s1.ax1x.com/2020/11/04/BgERNd.png 1.5x, https://s1.ax1x.com/2020/11/04/BgERNd.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/04/BgERNd.png"
-        title="https://s1.ax1x.com/2020/11/04/BgERNd.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/04/BgERNd.png" title="https://s1.ax1x.com/2020/11/04/BgERNd.png" data-thumbnail="https://s1.ax1x.com/2020/11/04/BgERNd.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/04/BgERNd.png"
+            data-srcset="https://s1.ax1x.com/2020/11/04/BgERNd.png, https://s1.ax1x.com/2020/11/04/BgERNd.png 1.5x, https://s1.ax1x.com/2020/11/04/BgERNd.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/04/BgERNd.png">
+    </a></p>
 <p>​	通过后面的报错语句<code>1'' LIMIT 0,1</code>的分析，我们的单引号被数据库解析，那么说明我们也可以使用连接查询<code>union</code>插入我们想要查询的语句。</p>
 <p>​	推出数据库的查询的部分语句可能为<code>where id = '$id'LIMIT 0,1</code>，那么通过构造闭合<code>?id=1' [这里添加语句] --+</code>添加自己想要语句，语句后面的<code>--+</code>作用是将后面的其他语句注释掉。</p>
 <p>​	首先是判断字段个数：<code>?id=1' order by 1 --+</code>，页面显示正常，直到尝试<code>?id=1' order by 4 --+</code>发现数据库报错</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/04/BgVsGn.png"
-        data-srcset="https://s1.ax1x.com/2020/11/04/BgVsGn.png, https://s1.ax1x.com/2020/11/04/BgVsGn.png 1.5x, https://s1.ax1x.com/2020/11/04/BgVsGn.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/04/BgVsGn.png"
-        title="https://s1.ax1x.com/2020/11/04/BgVsGn.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/04/BgVsGn.png" title="https://s1.ax1x.com/2020/11/04/BgVsGn.png" data-thumbnail="https://s1.ax1x.com/2020/11/04/BgVsGn.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/04/BgVsGn.png"
+            data-srcset="https://s1.ax1x.com/2020/11/04/BgVsGn.png, https://s1.ax1x.com/2020/11/04/BgVsGn.png 1.5x, https://s1.ax1x.com/2020/11/04/BgVsGn.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/04/BgVsGn.png">
+    </a></p>
 <p>​	说明数据库的字段值只有四个。</p>
 <p>​	接下来测试数据的回显位，构造语句<code>?id=' union select 1,2,3 --+</code>，这里需要注意的有，前面<code>id</code>的查询一定是要不存在的，因为数据库只会回显第一条查询的数据，如果第一条语句查询成功则后面<code>union</code>构造的语句就不会显示；<code>union</code>连接查询语句后面查询的字段数需要和前面的字段数相等，详细用法可以自行查询。</p>
 <p>​	执行后页面显示。</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/04/BgZAeS.png"
-        data-srcset="https://s1.ax1x.com/2020/11/04/BgZAeS.png, https://s1.ax1x.com/2020/11/04/BgZAeS.png 1.5x, https://s1.ax1x.com/2020/11/04/BgZAeS.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/04/BgZAeS.png"
-        title="https://s1.ax1x.com/2020/11/04/BgZAeS.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/04/BgZAeS.png" title="https://s1.ax1x.com/2020/11/04/BgZAeS.png" data-thumbnail="https://s1.ax1x.com/2020/11/04/BgZAeS.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/04/BgZAeS.png"
+            data-srcset="https://s1.ax1x.com/2020/11/04/BgZAeS.png, https://s1.ax1x.com/2020/11/04/BgZAeS.png 1.5x, https://s1.ax1x.com/2020/11/04/BgZAeS.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/04/BgZAeS.png">
+    </a></p>
 <p>​	说明查询语句的<code>2,3</code>是回显位，之后就可以将查询的语句进行替换。如：</p>
 <p>​	获取数据库版本，数据库路径，当前用户，当前数据库：
 ​	<code>?id=' union select 1,concat_ws('_',user(),version(),database()),@@basedir --+</code></p>
 <p>页面显示</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/04/BgZbfs.png"
-        data-srcset="https://s1.ax1x.com/2020/11/04/BgZbfs.png, https://s1.ax1x.com/2020/11/04/BgZbfs.png 1.5x, https://s1.ax1x.com/2020/11/04/BgZbfs.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/04/BgZbfs.png"
-        title="https://s1.ax1x.com/2020/11/04/BgZbfs.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/04/BgZbfs.png" title="https://s1.ax1x.com/2020/11/04/BgZbfs.png" data-thumbnail="https://s1.ax1x.com/2020/11/04/BgZbfs.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/04/BgZbfs.png"
+            data-srcset="https://s1.ax1x.com/2020/11/04/BgZbfs.png, https://s1.ax1x.com/2020/11/04/BgZbfs.png 1.5x, https://s1.ax1x.com/2020/11/04/BgZbfs.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/04/BgZbfs.png">
+    </a></p>
 <p>​	利用元数据库来爆表、爆数据</p>
 <p>​	<code>?id=' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+</code></p>
 <p>​	之后大家可以自行发挥。</p>
@@ -224,13 +218,14 @@
     <a href="#less-2" class="header-mark"></a>less-2</h2><p>​	第二题看题目名称<code>intiger based</code>知大意，是id的数据类型由字符型变成了数字类型，这次就不使用单引号直接构造语句，和第一题差不多。</p>
 <h2 id="less-3" class="headerLink">
     <a href="#less-3" class="header-mark"></a>less-3</h2><p>​	看标题<code>Single quotes with twist</code>，是在前面题的基础上加上了括号包裹，所以语句就成了<code>where id = ('id')</code>所以我们闭合的方式也要改变。附源码</p>
-<p><img
-        class="lazyload"
-        data-src="https://s1.ax1x.com/2020/11/04/BgnO1A.png"
-        data-srcset="https://s1.ax1x.com/2020/11/04/BgnO1A.png, https://s1.ax1x.com/2020/11/04/BgnO1A.png 1.5x, https://s1.ax1x.com/2020/11/04/BgnO1A.png 2x"
-        data-sizes="auto"
-        alt="https://s1.ax1x.com/2020/11/04/BgnO1A.png"
-        title="https://s1.ax1x.com/2020/11/04/BgnO1A.png"></p>
+<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/04/BgnO1A.png" title="https://s1.ax1x.com/2020/11/04/BgnO1A.png" data-thumbnail="https://s1.ax1x.com/2020/11/04/BgnO1A.png">
+        <img
+            class="lazyload"
+            data-src="https://s1.ax1x.com/2020/11/04/BgnO1A.png"
+            data-srcset="https://s1.ax1x.com/2020/11/04/BgnO1A.png, https://s1.ax1x.com/2020/11/04/BgnO1A.png 1.5x, https://s1.ax1x.com/2020/11/04/BgnO1A.png 2x"
+            data-sizes="auto"
+            alt="https://s1.ax1x.com/2020/11/04/BgnO1A.png">
+    </a></p>
 <h2 id="less-4" class="headerLink">
     <a href="#less-4" class="header-mark"></a>less-4</h2><p>​	标题<code>Double Quotes</code>，说明是个引号注入，把前面题的单引号改成双引号构成闭合即可。</p>
 <h2 id="less-5" class="headerLink">
@@ -267,8 +262,8 @@
     <div class="post-nav"><a href="/posts/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/" class="prev" rel="prev" title="Chevereto-搭建一个自己的图床"><i class="fas fa-angle-left fa-fw"></i>Chevereto-搭建一个自己的图床</a>
             <a href="/posts/hackgame20201/" class="next" rel="next" title="Hackgame2020(一)">Hackgame2020(一)<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="valine" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
@@ -297,7 +292,7 @@
 			})();
 		</script></div>
 
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"//img.braindance.top/CDN/emoji/","emojiMaps":{"2233_卖萌":"2233/卖萌n.png","2233_吃惊":"2233/吃惊n.png","2233_吐魂":"2233/吐魂.png","2233_喝水":"2233/喝水.png","2233_困惑":"2233/困惑n.png","2233_大哭":"2233/大哭.png","2233_大笑":"2233/大笑n.png","2233_委屈":"2233/委屈.png","2233_怒":"2233/怒.png","2233_无言":"2233/无言.png","2233_汗":"2233/汗n.png","2233_疑问":"2233/疑问n.png","2233_第一":"2233/第一.png","2233_耶":"2233/耶.png","2233_郁闷":"2233/郁闷.png","tv_doge":"xiaodianshi/doge.gif","tv_亲亲":"xiaodianshi/亲亲.gif","tv_偷笑":"xiaodianshi/偷笑.gif","tv_再见":"xiaodianshi/再见.gif","tv_发怒":"xiaodianshi/发怒.gif","tv_发财":"xiaodianshi/发财.gif","tv_可爱":"xiaodianshi/可爱.gif","tv_吐血":"xiaodianshi/吐血.gif","tv_呆":"xiaodianshi/呆.gif","tv_呕吐":"xiaodianshi/呕吐.gif","tv_困":"xiaodianshi/困.gif","tv_坏笑":"xiaodianshi/坏笑.gif","tv_大佬":"xiaodianshi/大佬.gif","tv_大哭":"xiaodianshi/大哭.gif","tv_委屈":"xiaodianshi/委屈.gif","tv_害羞":"xiaodianshi/害羞.gif","tv_尴尬":"xiaodianshi/尴尬.gif","tv_微笑":"xiaodianshi/微笑.gif","tv_思考":"xiaodianshi/思考.gif","tv_打脸":"xiaodianshi/打脸.gif","tv_抓狂":"xiaodianshi/抓狂.gif","tv_抠鼻子":"xiaodianshi/抠鼻子.gif","tv_斜眼笑":"xiaodianshi/斜眼笑.gif","tv_晕":"xiaodianshi/晕.gif","tv_流汗":"xiaodianshi/流汗.gif","tv_流鼻血":"xiaodianshi/流鼻血.gif","tv_点赞":"xiaodianshi/点赞.gif","tv_生气":"xiaodianshi/生气.gif","tv_生病":"xiaodianshi/生病.gif","tv_疑问":"xiaodianshi/疑问.gif","tv_白眼":"xiaodianshi/白眼.gif","tv_睡着":"xiaodianshi/睡着.gif","tv_笑哭":"xiaodianshi/笑哭.gif","tv_腼腆":"xiaodianshi/腼腆.gif","tv_色":"xiaodianshi/色.gif","tv_调皮":"xiaodianshi/调皮.gif","tv_鄙视":"xiaodianshi/鄙视.gif","tv_闭嘴":"xiaodianshi/闭嘴.gif","tv_难过":"xiaodianshi/难过.gif","tv_馋":"xiaodianshi/馋.gif","tv_黑人问号":"xiaodianshi/黑人问号.gif","tv_鼓掌":"xiaodianshi/鼓掌.gif","蛆音娘_OK":"quyinniang/OK.png","蛆音娘_die":"quyinniang/die.png","蛆音娘_偷看":"quyinniang/偷看.png","蛆音娘_卖萌":"quyinniang/卖萌.png","蛆音娘_吃惊":"quyinniang/吃惊q.png","蛆音娘_吃瓜群众":"quyinniang/吃瓜群众.png","蛆音娘_吐血":"quyinniang/吐血.png","蛆音娘_哭泣":"quyinniang/哭泣q.png","蛆音娘_哼":"quyinniang/哼.png","蛆音娘_大笑":"quyinniang/大笑.png","蛆音娘_害怕":"quyinniang/害怕.png","蛆音娘_扶额":"quyinniang/扶额.png","蛆音娘_摇头":"quyinniang/摇头.png","蛆音娘_无语":"quyinniang/无语q.png","蛆音娘_机智":"quyinniang/机智.png","蛆音娘_滑稽":"quyinniang/滑稽.png","蛆音娘_生气":"quyinniang/生气.png","蛆音娘_疑问":"quyinniang/疑问.png","蛆音娘_睡觉觉":"quyinniang/睡觉觉.png","蛆音娘_肥皂":"quyinniang/肥皂.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"serverURLs":"https://shaendlk.api.lncldglobal.com","visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/valine/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"http://42.192.83.222:2342","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

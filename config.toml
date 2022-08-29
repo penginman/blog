@@ -58,7 +58,7 @@ theme = "DoIt"
     mobileMode = "auto"
     # 主题切换模式
     # 主题切换模式 ("switch", "select")
-    themeChangeMode = "select"
+    themeChangeMode = "switch"
 
 
     # 页面底部信息配置
@@ -169,25 +169,33 @@ theme = "DoIt"
         # Disqus 的 shortname, 用来在文章中启用 Disqus 评论系统
         shortname = "braindance-1"
     [params.page.comment.valine]
-        enable = true
-        appId = "shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI"
-        appKey = "e074xMKoSw3B9kWmBediaBE9"
-        placeholder = "Just go go"
-        avatar = "mp"
-        meta= ""
-        pageSize = 5
-        lang = ""
-        visitor = true
-        recordIP = true
-        highlight = true
-        enableQQ = false
-        serverURLs = "https://shaendlk.api.lncldglobal.com"
-        # DoIt 新增 | 0.2.6 emoji 数据文件名称, 默认是 "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # 位于 "themes/DoIt/assets/data/emoji/" 目录
-        # 可以在你的项目下相同路径存放你自己的数据文件:
-        # "assets/data/emoji/"
-        emoji = "all.yml"
+      enable = false
+      appId = "shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI"
+      appKey = "e074xMKoSw3B9kWmBediaBE9"
+      placeholder = "Just go go"
+      avatar = "mp"
+      meta= ""
+      pageSize = 5
+      lang = ""
+      visitor = true
+      recordIP = true
+      highlight = true
+      enableQQ = false
+      serverURLs = "https://shaendlk.api.lncldglobal.com"
+      # DoIt 新增 | 0.2.6 emoji 数据文件名称, 默认是 "google.yml"
+      # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+      # 位于 "themes/DoIt/assets/data/emoji/" 目录
+      # 可以在你的项目下相同路径存放你自己的数据文件:
+      # "assets/data/emoji/"
+      emoji = "all.yml"
+    # DoIt 新增 | 0.2.12 Twikoo 评论系统设置
+    [params.page.comment.twikoo]
+      enable = true
+      envId = "http://42.192.83.222:2342"
+      region = ""
+      path = ""
+      visitor = true
+      commentCount = true
   [params.verification]
     google = ""
     bing = ""
@@ -221,7 +229,7 @@ theme = "DoIt"
     name = "文章"
     url = "/posts/"
     # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
-    title = ""
+    title = "文章"
     weight = 1
   [[menu.main]]
     identifier = "tags"
@@ -229,7 +237,7 @@ theme = "DoIt"
     post = ""
     name = "标签"
     url = "/tags/"
-    title = ""
+    title = "标签"
     weight = 2
   [[menu.main]]
     identifier = "categories"
@@ -237,8 +245,32 @@ theme = "DoIt"
     post = ""
     name = "分类"
     url = "/categories/"
-    title = ""
+    title = "分类"
     weight = 3
+  [[menu.main]]
+    identifier = "shuoshuo"
+    pre = ""
+    post = ""
+    name = "说说"
+    url = "/shuoshuo/"
+    title = "说说"
+    weight = 4
+  [[menu.main]]
+    identifier = "about"
+    pre = ""
+    post = ""
+    name = "关于"
+    url = "/about/"
+    title = "关于"
+    weight = 5
+  [[menu.main]]
+    identifier = ""
+    pre = "🚇"
+    post = ""
+    name = "开往"
+    url = "https://travellings.link"
+    title = "开往"
+    weight = 6
 
 [author]
   name = "Braindance"
@@ -256,6 +288,9 @@ theme = "DoIt"
     lineNos = true
     lineNumbersInTable = true
     noClasses = false
+  [markup.goldmark.renderer]
+    # 是否在文档中直接使用 HTML 标签
+    unsafe = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

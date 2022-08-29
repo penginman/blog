@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -69,14 +69,8 @@
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
                 </a></div>
         </div>
     </div>
@@ -106,14 +100,8 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
             </a></div>
     </div>
 </header>
@@ -141,7 +129,9 @@
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/drops/"><i class="far fa-folder fa-fw"></i>DROPS</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-19">2020-11-19</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-11-19">2020-11-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2023 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/posts/upload-labs5/" class="leancloud_visitors" data-flag-title="Upload-Labs的最后几道题">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"></span>&nbsp;次阅读
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/posts/upload-labs5/" class="comment_count" data-flag-title="Upload-Labs的最后几道题">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -265,13 +255,14 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>​	第一次用python的我在这里知道了<code>pip</code>。这道题因为要不断的上传和访问文件，所以对在线靶场不友好，所以才选择了本地环境解题。完工</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png">
+    </a></p>
 <h2 id="pass-18失手" class="headerLink">
     <a href="#pass-18%e5%a4%b1%e6%89%8b" class="header-mark"></a>Pass-18（失手）</h2><p>​	18题失手了没有思路，如果使用<code>include.php</code>文件包含的话还可以，看了看网上大部分的博客都是敷敷衍衍过去的，找到了一篇稍微有点思路的，使用的是<code>apache2.2.x的解析漏洞</code>，这个漏洞的思路就是，apache服务器在解析有多个后缀名的文件时，从最后一个开始向前扫描，如果不认识就跳过，直到遇到一个认识的文件后缀，就把这个文件以这个能识别的后缀解析。</p>
 <p><a href="https://blog.csdn.net/qq_32434307/article/details/79480316" target="_blank" rel="noopener noreffer">Apache文件解析漏洞</a></p>
@@ -337,29 +328,32 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>​	源码第七行使用了<strong>POST</strong>来接受文件的命名，前面有类似题的是使用了<strong>0x00截断上传</strong>，后面也同样是<code>move_uploaded_file</code>移动文件的函数，还使用了黑名单验证，方法就很明确，使用<strong>截断上传</strong>。别忘了截断上传需要的特定条件：php版本需要低于<code>5.3.29</code>、<code>magic_quotes_gpc</code>需要为关闭状态。</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png">
+    </a></p>
 <p>​	同样是命名为<code>phpa</code>方便在十六进制表里修改为<code>00</code></p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png">
+    </a></p>
 <p>​	打开图片把url链接<code>http://upload-labs/upload/upload-19.php�</code>修改一下即可。完工</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png">
+    </a></p>
 <p>​	其实这道题还有一个思路，因为题目使用了<strong>黑名单验证</strong>，分析源码没有设置大小写过滤，所以也可以使用大小写方法通过如<code>Php</code>，不演示了。</p>
 <h2 id="pass-20" class="headerLink">
     <a href="#pass-20" class="header-mark"></a>Pass-20</h2><p>（LInux环境，php7.2.21）</p>
@@ -438,29 +432,32 @@
 </div>
 </div><p>​	这道题使用了<code>MIME</code>验证和白名单验证。先看第10行使用了<code>三目运算符</code>判断<code>$_POST['save_name']</code>是否为空，若为空则执行<code>:</code>前获取上传文件的名称，若不为空则获取POST中的<code>save_name</code>。第11行使用了<code>is_array</code>函数判断是否是一个数组，然后使用<code>explode</code>截断文件名转换小写并返回数组。也就是说，如果我们POST中的<code>save_name</code>是个数组的就可以跳过11行的判断。15行使用<code>end</code>函数获取数组中的最后一个元素用于后缀验证。20行把文件名进行拼接：数组<strong>第一个</strong>元素+数组元素<strong>总数-1</strong>的那个元素。</p>
 <p>所以我们可以构造一个这样的数组用于绕过：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png">
+    </a></p>
 <p>​	数组[2]用于绕过白名单，文件名为：<code>数组[0].数组[1]</code>，但是数组[1]是空的所以只剩下<code>数组[0].</code>（后面有个点）</p>
 <p>​	别忘了还要绕过<strong>MIME</strong></p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"></p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png">
+    </a></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png">
+    </a></p>
 <p>完工</p>
 <h2 id="最后" class="headerLink">
     <a href="#%e6%9c%80%e5%90%8e" class="header-mark"></a>最后</h2><p>​	Upload labs的20道题大部分完成了，有两道题没完成，但是也学到了不少东西，这些天再抽空写一个总结吧。射射观看。</p>
@@ -492,8 +489,8 @@
     <div class="post-nav"><a href="/posts/upload-labs4/" class="prev" rel="prev" title="Upload-Labs之Pass-16"><i class="fas fa-angle-left fa-fw"></i>Upload-Labs之Pass-16</a>
             <a href="/posts/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/" class="next" rel="next" title="萌娘百科黑幕实现">萌娘百科黑幕实现<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="valine" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
@@ -522,7 +519,7 @@
 			})();
 		</script></div>
 
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"//img.braindance.top/CDN/emoji/","emojiMaps":{"2233_卖萌":"2233/卖萌n.png","2233_吃惊":"2233/吃惊n.png","2233_吐魂":"2233/吐魂.png","2233_喝水":"2233/喝水.png","2233_困惑":"2233/困惑n.png","2233_大哭":"2233/大哭.png","2233_大笑":"2233/大笑n.png","2233_委屈":"2233/委屈.png","2233_怒":"2233/怒.png","2233_无言":"2233/无言.png","2233_汗":"2233/汗n.png","2233_疑问":"2233/疑问n.png","2233_第一":"2233/第一.png","2233_耶":"2233/耶.png","2233_郁闷":"2233/郁闷.png","tv_doge":"xiaodianshi/doge.gif","tv_亲亲":"xiaodianshi/亲亲.gif","tv_偷笑":"xiaodianshi/偷笑.gif","tv_再见":"xiaodianshi/再见.gif","tv_发怒":"xiaodianshi/发怒.gif","tv_发财":"xiaodianshi/发财.gif","tv_可爱":"xiaodianshi/可爱.gif","tv_吐血":"xiaodianshi/吐血.gif","tv_呆":"xiaodianshi/呆.gif","tv_呕吐":"xiaodianshi/呕吐.gif","tv_困":"xiaodianshi/困.gif","tv_坏笑":"xiaodianshi/坏笑.gif","tv_大佬":"xiaodianshi/大佬.gif","tv_大哭":"xiaodianshi/大哭.gif","tv_委屈":"xiaodianshi/委屈.gif","tv_害羞":"xiaodianshi/害羞.gif","tv_尴尬":"xiaodianshi/尴尬.gif","tv_微笑":"xiaodianshi/微笑.gif","tv_思考":"xiaodianshi/思考.gif","tv_打脸":"xiaodianshi/打脸.gif","tv_抓狂":"xiaodianshi/抓狂.gif","tv_抠鼻子":"xiaodianshi/抠鼻子.gif","tv_斜眼笑":"xiaodianshi/斜眼笑.gif","tv_晕":"xiaodianshi/晕.gif","tv_流汗":"xiaodianshi/流汗.gif","tv_流鼻血":"xiaodianshi/流鼻血.gif","tv_点赞":"xiaodianshi/点赞.gif","tv_生气":"xiaodianshi/生气.gif","tv_生病":"xiaodianshi/生病.gif","tv_疑问":"xiaodianshi/疑问.gif","tv_白眼":"xiaodianshi/白眼.gif","tv_睡着":"xiaodianshi/睡着.gif","tv_笑哭":"xiaodianshi/笑哭.gif","tv_腼腆":"xiaodianshi/腼腆.gif","tv_色":"xiaodianshi/色.gif","tv_调皮":"xiaodianshi/调皮.gif","tv_鄙视":"xiaodianshi/鄙视.gif","tv_闭嘴":"xiaodianshi/闭嘴.gif","tv_难过":"xiaodianshi/难过.gif","tv_馋":"xiaodianshi/馋.gif","tv_黑人问号":"xiaodianshi/黑人问号.gif","tv_鼓掌":"xiaodianshi/鼓掌.gif","蛆音娘_OK":"quyinniang/OK.png","蛆音娘_die":"quyinniang/die.png","蛆音娘_偷看":"quyinniang/偷看.png","蛆音娘_卖萌":"quyinniang/卖萌.png","蛆音娘_吃惊":"quyinniang/吃惊q.png","蛆音娘_吃瓜群众":"quyinniang/吃瓜群众.png","蛆音娘_吐血":"quyinniang/吐血.png","蛆音娘_哭泣":"quyinniang/哭泣q.png","蛆音娘_哼":"quyinniang/哼.png","蛆音娘_大笑":"quyinniang/大笑.png","蛆音娘_害怕":"quyinniang/害怕.png","蛆音娘_扶额":"quyinniang/扶额.png","蛆音娘_摇头":"quyinniang/摇头.png","蛆音娘_无语":"quyinniang/无语q.png","蛆音娘_机智":"quyinniang/机智.png","蛆音娘_滑稽":"quyinniang/滑稽.png","蛆音娘_生气":"quyinniang/生气.png","蛆音娘_疑问":"quyinniang/疑问.png","蛆音娘_睡觉觉":"quyinniang/睡觉觉.png","蛆音娘_肥皂":"quyinniang/肥皂.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"serverURLs":"https://shaendlk.api.lncldglobal.com","visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/valine/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"http://42.192.83.222:2342","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

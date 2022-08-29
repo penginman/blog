@@ -9,8 +9,8 @@
 <meta property="og:description" content="[极客大挑战 2019]RCE ME源码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]&#43;/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/" /><meta property="article:section" content="posts" />
-
-
+<meta property="article:published_time" content="2020-12-05T20:42:00+08:00" />
+<meta property="article:modified_time" content="2020-12-05T20:42:00+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="极客大挑战 2019 RCE ME"/>
@@ -20,7 +20,7 @@
 
 <meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/" /><link rel="next" href="https://www.braindance.top/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/" /><link rel="prev" href="https://www.braindance.top/posts/gxyctf2019ping-ping-ping/" /><link rel="next" href="https://www.braindance.top/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -32,7 +32,7 @@
             "@type": "WebPage",
             "@id": "https:\/\/www.braindance.top\/posts\/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me\/"
         },"genre": "posts","keywords": "Web, BUUCTF_Web, RCE, disable_function绕过","wordcount":  1572 ,
-        "url": "https:\/\/www.braindance.top\/posts\/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me\/","publisher": {
+        "url": "https:\/\/www.braindance.top\/posts\/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me\/","datePublished": "2020-12-05T20:42:00+08:00","dateModified": "2020-12-05T20:42:00+08:00","publisher": {
             "@type": "Organization",
             "name": "Braindance"},"author": {
                 "@type": "Person",
@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -69,14 +69,8 @@
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
                 </a></div>
         </div>
     </div>
@@ -106,14 +100,8 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
             </a></div>
     </div>
 </header>
@@ -131,9 +119,11 @@
             <div class="post-meta-line">
                 <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Braindance</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/drops/"><i class="far fa-folder fa-fw"></i>DROPS</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1572 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-05">2020-12-05</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-12-05">2020-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1572 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/" class="leancloud_visitors" data-flag-title="极客大挑战 2019 RCE ME">
-                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"></span>&nbsp;次阅读
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/" class="comment_count" data-flag-title="极客大挑战 2019 RCE ME">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -147,7 +137,7 @@
                 </div>
                 <div class="details-content">
                     <div class="admonition-content">
-                        本文最后更新于 <span class="timeago" datetime="0001-01-01T00:00:00" title="January 1, 0001">0001-01-01</span>，文中内容可能已过时。</div>
+                        本文最后更新于 <span class="timeago" datetime="2020-12-05T20:42:00" title="December 5, 2020">2020-12-05</span>，文中内容可能已过时。</div>
                 </div>
             </div><h1 id="极客大挑战-2019rce-me" class="headerLink">
     <a href="#%e6%9e%81%e5%ae%a2%e5%a4%a7%e6%8c%91%e6%88%98-2019rce-me" class="header-mark"></a>[极客大挑战 2019]RCE ME</h1><p>源码：</p>
@@ -235,21 +225,23 @@ else{
 </div>
 </div><p>网站获得请求以后会进行url解码，由于是不可见字符可以绕过长度和正则表达式，之后执行代码时，前面的<code>~</code>取反再获得真正的函数名。</p>
 <p>使用蚁剑连接，进后台在根目录找到了flag、readflag。打开flag内容为空，又打开readflag文件是一堆乱码，但是看到了文件头是<code>ELF</code>是linux的可执行文件。那么很有可能就是执行readflag才能获得flag，但是在终端执行时出现了一些问题：无论输入什么，终端都只会返回<code>ret=127</code>：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png">
+    </a></p>
 <p>搜索了一波，原来是是<strong>disable_function</strong>搞的鬼，这个表可以在phpinfo()中查看：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png">
+    </a></p>
 <p>因为<code>system</code>、<code>exec</code>、<code>shell_exec</code>等命令执行的函数都被禁止了，目前我理解的webshell就是通过这些函数才能在终端执行命令的，所以终端基本是个废的，所以就是寻找绕过<strong>disable_function</strong>的方法，网上有很多其他方法，其中一个方法：</p>
 <p><strong>利用环境变量LD_PRELOAD来绕过</strong></p>
 <blockquote>
@@ -257,21 +249,23 @@ else{
 <p>LD_PRELOAD是Linux系统的下一个有趣的环境变量：“它允许你定义在程序运行前优先加载的动态链接库。这个功能主要就是用来有选择性的载入不同动态链接库中的相同函数。通过这个环境变量，我们可以在主程序和其动态链接库的中间加载别的动态链接库，甚至覆盖正常的函数库。一方面，我们可以以此功能来使用自己的或是更好的函数（无需别人的源码），而另一方面，我们也可以以向别人的程序注入程序，从而达到特定的目的。</p>
 </blockquote>
 <p>正好蚁剑的插件中就有一个名为：<a href="https://github.com/Medicean/as_bypass_php_disable_functions" target="_blank" rel="noopener noreffer">as_bypass_php_disable_functions</a>的插件，可以选择在插件市场安装或是手动安装（github有步骤）。安装以后右键shell选择加载插件：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png">
+    </a></p>
 <p>插件的工作原理是自动上传几个绕过的文件，然后再用蚁剑连接上传的文件即可实现绕过，但是一开始的<code>/var/www/html</code>目录是没有上传权限的，我右键以后发现能修改权限，改成0777：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png">
+    </a></p>
 <blockquote>
 <p>在这里我还遇到了问题，使用原来的shell执行插件功能以后，终端还是没有权限，但是我尝试了自己又上传了一个一句话木马，用这个新的一句话木马执行插件才成功，具体原因我也不清楚，如果有师傅知道原因求告知。</p>
 </blockquote>
@@ -287,29 +281,32 @@ else{
 </code></pre></td></tr></table>
 </div>
 </div><p>再用一句话木马的shell执行插件：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png">
+    </a></p>
 <p>进入shell，目录下面多了一个名为**.antproxy.php**的文件：</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png">
+    </a></p>
 <p>再使用蚁剑连接**.antproxy.php**，密码是运行插件的那个shell的密码，这时候就可以开开心心的去根目录下执行readflag获得flag辣。</p>
-<p><img
-        class="lazyload"
-        data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png"
-        title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png"></p>
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png">
+    </a></p>
 <p>flag{a216900e-2427-48f7-9323-f65d0a3abdbf}</p>
 </div>
 
@@ -317,7 +314,7 @@ else{
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 0001-01-01</span>
+                <span>更新于 2020-12-05</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -336,11 +333,11 @@ else{
         </section>
     </div>
 
-    <div class="post-nav">
-            <a href="/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="next" rel="next" title="第一篇文章">第一篇文章<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/gxyctf2019ping-ping-ping/" class="prev" rel="prev" title="GXYCTF2019 Ping Ping Ping"><i class="fas fa-angle-left fa-fw"></i>GXYCTF2019 Ping Ping Ping</a>
+            <a href="/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/" class="next" rel="next" title="BUUCTF寒假刷题-Web">BUUCTF寒假刷题-Web<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-<div id="comments"><div id="valine" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
@@ -369,7 +366,7 @@ else{
 			})();
 		</script></div>
 
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI","appKey":"e074xMKoSw3B9kWmBediaBE9","avatar":"mp","el":"#valine","emojiCDN":"//img.braindance.top/CDN/emoji/","emojiMaps":{"2233_卖萌":"2233/卖萌n.png","2233_吃惊":"2233/吃惊n.png","2233_吐魂":"2233/吐魂.png","2233_喝水":"2233/喝水.png","2233_困惑":"2233/困惑n.png","2233_大哭":"2233/大哭.png","2233_大笑":"2233/大笑n.png","2233_委屈":"2233/委屈.png","2233_怒":"2233/怒.png","2233_无言":"2233/无言.png","2233_汗":"2233/汗n.png","2233_疑问":"2233/疑问n.png","2233_第一":"2233/第一.png","2233_耶":"2233/耶.png","2233_郁闷":"2233/郁闷.png","tv_doge":"xiaodianshi/doge.gif","tv_亲亲":"xiaodianshi/亲亲.gif","tv_偷笑":"xiaodianshi/偷笑.gif","tv_再见":"xiaodianshi/再见.gif","tv_发怒":"xiaodianshi/发怒.gif","tv_发财":"xiaodianshi/发财.gif","tv_可爱":"xiaodianshi/可爱.gif","tv_吐血":"xiaodianshi/吐血.gif","tv_呆":"xiaodianshi/呆.gif","tv_呕吐":"xiaodianshi/呕吐.gif","tv_困":"xiaodianshi/困.gif","tv_坏笑":"xiaodianshi/坏笑.gif","tv_大佬":"xiaodianshi/大佬.gif","tv_大哭":"xiaodianshi/大哭.gif","tv_委屈":"xiaodianshi/委屈.gif","tv_害羞":"xiaodianshi/害羞.gif","tv_尴尬":"xiaodianshi/尴尬.gif","tv_微笑":"xiaodianshi/微笑.gif","tv_思考":"xiaodianshi/思考.gif","tv_打脸":"xiaodianshi/打脸.gif","tv_抓狂":"xiaodianshi/抓狂.gif","tv_抠鼻子":"xiaodianshi/抠鼻子.gif","tv_斜眼笑":"xiaodianshi/斜眼笑.gif","tv_晕":"xiaodianshi/晕.gif","tv_流汗":"xiaodianshi/流汗.gif","tv_流鼻血":"xiaodianshi/流鼻血.gif","tv_点赞":"xiaodianshi/点赞.gif","tv_生气":"xiaodianshi/生气.gif","tv_生病":"xiaodianshi/生病.gif","tv_疑问":"xiaodianshi/疑问.gif","tv_白眼":"xiaodianshi/白眼.gif","tv_睡着":"xiaodianshi/睡着.gif","tv_笑哭":"xiaodianshi/笑哭.gif","tv_腼腆":"xiaodianshi/腼腆.gif","tv_色":"xiaodianshi/色.gif","tv_调皮":"xiaodianshi/调皮.gif","tv_鄙视":"xiaodianshi/鄙视.gif","tv_闭嘴":"xiaodianshi/闭嘴.gif","tv_难过":"xiaodianshi/难过.gif","tv_馋":"xiaodianshi/馋.gif","tv_黑人问号":"xiaodianshi/黑人问号.gif","tv_鼓掌":"xiaodianshi/鼓掌.gif","蛆音娘_OK":"quyinniang/OK.png","蛆音娘_die":"quyinniang/die.png","蛆音娘_偷看":"quyinniang/偷看.png","蛆音娘_卖萌":"quyinniang/卖萌.png","蛆音娘_吃惊":"quyinniang/吃惊q.png","蛆音娘_吃瓜群众":"quyinniang/吃瓜群众.png","蛆音娘_吐血":"quyinniang/吐血.png","蛆音娘_哭泣":"quyinniang/哭泣q.png","蛆音娘_哼":"quyinniang/哼.png","蛆音娘_大笑":"quyinniang/大笑.png","蛆音娘_害怕":"quyinniang/害怕.png","蛆音娘_扶额":"quyinniang/扶额.png","蛆音娘_摇头":"quyinniang/摇头.png","蛆音娘_无语":"quyinniang/无语q.png","蛆音娘_机智":"quyinniang/机智.png","蛆音娘_滑稽":"quyinniang/滑稽.png","蛆音娘_生气":"quyinniang/生气.png","蛆音娘_疑问":"quyinniang/疑问.png","蛆音娘_睡觉觉":"quyinniang/睡觉觉.png","蛆音娘_肥皂":"quyinniang/肥皂.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":5,"placeholder":"Just go go","recordIP":true,"serverURLs":"https://shaendlk.api.lncldglobal.com","visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/valine/Valine.min.js" defer></script><script type="text/javascript" src="/js/valine.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"http://42.192.83.222:2342","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>
