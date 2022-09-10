@@ -265,12 +265,20 @@ theme = "DoIt"
     weight = 5
   [[menu.main]]
     identifier = ""
+    pre = ""
+    post = ""
+    name = "友链"
+    url = "/friend/"
+    title = "友链"
+    weight = 6
+  [[menu.main]]
+    identifier = ""
     pre = "🚇"
     post = ""
     name = "开往"
     url = "https://travellings.link"
     title = "开往"
-    weight = 6
+    weight = 7
 
 [author]
   name = "Braindance"

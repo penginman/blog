@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -100,7 +100,7 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -161,8 +161,8 @@
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>​	继续接着上一次的<code>Upload-labs</code>往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久的关，不过也学到了感觉很牛的姿势，所以到时候专门开一篇只讲16。</p>
 <p>​	在线靶机地址：</p>
 <ul>
-<li><a href="https://buuoj.cn/challenges#Upload-Labs-Linux" target="_blank" rel="noopener noreffer">linux环境</a></li>
-<li><a href="https://buuoj.cn/challenges#[Windows]Upload-Labs-Windows" target="_blank" rel="noopener noreffer">windows环境</a></li>
+<li><a href="https://buuoj.cn/challenges#Upload-Labs-Linux" target="_blank" rel="noopener noreferrer">linux环境</a></li>
+<li><a href="https://buuoj.cn/challenges#[Windows]Upload-Labs-Windows" target="_blank" rel="noopener noreferrer">windows环境</a></li>
 </ul>
 <h2 id="pass-11" class="headerLink">
     <a href="#pass-11" class="header-mark"></a>Pass-11</h2><p>​	(这题使用了windows环境)</p>
@@ -216,7 +216,7 @@
 <p><strong>Warning</strong> 本特性已自 PHP 5.3.0 起<em>废弃</em>并将自 PHP 5.4.0 起<em>移除</em>。</p>
 <p>​      为 GPC (Get/Post/Cookie) 操作设置 magic_quotes 状态。      当 magic_quotes 为 on，所有的 ' (单引号)、&quot; (双引号)、\（反斜杠）和 NUL&rsquo;s 被一个反斜杠自动转义。</p>
 </blockquote>
-<p>​	使用bp抓包并添加<code>0x00截断</code>，在GET请求中可以使用url编码的截断：<code>%00</code>。贴个自己参考的博客，<a href="https://www.cnblogs.com/milantgh/p/3612978.html" target="_blank" rel="noopener noreffer">截断上传原理剖析</a>。个人对于这道题的分析就是，上面文件的代码执行到第8行的时候，获取到了<code>$_GET['save_path']</code>变量的值，但是我们在这个变量后面添加了<code>0x00截断</code>，所以后面的代码便不会执行，文件也就不会被重命名。</p>
+<p>​	使用bp抓包并添加<code>0x00截断</code>，在GET请求中可以使用url编码的截断：<code>%00</code>。贴个自己参考的博客，<a href="https://www.cnblogs.com/milantgh/p/3612978.html" target="_blank" rel="noopener noreferrer">截断上传原理剖析</a>。个人对于这道题的分析就是，上面文件的代码执行到第8行的时候，获取到了<code>$_GET['save_path']</code>变量的值，但是我们在这个变量后面添加了<code>0x00截断</code>，所以后面的代码便不会执行，文件也就不会被重命名。</p>
 <p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115204109.png">
         <img
             class="lazyload"
@@ -251,10 +251,10 @@
     <a href="#pass-13" class="header-mark"></a>Pass-13</h2><p>​	（Linux环境）</p>
 <p>​	源码中有关的函数解释：</p>
 <blockquote>
-<p><a href="https://segmentfault.com/a/1190000008305573" target="_blank" rel="noopener noreffer">PHP中pack、unpack的详细用法</a></p>
-<p><a href="https://www.php.net/manual/zh/function.fread.php" target="_blank" rel="noopener noreffer">fread()</a></p>
-<p><a href="https://www.php.net/fclose" target="_blank" rel="noopener noreffer">fclose()</a></p>
-<p><a href="https://www.php.net/intval" target="_blank" rel="noopener noreffer">intval()</a></p>
+<p><a href="https://segmentfault.com/a/1190000008305573" target="_blank" rel="noopener noreferrer">PHP中pack、unpack的详细用法</a></p>
+<p><a href="https://www.php.net/manual/zh/function.fread.php" target="_blank" rel="noopener noreferrer">fread()</a></p>
+<p><a href="https://www.php.net/fclose" target="_blank" rel="noopener noreferrer">fclose()</a></p>
+<p><a href="https://www.php.net/intval" target="_blank" rel="noopener noreferrer">intval()</a></p>
 </blockquote>
 <p>​	这道题和前面题目都不一样了：</p>
 <p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png">
@@ -266,11 +266,11 @@
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201115211509.png">
     </a></p>
 <p>​	题目说道需要<strong>上传图片马</strong>，然后使用<strong>文件包含漏洞</strong>进行测试，那么我们就先制作图片马。</p>
-<p>​	查看本题的提示<code>本pass检查图标内容开头2个字节！</code>，意思就是只检测文件前面两个字节的标识，贴一个<a href="https://blog.csdn.net/qq_37414405/article/details/84660148" target="_blank" rel="noopener noreffer">各种格式图片文件头标识分析</a>，所以这道题只用在上传的文件头部的两个字节处粘贴对应<strong>文件的头标识</strong>即可绕过检测。</p>
+<p>​	查看本题的提示<code>本pass检查图标内容开头2个字节！</code>，意思就是只检测文件前面两个字节的标识，贴一个<a href="https://blog.csdn.net/qq_37414405/article/details/84660148" target="_blank" rel="noopener noreferrer">各种格式图片文件头标识分析</a>，所以这道题只用在上传的文件头部的两个字节处粘贴对应<strong>文件的头标识</strong>即可绕过检测。</p>
 <p>​	以GIF的文件头GIF89a 为例，创建文件notepad++编辑打开输入<code>GIF89a&lt;?php phpinfo(); ?&gt;</code>，后缀名无所谓了，因为题目只检测前两个字节即可上传。</p>
-<p>​	<strong>还有一种方法制作图片马</strong>：使用windows的<code>copy /b</code>指令，把两个文件进行<del>无缝</del>拼接，可以使用一张正常的图片加一个php文件进行拼接，即可正常上传。参考博客：<a href="https://blog.csdn.net/gaoshi66/article/details/83653143" target="_blank" rel="noopener noreffer">windows窗口命令——(copy/b)文件无缝拼接隐藏</a>。</p>
+<p>​	<strong>还有一种方法制作图片马</strong>：使用windows的<code>copy /b</code>指令，把两个文件进行<del>无缝</del>拼接，可以使用一张正常的图片加一个php文件进行拼接，即可正常上传。参考博客：<a href="https://blog.csdn.net/gaoshi66/article/details/83653143" target="_blank" rel="noopener noreferrer">windows窗口命令——(copy/b)文件无缝拼接隐藏</a>。</p>
 <p>​	别忘了题目中说道了需要<strong>三种后缀都上传成功才算过关！</strong></p>
-<p>​	<strong>上传以后需要使用文件包含进行判定是否执行</strong>，先在新标签页面中打开图片，url中记下图片在服务器中的目录和名称（我的图片名称为8220201116071327.gif），点击<strong>2</strong>的链接进入<code>include.php</code>进行文件包含：网址输入<code>https://...../include.php?file=./upload/8220201116071327.gif</code>，找到php成功执行的页面。这里还有一个小知识点我学到的就是：<a href="https://www.cnblogs.com/xc90/articles/10257402.html" target="_blank" rel="noopener noreffer">路径中的'.&lsquo;和&rsquo;..&lsquo;还有&rsquo;./&lsquo;和&rsquo;../&lsquo;都是什么意思</a>。完工</p>
+<p>​	<strong>上传以后需要使用文件包含进行判定是否执行</strong>，先在新标签页面中打开图片，url中记下图片在服务器中的目录和名称（我的图片名称为8220201116071327.gif），点击<strong>2</strong>的链接进入<code>include.php</code>进行文件包含：网址输入<code>https://...../include.php?file=./upload/8220201116071327.gif</code>，找到php成功执行的页面。这里还有一个小知识点我学到的就是：<a href="https://www.cnblogs.com/xc90/articles/10257402.html" target="_blank" rel="noopener noreferrer">路径中的'.&lsquo;和&rsquo;..&lsquo;还有&rsquo;./&lsquo;和&rsquo;../&lsquo;都是什么意思</a>。完工</p>
 <p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116152417.png">
         <img
             class="lazyload"
@@ -281,7 +281,7 @@
     </a></p>
 <h2 id="pass-14" class="headerLink">
     <a href="#pass-14" class="header-mark"></a>Pass-14</h2><p>​	（Linux环境）</p>
-<p>​	这题提示写道<code>本pass使用getimagesize()检查是否为图片文件！</code>，和上一题不一样的地方就是使用了<code>getimagesize()</code>函数，这个函数的官方文档<a href="https://www.php.net/manual/zh/function.getimagesize.php" target="_blank" rel="noopener noreffer">getimagesize()</a>，所以这道题就不能用13题的加<strong>文件的头标识</strong>方法绕过，这次要使用上一题中的<code>copy /b</code>指令用一张正常的图片进行拼接还是可以通过的。</p>
+<p>​	这题提示写道<code>本pass使用getimagesize()检查是否为图片文件！</code>，和上一题不一样的地方就是使用了<code>getimagesize()</code>函数，这个函数的官方文档<a href="https://www.php.net/manual/zh/function.getimagesize.php" target="_blank" rel="noopener noreferrer">getimagesize()</a>，所以这道题就不能用13题的加<strong>文件的头标识</strong>方法绕过，这次要使用上一题中的<code>copy /b</code>指令用一张正常的图片进行拼接还是可以通过的。</p>
 <p>​	PS：听同学说<code>getimagesize()</code>不过是检测了前八个字节，不过我没试。</p>
 <p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201116155407.png">
         <img
@@ -335,7 +335,7 @@
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">

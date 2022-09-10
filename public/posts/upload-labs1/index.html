@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -100,7 +100,7 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -163,8 +163,8 @@
 </blockquote>
 <p>在线靶机地址：</p>
 <ul>
-<li><a href="https://buuoj.cn/challenges#Upload-Labs-Linux" target="_blank" rel="noopener noreffer">linux环境</a></li>
-<li><a href="https://buuoj.cn/challenges#[Windows]Upload-Labs-Windows" target="_blank" rel="noopener noreffer">windows环境</a></li>
+<li><a href="https://buuoj.cn/challenges#Upload-Labs-Linux" target="_blank" rel="noopener noreferrer">linux环境</a></li>
+<li><a href="https://buuoj.cn/challenges#[Windows]Upload-Labs-Windows" target="_blank" rel="noopener noreferrer">windows环境</a></li>
 </ul>
 <h2 id="pass-01" class="headerLink">
     <a href="#pass-01" class="header-mark"></a>Pass-01</h2><p>​	尝试上传php木马，发现提示上传错误</p>
@@ -292,7 +292,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>​	发现文件判断是根据<code>image/jpeg、image/png...</code>进行过滤判定，这些值都是Http请求中的<strong>Content-Type</strong>常见的值，通常浏览网页中各种各样的文件类型的就是通过它判断。那么这道题的目标就是绕过它。贴一个我参考值种类的博客:<a href="https://www.cnblogs.com/klb561/p/10090540.html" target="_blank" rel="noopener noreffer">Http请求中Content-Type</a>。</p>
+</div><p>​	发现文件判断是根据<code>image/jpeg、image/png...</code>进行过滤判定，这些值都是Http请求中的<strong>Content-Type</strong>常见的值，通常浏览网页中各种各样的文件类型的就是通过它判断。那么这道题的目标就是绕过它。贴一个我参考值种类的博客:<a href="https://www.cnblogs.com/klb561/p/10090540.html" target="_blank" rel="noopener noreferrer">Http请求中Content-Type</a>。</p>
 <p>​	同样是burp抓包修改<strong>Content-Type</strong>的值。</p>
 <p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/08/BT1EXq.png" title="https://s1.ax1x.com/2020/11/08/BT1EXq.png" data-thumbnail="https://s1.ax1x.com/2020/11/08/BT1EXq.png">
         <img
@@ -446,7 +446,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">SetHandler application/x-httpd-php
 </code></pre></td></tr></table>
 </div>
-</div><p>​	原理的话我讲一下个人的见解：.<code>htaccess</code>文件是一个<code>apache</code>服务器的配置文件，它的作用就是对于该目录下的所有文件都需要符合这个配置文件。然后上传的文件内容作用是：所有文件访问时都会解析为<code>php</code>。参考的博客：<a href="https://www.cnblogs.com/gyrgyr/p/10773118.html" target="_blank" rel="noopener noreffer">htaccess使用方法介绍</a>。</p>
+</div><p>​	原理的话我讲一下个人的见解：.<code>htaccess</code>文件是一个<code>apache</code>服务器的配置文件，它的作用就是对于该目录下的所有文件都需要符合这个配置文件。然后上传的文件内容作用是：所有文件访问时都会解析为<code>php</code>。参考的博客：<a href="https://www.cnblogs.com/gyrgyr/p/10773118.html" target="_blank" rel="noopener noreferrer">htaccess使用方法介绍</a>。</p>
 <p>​	接下来上传<code>2333.jpg</code>图片木马，再打开就会被成功解析为<code>php</code>文件并执行：</p>
 <p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/09/BTqoN9.png" title="https://s1.ax1x.com/2020/11/09/BTqoN9.png" data-thumbnail="https://s1.ax1x.com/2020/11/09/BTqoN9.png">
         <img
@@ -577,7 +577,7 @@
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">

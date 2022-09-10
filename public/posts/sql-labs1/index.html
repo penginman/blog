@@ -58,7 +58,7 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
                         <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -100,7 +100,7 @@
                     <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreffer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.link" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -230,7 +230,7 @@
     <a href="#less-4" class="header-mark"></a>less-4</h2><p>​	标题<code>Double Quotes</code>，说明是个引号注入，把前面题的单引号改成双引号构成闭合即可。</p>
 <h2 id="less-5" class="headerLink">
     <a href="#less-5" class="header-mark"></a>less-5</h2><p>​	标题<code>Double Injection-Single Quotes</code>，很明显提示是单引号，然后套用前面的方法， 发现这次题目变了，不管输入啥页面只显示一个<code>You are in...........</code>，但是数据库报错还是会显示，只要数据库错误还能显示，我们就可以是用一个新的技术把数据显示在错误信息上。</p>
-<p>​	双查询注入也是我第一次听，贴一个讲大致原理的帖子：<a href="https://blog.csdn.net/Leep0rt/article/details/78556440" target="_blank" rel="noopener noreffer">点我</a>。</p>
+<p>​	双查询注入也是我第一次听，贴一个讲大致原理的帖子：<a href="https://blog.csdn.net/Leep0rt/article/details/78556440" target="_blank" rel="noopener noreferrer">点我</a>。</p>
 <p>​	构造语句：</p>
 <p><code>?id=' union select 1,2,3 from (select 1,count(*),concat_ws('____________',floor(rand()*2),concat_ws('********',version(),database()))a from information_schema.tables group by a)b --+</code></p>
 <p>​	讲一下<code>CONCAT_WS(separator,str1,str2,…)</code>函数的用法：把<code>str1</code>、<code>str2</code>连接起来，并使用<code>separator</code>做分隔符。</p>
@@ -267,7 +267,7 @@
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
