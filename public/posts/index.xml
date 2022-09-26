@@ -11,6 +11,13 @@
     </author><guid>https://www.braindance.top/posts/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[水一篇文章，写写最近干了啥 Onenav一直想找一个导航页的网站，自己天天用书签栏用的找不到太烦了。之前用过webstack主题的网站，本来是]]></description>
 </item><item>
+    <title>Python-Day-100 笔记</title>
+    <link>https://www.braindance.top/posts/python%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 06 Jun 2022 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/python%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[函数函数的参数可以使用可变参数def func(*args)，参数前面的*代表args是一个可变参数。 用模块管理函数每个文件代表一个模块，不同]]></description>
+</item><item>
     <title>获取京东CK教程</title>
     <link>https://www.braindance.top/posts/%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Cck/</link>
     <pubDate>Mon, 09 May 2022 21:40:49 &#43;0800</pubDate><author>
@@ -66,12 +73,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
     <description><![CDATA[大四开始写毕业设计了，在学的过程中想记一记笔记，但是之前的hexo博客没动很久了，就想着把博客搬迁下顺便起个头，激起一些学习的劲头。 为什么选]]></description>
-</item><item>
-    <title>CISCN线上赛库存</title>
-    <link>https://www.braindance.top/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
-    <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
-    <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合]]></description>
 </item></channel>
 </rss>
