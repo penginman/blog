@@ -1,5 +1,6 @@
 ---
 title: "Python-Day-100 笔记"
+categories: ['学习笔记']
 date: 2022-06-06
 lastmod: 2022-09-24
 draft: false

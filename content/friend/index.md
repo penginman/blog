@@ -17,6 +17,16 @@ draft: false
 {{< friend "小嘉的部落格 " "https://blog.imzjw.cn" "https://npm.elemecdn.com/nanshen/avatar.jpg" "一个爱折腾的Java开发工程师" >}}
 
 
+
+## 发现的大佬
+
+偷偷去学习一波
+
+{{< friend "钝悟 ◾ Dunwu " "https://dunwu.github.io/blog/" "https://dunwu.github.io/blog/uploads/avatar.gif" "大道至简，知易行难" >}}
+
+
+
+
 ## 交换友链
 
 想互换友链就留言吧～格式参考如下～
