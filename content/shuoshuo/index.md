@@ -34,6 +34,7 @@ comment: false
         el: '#ispeak',
         api: 'https://kkapi.braindance.top/',
         author: '633af7214f708f8f9fb13582',
+        speakPage: "/shuoshuo/",
         githubClientId: 'Iv1.406befed580627cf',
         pageSize: 10,
         loading_img: 'https://www.penginman.com/img/loading.gif',
