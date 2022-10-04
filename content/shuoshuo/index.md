@@ -5,7 +5,7 @@ draft: false
 comment: false
 ---
 
- 
+
 <div id="tip" style="text-align:center;">ipseak加载中</div>
 <div id="ispeak"></div>
 <link
@@ -30,13 +30,13 @@ comment: false
   meta.content = 'no-referrer'
   head.appendChild(meta)
   if (ispeak) {
-    ispeak
-      .init({
+    ispeak.init({
         el: '#ispeak',
         api: 'https://kkapi.braindance.top/',
         author: '633af7214f708f8f9fb13582',
+        githubClientId: 'Iv1.406befed580627cf',
         pageSize: 10,
-        loading_img: 'https://cdn.staticaly.com/gh/penginman/CDN@master/img/loading.gif',
+        loading_img: 'https://www.penginman.com/img/loading.gif',
         comment: function (speak) {
           // 4.4.0 之后在此回调函数中初始化评论
           twikoo.init({
