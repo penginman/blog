@@ -3,7 +3,7 @@ title: "KKapi+ISpeak说说页面部署"
 categories: ['瞎折腾']
 tags: ['说说']
 date: 2022-10-04
-lastmod: 2022-10-05
+lastmod: 2022-10-10
 
 ---
 
@@ -25,8 +25,8 @@ lastmod: 2022-10-05
 
 ```shell
 docker run -d --name mongodb \
-	-p xxxxx:27017
-	-v /my/own/datadir:/data/db
+	-p xxxxx:27017 \
+	-v /my/own/datadir:/data/db \
 	-e MONGO_INITDB_ROOT_USERNAME=mongoadmin \
 	-e MONGO_INITDB_ROOT_PASSWORD=secret \
 	mongo
@@ -58,6 +58,8 @@ SECRETKEY=xxxxxxxxxxxxxxx
 
 6. 使用 `pm2` 使用守护线程启动项目
 `pm2 start pm2.json`
+
+我启动项目遇到了 `[PM2][WARN] Expect “restart_delay” to be a typeof [object Number], but now is [object String]` 错误，这个错误原因是作者的  pm2.json 中的 `restart_delay` 值是字符串类型 `60s` 改成数值 `60` 就可以了。
 
 7. 测试项目是否成功启动
 可以使用 `lsof -i:端口` 查看端口是否被监听判断项目是否成功启动。没成功的原因大概率是因为数据库连接地址、数据库账号密码不正确。
