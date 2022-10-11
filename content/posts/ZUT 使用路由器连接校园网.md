@@ -39,7 +39,7 @@ zut 校园网的客户端版本为：6.0.0（P）
 * 网线两根。一根我买的8m的，因为宿舍AP在门上面，另一根需要连接路由器和电脑，长度自己看。
 * 开通校园网的账号。
 * 自己思考的能力。
-* 需要的软件压缩包：[zut_Xiaomi_router_4c.zip](https://wwn.lanzouy.com/iVCQu0dm7o5c)。其中包含
+* 需要的软件压缩包：[zut_Xiaomi_router_4c.zip](https://wwn.lanzouy.com/igsaW0dn0k3a)。其中包含
 	* dogcom.zip。用来进行校园网模拟拨号，定时发送心跳包的工具。
 	* R3GV2 patches.zip。刷机的主要部分包含了：R3GV2 patches（前期连接路由器的工具）、Mi4C.bin（小米 4c 的 openwrt 固件自带防检测插件）、breed.bin（breed web 恢复控制台）
 	* MobaXterm_Portable.zip。用来连接路由器和传输文件的软件
