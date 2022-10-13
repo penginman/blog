@@ -3,7 +3,7 @@ title: "KKapi+ISpeak说说页面部署"
 categories: ['瞎折腾']
 tags: ['说说']
 date: 2022-10-04
-lastmod: 2022-10-10
+lastmod: 2022-10-13
 
 ---
 
@@ -18,7 +18,7 @@ lastmod: 2022-10-10
 作者文档中给出很多部署方法，白嫖版的就是 vercel 后端 api + 管理界面 + MongoDB 提供的云服务，但是个人感觉 vercel 经常被墙，所以部署的 api 感觉也不会稳定，而且考虑到数据的存放问题，所以我选择的是都部署到自己服务器上。
 
 ## 后端部署
-
+ 
  ### Docker 安装 Mongodb
 
 安装可以参考菜鸟教程的 [Docker 安装 MongoDB](https://www.runoob.com/docker/docker-install-mongodb.html) 。因为之前听过 MongoDB 的未授权访问，所以考虑到安全性问题，创建容器的时候添加 `MONGO_INITDB_ROOT_USERNAME` 和 `MONGO_INITDB_ROOT_PASSWORD` 设置用户的账号密码，开启Docker MongoDB 的身份验证。考虑到数据未来的迁移可以通过 `-v` 挂载宿主机的一个目录。可以修改默认端口再减少一些风险。最后我启动的命令如下 
@@ -29,6 +29,7 @@ docker run -d --name mongodb \
 	-v /my/own/datadir:/data/db \
 	-e MONGO_INITDB_ROOT_USERNAME=mongoadmin \
 	-e MONGO_INITDB_ROOT_PASSWORD=secret \
+	--restart=always
 	mongo
 ```
 
@@ -36,7 +37,7 @@ docker run -d --name mongodb \
 
 ### kkapi 部署
 
-和项目文档中的教程差不多
+和项目文档中的教程差不多，要注意使用的 node 版本请高于 `16.0.0`
 1. 首先克隆项目源码
 `git clone https://ghproxy.com/https://github.com/kkfive/kkapi-open.git`
 2. 接下来项目需要安装的工具 `yarn` 和 `pm2`，分别是
@@ -48,8 +49,8 @@ docker run -d --name mongodb \
 ```env
 PORT=3000
 DATABASE_URL=mongodb://127.0.0.1:27017/kkpaiopen?authSource=admin
-DATABASE_USER=root
-DATABASE_PASSWORD=root
+DATABASE_USER=mongoadmin
+DATABASE_PASSWORD=secret
 # 加密密钥 测试
 SECRETKEY=xxxxxxxxxxxxxxx
 ```
@@ -89,7 +90,7 @@ SECRETKEY=xxxxxxxxxxxxxxx
 发布成功可以在后端看到发布的说说。
 
 ## 前端部署
-我使用的是 Ispeak 搭配的 twikoo 评论，因为现在博客使用的就是 twikoo，省了再部署评论的麻烦。根据[ISpeak文档部分](https://kkapi.js.org/posts/ispeak/)，[ispeak 配置项](https://github.com/kkfive/ISpeak/blob/master/src/types/parameter.ts)中 `comment` 是一个回调函数，可以自行初始化评论，参照twikoo评论初始化的格式。我博客中的说说页面代码
+我使用的是 Ispeak 搭配的 twikoo 评论，因为现在博客使用的就是 twikoo，省去了再部署评论的麻烦。根据[ISpeak文档部分](https://kkapi.js.org/posts/ispeak/)，[ispeak 配置项](https://github.com/kkfive/ISpeak/blob/master/src/types/parameter.ts)中 `comment` 是一个回调函数，可以自行初始化评论，参照twikoo评论初始化的格式。我博客中的说说页面代码
 
 ```html
 <div id="tip" style="text-align:center;">ipseak加载中</div>
