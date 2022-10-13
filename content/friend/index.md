@@ -10,19 +10,17 @@ draft: false
 ## 主题作者
 {{< friend "PCloud" "https://github.com/HEIGE-PCloud/" "https://avatars.githubusercontent.com/u/52968553?v=4" "This is PCloud~💤" >}}
 
-## 膜拜列表
+## 友情链接
 
 {{< friend "小冰博客" "https://zfe.one" "https://zfe.space/images/headimage.png" "做个有梦想的人！" >}}
 
 {{< friend "小嘉的部落格 " "https://blog.imzjw.cn" "https://npm.elemecdn.com/nanshen/avatar.jpg" "一个爱折腾的Java开发工程师" >}}
 
-
-
-## 发现的大佬
-
-偷偷去学习一波
-
 {{< friend "钝悟 ◾ Dunwu " "https://dunwu.github.io/blog/" "https://dunwu.github.io/blog/uploads/avatar.gif" "大道至简，知易行难" >}}
+
+{{< friend "Bore's Notes" "https://bore.vip" "https://bore.vip/img/avatar.jpg" "博观而约取，厚积而薄发。" >}}
+
+
 
 
 
