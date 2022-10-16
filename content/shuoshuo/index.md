@@ -39,9 +39,11 @@ comment: false
         pageSize: 10,
         loading_img: 'https://www.penginman.com/img/loading.gif',
         comment: function (speak) {
+        const { _id, title, content } = speak
           // 4.4.0 之后在此回调函数中初始化评论
           twikoo.init({
             el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
+            path: '/shuoshuo/?q=' + _id,
             envId: "https://twikoo.penginman.com/"
           })
         }
