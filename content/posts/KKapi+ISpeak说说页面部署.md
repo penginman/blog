@@ -3,7 +3,7 @@ title: "KKapi+ISpeak说说页面部署"
 categories: ['瞎折腾']
 tags: ['说说']
 date: 2022-10-04
-lastmod: 2022-10-13
+lastmod: 2022-10-16
 
 ---
 
@@ -18,7 +18,7 @@ lastmod: 2022-10-13
 作者文档中给出很多部署方法，白嫖版的就是 vercel 后端 api + 管理界面 + MongoDB 提供的云服务，但是个人感觉 vercel 经常被墙，所以部署的 api 感觉也不会稳定，而且考虑到数据的存放问题，所以我选择的是都部署到自己服务器上。
 
 ## 后端部署
- 
+
  ### Docker 安装 Mongodb
 
 安装可以参考菜鸟教程的 [Docker 安装 MongoDB](https://www.runoob.com/docker/docker-install-mongodb.html) 。因为之前听过 MongoDB 的未授权访问，所以考虑到安全性问题，创建容器的时候添加 `MONGO_INITDB_ROOT_USERNAME` 和 `MONGO_INITDB_ROOT_PASSWORD` 设置用户的账号密码，开启Docker MongoDB 的身份验证。考虑到数据未来的迁移可以通过 `-v` 挂载宿主机的一个目录。可以修改默认端口再减少一些风险。最后我启动的命令如下 
@@ -124,10 +124,12 @@ SECRETKEY=xxxxxxxxxxxxxxx
         pageSize: 10,
         loading_img: 'https://bu.dusays.com/2021/03/04/d2d5e983e2961.gif',
         comment: function (speak) {
+          const { _id, title, content } = speak
           // 4.4.0 之后在此回调函数中初始化评论
           //这里是twikoo的初始化配置，如果使用其他评论可以在这里修改
           twikoo.init({ 
             el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
+			path: '/shuoshuo/?q=' + _id,
             envId: "twikoo后端地址"
           })
         }
@@ -140,8 +142,10 @@ SECRETKEY=xxxxxxxxxxxxxxx
     document.getElementById('tip').innerHTML = 'ipseak依赖加载失败！'
   }
 </script>
-
 ```
+
+更新一波。被人发现了说说的评论没有独立，自己改了下配置。
+上面的代码加入了 32 和 37 行代码，其中 37 行 `path` 属性设置为你当前的说说页面路径加 `q` 参数，这个参数可能无所谓吧，但是 `_id` 是当前说说的唯一 id，因为自己在页面中测试时，说说评论请求的地址格式也是根据 37 行代码这个进行请求查询的。
 
 ## Github 登陆验证（可选*）
 可以发布仅登陆可见的说说，但是需要配置 Github app。
