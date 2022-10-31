@@ -32,13 +32,6 @@
     </author><guid>https://www.braindance.top/posts/python%E7%AC%94%E8%AE%B0/</guid>
     <description><![CDATA[函数函数的参数可以使用可变参数def func(*args)，参数前面的*代表args是一个可变参数。 用模块管理函数每个文件代表一个模块，不同]]></description>
 </item><item>
-    <title>获取京东CK教程</title>
-    <link>https://www.braindance.top/posts/%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Cck/</link>
-    <pubDate>Mon, 09 May 2022 21:40:49 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Cck/</guid>
-    <description><![CDATA[获取京东CK(cookie)并提交到上车面板。教程分为不啰嗦版本和详细版本。 提交的cookie的格式为：pt_key=XXX; pt_pin=XXX; CK提交地址]]></description>
-</item><item>
     <title>博客图床迁移</title>
     <link>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0800</pubDate><author>
@@ -73,5 +66,12 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[已经二月才写年度总结的估计只有我把，纯纯的懒狗一条。 个人总结学业因为加入了学校组织的DROPS集训队，整个人都把精力投入在里面了，然后把自己]]></description>
+</item><item>
+    <title>2021年度日记</title>
+    <link>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</link>
+    <pubDate>Thu, 03 Feb 2022 09:47:43 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</guid>
+    <description><![CDATA[新年快乐🤗年度总结被拖到了农历的年。。。确实是自己懒得离谱（确实懒嗷，这篇文章写了四天了）。年前想写但是又想迁移博客，所以没干，年后家里又置]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,7 @@ title: 'ZUT 使用路由器连接校园网'
 tags: ['校园网']
 categories: ['瞎折腾']
 date: 2022-10-11
-lastmod: 2022-10-11
+lastmod: 2022-10-31
 
 
 ---
@@ -72,7 +72,23 @@ zut 校园网的客户端版本为：6.0.0（P）
 
 打开前面下载的压缩包中的 `R3GV2 patches` 文件夹，运行其中的 `0.start_main.bat`，这个批处理的命令主要是运行了文件夹中的 `main.py` ，而 `main.py` 做的事情就是尝试发现你的路由器后台地址，然后需要输入**管理后台的密码**，然后执行一些 exploit 在路由器中写入后门，界面中出现 `Done` 字样就算成功。
 
-使用 MobaXterm 连接路由器，新建一个 session 类型选择 telnet，这时的路由器地址就是管理后台的地址应该是 `192.168.31.1`，用户为 `root`。
+这里遇到过扫描不到管理后台的情况，如果遇到了可以参考以下步骤。修改 `main.py` 文件中的第 10 行到 15 行，删掉
+```python
+line4 = subprocess.check_output(["cmd","/c","chcp","437","&","tracert","-d","-h","1","1.1.1.1"]).decode().split("\r\n")[4].strip().split(" ")
+
+for data in line4:
+	if len(data.split(".")) == 4:
+		router_ip_address = data
+		break
+```
+
+添加 `router_ip_address` 变量为你的管理后台地址，通常为 `192.168.31.1`
+```python
+router_ip_address = '192.168.31.1'
+```
+
+
+接下来使用 MobaXterm 连接路由器，新建一个 session 类型选择 telnet，这时的路由器地址就是管理后台的地址应该是 `192.168.31.1`，用户为 `root`。
 
 ![创建session](https://img.braindance.top/artical/2022/10/11/6345188f255ec.png)
 
@@ -301,17 +317,149 @@ sleep 10 && /usr/bin/dogcom -m pppoe -c /usr/drcom.conf -e -d &
 
 ### 校园网防检测
 
+常见的四种检测：
+
+* 基于 IPv4 数据包包头内的 TTL 字段的检测（固定TTL）
+* 基于 HTTP 数据包请求头内的 User-Agent 字段的检测(UA2F)
+* DPI (Deep Packet Inspection) 深度包检测技术）（不常用）
+* 基于 IPv4 数据包包头内的 Identification 字段的检测（rkp-ipid 设置 IPID）
+* 基于网络协议栈时钟偏移的检测技术（防时钟偏移检测）
+* Flash Cookie 检测技术（iptables 拒绝 AC 进行 Flash 检测 不常用）
+
 大佬讲解文章：https://catalog.chn.moe/
 
 广东工业大学项目：https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt#步骤六配置防检测
 
 ### 校园网经常掉线
 
+2022.10.31 更新
+
+自己从网上找了一个检测断网并自动重新拨号的脚本，配合定时任务每天凌晨 4 点重启，已经用了 20 多天了感觉还不错，分享一波代码。可以在任意目录下创建一个 ping 文件夹（但是需要自己改下某些配置路径），下面的例子是在 /root/ping 目录里放的脚本。脚本包括产生的日志有三个文件：
+* ping.sh。每间隔 `SLEEP_SEC` 时间测试两个外网地址能否访问，超过 `PING_SUM` 次数无法访问判断为拨号掉线，重启 wan 口进行拨号。产生的日志文件存放到 `/root/ping/log.txt`
+* daemon.sh。检测 ping.sh 进程是否存活，如果不存在进程则重启进程；判断日志文件超过 50MB 清空日志文件。
+
+`ping.sh`
+```shell
+#!/bin/sh
+
+
+PING_SUM=5
+
+#ping interval
+SLEEP_SEC=10
+
+#连续重启网卡 REBOOT_CNT 次网络都没有恢复正常，重启软路由
+#时间= (SLEEP_SEC * PING_SUM + 20) * REBOOT_CNT
+REBOOT_CNT=30
+
+LOG_PATH="/root/ping/log.txt"
+
+cnt=0
+reboot_cnt=0
+while :
+do
+    ping -c 1 -W 1 114.114.114.114 > /dev/null
+    ret=$?
+
+    ping -c 1 -W 1 223.6.6.6 > /dev/null
+    ret2=$?
+
+    if [[ $ret -eq 0 || $ret2 -eq 0 ]]
+    then
+        echo 'Network OK!'
+        cnt=0
+        reboot_cnt=0
+    else
+        cnt=`expr $cnt + 1`
+        echo -n `date '+%Y-%m-%d %H:%M:%S'` >> $LOG_PATH
+        printf '-> [%d/%d] Network maybe disconnected,checking again after %d seconds!\r\n' $cnt $PING_SUM $SLEEP_SEC >> $LOG_PATH
+        printf '-> [%d/%d] Network maybe disconnected,checking again after %d seconds!\r\n' $cnt $PING_SUM $SLEEP_SEC
+
+        if [ $cnt == $PING_SUM ]
+        then
+            echo 'ifup wan!!!' >> $LOG_PATH
+            echo 'ifup wan!!!'
+
+            ifdown wan
+            sleep 1
+            ifup wan
+
+            cnt=0
+            #重连后，等待20秒再进行ping检测
+            sleep 20
+
+
+            #网卡重启超过指定次数还没恢复正常，重启软路由
+            reboot_cnt=`expr $reboot_cnt + 1`
+            if [ $reboot_cnt == $REBOOT_CNT ]
+            then
+                echo -n `date '+%Y-%m-%d %H:%M:%S'` >> $LOG_PATH
+                echo '-> =============== reboot!' >> $LOG_PATH
+                echo '-> =============== reboot!'
+
+                sshpass -p 132465 ssh -p 22 root@192.168.1.1 'reboot'
+            fi
+        fi
+    fi
+
+    sleep $SLEEP_SEC
+done
+```
+
+`daemon.sh`
+
+```shell
+#!/bin/sh
+
+LOG_PATH="/root/ping/log.txt"
+
+# 用ps获取ups进程数量
+NUM=`ps | grep ping.sh | grep -v grep | wc -l`
+echo ${NUM}
+
+# 少于1，重启进程
+if [ "${NUM}" -lt "1" ]
+then
+    /root/ping/ping.sh > /dev/null &
+    echo -n `date '+%Y-%m-%d %H:%M:%S'` >> $LOG_PATH
+    echo '-> Ping daemon start' >> $LOG_PATH
+fi
+
+s=`du -k /root/ping/log.txt|awk '{print $1}'`
+if [ $s -gt 500000 ]
+    then
+    chengdatetime=`date "+%Y-%m-%d %H:%M:%S"`
+    echo $chengdatetime":log size is large than expected and cleaning is started" >> $LOG_PATH
+        cat /dev/null > /root/ping/log.txt
+fi
+
+exit 0
+
+
+```
+
+之后在 openwrt 的管理后台 ---> 系统 ---> 计划任务中添加
+```shell
+0 4 * * * reboot
+0 */1 * * * /root/ping/daemon.sh
+```
+第一行是每天 4 点重启路由器，第二行是启动检测存活脚本（看好文件路径别错），可以自行设置计划运行时间。
+
+---
+分割线，以下是旧内容
+
+---
+
 这个我也遇到过了，不知道是什么原因，毕竟我自己用电脑连着认证时不时也会掉，但是也有搜到的下面的办法
 
 https://blog.csdn.net/weixin_35251837/article/details/119553540
 
 在 `/etc/ppp/options` 文件中添加 `persist`
+
+
+
+
+
 
 ## 完工
 

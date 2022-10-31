@@ -3,7 +3,7 @@ title: "获取京东CK教程"
 date: 2022-05-09T21:40:49+08:00
 categories: ['瞎折腾']
 tags: ['京东薅羊毛']
-draft: false
+draft: true
 ---
 
 获取京东CK(cookie)并提交到上车面板。教程分为不啰嗦版本和详细版本。
