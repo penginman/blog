@@ -101,7 +101,7 @@ theme = "DoIt"
     rss = 10
     [params.home.profile]
       enable = true
-      avatarURL = "https://s4.ax1x.com/2022/02/01/HkWwQS.png"
+      avatarURL = "https://www.penginman.com/img/avatar.png"
       # gravatarEmail = "2250926180@qq.com"
       title = "Braindance"
       subtitle = "为世界上所有的美好而战"

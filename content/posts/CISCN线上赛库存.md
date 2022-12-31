@@ -43,7 +43,7 @@ flag：CISCN{SWAqt-siWro-Wi7jV-FTdRm-9iOkG-}
 
 使用目录扫描，扫描到了`.index.php.swo`
 
-```
+```php
 本题目没有其他代码了噢，就只有这一个文件，虽然你看到的不完全，但是你觉得我会把flag藏在哪里呢，仔细想想文件里面还有什么？
 <?php
 class User

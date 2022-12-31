@@ -3,7 +3,14 @@
         <title>所有文章 - Braindance</title>
         <link>https://www.braindance.top/posts/</link>
         <description>所有文章 | Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 11 Oct 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 31 Dec 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>2022年度总结</title>
+    <link>https://www.braindance.top/posts/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+    <pubDate>Sat, 31 Dec 2022 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[今年过得可真是太快了，不知道从哪开始写。前几天不小心点开微博，首页一句话想想只能苦笑一下，所有人应该都过得差不多吧。今年我乱过的，明年我一定]]></description>
+</item><item>
     <title>ZUT 使用路由器连接校园网</title>
     <link>https://www.braindance.top/posts/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
     <pubDate>Tue, 11 Oct 2022 00:00:00 &#43;0800</pubDate><author>
@@ -66,12 +73,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[已经二月才写年度总结的估计只有我把，纯纯的懒狗一条。 个人总结学业因为加入了学校组织的DROPS集训队，整个人都把精力投入在里面了，然后把自己]]></description>
-</item><item>
-    <title>2021年度日记</title>
-    <link>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</link>
-    <pubDate>Thu, 03 Feb 2022 09:47:43 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</guid>
-    <description><![CDATA[新年快乐🤗年度总结被拖到了农历的年。。。确实是自己懒得离谱（确实懒嗷，这篇文章写了四天了）。年前想写但是又想迁移博客，所以没干，年后家里又置]]></description>
 </item></channel>
 </rss>
