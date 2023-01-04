@@ -3,9 +3,16 @@
         <title>Braindance</title>
         <link>https://www.braindance.top/</link>
         <description>Braindance&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 31 Dec 2022 00:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Jan 2023 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://www.braindance.top/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>中国联通SK-D748光猫超级密码获取</title>
+    <link>https://www.braindance.top/posts/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
+    <pubDate>Wed, 04 Jan 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</guid>
+    <description><![CDATA[折腾软路由百忙之中抽时间来简单水一篇。 有这个需求是因为目前在家里是用另一个无线路由器桥接联通的光猫的，但是在dhcp 里死活找不到桥接路由器分]]></description>
+</item><item>
     <title>2022年度总结</title>
     <link>https://www.braindance.top/posts/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
     <pubDate>Sat, 31 Dec 2022 00:00:00 &#43;0800</pubDate><author>
@@ -68,12 +75,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/css%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[选择器 element p 选择所有 &lt;p&gt; 元素。 element.class p.intro 选择 class=&ldquo;intro&rdquo; 的所有 &lt;p&gt; 元素。 element,element div, p 选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。 element element div p 选择 &lt;div&gt; 元素内的所有 &lt;p&gt; 元素。 element&gt;element div &gt; p 选择父元素是 &lt;div&gt;]]></description>
-</item><item>
-    <title>2021年度总结</title>
-    <link>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
-    <pubDate>Mon, 07 Feb 2022 11:04:02 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[已经二月才写年度总结的估计只有我把，纯纯的懒狗一条。 个人总结学业因为加入了学校组织的DROPS集训队，整个人都把精力投入在里面了，然后把自己]]></description>
 </item></channel>
 </rss>
