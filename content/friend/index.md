@@ -20,6 +20,8 @@ draft: false
 
 {{< friend "Bore's Notes" "https://bore.vip" "https://bore.vip/img/avatar.jpg" "博观而约取，厚积而薄发。" >}}
 
+{{< friend "LyShark - 孤风洗剑" "https://www.lyshark.com" "https://www.lyshark.com/images/baidu_logo.png" "道，可道，非常道；名，可名，非常名。—— 老子《道德经》" >}}
+
 
 
 
