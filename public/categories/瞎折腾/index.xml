@@ -3,7 +3,14 @@
         <title>瞎折腾 - 分类 - Braindance</title>
         <link>https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
         <description>瞎折腾 - 分类 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Jan 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>软路由日记(一)</title>
+    <link>https://www.braindance.top/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
+    <pubDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</guid>
+    <description><![CDATA[前言在学校疫情期间买了一个 j4125 的软路由，一直等到回家过了很久才到手，因为买的是裸机，还有些配件是在别的店买的，回家以后发现地址只能在区以内修改]]></description>
+</item><item>
     <title>中国联通SK-D748光猫超级密码获取</title>
     <link>https://www.braindance.top/posts/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
     <pubDate>Wed, 04 Jan 2023 00:00:00 &#43;0800</pubDate><author>
@@ -66,12 +73,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
     <description><![CDATA[前言​ 这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。 CDN的全称是Content]]></description>
-</item><item>
-    <title>Chevereto-搭建一个自己的图床</title>
-    <link>https://www.braindance.top/posts/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
-    <pubDate>Sun, 20 Sep 2020 11:09:02 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
-    <description><![CDATA[博客搭完了，自己选择的这个博客主题又是以图片为主要元素的，当然要考虑图片的使用问题了，原来打算直接放在服务器上，但是后来想了想，以后如果文章]]></description>
 </item></channel>
 </rss>

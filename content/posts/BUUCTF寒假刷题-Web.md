@@ -1039,7 +1039,11 @@ auto_prepend_file=233.gif
 
 接下来上传图片马，尝试了正常上传PHP马会提示：
 
-> <? in contents!
+
+
+> \<\? in contents!
+
+
 
 所以使用script马执行php：
 
@@ -1054,9 +1058,17 @@ GIF89a
 > Your files :
 > array(5) { [0]=> string(1) "." [1]=> string(2) ".." [2]=> string(9) ".user.ini" [3]=> string(7) "233.gif" [4]=> string(9) "index.php" }
 
+
+
 这时候.user.ini文件已经会帮我们自动包含图片马了，所以我们只需要访问一个PHP文件即可，正好上传目录下有一个index.php文件，可以直接蚁剑连接或者POST请求system('cat /flag')。
 
+ 
+
+
+
 ---
+
+
 
 # [BJDCTF2020]Easy MD5
 
