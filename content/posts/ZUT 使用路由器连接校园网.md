@@ -271,7 +271,7 @@ keep_alive2_flag = '\xdb'
 
 ### 配置 PPPoE 拨号文件
 
-在 ssh 中按照顺序执行以下指令：
+在 ssh 中按照顺序执行以下指令，**这一步十分的重要！！！**：
 
 ```
 cp /lib/netifd/proto/ppp.sh /lib/netifd/proto/ppp.sh_bak

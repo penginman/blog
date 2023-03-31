@@ -247,14 +247,14 @@ theme = "DoIt"
     url = "/categories/"
     title = "分类"
     weight = 3
-  [[menu.main]]
-    identifier = "shuoshuo"
-    pre = ""
-    post = ""
-    name = "说说"
-    url = "/shuoshuo/"
-    title = "说说"
-    weight = 4
+  # [[menu.main]]
+  #   identifier = "shuoshuo"
+  #   pre = ""
+  #   post = ""
+  #   name = "说说"
+  #   url = "/shuoshuo/"
+  #   title = "说说"
+  #   weight = 4
   [[menu.main]]
     identifier = "about"
     pre = ""

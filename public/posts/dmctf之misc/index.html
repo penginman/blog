@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">DMCTF之Misc - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="DMCTF之Misc" />
+    <title>DMCTF之Misc - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="DMCTF之Misc" />
 <meta property="og:description" content="前言这次比赛是第一次做Mics的题awa。 MiscCheck_in真·有手就行 fakezip看到题目fakezip翻译：假的压缩包，所以猜应" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.braindance.top/posts/dmctf%E4%B9%8Bmisc/" /><meta property="article:section" content="posts" />
@@ -20,7 +20,7 @@
 
 <meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/dmctf%E4%B9%8Bmisc/" /><link rel="prev" href="https://www.braindance.top/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" /><link rel="next" href="https://www.braindance.top/posts/gxyctf2019ping-ping-ping/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/dmctf%E4%B9%8Bmisc/" /><link rel="prev" href="https://www.braindance.top/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" /><link rel="next" href="https://www.braindance.top/posts/gxyctf2019ping-ping-ping/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -39,14 +39,15 @@
                 "name": "Braindance"
             },"description": ""
     }
-    </script></head>
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
-        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
-        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
-        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
-        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
     </script>
 
@@ -58,18 +59,18 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    </span><a href="#" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a></div>
         </div>
@@ -87,20 +88,20 @@
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="搜些什么" id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -178,34 +179,37 @@
 <h1 id="misc" class="headerLink">
     <a href="#misc" class="header-mark"></a>Misc</h1><h2 id="check_in" class="headerLink">
     <a href="#check_in" class="header-mark"></a>Check_in</h2><p>真·有手就行</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="fakezip" class="headerLink">
     <a href="#fakezip" class="header-mark"></a>fakezip</h2><p>看到题目<strong>fakezip</strong>翻译：假的压缩包，所以猜应该是伪加密，贴一个原理的博客：<a href="https://blog.csdn.net/u011377996/article/details/79286958" target="_blank" rel="noopener noreferrer">zip伪加密</a>，使用010 Editor打开压缩包，</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png">
-    </a></p>
+    </a></figure></p>
 <p>找到01修改为00，再解压压缩包，虽然提示了压缩包错误但是直接无视，获得一个flag.txt</p>
 <p>打开以后内容是：<code>♬♩¶♯♬♭♬♫♫♪♬∮♬♭‖♭♬♭♬∮♬♭‖♭♬♭♫♫♯=</code>，音符加密虽然是第一次听说，但是百度还是可以简单找到：<a href="https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue" target="_blank" rel="noopener noreferrer">文本加密为音乐符号</a></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="base-family" class="headerLink">
     <a href="#base-family" class="header-mark"></a>Base family</h2><p>题目给出了是base家族，所以base所有种类都试一遍。base常见的种类有：<code>base16</code>、<code>base32</code>、<code>base58</code>、<code>base64</code>、<code>base91</code>。还有几种没听过的base种类可以在这个网站找到：<a href="http://ctf.ssleye.com/" target="_blank" rel="noopener noreferrer">CTF在线工具</a>。</p>
 <p><strong>原层</strong>：</p>
@@ -264,14 +268,15 @@
 </div>
 </div><h2 id="slienteye" class="headerLink">
     <a href="#slienteye" class="header-mark"></a>SlientEye</h2><p>根据题目直接百度<strong>SlientEye</strong>，下载以后打开图片&ndash;&gt;decode：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png">
-    </a></p>
+    </a></figure></p>
 <p>参数啥的都没动，密码为默认密码，直接Decode，得到一个flag.txt：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -287,24 +292,26 @@
 <p>解出来以后看到第一句：<code>如是我闻:</code>，&ndash;&gt;<a href="http://www.keyfc.net/bbs/tools/tudoucode.aspx" target="_blank" rel="noopener noreferrer">与佛论禅</a></p>
 <p>再解之后看第一句：<code>新佛曰：</code>。&ndash;&gt;<a href="http://hi.pcmoe.net/buddha.html" target="_blank" rel="noopener noreferrer">新与佛论禅</a></p>
 <p>解完以后直接出了一堆由：<code>[、]、!、+、(、)</code>组成的符号，还是百度找到了这种编码叫JSfuck，可以直接浏览器控制台console输出获得flag</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="jpgsteg" class="headerLink">
     <a href="#jpgsteg" class="header-mark"></a>jpgsteg</h2><p>题目即是用到的工具，百度下载软件，使用jphide.exe打开图片<code>Tap code.jpg</code>，选择seek功能解密，密码为123456（我蒙的）：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png">
-    </a></p>
+    </a></figure></p>
 <p>成功解密后获得一个文档，内容如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -335,26 +342,28 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>这里我思索了好久，刚开始以为是摩斯密码，但是又对不上号，最后找到了一个名为敲击码的，正好一行中的<code>.</code>分成两部分代表坐标</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png">
-    </a></p>
+    </a></figure></p>
 <p>解码得到：<code>ohhamazing</code> ，加上括号就是：<strong>flag{ohhamazing}</strong></p>
 <p>事后多看了一眼图片命名：<code>Tap code.jpg</code>。这用啥解密不就在脸上写着的<del>wosabi \0/</del>。。。</p>
 <h2 id="collision" class="headerLink">
     <a href="#collision" class="header-mark"></a>Collision</h2><p>打开压缩包发现都是加密，但是原始大小都为4，只有CRC不一样：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png">
-    </a></p>
+    </a></figure></p>
 <p>所以很有可能是四位数据的CRC32碰撞，就去网上找了一个python脚本：<a href="https://blog.csdn.net/weixin_45396639/article/details/103393759" target="_blank" rel="noopener noreferrer">crc32碰撞 ctf python</a>作者原创的脚本：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -495,14 +504,15 @@ flag
 </div><p>根据flag的结构拼接一下：<strong>flag{crc32collis1on}</strong></p>
 <h2 id="kaomoji" class="headerLink">
     <a href="#kaomoji" class="header-mark"></a>kaomoji</h2><p>题目的压缩包解压以后得到一个<strong>flag.zip</strong>压缩包和<strong>secret.txt</strong>，flag.zip中也含有secret.txt，将外面没有加密的secret.txt使用<strong>winrar</strong>压缩（需要和原来的压缩软件一致哒）以后对比flag.zip里的文件发现CRC码相同的：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png">
-    </a></p>
+    </a></figure></p>
 <p>配合ARCHPR使用明文攻击，获得加密密钥： <strong>[b00df998 5bdbbde6 485fa1f8]</strong></p>
 <p>我在进行明文攻击时虽然没有跑出来压缩包的密码，但是获得了上面的密钥，也是可以解压加密的压缩包的（具体原理不清楚）。解压明文攻击解开获得的压缩包<strong>flag_decrypted.zip</strong>，打开flag.txt是颜文字表情加密，直接复制到浏览器console控制台运行获得flag：flag{kaomoj1_1s_cut3}</p>
 <h2 id="archpr" class="headerLink">
@@ -560,24 +570,26 @@ Encrypted data: U2FsdGVkX1/nmu9u2Ho1dD9kQWv7L5a6bsUrWxBkVp68txdFL4v/givGGYy7dBU+
 <p>解密网站：https://tool.oschina.net/encrypt</p>
 <h2 id="whitespace" class="headerLink">
     <a href="#whitespace" class="header-mark"></a>Whitespace</h2><p>题目即提示，Whitespace进行一波搜索以后了解到是一种用空白符编程的语言，在压缩包里面摸了好久，在注释里发现空白编码：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png">
-    </a></p>
+    </a></figure></p>
 <p>这也让我想到自己在网上下工具的压缩包时，网站经常在注释里附上密码，通常都是网站的网址。</p>
 <p>在<a href="https://vii5ard.github.io/whitespace" target="_blank" rel="noopener noreferrer">whitespace</a>网站中粘贴密文点上面的<code>run</code>：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png">
-    </a></p>
+    </a></figure></p>
 <p>解密获得：<strong>password is BlindWaterMark!</strong></p>
 <p>输入解压以后获得两张看着相同的罗翔老师.png图片和一个hint.txt：</p>
 <div class="highlight"><div class="chroma">
@@ -610,14 +622,15 @@ Get to know its secrets and tell you quietly that you need to know a knowledge c
 </code></pre></td></tr></table>
 </div>
 </div><p>获得解密图片：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png">
-    </a></p>
+    </a></figure></p>
 <p>图片中的内容为：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -642,14 +655,15 @@ a6a6569955a
 </code></pre></td></tr></table>
 </div>
 </div><p>就百度曼切斯特编码解码，找到一篇博客：<a href="https://blog.csdn.net/weixin_30416871/article/details/98566881" target="_blank" rel="noopener noreferrer">一些CTF编码脚本</a>，在里面找到了这两段：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png">
-    </a></p>
+    </a></figure></p>
 <p>心里一顿狂喜，因为都是<code>2965a</code>这个几个字符组成的，应该就是找对了。根据博客代码自行修改脚本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -697,14 +711,15 @@ print hex(int(r,2))[2:-1].decode(&#39;hex&#39;)
 <p>慢扫描电视（Slow-scan television）是业余无线电爱好者的一种主要图片传输方法，慢扫描电视通过无线电传输和接收单色或彩色静态图片。</p>
 </blockquote>
 <p>了解到是一种无线电传递图片的方法，搜到的博客<a href="https://blog.csdn.net/zkf0100007/article/details/83387790" target="_blank" rel="noopener noreferrer">慢扫描电视 SSTV</a>和B站的视频<a href="https://www.bilibili.com/video/BV1ea4y1J787" target="_blank" rel="noopener noreferrer">慢扫描电视SSTV</a>，下载MMSSTV软件，把output.wav音频调制麦克风输出，我使用的方法是在声音设置里把立体声混音打开并且设为默认设备，然后电脑里播放的声音就会被录制到。等待图片绘制成功，获得flag：<strong>DMCTF{SSTV,yyds?}</strong></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="simpleqrcode" class="headerLink">
     <a href="#simpleqrcode" class="header-mark"></a>SimpleQrcode</h2><p>​	下载题目是一个gif图片都是二维码，使用使用stegSovle中的Frame Browser功能，一帧一帧播放，一帧一扫，有几帧图片是少了二维码的上边，有一张是少了右边，可以参考第一张完整的图片，把上面截取拼接上去，扫码后17张图片对应的内容（根据代码行号）：</p>
 <div class="highlight"><div class="chroma">
@@ -781,7 +796,7 @@ ng
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
@@ -793,7 +808,7 @@ ng
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'UA-176925141-1', { 'anonymize_ip': true });
         </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-176925141-1" async></script><script>
@@ -805,8 +820,6 @@ ng
 			  s.parentNode.insertBefore(hm, s);
 			})();
 		</script></div>
-
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

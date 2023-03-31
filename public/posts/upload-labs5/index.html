@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">Upload-Labs的最后几道题 - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="Upload-Labs的最后几道题" />
+    <title>Upload-Labs的最后几道题 - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="Upload-Labs的最后几道题" />
 <meta property="og:description" content="Pass-17​ （windows环境，php版本5.2.17，题号是18题） 源码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 $is_upload = false; $msg = null;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.braindance.top/posts/upload-labs5/" /><meta property="article:section" content="posts" />
@@ -20,7 +20,7 @@
 
 <meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/upload-labs5/" /><link rel="prev" href="https://www.braindance.top/posts/upload-labs4/" /><link rel="next" href="https://www.braindance.top/posts/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/upload-labs5/" /><link rel="prev" href="https://www.braindance.top/posts/upload-labs4/" /><link rel="next" href="https://www.braindance.top/posts/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -39,14 +39,15 @@
                 "name": "Braindance"
             },"description": ""
     }
-    </script></head>
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
-        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
-        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
-        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
-        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
     </script>
 
@@ -58,18 +59,18 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    </span><a href="#" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a></div>
         </div>
@@ -87,20 +88,20 @@
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="搜些什么" id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -255,14 +256,15 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>​	第一次用python的我在这里知道了<code>pip</code>。这道题因为要不断的上传和访问文件，所以对在线靶场不友好，所以才选择了本地环境解题。完工</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119090033.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="pass-18失手" class="headerLink">
     <a href="#pass-18%e5%a4%b1%e6%89%8b" class="header-mark"></a>Pass-18（失手）</h2><p>​	18题失手了没有思路，如果使用<code>include.php</code>文件包含的话还可以，看了看网上大部分的博客都是敷敷衍衍过去的，找到了一篇稍微有点思路的，使用的是<code>apache2.2.x的解析漏洞</code>，这个漏洞的思路就是，apache服务器在解析有多个后缀名的文件时，从最后一个开始向前扫描，如果不认识就跳过，直到遇到一个认识的文件后缀，就把这个文件以这个能识别的后缀解析。</p>
 <p><a href="https://blog.csdn.net/qq_32434307/article/details/79480316" target="_blank" rel="noopener noreferrer">Apache文件解析漏洞</a></p>
@@ -328,32 +330,35 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>​	源码第七行使用了<strong>POST</strong>来接受文件的命名，前面有类似题的是使用了<strong>0x00截断上传</strong>，后面也同样是<code>move_uploaded_file</code>移动文件的函数，还使用了黑名单验证，方法就很明确，使用<strong>截断上传</strong>。别忘了截断上传需要的特定条件：php版本需要低于<code>5.3.29</code>、<code>magic_quotes_gpc</code>需要为关闭状态。</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164220.png">
-    </a></p>
+    </a></figure></p>
 <p>​	同样是命名为<code>phpa</code>方便在十六进制表里修改为<code>00</code></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119162729.png">
-    </a></p>
+    </a></figure></p>
 <p>​	打开图片把url链接<code>http://upload-labs/upload/upload-19.php�</code>修改一下即可。完工</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119164458.png">
-    </a></p>
+    </a></figure></p>
 <p>​	其实这道题还有一个思路，因为题目使用了<strong>黑名单验证</strong>，分析源码没有设置大小写过滤，所以也可以使用大小写方法通过如<code>Php</code>，不演示了。</p>
 <h2 id="pass-20" class="headerLink">
     <a href="#pass-20" class="header-mark"></a>Pass-20</h2><p>（LInux环境，php7.2.21）</p>
@@ -432,32 +437,35 @@
 </div>
 </div><p>​	这道题使用了<code>MIME</code>验证和白名单验证。先看第10行使用了<code>三目运算符</code>判断<code>$_POST['save_name']</code>是否为空，若为空则执行<code>:</code>前获取上传文件的名称，若不为空则获取POST中的<code>save_name</code>。第11行使用了<code>is_array</code>函数判断是否是一个数组，然后使用<code>explode</code>截断文件名转换小写并返回数组。也就是说，如果我们POST中的<code>save_name</code>是个数组的就可以跳过11行的判断。15行使用<code>end</code>函数获取数组中的最后一个元素用于后缀验证。20行把文件名进行拼接：数组<strong>第一个</strong>元素+数组元素<strong>总数-1</strong>的那个元素。</p>
 <p>所以我们可以构造一个这样的数组用于绕过：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119170734.png">
-    </a></p>
+    </a></figure></p>
 <p>​	数组[2]用于绕过白名单，文件名为：<code>数组[0].数组[1]</code>，但是数组[1]是空的所以只剩下<code>数组[0].</code>（后面有个点）</p>
 <p>​	别忘了还要绕过<strong>MIME</strong></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172340.png">
-    </a></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png">
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png" title="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png">
-    </a></p>
+    </a></figure></p>
 <p>完工</p>
 <h2 id="最后" class="headerLink">
     <a href="#%e6%9c%80%e5%90%8e" class="header-mark"></a>最后</h2><p>​	Upload labs的20道题大部分完成了，有两道题没完成，但是也学到了不少东西，这些天再抽空写一个总结吧。射射观看。</p>
@@ -494,7 +502,7 @@
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
@@ -506,7 +514,7 @@
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'UA-176925141-1', { 'anonymize_ip': true });
         </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-176925141-1" async></script><script>
@@ -518,8 +526,6 @@
 			  s.parentNode.insertBefore(hm, s);
 			})();
 		</script></div>
-
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

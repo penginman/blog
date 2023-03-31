@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">Hackgame2020(二) - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="Hackgame2020(二)" />
+    <title>Hackgame2020(二) - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:title" content="Hackgame2020(二)" />
 <meta property="og:description" content="一闪而过的Flag​ 根据题目信息程序每次运行时隐约可见黑色控制台上有 flag 一闪而过，我想到了应该能看程序的代码啥的找到，但是天下武功，唯快不破，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.braindance.top/posts/hackgame20202/" /><meta property="article:section" content="posts" />
@@ -20,7 +20,7 @@
 
 <meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/hackgame20202/" /><link rel="prev" href="https://www.braindance.top/posts/xss-lab1/" /><link rel="next" href="https://www.braindance.top/posts/upload-labs1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://www.braindance.top/posts/hackgame20202/" /><link rel="prev" href="https://www.braindance.top/posts/xss-lab1/" /><link rel="next" href="https://www.braindance.top/posts/upload-labs1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -39,14 +39,15 @@
                 "name": "Braindance"
             },"description": ""
     }
-    </script></head>
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
-        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
-        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
-        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
-        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
     </script>
 
@@ -58,18 +59,18 @@
             <a href="/" title="Braindance">Braindance</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/shuoshuo/" title="说说"> 说说 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/friend/" title="友链"> 友链 </a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇 开往 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜些什么" id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    </span><a href="#" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a></div>
         </div>
@@ -87,20 +88,20 @@
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="搜些什么" id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <i class="fas fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
                             <i class="fas fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/shuoshuo/" title="说说">说说</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/friend/" title="友链">友链</a><a class="menu-item" href="https://travellings.cn" title="开往" rel="noopener noreferrer" target="_blank">🚇开往</a><a href="#" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -163,26 +164,28 @@
                 </div>
             </div><h3 id="一闪而过的flag" class="headerLink">
     <a href="#%e4%b8%80%e9%97%aa%e8%80%8c%e8%bf%87%e7%9a%84flag" class="header-mark"></a>一闪而过的Flag</h3><p>​	根据题目信息<strong>程序每次运行时隐约可见黑色控制台上有 flag 一闪而过</strong>，我想到了应该能看程序的代码啥的找到，但是<del>天下武功，唯快不破</del>，下载 运行 截图一气呵成。</p>
-<p>​	<a class="lightgallery" href="https://s1.ax1x.com/2020/11/09/B7TOUA.png" title="https://s1.ax1x.com/2020/11/09/B7TOUA.png" data-thumbnail="https://s1.ax1x.com/2020/11/09/B7TOUA.png">
+<p>​	<figure><a class="lightgallery" href="https://s1.ax1x.com/2020/11/09/B7TOUA.png" title="https://s1.ax1x.com/2020/11/09/B7TOUA.png" data-thumbnail="https://s1.ax1x.com/2020/11/09/B7TOUA.png">
         <img
-            class="lazyload"
-            data-src="https://s1.ax1x.com/2020/11/09/B7TOUA.png"
-            data-srcset="https://s1.ax1x.com/2020/11/09/B7TOUA.png, https://s1.ax1x.com/2020/11/09/B7TOUA.png 1.5x, https://s1.ax1x.com/2020/11/09/B7TOUA.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://s1.ax1x.com/2020/11/09/B7TOUA.png"
+            srcset="https://s1.ax1x.com/2020/11/09/B7TOUA.png, https://s1.ax1x.com/2020/11/09/B7TOUA.png 1.5x, https://s1.ax1x.com/2020/11/09/B7TOUA.png 2x"
+            sizes="auto"
             alt="https://s1.ax1x.com/2020/11/09/B7TOUA.png">
-    </a></p>
+    </a></figure></p>
 <p>​	接下来让我康康哪一位是<del>瞎子</del>，包括答案里也是满满的嘲讽。</p>
 <p><strong>参考答案：flag{Are_you_eyes1ght_g00D?_can_you_dIst1nguish_1iI?}</strong></p>
 <h3 id="从零开始的记账工具人" class="headerLink">
     <a href="#%e4%bb%8e%e9%9b%b6%e5%bc%80%e5%a7%8b%e7%9a%84%e8%ae%b0%e8%b4%a6%e5%b7%a5%e5%85%b7%e4%ba%ba" class="header-mark"></a>从零开始的记账工具人</h3><p>​	<del>npy</del>给了我一张账单，让我计算账单上面的金额，flag就是由金额组成的。本以为是一个简单的Excel的表格函数解决，打开我傻了。</p>
-<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2Flxf.png" title="https://s1.ax1x.com/2020/11/05/B2Flxf.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2Flxf.png">
+<p><figure><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2Flxf.png" title="https://s1.ax1x.com/2020/11/05/B2Flxf.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2Flxf.png">
         <img
-            class="lazyload"
-            data-src="https://s1.ax1x.com/2020/11/05/B2Flxf.png"
-            data-srcset="https://s1.ax1x.com/2020/11/05/B2Flxf.png, https://s1.ax1x.com/2020/11/05/B2Flxf.png 1.5x, https://s1.ax1x.com/2020/11/05/B2Flxf.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://s1.ax1x.com/2020/11/05/B2Flxf.png"
+            srcset="https://s1.ax1x.com/2020/11/05/B2Flxf.png, https://s1.ax1x.com/2020/11/05/B2Flxf.png 1.5x, https://s1.ax1x.com/2020/11/05/B2Flxf.png 2x"
+            sizes="auto"
             alt="https://s1.ax1x.com/2020/11/05/B2Flxf.png">
-    </a></p>
+    </a></figure></p>
 <p>​	原来是搞这个大小写金额的转换，没见过Excel有这种操作就去百度，转了一大圈，网上只有数字转大写金额的，没有反过来的。还去了github上找代码，发现运行的结果和自己想要的还是有些出入。卡了有足足半天，之后自己写了一个Java代码跑了一遍，代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -287,51 +290,55 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>​	程序用的控制台输入，直接表格两列从头拉倒尾粘贴，出答案。程序的思路就是把金额大写当做字符串处理，每一位用<code>switch</code>判断数字或是个、十、百、千那一位上的数字。</p>
-<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2F7ee.png" title="https://s1.ax1x.com/2020/11/05/B2F7ee.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2F7ee.png">
+<p><figure><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2F7ee.png" title="https://s1.ax1x.com/2020/11/05/B2F7ee.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2F7ee.png">
         <img
-            class="lazyload"
-            data-src="https://s1.ax1x.com/2020/11/05/B2F7ee.png"
-            data-srcset="https://s1.ax1x.com/2020/11/05/B2F7ee.png, https://s1.ax1x.com/2020/11/05/B2F7ee.png 1.5x, https://s1.ax1x.com/2020/11/05/B2F7ee.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://s1.ax1x.com/2020/11/05/B2F7ee.png"
+            srcset="https://s1.ax1x.com/2020/11/05/B2F7ee.png, https://s1.ax1x.com/2020/11/05/B2F7ee.png 1.5x, https://s1.ax1x.com/2020/11/05/B2F7ee.png 2x"
+            sizes="auto"
             alt="https://s1.ax1x.com/2020/11/05/B2F7ee.png">
-    </a></p>
+    </a></figure></p>
 <p>​	Java渣轻喷。</p>
 <p><strong>参考答案：flag{19115.33}</strong></p>
 <h3 id="超简单的世界模拟器" class="headerLink">
     <a href="#%e8%b6%85%e7%ae%80%e5%8d%95%e7%9a%84%e4%b8%96%e7%95%8c%e6%a8%a1%e6%8b%9f%e5%99%a8" class="header-mark"></a>超简单的世界模拟器</h3><p>​	这道题下面有两道小题</p>
 <h3 id="蝴蝶效应" class="headerLink">
     <a href="#%e8%9d%b4%e8%9d%b6%e6%95%88%e5%ba%94" class="header-mark"></a>蝴蝶效应</h3><p>​	先看有意思的一个漫画</p>
-<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2k9eg.png" title="https://s1.ax1x.com/2020/11/05/B2k9eg.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2k9eg.png">
+<p><figure><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2k9eg.png" title="https://s1.ax1x.com/2020/11/05/B2k9eg.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2k9eg.png">
         <img
-            class="lazyload"
-            data-src="https://s1.ax1x.com/2020/11/05/B2k9eg.png"
-            data-srcset="https://s1.ax1x.com/2020/11/05/B2k9eg.png, https://s1.ax1x.com/2020/11/05/B2k9eg.png 1.5x, https://s1.ax1x.com/2020/11/05/B2k9eg.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://s1.ax1x.com/2020/11/05/B2k9eg.png"
+            srcset="https://s1.ax1x.com/2020/11/05/B2k9eg.png, https://s1.ax1x.com/2020/11/05/B2k9eg.png 1.5x, https://s1.ax1x.com/2020/11/05/B2k9eg.png 2x"
+            sizes="auto"
             alt="https://s1.ax1x.com/2020/11/05/B2k9eg.png">
-    </a></p>
+    </a></figure></p>
 <p>​	一个人用石头模拟了一整个宇宙，斯巴拉西。</p>
 <p>​	打开题目以后是一个终端，然提示等待你输入一个<strong>15*15矩阵</strong>（只能有0和1组成），看到这挺懵的，但是题目里有一个重要信息<strong>生命游戏</strong>，百度百科看了一下这个<a href="https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/2926434?fr=aladdin" target="_blank" rel="noopener noreferrer">生命游戏</a>，游戏的规则大致就是：<strong>一个细胞会根据周围的细胞数量判断存活和死亡</strong>，然后细胞会不断演算，这个和前面的漫画有异曲同工之妙。</p>
-<p>​	返回终端里面一片白中间有几个框框<a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2ZFBT.png" title="https://s1.ax1x.com/2020/11/05/B2ZFBT.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2ZFBT.png">
+<p>​	返回终端里面一片白中间有几个框框<figure><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2ZFBT.png" title="https://s1.ax1x.com/2020/11/05/B2ZFBT.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2ZFBT.png">
         <img
-            class="lazyload"
-            data-src="https://s1.ax1x.com/2020/11/05/B2ZFBT.png"
-            data-srcset="https://s1.ax1x.com/2020/11/05/B2ZFBT.png, https://s1.ax1x.com/2020/11/05/B2ZFBT.png 1.5x, https://s1.ax1x.com/2020/11/05/B2ZFBT.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://s1.ax1x.com/2020/11/05/B2ZFBT.png"
+            srcset="https://s1.ax1x.com/2020/11/05/B2ZFBT.png, https://s1.ax1x.com/2020/11/05/B2ZFBT.png 1.5x, https://s1.ax1x.com/2020/11/05/B2ZFBT.png 2x"
+            sizes="auto"
             alt="https://s1.ax1x.com/2020/11/05/B2ZFBT.png">
-    </a>，题目中</p>
+    </a></figure>，题目中</p>
 <blockquote>
 <p>如果被特殊标注的正方形内的细胞被“清除”，你将会得到对应的 flag：</p>
 <p>“清除”任意一个正方形，你将会得到第一个 flag。同时“清除”两个正方形，你将会得到第二个 flag。</p>
 </blockquote>
 <p>​	用细胞去碰框框就是了，正好也看到了一个知乎的提问：<a href="https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/2926434?fr=aladdin" target="_blank" rel="noopener noreferrer"><em>生命游戏</em>(Game of Life)有哪些图形? - 知乎</a>，看了看内容更有趣了。</p>
-<p><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2elzn.png" title="https://s1.ax1x.com/2020/11/05/B2elzn.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2elzn.png">
+<p><figure><a class="lightgallery" href="https://s1.ax1x.com/2020/11/05/B2elzn.png" title="https://s1.ax1x.com/2020/11/05/B2elzn.png" data-thumbnail="https://s1.ax1x.com/2020/11/05/B2elzn.png">
         <img
-            class="lazyload"
-            data-src="https://s1.ax1x.com/2020/11/05/B2elzn.png"
-            data-srcset="https://s1.ax1x.com/2020/11/05/B2elzn.png, https://s1.ax1x.com/2020/11/05/B2elzn.png 1.5x, https://s1.ax1x.com/2020/11/05/B2elzn.png 2x"
-            data-sizes="auto"
+            
+            loading="lazy"
+            src="https://s1.ax1x.com/2020/11/05/B2elzn.png"
+            srcset="https://s1.ax1x.com/2020/11/05/B2elzn.png, https://s1.ax1x.com/2020/11/05/B2elzn.png 1.5x, https://s1.ax1x.com/2020/11/05/B2elzn.png 2x"
+            sizes="auto"
             alt="https://s1.ax1x.com/2020/11/05/B2elzn.png">
-    </a></p>
+    </a></figure></p>
 <p>​	大师我悟了，就是提供一个初始的<strong>15*15矩阵</strong>，根据<strong>生命游戏</strong>的规则进行演算，然后去消除黑框框。我臭屁完了直接贴图形</p>
 <ul>
 <li>第一关</li>
@@ -450,7 +457,7 @@
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
@@ -462,7 +469,7 @@
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'UA-176925141-1', { 'anonymize_ip': true });
         </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-176925141-1" async></script><script>
@@ -474,8 +481,6 @@
 			  s.parentNode.insertBefore(hm, s);
 			})();
 		</script></div>
-
-<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.penginman.com/","lang":"zh-cn"}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"twemoji":true};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></div>
 </body>
 
 </html>
