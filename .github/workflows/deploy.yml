@@ -42,9 +42,9 @@ jobs:
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          password: ${{ secrets.USER_PASSWD }}
+          key: ${{ secrets.KEY }}
           script: |
-            cd /var/www/html/blog.braindance.top
+            cd ${{ secrets.REMOTE_DIR }}
             git pull
-          
+           
           
