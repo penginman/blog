@@ -287,6 +287,14 @@ theme = "DoIt"
     url = "https://travellings.cn"
     title = "开往"
     weight = 7
+  [[menu.main]]
+    identifier = ""
+    pre = "<img class='emoji' src='https://www.penginman.com/img/favicon.ico' width='20'>"
+    post = ""
+    name = "笔记"
+    url = "https://notion.braindance.top"
+    title = "同步notion笔记"
+    weight = 8
 
 [author]
   name = "Braindance"
