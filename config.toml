@@ -289,7 +289,7 @@ theme = "DoIt"
     weight = 7
   [[menu.main]]
     identifier = ""
-    pre = "<img class='emoji' src='https://www.penginman.com/img/favicon.ico' width='20'>"
+    pre = "<img class='emoji' src='https://www.penginman.com/img/notion.ico' width='20'>"
     post = ""
     name = "笔记"
     url = "https://notion.braindance.top"
