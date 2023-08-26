@@ -3,7 +3,14 @@
         <title>Categories - 分类 - Braindance</title>
         <link>https://www.braindance.top/categories/</link>
         <description>Categories - 分类 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 21 May 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>学习笔记</title>
+    <link>https://www.braindance.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Sun, 21 May 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>瞎折腾</title>
     <link>https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
     <pubDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</pubDate><author>
@@ -16,13 +23,6 @@
     <pubDate>Sat, 31 Dec 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>学习笔记</title>
-    <link>https://www.braindance.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Mon, 06 Jun 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>CTF</title>
