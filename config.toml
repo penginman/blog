@@ -101,7 +101,7 @@ theme = "DoIt"
     rss = 10
     [params.home.profile]
       enable = true
-      avatarURL = "https://www.penginman.com/img/avatar.png"
+      avatarURL = "https://www.braindance.top/img/avatar.png"
       # gravatarEmail = "2250926180@qq.com"
       title = "Braindance"
       subtitle = "为世界上所有的美好而战"
@@ -174,26 +174,6 @@ theme = "DoIt"
         enable = false
         # Disqus 的 shortname, 用来在文章中启用 Disqus 评论系统
         shortname = "braindance-1"
-    [params.page.comment.valine]
-      enable = false
-      appId = "shaenDlkzwy9NvdCNJVrJspu-MdYXbMMI"
-      appKey = "e074xMKoSw3B9kWmBediaBE9"
-      placeholder = "Just go go"
-      avatar = "mp"
-      meta= ""
-      pageSize = 5
-      lang = ""
-      visitor = true
-      recordIP = true
-      highlight = true
-      enableQQ = false
-      serverURLs = "https://shaendlk.api.lncldglobal.com"
-      # DoIt 新增 | 0.2.6 emoji 数据文件名称, 默认是 "google.yml"
-      # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-      # 位于 "themes/DoIt/assets/data/emoji/" 目录
-      # 可以在你的项目下相同路径存放你自己的数据文件:
-      # "assets/data/emoji/"
-      emoji = "all.yml"
     # DoIt 新增 | 0.2.12 Twikoo 评论系统设置
     [params.page.comment.twikoo]
       enable = true

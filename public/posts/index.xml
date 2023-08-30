@@ -3,13 +3,13 @@
         <title>所有文章 - Braindance</title>
         <link>https://www.braindance.top/posts/</link>
         <description>所有文章 | Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 21 May 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>LaTex数学公式</title>
-    <link>https://www.braindance.top/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
-    <pubDate>Sun, 21 May 2023 00:00:00 &#43;0800</pubDate><author>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>JetBrains 全家桶破解</title>
+    <link>https://www.braindance.top/posts/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
+    <pubDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
-    <description><![CDATA[https://blog.csdn.net/m0_55746113/article/details/122728673 标注符号上下标上标符号为“^”、下标符号为“_” ，多于一个字符用{}包含，例如2^r、a_5 $2^r,a_5,A_{n+1}$ 平均值、箭头、向量等加^号：\hat{x} 加]]></description>
+    </author><guid>https://www.braindance.top/posts/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
+    <description><![CDATA[突然想开发了我的 IDEA 还是 2021 的，IDEA 和 Pycharm 还在机械硬盘，装个最新的到固态里面。教育邮箱懒得申请了，失效了又要麻烦续杯。写出来记录一下以后自己参]]></description>
 </item><item>
     <title>软路由日记(一)</title>
     <link>https://www.braindance.top/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>

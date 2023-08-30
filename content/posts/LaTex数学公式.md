@@ -3,7 +3,7 @@ title: LaTex数学公式
 date: 2023-05-21
 categories: ['学习笔记']
 tags: ['LaTex']
-draft: false
+draft: true
 math: true
 ---
 
@@ -39,7 +39,7 @@ $\hat x,\overline x,\widehat x,\widetilde x,\dot x,\ddot x$
 
 ## 希腊字母表
 
-![1684640635418.png](http://braindance.top:8089/artical/2023/05/21/6469937a48ead.png)
+![1684640635418.png](https://img.braindance.top/artical/2023/05/21/6469937a48ead.png)
 
 
 

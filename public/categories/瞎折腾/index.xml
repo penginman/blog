@@ -3,7 +3,14 @@
         <title>瞎折腾 - 分类 - Braindance</title>
         <link>https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
         <description>瞎折腾 - 分类 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>JetBrains 全家桶破解</title>
+    <link>https://www.braindance.top/posts/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
+    <pubDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
+    <description><![CDATA[突然想开发了我的 IDEA 还是 2021 的，IDEA 和 Pycharm 还在机械硬盘，装个最新的到固态里面。教育邮箱懒得申请了，失效了又要麻烦续杯。写出来记录一下以后自己参]]></description>
+</item><item>
     <title>软路由日记(一)</title>
     <link>https://www.braindance.top/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
     <pubDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</pubDate><author>
@@ -66,12 +73,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</guid>
     <description><![CDATA[前言​ 老早就觉得萌娘百科里的黑幕很好玩，所以摸索着给自己博客加了一个。参考博客Re：萌娘百科上的黑幕实现。不过我改的方法有稍稍有点不同，是把]]></description>
-</item><item>
-    <title>jsDelivr加速静态博客</title>
-    <link>https://www.braindance.top/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
-    <pubDate>Wed, 11 Nov 2020 21:37:53 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
-    <description><![CDATA[前言​ 这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。 CDN的全称是Content]]></description>
 </item></channel>
 </rss>
