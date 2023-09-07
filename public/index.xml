@@ -13,6 +13,13 @@
     </author><guid>https://www.braindance.top/posts/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
     <description><![CDATA[突然想开发了我的 IDEA 还是 2021 的，IDEA 和 Pycharm 还在机械硬盘，装个最新的到固态里面。教育邮箱懒得申请了，失效了又要麻烦续杯。写出来记录一下以后自己参]]></description>
 </item><item>
+    <title>LaTex数学公式</title>
+    <link>https://www.braindance.top/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
+    <pubDate>Sun, 21 May 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>https://www.braindance.top/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
+    <description><![CDATA[https://blog.csdn.net/m0_55746113/article/details/122728673 标注符号上下标上标符号为“^”、下标符号为“_” ，多于一个字符用{}包含，例如2^r、a_5 $2^r,a_5,A_{n+1}$ 平均值、箭头、向量等加^号：\hat{x} 加]]></description>
+</item><item>
     <title>软路由日记(一)</title>
     <link>https://www.braindance.top/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
     <pubDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</pubDate><author>
@@ -68,12 +75,5 @@
         <name>Braindance</name>
     </author><guid>https://www.braindance.top/posts/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
     <description><![CDATA[起因原来博客的图片使用Jsdelivr和github的方式存储访问，但是最近Jsdelivr频繁的被墙，感觉可能在未来的不久会失效，毕竟好多]]></description>
-</item><item>
-    <title>英语问答</title>
-    <link>https://www.braindance.top/posts/%E8%8B%B1%E8%AF%AD%E9%97%AE%E7%AD%94/</link>
-    <pubDate>Mon, 04 Apr 2022 08:54:55 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/%E8%8B%B1%E8%AF%AD%E9%97%AE%E7%AD%94/</guid>
-    <description><![CDATA[Please introduce yourself​ Good morning/afternoon/,dear teachers/professors! It’s my great honor to be here for this interview. My name is XXX, 22 years old and I come from Luoyang, a city with a long history, I am a senior student in Zhongyuan University of Technology, and my major is software engineering. ​ After entering the University, I have always maintained]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,7 @@ title: LaTex数学公式
 date: 2023-05-21
 categories: ['学习笔记']
 tags: ['LaTex']
-draft: true
+draft: false
 math: true
 ---
 

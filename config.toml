@@ -101,7 +101,7 @@ theme = "DoIt"
     rss = 10
     [params.home.profile]
       enable = true
-      avatarURL = "https://www.braindance.top/img/avatar.png"
+      avatarURL = "/img/avatar.png"
       # gravatarEmail = "2250926180@qq.com"
       title = "Braindance"
       subtitle = "为世界上所有的美好而战"
@@ -269,7 +269,7 @@ theme = "DoIt"
     weight = 7
   [[menu.main]]
     identifier = ""
-    pre = "<img class='emoji' src='https://www.penginman.com/img/notion.ico' width='20'>"
+    pre = "<img class='emoji' src='/img/notion.ico' width='20'>"
     post = ""
     name = "笔记"
     url = "https://notion.braindance.top"
