@@ -12,7 +12,7 @@ draft: false
 
 破解使用的是 [ja-netfilter](https://gitee.com/ja-netfilter/ja-netfilter)：https://gitee.com/ja-netfilter/ja-netfilter。release 下载以后解压。
 
-![1693410710464.png](https://img.braindance.top/artical/2023/08/30/64ef657904e57.png)
+![1696657544950.png](https://img.braindance.top/article/2023/10/07/6520f05f102ea.png)
 
 `config` 配置文件默认为空，需要添加一些配置。plugins 是可以加载一些其他联动插件，本文使用的方法不用其他插件。
 
@@ -210,4 +210,4 @@ R7FP0YWA38-eyJsaWNlbnNlSWQiOiJSN0ZQMFlXQTM4IiwibGljZW5zZWVOYW1lIjoiQnJhaW5kYW5jZ
 
 应该可以直接使用我上面的配置，自己生成也可以。重启软件激活
 
-![1693412928011.png](https://img.braindance.top/artical/2023/08/31/64ef6e21d9a6a.png)
+![1696657436047.png](https://img.braindance.top/article/2023/10/07/6520eff16b4a4.png)

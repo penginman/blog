@@ -79,13 +79,13 @@ SECRETKEY=xxxxxxxxxxxxxxx
 * ISpeak 标签。因为发布说说是需要选择标签的，标签中的背景颜色值是**十六进制的颜色**代码
 * 添加用户token。**需要注意！！！**，添加的token的**标题**只能是 `speak` 不能是其他的，否则发布说说时会提示token不存在，发布时验证的就是字段为 `speak` 的token的值。
 
-![](https://img.braindance.top/artical/2022/10/04/c5191febc049fbed86f5b77df8367c89.png)
+![](https://img.braindance.top/article/2022/10/04/c5191febc049fbed86f5b77df8367c89.png)
 
 接下来可以在前端说说页面测试发布说说，发布说说需要输入后端 kkapi 地址、用户id （在管理后台可以找到）、token。网址：https://ispeak-biubiu.vercel.app/
 
-![](https://img.braindance.top/artical/2022/10/04/778dcc5fe051722e4f9a919b7a9e2a61.png)
+![](https://img.braindance.top/article/2022/10/04/778dcc5fe051722e4f9a919b7a9e2a61.png)
 
-![](https://img.braindance.top/artical/2022/10/04/491fff2969d731ff17d8799fe6a20d14.png)
+![](https://img.braindance.top/article/2022/10/04/491fff2969d731ff17d8799fe6a20d14.png)
 
 发布成功可以在后端看到发布的说说。
 
@@ -169,7 +169,7 @@ githubClientId: 'Iv1.*******',  //github app 的 Client ID
 
 然后就可以在你的说说下面找到一个 Github 授权登陆。
 
-![](https://img.braindance.top/artical/2022/10/04/4aeea0532e5dc44c83a6822033d9971e.png)
+![](https://img.braindance.top/article/2022/10/04/4aeea0532e5dc44c83a6822033d9971e.png)
 
 ## 完工
 说说还支持 markdown 格式的图片插入，看起来更好用了，给作者点个赞。

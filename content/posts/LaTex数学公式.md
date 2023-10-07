@@ -37,9 +37,13 @@ $\hat x,\overline x,\widehat x,\widetilde x,\dot x,\ddot x$
 
 矩阵字母一般会用加粗的罗马体来表示。`\bf`
 
+## 根号
+
+`\sqrt{}`
+
 ## 希腊字母表
 
-![1684640635418.png](https://img.braindance.top/artical/2023/05/21/6469937a48ead.png)
+![1684640635418.png](https://img.braindance.top/article/2023/05/21/6469937a48ead.png)
 
 
 

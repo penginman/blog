@@ -289,7 +289,7 @@ key的作用和原理
    最好使用每条数据的唯一标识作为key，比如id、手机号、身份证号、学号等唯一值。
    如果不存在对数据的逆序添加、逆序则除等破坏顺序操作，仅用于渲染列表用于展示，使用index作为key是没有问题的。
 
-![](https://img.braindance.top/artical/2022/06/15/684dd822cdc7d26d5e587df6a93c9a0d.png) 
+![](https://img.braindance.top/article/2022/06/15/684dd822cdc7d26d5e587df6a93c9a0d.png) 
 
 ## 列表排序&过滤
 
