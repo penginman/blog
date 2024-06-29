@@ -43,9 +43,7 @@ $\hat x,\overline x,\widehat x,\widetilde x,\dot x,\ddot x$
 
 ## 希腊字母表
 
-![1684640635418.png](https://img.braindance.top/article/2023/05/21/6469937a48ead.png)
-
-
+![1697112011353.png](https://img.braindance.top/article/2023/10/12/6527dfcd9db91.png)
 
 ## 运算符号
 
