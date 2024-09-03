@@ -1,7 +1,7 @@
 ---
 title: GXYCTF2019 Ping Ping Ping
 date: 2020-12-04 20:24:50
-categories: ['DROPS']
+categories: ['CTF']
 tags: ['Web','BUUCTF_Web','RCE']
 cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120223448.jpg 
 ---

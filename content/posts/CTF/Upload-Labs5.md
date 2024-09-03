@@ -1,6 +1,6 @@
 ---
 title: Upload-Labs的最后几道题
-categories: ['DROPS']
+categories: ['CTF']
 tags: ['文件上传漏洞']
 cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201119174619.jpg'
 date: 2020-11-19 08:47:19

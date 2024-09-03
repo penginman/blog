@@ -5,24 +5,24 @@
         <description>BUUCTF_Web - 标签 - Braindance</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 18 Jan 2021 16:58:56 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/buuctf_web/" rel="self" type="application/rss+xml" /><item>
     <title>BUUCTF寒假刷题-Web</title>
-    <link>https://www.braindance.top/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+    <link>https://www.braindance.top/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
     <pubDate>Mon, 18 Jan 2021 16:58:56 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+    </author><guid>https://www.braindance.top/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
     <description><![CDATA[寒假横向刷题（尽量） BUUCTF 💗🧡💛💚💙💜🤎🖤🤍 题都写这一个里面了，可以先用Ctrl+F搜索，还有部分是草稿还没有整理，不过我认为的思路已经整理出来]]></description>
 </item><item>
     <title>极客大挑战 2019 RCE ME</title>
-    <link>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+    <link>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
     <pubDate>Sat, 05 Dec 2020 20:42:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
-    <description><![CDATA[[极客大挑战 2019]RCE ME源码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过]]></description>
+    </author><guid>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+    <description><![CDATA[[极客大挑战 2019]RCE ME源码： text &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过的话需要绕过两个检测： paylo]]></description>
 </item><item>
     <title>GXYCTF2019 Ping Ping Ping</title>
-    <link>https://www.braindance.top/posts/gxyctf2019ping-ping-ping/</link>
+    <link>https://www.braindance.top/posts/ctf/gxyctf2019ping-ping-ping/</link>
     <pubDate>Fri, 04 Dec 2020 20:24:50 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/gxyctf2019ping-ping-ping/</guid>
+    </author><guid>https://www.braindance.top/posts/ctf/gxyctf2019ping-ping-ping/</guid>
     <description><![CDATA[[GXYCTF2019]Ping Ping Ping题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping 和]]></description>
 </item></channel>
 </rss>

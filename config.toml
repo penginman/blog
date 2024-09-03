@@ -129,7 +129,7 @@ theme = "DoIt"
     # Markdown扩展
     ruby = true
     fraction = true
-    fontawesome = true
+    fontawesome = false
 
     linkToMarkdown = true
     seriesNavigation = true
@@ -282,6 +282,12 @@ theme = "DoIt"
   link = ""
   avatar = ""
   gravatarEmail = "2250926180@qq.com"
+
+# 网站地图配置
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 # Hugo 解析文档的配置
 [markup]

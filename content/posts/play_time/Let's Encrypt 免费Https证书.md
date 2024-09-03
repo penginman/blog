@@ -1,7 +1,7 @@
 ---
 title: Let_s_Encrypt 免费Https证书
 date: 2020-09-03 15:30:37
-categories: ['服务器']
+categories: ['瞎折腾']
 tag: ['Https证书']
 cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120852.jpg
 ---

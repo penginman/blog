@@ -5,10 +5,10 @@
         <description>代码审计 - 标签 - Braindance</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 01 Nov 2020 18:33:40 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" rel="self" type="application/rss+xml" /><item>
     <title>Hackgame2020(一)</title>
-    <link>https://www.braindance.top/posts/hackgame20201/</link>
+    <link>https://www.braindance.top/posts/ctf/hackgame20201/</link>
     <pubDate>Sun, 01 Nov 2020 18:33:40 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/hackgame20201/</guid>
-    <description><![CDATA[前言比赛地址：https://hack.lug.ustc.edu.cn/ web签到题​ 第一题是flag提取器，打开题目以后页面是一个提取器下]]></description>
+    </author><guid>https://www.braindance.top/posts/ctf/hackgame20201/</guid>
+    <description><![CDATA[前言比赛地址：https://hack.lug.ustc.edu.cn/ web 签到题​ 第一题是flag提取器，打开题目以后页面是一个提取器下面一]]></description>
 </item></channel>
 </rss>
