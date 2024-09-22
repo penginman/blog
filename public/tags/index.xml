@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - Braindance</title>
-        <link>https://www.braindance.top/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Tags - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>JetBrains 激活</title>
-    <link>https://www.braindance.top/tags/jetbrains-%E6%BF%80%E6%B4%BB/</link>
-    <pubDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</pubDate><author>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 02 Sep 2024 00:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>题解</title>
+    <link>http://localhost:1313/tags/%E9%A2%98%E8%A7%A3/</link>
+    <pubDate>Mon, 02 Sep 2024 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/jetbrains-%E6%BF%80%E6%B4%BB/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>LaTex</title>
-    <link>https://www.braindance.top/tags/latex/</link>
-    <pubDate>Sun, 21 May 2023 00:00:00 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/latex/</guid>
+    </author><guid>http://localhost:1313/tags/%E9%A2%98%E8%A7%A3/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>软路由</title>
-    <link>https://www.braindance.top/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</link>
-    <pubDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</pubDate><author>
+    <link>http://localhost:1313/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</link>
+    <pubDate>Fri, 15 Sep 2023 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</guid>
+    </author><guid>http://localhost:1313/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>破解</title>
+    <link>http://localhost:1313/tags/%E7%A0%B4%E8%A7%A3/</link>
+    <pubDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>http://localhost:1313/tags/%E7%A0%B4%E8%A7%A3/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>LaTex</title>
+    <link>http://localhost:1313/tags/latex/</link>
+    <pubDate>Sun, 21 May 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>http://localhost:1313/tags/latex/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>校园网</title>
-    <link>https://www.braindance.top/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
+    <link>http://localhost:1313/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
     <pubDate>Tue, 11 Oct 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
+    </author><guid>http://localhost:1313/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>说说</title>
-    <link>https://www.braindance.top/tags/%E8%AF%B4%E8%AF%B4/</link>
+    <link>http://localhost:1313/tags/%E8%AF%B4%E8%AF%B4/</link>
     <pubDate>Tue, 04 Oct 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/%E8%AF%B4%E8%AF%B4/</guid>
+    </author><guid>http://localhost:1313/tags/%E8%AF%B4%E8%AF%B4/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>京东薅羊毛</title>
+    <link>http://localhost:1313/tags/%E4%BA%AC%E4%B8%9C%E8%96%85%E7%BE%8A%E6%AF%9B/</link>
+    <pubDate>Mon, 09 May 2022 21:40:49 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>http://localhost:1313/tags/%E4%BA%AC%E4%B8%9C%E8%96%85%E7%BE%8A%E6%AF%9B/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>图床</title>
-    <link>https://www.braindance.top/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <link>http://localhost:1313/tags/%E5%9B%BE%E5%BA%8A/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/%E5%9B%BE%E5%BA%8A/</guid>
+    </author><guid>http://localhost:1313/tags/%E5%9B%BE%E5%BA%8A/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>博客搬迁</title>
-    <link>https://www.braindance.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
+    <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
     <pubDate>Mon, 31 Jan 2022 11:31:54 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
+    </author><guid>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Php原生类</title>
-    <link>https://www.braindance.top/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</link>
+    <link>http://localhost:1313/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</link>
     <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Sql注入</title>
-    <link>https://www.braindance.top/tags/sql%E6%B3%A8%E5%85%A5/</link>
-    <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/sql%E6%B3%A8%E5%85%A5/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Web</title>
-    <link>https://www.braindance.top/tags/web/</link>
-    <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/tags/web/</guid>
+    </author><guid>http://localhost:1313/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

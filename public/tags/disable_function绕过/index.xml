@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Disable_function绕过 - 标签 - Braindance</title>
-        <link>https://www.braindance.top/tags/disable_function%E7%BB%95%E8%BF%87/</link>
+        <link>http://localhost:1313/tags/disable_function%E7%BB%95%E8%BF%87/</link>
         <description>Disable_function绕过 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Dec 2020 20:42:00 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/disable_function%E7%BB%95%E8%BF%87/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Dec 2020 20:42:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/disable_function%E7%BB%95%E8%BF%87/" rel="self" type="application/rss+xml" /><item>
     <title>极客大挑战 2019 RCE ME</title>
-    <link>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+    <link>http://localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
     <pubDate>Sat, 05 Dec 2020 20:42:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
-    <description><![CDATA[[极客大挑战 2019]RCE ME源码： text &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过的话需要绕过两个检测： paylo]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+    <description><![CDATA[[极客大挑战 2019]RCE ME源码： text &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__);]]></description>
 </item></channel>
 </rss>

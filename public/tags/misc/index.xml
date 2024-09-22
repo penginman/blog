@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Misc - 标签 - Braindance</title>
-        <link>https://www.braindance.top/tags/misc/</link>
+        <link>http://localhost:1313/tags/misc/</link>
         <description>Misc - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/misc/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/misc/" rel="self" type="application/rss+xml" /><item>
     <title>DMCTF之Misc</title>
-    <link>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
+    <link>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
     <pubDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
-    <description><![CDATA[前言这次比赛是第一次做Mics的题awa。 Misc Check_in真·有手就行 fakezip看到题目fakezip翻译：假的压缩包，所以猜应该是伪]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
+    <description><![CDATA[前言这次比赛是第一次做Mics的题awa。 Misc Check_in]]></description>
 </item></channel>
 </rss>

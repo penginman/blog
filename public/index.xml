@@ -1,79 +1,79 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Braindance</title>
-        <link>https://www.braindance.top/</link>
+        <link>http://localhost:1313/</link>
         <description>Braindance&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 02 Sep 2024 00:00:00 &#43;0800</lastBuildDate>
-            <atom:link href="https://www.braindance.top/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>菜鸡解题1</title>
+    <link>http://localhost:1313/posts/leetcode/2024_09_02/</link>
+    <pubDate>Mon, 02 Sep 2024 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>http://localhost:1313/posts/leetcode/2024_09_02/</guid>
+    <description><![CDATA[text 关键：题目中关键信息 题解：自己或别人的解题思路 特解：这道题]]></description>
+</item><item>
+    <title>lede 编译</title>
+    <link>http://localhost:1313/posts/play_time/lede-%E7%BC%96%E8%AF%91/</link>
+    <pubDate>Fri, 15 Sep 2023 00:00:00 &#43;0800</pubDate><author>
+        <name>Braindance</name>
+    </author><guid>http://localhost:1313/posts/play_time/lede-%E7%BC%96%E8%AF%91/</guid>
+    <description><![CDATA[主题 text cd package mkdir openwrt-packages cd openwrt-packages git clone https://github.com/jerrykuku/luci-theme-argon.git git clone https://github.com/thinktip/luci-theme-neobird.git git clone https://github.com/rosywrt/luci-theme-rosy.git git clone https://github.com/gngpp/luci-theme-design.git git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git 软件 text git clone https://github.com/Zxilly/UA2F.git]]></description>
+</item><item>
     <title>JetBrains 全家桶破解</title>
-    <link>https://www.braindance.top/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
+    <link>http://localhost:1313/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
     <pubDate>Wed, 30 Aug 2023 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
-    <description><![CDATA[突然想开发了我的 IDEA 还是 2021 的，IDEA 和 Pycharm 还在机械硬盘，装个最新的到固态里面。教育邮箱懒得申请了，失效了又要麻烦续杯。写出来记录一下以后自己参]]></description>
+    </author><guid>http://localhost:1313/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
+    <description><![CDATA[突然想开发了我的 IDEA 还是 2021 的，IDEA 和 Pycharm 还在机械硬盘，装个最]]></description>
 </item><item>
     <title>LaTex数学公式</title>
-    <link>https://www.braindance.top/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
+    <link>http://localhost:1313/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
     <pubDate>Sun, 21 May 2023 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
-    <description><![CDATA[https://blog.csdn.net/m0_55746113/article/details/122728673 标注符号 上下标上标符号为“^”、下标符号为“_” ，多于一个字符用{}包含，例如2^r、a_5 $2^r,a_5,A_{n+1}$ 平均值、箭头、向量等加^号：\hat{x} 加]]></description>
+    </author><guid>http://localhost:1313/posts/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
+    <description><![CDATA[https://blog.csdn.net/m0_55746113/article/details/122728673 标注符号 上下标上标符号为“^”、下标符号为“_” ，多于一个]]></description>
 </item><item>
     <title>软路由日记(一)</title>
-    <link>https://www.braindance.top/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
+    <link>http://localhost:1313/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
     <pubDate>Fri, 03 Feb 2023 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</guid>
-    <description><![CDATA[前言在学校疫情期间买了一个 j4125 的软路由，一直等到回家过了很久才到手，因为买的是裸机，还有些配件是在别的店买的，回家以后发现地址只能在区以内修改]]></description>
+    </author><guid>http://localhost:1313/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</guid>
+    <description><![CDATA[前言在学校疫情期间买了一个 j4125 的软路由，一直等到回家过了很久才]]></description>
 </item><item>
     <title>中国联通SK-D748光猫超级密码获取</title>
-    <link>https://www.braindance.top/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
+    <link>http://localhost:1313/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
     <pubDate>Wed, 04 Jan 2023 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</guid>
-    <description><![CDATA[折腾软路由百忙之中抽时间来简单水一篇。 有这个需求是因为目前在家里是用另一个无线路由器桥接联通的光猫的，但是在dhcp 里死活找不到桥接路由器分]]></description>
+    </author><guid>http://localhost:1313/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</guid>
+    <description><![CDATA[折腾软路由百忙之中抽时间来简单水一篇。 有这个需求是因为目前在]]></description>
 </item><item>
     <title>2022年度总结</title>
-    <link>https://www.braindance.top/posts/annual/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/posts/annual/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
     <pubDate>Sat, 31 Dec 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/annual/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[今年过得可真是太快了，不知道从哪开始写。前几天不小心点开微博，首页一句话想想只能苦笑一下，所有人应该都过得差不多吧。今年我乱过的，明年我一定]]></description>
+    </author><guid>http://localhost:1313/posts/annual/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[今年过得可真是太快了，不知道从哪开始写。前几天不小心点开微博]]></description>
 </item><item>
     <title>ZUT 使用路由器连接校园网</title>
-    <link>https://www.braindance.top/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
+    <link>http://localhost:1313/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
     <pubDate>Tue, 11 Oct 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
-    <description><![CDATA[前言我们学校的校园网不光每个月要宽带费 20/月，而且要绑定一个校园卡，我的一个月月租下来要 49/月，而且校园网还限制设备数量只能连接一个，我]]></description>
+    </author><guid>http://localhost:1313/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
+    <description><![CDATA[前言我们学校的校园网不光每个月要宽带费 20/月，而且要绑定一]]></description>
 </item><item>
     <title>KKapi&#43;ISpeak说说页面部署</title>
-    <link>https://www.braindance.top/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</link>
+    <link>http://localhost:1313/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</link>
     <pubDate>Tue, 04 Oct 2022 00:00:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</guid>
-    <description><![CDATA[前言感觉原来的 Artitalk 说说不好康，在开往里发现好多博客都用的说说功能叫叨叨点啥，看了看作者的说说页面，可以插入图片和标签分类，还有仅自己可见的功能]]></description>
+    </author><guid>http://localhost:1313/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</guid>
+    <description><![CDATA[前言感觉原来的 Artitalk 说说不好康，在开往里发现好多博客都用的说说功]]></description>
 </item><item>
     <title>近期总结</title>
-    <link>https://www.braindance.top/posts/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/posts/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</link>
     <pubDate>Wed, 10 Aug 2022 18:39:26 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[水一篇文章，写写最近干了啥 Onenav一直想找一个导航页的网站，自己天天用书签栏用的找不到太烦了。之前用过webstack主题的网站，本来是]]></description>
-</item><item>
-    <title>Python-Day-100 笔记</title>
-    <link>https://www.braindance.top/posts/python%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Mon, 06 Jun 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/python%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[函数 函数的参数可以使用可变参数def func(*args)，参数前面的*代表args是一个可变参数。 用模块管理函数每个文件代表一个模块，不同]]></description>
-</item><item>
-    <title>博客图床迁移</title>
-    <link>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
-    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
-    <description><![CDATA[起因原来博客的图片使用Jsdelivr和github的方式存储访问，但是最近Jsdelivr频繁的被墙，感觉可能在未来的不久会失效，毕竟好多]]></description>
+    </author><guid>http://localhost:1313/posts/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[水一篇文章，写写最近干了啥 Onenav一直想找一个导航页的网]]></description>
 </item></channel>
 </rss>

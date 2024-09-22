@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>反序列化 - 标签 - Braindance</title>
-        <link>https://www.braindance.top/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+        <link>http://localhost:1313/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
         <description>反序列化 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
     <title>ReadlezPHP&amp;EasySearch</title>
-    <link>https://www.braindance.top/posts/ctf/readlezphpeasysearch/</link>
+    <link>http://localhost:1313/posts/ctf/readlezphpeasysearch/</link>
     <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/readlezphpeasysearch/</guid>
-    <description><![CDATA[ReadlezPHP源码找到time.php?source php &lt;?php #error_reporting(0); class HelloPhp { public $a; public $b; public function __construct(){ $this-&gt;a = &#34;Y-m-d h:i:s&#34;; $this-&gt;b = &#34;date&#34;; } public function __destruct(){ $a = $this-&gt;a; $b = $this-&gt;b; echo $b($a); } } $c = new HelloPhp; if(isset($_GET[&#39;source&#39;])) { highlight_file(__FILE__);]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/readlezphpeasysearch/</guid>
+    <description><![CDATA[ReadlezPHP源码找到time.php?source php]]></description>
 </item></channel>
 </rss>

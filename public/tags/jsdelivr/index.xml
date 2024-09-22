@@ -1,21 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Jsdelivr - 标签 - Braindance</title>
-        <link>https://www.braindance.top/tags/jsdelivr/</link>
+        <link>http://localhost:1313/tags/jsdelivr/</link>
         <description>Jsdelivr - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Nov 2020 22:02:46 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/tags/jsdelivr/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 20 Nov 2020 22:02:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/jsdelivr/" rel="self" type="application/rss+xml" /><item>
     <title>jsdelivr 缓存刷新</title>
-    <link>https://www.braindance.top/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
+    <link>http://localhost:1313/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
     <pubDate>Fri, 20 Nov 2020 22:02:46 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
-    <description><![CDATA[前言​ 上一篇修改了黑幕，但是使用了jsdelivr加速的静态资源，所以照常更新下github上的资源，但是github上查看已经上传成功了，]]></description>
+    </author><guid>http://localhost:1313/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
+    <description><![CDATA[前言​ 上一篇修改了黑幕，但是使用了jsdelivr加速的静态]]></description>
 </item><item>
     <title>jsDelivr加速静态博客</title>
-    <link>https://www.braindance.top/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+    <link>http://localhost:1313/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
     <pubDate>Wed, 11 Nov 2020 21:37:53 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
-    <description><![CDATA[前言​ 这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。 CDN的全称是Content]]></description>
+    </author><guid>http://localhost:1313/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+    <description><![CDATA[前言​ 这几天总感觉博客访问特别慢，最先是找到了CDN加速，但]]></description>
 </item></channel>
 </rss>

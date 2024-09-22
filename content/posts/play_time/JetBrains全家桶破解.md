@@ -2,7 +2,7 @@
 title: JetBrains 全家桶破解
 date: 2023-08-30
 categories: ['瞎折腾']
-tags: ['JetBrains 激活']
+tags: ['破解']
 draft: false
 ---
 

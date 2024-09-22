@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>CTF - 分类 - Braindance</title>
-        <link>https://www.braindance.top/categories/ctf/</link>
+        <link>http://localhost:1313/categories/ctf/</link>
         <description>CTF - 分类 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</lastBuildDate><atom:link href="https://www.braindance.top/categories/ctf/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/ctf/" rel="self" type="application/rss+xml" /><item>
     <title>CISCN线上赛库存</title>
-    <link>https://www.braindance.top/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+    <link>http://localhost:1313/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
     <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
-    <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+    <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，]]></description>
 </item><item>
     <title>ReadlezPHP&amp;EasySearch</title>
-    <link>https://www.braindance.top/posts/ctf/readlezphpeasysearch/</link>
+    <link>http://localhost:1313/posts/ctf/readlezphpeasysearch/</link>
     <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/readlezphpeasysearch/</guid>
-    <description><![CDATA[ReadlezPHP源码找到time.php?source php &lt;?php #error_reporting(0); class HelloPhp { public $a; public $b; public function __construct(){ $this-&gt;a = &#34;Y-m-d h:i:s&#34;; $this-&gt;b = &#34;date&#34;; } public function __destruct(){ $a = $this-&gt;a; $b = $this-&gt;b; echo $b($a); } } $c = new HelloPhp; if(isset($_GET[&#39;source&#39;])) { highlight_file(__FILE__);]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/readlezphpeasysearch/</guid>
+    <description><![CDATA[ReadlezPHP源码找到time.php?source php]]></description>
 </item><item>
     <title>极客大挑战 2019 FinalSQL</title>
-    <link>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</link>
+    <link>http://localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</link>
     <pubDate>Sun, 18 Apr 2021 19:11:51 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</guid>
-    <description><![CDATA[还是同一场比赛的界面 这次测试了下面的登陆框已经不能用了，无论怎么输入都是同一个回显：你可别被我逮住了，臭弟弟，测试上面的序号，注意此时的ur]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019finalsql/</guid>
+    <description><![CDATA[还是同一场比赛的界面 这次测试了下面的登陆框已经不能用了，无论]]></description>
 </item><item>
     <title>WUSTCTF2020 朴实无华</title>
-    <link>https://www.braindance.top/posts/ctf/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
+    <link>http://localhost:1313/posts/ctf/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
     <pubDate>Fri, 16 Apr 2021 15:33:32 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
-    <description><![CDATA[进入页面直接报错 试试其他的地方，我的习惯是git泄露、请求头、robots.txt、hint.txt都看看。果然在robots下有内容 User-agent: * Disallow:]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/wustctf2020%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
+    <description><![CDATA[进入页面直接报错 试试其他的地方，我的习惯是git泄露、请求头]]></description>
 </item><item>
     <title>SWPU2019 Web1</title>
-    <link>https://www.braindance.top/posts/ctf/swpu2019web1/</link>
+    <link>http://localhost:1313/posts/ctf/swpu2019web1/</link>
     <pubDate>Thu, 15 Apr 2021 09:55:17 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/swpu2019web1/</guid>
-    <description><![CDATA[一个登陆界面，再看下url地址为login.php，确认了使用的是php 直接查看源码，在源码中找到了register.php。先注册一个进去]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/swpu2019web1/</guid>
+    <description><![CDATA[一个登陆界面，再看下url地址为login.php，确认了使]]></description>
 </item><item>
     <title>BUUCTF寒假刷题-Web</title>
-    <link>https://www.braindance.top/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+    <link>http://localhost:1313/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
     <pubDate>Mon, 18 Jan 2021 16:58:56 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
-    <description><![CDATA[寒假横向刷题（尽量） BUUCTF 💗🧡💛💚💙💜🤎🖤🤍 题都写这一个里面了，可以先用Ctrl+F搜索，还有部分是草稿还没有整理，不过我认为的思路已经整理出来]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+    <description><![CDATA[寒假横向刷题（尽量） BUUCTF 💗🧡💛💚💙💜🤎🖤🤍 题都写这一个里面了，]]></description>
 </item><item>
     <title>极客大挑战 2019 RCE ME</title>
-    <link>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+    <link>http://localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
     <pubDate>Sat, 05 Dec 2020 20:42:00 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
-    <description><![CDATA[[极客大挑战 2019]RCE ME源码： text &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__); } // ?&gt; 分析一波，GET请求获得code，想要通过的话需要绕过两个检测： paylo]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+    <description><![CDATA[[极客大挑战 2019]RCE ME源码： text &lt;?php error_reporting(0); if(isset($_GET[&#39;code&#39;])){ $code=$_GET[&#39;code&#39;]; if(strlen($code)&gt;40){ die(&#34;This is too Long.&#34;); } if(preg_match(&#34;/[A-Za-z0-9]+/&#34;,$code)){ die(&#34;NO.&#34;); } @eval($code); } else{ highlight_file(__FILE__);]]></description>
 </item><item>
     <title>GXYCTF2019 Ping Ping Ping</title>
-    <link>https://www.braindance.top/posts/ctf/gxyctf2019ping-ping-ping/</link>
+    <link>http://localhost:1313/posts/ctf/gxyctf2019ping-ping-ping/</link>
     <pubDate>Fri, 04 Dec 2020 20:24:50 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/gxyctf2019ping-ping-ping/</guid>
-    <description><![CDATA[[GXYCTF2019]Ping Ping Ping题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping 和]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/gxyctf2019ping-ping-ping/</guid>
+    <description><![CDATA[[GXYCTF2019]Ping Ping Ping题目链接：https://buuoj.cn/ch]]></description>
 </item><item>
     <title>DMCTF之Misc</title>
-    <link>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
+    <link>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
     <pubDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
-    <description><![CDATA[前言这次比赛是第一次做Mics的题awa。 Misc Check_in真·有手就行 fakezip看到题目fakezip翻译：假的压缩包，所以猜应该是伪]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
+    <description><![CDATA[前言这次比赛是第一次做Mics的题awa。 Misc Check_in]]></description>
 </item><item>
     <title>DMCTF之Web</title>
-    <link>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bweb/</link>
+    <link>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bweb/</link>
     <pubDate>Sun, 29 Nov 2020 23:17:50 &#43;0800</pubDate><author>
         <name>Braindance</name>
-    </author><guid>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bweb/</guid>
-    <description><![CDATA[前言比赛地址：http://dmctf.vaala.cloud:81 这次先写Web题目部分，我最后的排名： Web weak_type源码： text PHP &lt;?php show_source(__FILE__);]]></description>
+    </author><guid>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bweb/</guid>
+    <description><![CDATA[前言比赛地址：http://dmctf.vaala.clou]]></description>
 </item></channel>
 </rss>
