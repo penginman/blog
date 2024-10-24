@@ -42,6 +42,7 @@ draft: false
 ```
 [URL]
 PREFIX,https://account.jetbrains.com/lservice/rpc/validateKey.action
+PREFIX,https://account.jetbrains.com.cn/lservice/rpc/validateKey.action
 ```
 
 `congig/dns.conf`
@@ -213,3 +214,15 @@ R7FP0YWA38-eyJsaWNlbnNlSWQiOiJSN0ZQMFlXQTM4IiwibGljZW5zZWVOYW1lIjoiQnJhaW5kYW5jZ
 应该可以直接使用我上面的配置，自己生成也可以。重启软件激活
 
 ![1696657436047.png](https://img.braindance.top/article/2023/10/07/6520eff16b4a4.png)
+
+**2024年10月21日**发现了个新问题。参照[博客][https://www.cnblogs.com/airlongdianblog/p/18418285]
+
+> 2024.2后jetbrains新的安装程序自带了三个区域语言包，其中若选择中文大陆区域语言包，会将激活验证服务器地址修改为国内新验证地址。而jetbra/ja-netfaliter的拦截是黑名单制度，该新服务器地址并不在原本的拦截列表中。
+
+这时激活失效并且会不断弹窗，只需要在`config/url.conf`中加入拦截域名，重新启动即可。
+
+```
+PREFIX,https://account.jetbrains.com.cn/lservice/rpc/validateKey.action
+```
+
+上面文章内容已经添加了。

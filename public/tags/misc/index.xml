@@ -1,14 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Misc - 标签 - Braindance</title>
-        <link>http://localhost:1313/tags/misc/</link>
-        <description>Misc - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/misc/" rel="self" type="application/rss+xml" /><item>
-    <title>DMCTF之Misc</title>
-    <link>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
-    <pubDate>Tue, 01 Dec 2020 11:20:45 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
-    <description><![CDATA[前言这次比赛是第一次做Mics的题awa。 Misc Check_in]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on </title>
+    <link>/tags/misc/</link>
+    <description>Recent content in Misc on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate>
+    <atom:link href="/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DMCTF之Misc</title>
+      <link>/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
+      <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
+      <guid>/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
+      <description>前言 这次比赛是第一次做Mics的题awa。&#xA;Misc Check_in 真·有手就行&#xA;fakezip 看到题目fakezip翻译：假的压缩包，所以猜应该是伪加密，贴一个原理的博客：zip伪加密，使用010 Editor打开压缩包，&#xA;找到01修改为00，再解压压缩包，虽然提示了压缩包错误但是直接无视，获得一个flag.txt&#xA;打开以后内容是：♬♩¶♯♬♭♬♫♫♪♬∮♬♭‖♭♬♭♬∮♬♭‖♭♬♭♫♫♯=，音符加密虽然是第一次听说，但是百度还是可以简单找到：文本加密为音乐符号&#xA;Base family 题目给出了是base家族，所以base所有种类都试一遍。base常见的种类有：base16、base32、base58、base64、base91。还有几种没听过的base种类可以在这个网站找到：CTF在线工具。&#xA;原层：&#xA;XUZbB{fp}U)=ql[n%GCbk9RZ7!XD$D)f1G{011LN(TSlXCJT:4nxQ[8Y#I:=k.Qi4t3/S!,N/%[I}^8jjP|0&amp;amp;whvi88gpQce(2lKt9ZHiT^g1.nZH,k=kjTT16pHJ_DrW,Td&amp;#34;^w$Q8+8T])e.llK?*z`gS:+C]llUG:z1=ekEN}8DmJf&amp;amp;GP&amp;lt;Rk:o_Jk&amp;lt;J.zp8%H0g7sYSTJ9p.&amp;#34;duRBGj`g0!I+xjm(fh)]IF:&amp;gt;omN8=m+Xp(X0:U*8Sj5|8p._o[i0:%.qu}%_=&amp;lt;D base91解码：&#xA;3G6MzYGwFwTsqcb3MWzTdQBTHZWBZ2LUBprZ3P62T2nsbt1R7o6a7PEsXsBvSFvoexeZJEkhW9Wv1VusvpWK1nfWsVHDypW2j3MMEygzSYLmwxKV5kNwWomvXc5ohX2Jgj6bMRnu6JXkasXdbbw3Aw8Pvh6vWwPfTZ4mpkpNU9fDhyNi1bciCZMXeLiCWL67BVupHPobQcFWkpftgLPggB8wgwW base58解码：&#xA;JZVFSMSZPJMXQTTKMMZVS2TDGVGXUQJTJZKFM3KONJCTEWL2MN4U26SNGJGVIWJQJZ5GWMK2NJNGSTTNKV5E2RDDGNHFOWJTJZCFSNCNPJGTCWTKKF4U42SFGNGXUWJRJZVFSMSNKRNGWTL2IUZFS6TDGVHDEUJ5 base32解码：&#xA;NjY2YzYxNjc3Yjc5MzA3NTVmNjE2YzcyMzM2MTY0Nzk1ZjZiNmUzMDc3NWY3NDY4MzM1ZjQyNjE3MzY1NjY2MTZkMzE2Yzc5N2Q= base64解码：&#xA;666c61677b7930755f616c72336164795f6b6e30775f7468335f4261736566616d316c797d hex解码：&#xA;flag{y0u_alr3ady_kn0w_th3_Basefam1ly} SlientEye 根据题目直接百度SlientEye，下载以后打开图片&amp;ndash;&amp;gt;decode：&#xA;参数啥的都没动，密码为默认密码，直接Decode，得到一个flag.txt：&#xA;&amp;amp;#102;&amp;amp;#108;&amp;amp;#97;&amp;amp;#103;&amp;amp;#123;&amp;amp;#110;&amp;amp;#49;&amp;amp;#95;&amp;amp;#98;&amp;amp;#117;&amp;amp;#95;&amp;amp;#106;&amp;amp;#49;&amp;amp;#97;&amp;amp;#110;&amp;amp;#103;&amp;amp;#95;&amp;amp;#119;&amp;amp;#117;&amp;amp;#95;&amp;amp;#100;&amp;amp;#51;&amp;amp;#125; 再去百度搜到一篇博客：&amp;amp;#x开头的是什么编码?，我点开一看，哦，原来是entity code实体编码，我啪的一下就把flag.txt改为flag.html，很快啊，然后是一个左正蹬、一个右鞭腿、一个左刺拳打开flag.html获得flag：flag{n1_bu_j1ang_wu_d3}&#xA;编码之王 下载文件打开后一堆社会主义核心价值观，前面提到的：CTF在线工具就有核心价值观编码，下面放密文，上面是解码内容。&#xA;解出来以后看到第一句：如是我闻:，&amp;ndash;&amp;gt;与佛论禅&#xA;再解之后看第一句：新佛曰：。&amp;ndash;&amp;gt;新与佛论禅&#xA;解完以后直接出了一堆由：[、]、!、+、(、)组成的符号，还是百度找到了这种编码叫JSfuck，可以直接浏览器控制台console输出获得flag&#xA;jpgsteg 题目即是用到的工具，百度下载软件，使用jphide.exe打开图片Tap code.jpg，选择seek功能解密，密码为123456（我蒙的）：&#xA;成功解密后获得一个文档，内容如下：&#xA;... ....&#xD;.. ...&#xD;.. ...&#xD;. .&#xD;... ..&#xD;. .&#xD;..... .....&#xD;.. ....&#xD;... ...&#xD;.. .. 这里我思索了好久，刚开始以为是摩斯密码，但是又对不上号，最后找到了一个名为敲击码的，正好一行中的.分成两部分代表坐标&#xA;解码得到：ohhamazing ，加上括号就是：flag{ohhamazing}&#xA;事后多看了一眼图片命名：Tap code.jpg。这用啥解密不就在脸上写着的wosabi \0/。。。&#xA;Collision 打开压缩包发现都是加密，但是原始大小都为4，只有CRC不一样：&#xA;所以很有可能是四位数据的CRC32碰撞，就去网上找了一个python脚本：crc32碰撞 ctf python作者原创的脚本：</description>
+    </item>
+  </channel>
 </rss>

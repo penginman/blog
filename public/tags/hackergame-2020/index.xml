@@ -1,21 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Hackergame 2020 - 标签 - Braindance</title>
-        <link>http://localhost:1313/tags/hackergame-2020/</link>
-        <description>Hackergame 2020 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 05 Nov 2020 09:29:22 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/hackergame-2020/" rel="self" type="application/rss+xml" /><item>
-    <title>Hackgame2020(二)</title>
-    <link>http://localhost:1313/posts/ctf/hackgame20202/</link>
-    <pubDate>Thu, 05 Nov 2020 09:29:22 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/ctf/hackgame20202/</guid>
-    <description><![CDATA[一闪而过的Flag​ 根据题目信息程序每次运行时隐约可见黑色控]]></description>
-</item><item>
-    <title>Hackgame2020(一)</title>
-    <link>http://localhost:1313/posts/ctf/hackgame20201/</link>
-    <pubDate>Sun, 01 Nov 2020 18:33:40 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/ctf/hackgame20201/</guid>
-    <description><![CDATA[前言比赛地址：https://hack.lug.ustc.e]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackergame 2020 on </title>
+    <link>/tags/hackergame-2020/</link>
+    <description>Recent content in Hackergame 2020 on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Nov 2020 09:29:22 +0000</lastBuildDate>
+    <atom:link href="/tags/hackergame-2020/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hackgame2020(二)</title>
+      <link>/posts/ctf/hackgame20202/</link>
+      <pubDate>Thu, 05 Nov 2020 09:29:22 +0000</pubDate>
+      <guid>/posts/ctf/hackgame20202/</guid>
+      <description>一闪而过的Flag ​&#x9;根据题目信息程序每次运行时隐约可见黑色控制台上有 flag 一闪而过，我想到了应该能看程序的代码啥的找到，但是天下武功，唯快不破，下载 运行 截图一气呵成。&#xA;​&#x9;​&#x9;接下来让我康康哪一位是瞎子，包括答案里也是满满的嘲讽。&#xA;参考答案：flag{Are_you_eyes1ght_g00D?_can_you_dIst1nguish_1iI?}&#xA;从零开始的记账工具人 ​&#x9;npy给了我一张账单，让我计算账单上面的金额，flag就是由金额组成的。本以为是一个简单的Excel的表格函数解决，打开我傻了。&#xA;​&#x9;原来是搞这个大小写金额的转换，没见过Excel有这种操作就去百度，转了一大圈，网上只有数字转大写金额的，没有反过来的。还去了github上找代码，发现运行的结果和自己想要的还是有些出入。卡了有足足半天，之后自己写了一个Java代码跑了一遍，代码如下：&#xA;import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sn = new Scanner(System.in); String str; int x; int cnt=0; double result=0; while(cnt++!=1000){ str = sn.next(); x = sn.nextInt(); result += tonum(str)*x; } System.out.println(result); } public static double tonum(String s){ int len; double res=0,temp = 1; double result=0; len = s.length(); for(int i=0;i&amp;lt;len;i++){ switch (s.</description>
+    </item>
+    <item>
+      <title>Hackgame2020(一)</title>
+      <link>/posts/ctf/hackgame20201/</link>
+      <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
+      <guid>/posts/ctf/hackgame20201/</guid>
+      <description>前言 比赛地址：https://hack.lug.ustc.edu.cn/&#xA;web 签到题 ​&#x9;第一题是flag提取器，打开题目以后页面是一个提取器下面一个进度条和一个提取按钮。&#xA;​&#x9;随便拉了拉进度条发现初始是0末尾是1.5，然后中间的数值都是小数&#xA;​&#x9;我猜的题目可能是想让数值为1时能提取到flag。&#xA;​&#x9;F12查看源代码，定位到进度条的标签，查看属性&#xA;​&#x9;确实和猜测一样最大最小值分别是0、1.5，注意到step值为0.00001，就是这个属性让我们拖动进度条时，递增的值是小数，想精准得到1个flag，就把网页上的step值改为1。然后随便拖动一下进度条得到1，点击提取按钮，完工。&#xA;2048 ​&#x9;打开题目是一个2048的小游戏，第一个想法就是玩2048达到一定分数以后会获得flag（可恶这个比赛怎么知道最近我天天在玩2048的）,但是想比赛不可能让选手在线玩游戏吧，尤其对于我这种逃课废物是不可能努力哒！&#xA;F12开始翻网页资源&#xA;​&#x9;还好上次摸鱼课题做了一个网页版的2048，略微能看懂一点点结构，第一个animframe_polyfill应该就是管动画效果的，keynpard...这个肯定是相应按键的，local_storage_manager应该是保存游戏的，game_manager感觉就是管理整个游戏的主要文件。&#xA;​&#x9;打开game_manager粗略的看了下变量，score 分数、over、won、keepPlaying游戏状态，想赢游戏肯定是和score、won有关，直接Ctrl+F搜索整个文档这两个变量出现的位置。&#xA;发现了&#xA;​&#x9;只有这里修改了won的状态，前面还有个16384这个应该就是获得胜利需要得到的分数，这个分数对于我来说还是简简单单（小声bb截图为证），直接让if里面的语句为真就可以获胜，直接修改if(1) self.won = true，保存文件，按一个方向键让语句执行到，完工。&#xA;general 猫咪问题++ ​&#x9;秉着前面题都是简单题，试着做了一下，看到题目提示的有往年的问题题解&#xA;​&#x9;题意思很明显的书考验同学的搜题技巧。那就开工。&#xA;第一题 以下编程语言、软件或组织对应标志是哺乳动物的有几个？ Docker，Golang，Python，Plan 9，PHP，GNU，LLVM，Swift，Perl，GitHub，TortoiseSVN，FireFox，MySQL，PostgreSQL，MariaDB，Linux，OpenBSD，FreeDOS，Apache Tomcat，Squid，openSUSE，Kali，Xfce.&#xA;提示：学术上一般认为龙不属于哺乳动物。&#xA;​&#x9;本人只认识几个，那就一个一个搜呗。我的模式是：百度xxx标志然后第二条就是百度图片的搜索结果，大致辨别一下，然后再百度xxx是哺乳动物吗，妥妥的胎儿教学。&#xA;​&#x9;一个比较有印象就是FreeDOS这个标志就离谱，什么玩意&#xA;参考答案 ：12&#xA;第二题 第一个以信鸽为载体的 IP 网络标准的 RFC 文档中推荐使用的 MTU (Maximum Transmission Unit) 是多少毫克？ ​&#x9;卡了我好一会，没听过信鸽传输，贴上最后找到答案的博客，以及一篇信鸽传输的历史发展，长见识了。&#xA;参考答案：256&#xA;第三题 USTC Linux 用户协会在 2019 年 9 月 21 日自由软件日活动中介绍的开源游戏的名称共有几个字母？ 提示：活动记录会在哪里？</description>
+    </item>
+  </channel>
 </rss>

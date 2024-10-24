@@ -1,359 +1,416 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" /><title>造窝过程(一) - Braindance</title><meta name="Description" content="Braindance&#39;s blog"><meta property="og:url" content="http://localhost:1313/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/">
-  <meta property="og:site_name" content="Braindance">
+<html lang="en">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> 造窝过程(一) | </title>
+  <link rel = 'canonical' href = '/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/'>
+  <meta name="description" content="为世界上所有的美好而战">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:url" content="/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/">
   <meta property="og:title" content="造窝过程(一)">
-  <meta property="og:description" content="备案劝退 很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭">
-  <meta property="og:locale" content="zh_CN">
+  <meta property="og:description" content="备案劝退 很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭建过一个，觉得IP访问太暴露了就想去备案，结果阿里云的备案过程真的是把我给整吐了，大概流程就是：填网站信息»&gt;阿里云审核通过»&gt;工信部审核。看似个简单的过程，我在阿里云审核那就被劝退了，官方小改改先是跟我说填写信息不能有什么什么字眼，很耐心的帮我改了改，然后让我提供钉钉号，说一会会有官方加我好友跟我视频认证，这对于稍微有点自闭的我来说有点难顶，但想都到这步了硬着头皮来吧。等了一个多小时，我看到邮箱里有封邮件说我拒绝视频认证，审核失败，我tm直接当场？？？看了看钉钉申请和审核失败的邮件，之间就相差了2分钟。
+选择服务器 听说了备案的依据是服务器的地理位置，想到去买国外的服务器，在知乎、谷歌上搜了一大堆国外的服务商，大致推荐的都是：vultr、搬瓦工、blablablabal，看到价格和配置都特别心动，但是都是很久之前的信息，现在已经变贵了，最后挑了一个现在最便宜的pacificrack,看评价说便宜的原因就是超售，而且服务商有可能跑路balbabla的，我现在就心想体验一番管他呢，最后买的配置1cpu 1G 20GB 100Mbps一年$12，觉得比阿里云那个学生云香，最重要的是不用备案！！！！
+域名注册 服务器到手以后，又听说什么国外的服务器有可能会被Qang，我也尽量少选国内提供的服务，随后找到了国外免费的域名注册商freenom，注册了域名braindanc.tk，把域名解析到自己的服务器，后面补一篇注册的过程吧。
+到这服务器和域名都搞定了。">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2020-09-02T11:14:35+08:00">
-    <meta property="article:modified_time" content="2020-09-02T11:14:35+08:00">
+    <meta property="article:published_time" content="2020-09-02T11:14:35+00:00">
+    <meta property="article:modified_time" content="2020-09-02T11:14:35+00:00">
 
+  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="造窝过程(一)">
-  <meta name="twitter:description" content="备案劝退 很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭">
-<meta name="application-name" content="Braindance">
-<meta name="apple-mobile-web-app-title" content="Braindance">
+  <meta name="twitter:description" content="备案劝退 很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭建过一个，觉得IP访问太暴露了就想去备案，结果阿里云的备案过程真的是把我给整吐了，大概流程就是：填网站信息»&gt;阿里云审核通过»&gt;工信部审核。看似个简单的过程，我在阿里云审核那就被劝退了，官方小改改先是跟我说填写信息不能有什么什么字眼，很耐心的帮我改了改，然后让我提供钉钉号，说一会会有官方加我好友跟我视频认证，这对于稍微有点自闭的我来说有点难顶，但想都到这步了硬着头皮来吧。等了一个多小时，我看到邮箱里有封邮件说我拒绝视频认证，审核失败，我tm直接当场？？？看了看钉钉申请和审核失败的邮件，之间就相差了2分钟。
+选择服务器 听说了备案的依据是服务器的地理位置，想到去买国外的服务器，在知乎、谷歌上搜了一大堆国外的服务商，大致推荐的都是：vultr、搬瓦工、blablablabal，看到价格和配置都特别心动，但是都是很久之前的信息，现在已经变贵了，最后挑了一个现在最便宜的pacificrack,看评价说便宜的原因就是超售，而且服务商有可能跑路balbabla的，我现在就心想体验一番管他呢，最后买的配置1cpu 1G 20GB 100Mbps一年$12，觉得比阿里云那个学生云香，最重要的是不用备案！！！！
+域名注册 服务器到手以后，又听说什么国外的服务器有可能会被Qang，我也尽量少选国内提供的服务，随后找到了国外免费的域名注册商freenom，注册了域名braindanc.tk，把域名解析到自己的服务器，后面补一篇注册的过程吧。
+到这服务器和域名都搞定了。">
 
-<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
-<link rel="canonical" href="http://localhost:1313/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/" /><link rel="prev" href="http://localhost:1313/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" /><link rel="next" href="http://localhost:1313/posts/play_time/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" />
-<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "造窝过程(一)",
-        "inLanguage": "zh-CN",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http://localhost:1313/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/"
-        },"genre": "posts","wordcount":  669 ,
-        "url": "http://localhost:1313/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/","datePublished": "2020-09-02T11:14:35+08:00","dateModified": "2020-09-02T11:14:35+08:00","publisher": {
-            "@type": "Organization",
-            "name": "Braindance"},"author": {
-                "@type": "Person",
-                "name": "Braindance"
-            },"description": ""
-    }
-    </script></head>
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
 
+  
+<link rel="icon" type="image/png" href="/images/favicon.ico" />
 
-<body data-instant-intensity="viewport" ><script type="text/javascript">
-        function setTheme(theme) {
-          document.body.setAttribute('theme', theme); 
-          document.documentElement.className = theme;
-          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
-          if (theme === 'light') {
-            document.documentElement.classList.remove('tw-dark')
-          } else {
-            document.documentElement.classList.add('tw-dark')
-          }
-          window.theme = theme;   
-          window.isDark = window.theme !== 'light' 
-        }
-        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
-        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
-        if (window.localStorage && localStorage.getItem('theme')) {
-            let theme = localStorage.getItem('theme');
-            if (theme === 'light' || theme === 'dark') {
-            setTheme(theme);
-            } else {
-                if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    setTheme('dark');
-                } else {
-                    setTheme('light');
-                }
-            }
-         } else { 
-            if ('' === 'light' || '' === 'dark') 
-                setTheme(''), saveTheme(''); 
-            else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');
-        }
-        let metaColors = {'light': '#f8f8f8','dark': '#161b22'}
-        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
-        window.switchThemeEventSet = new Set()
-    </script>
+  
+  
+  
+  
+</head>
 
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
 
-    <div id="back-to-top"></div>
-    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Braindance">Braindance</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item"
-                    href="/posts/"  title="文章" > 文章 </a><a class="menu-item"
-                    href="/tags/"  title="标签" > 标签 </a><a class="menu-item"
-                    href="/categories/"  title="分类" > 分类 </a><a class="menu-item"
-                    href="/about/"  title="关于" > 关于 </a><a class="menu-item"
-                    href="/friend/"  title="友链" > 友链 </a><a class="menu-item"
-                    href="https://travellings.cn"  title="开往" 
-                    rel="noopener noreferrer" target="_blank" >🚇 开往 </a><a class="menu-item"
-                    href="https://notion.braindance.top"  title="同步notion笔记" 
-                    rel="noopener noreferrer" target="_blank" ><img class='emoji' src='/img/notion.ico' width='20'> 笔记 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                    <input type="text"
-                        placeholder="搜些什么"
-                        id="search-input-desktop">
-                    <button class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-                    </button>
-                    <button class="search-button search-clear" id="search-clear-desktop" title="清空">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
-                    </button>
-                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
-                    </span>
-                </span><button class="menu-item theme-switch" aria-label="切换主题">
-                    <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
-                </button></div>
-        </div>
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/about">About</a></li>
+         
+        <li><a href="/friends">Friends</a></li>
+         
+        <li><a href="">开往</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" /posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="/posts/play_time/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&text=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&title=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&is_video=false&description=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29&body=Check out this article: %2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&title=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&title=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&name=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29&description=%e5%a4%87%e6%a1%88%e5%8a%9d%e9%80%80%20%e5%be%88%e6%97%a9%e5%b0%b1%e6%9c%89%e6%83%b3%e6%90%ad%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%83%b3%e6%b3%95%e4%ba%86%ef%bc%8c%e8%b5%b7%e5%88%9d%e5%9c%a8%e9%98%bf%e9%87%8c%e4%ba%91%e4%b8%8a%e7%94%a8%e5%ae%9d%e5%a1%94%e9%9d%a2%e6%9d%bf%e6%90%ad%e5%bb%ba%e8%bf%87%e4%b8%80%e4%b8%aa%ef%bc%8c%e8%a7%89%e5%be%97IP%e8%ae%bf%e9%97%ae%e5%a4%aa%e6%9a%b4%e9%9c%b2%e4%ba%86%e5%b0%b1%e6%83%b3%e5%8e%bb%e5%a4%87%e6%a1%88%ef%bc%8c%e7%bb%93%e6%9e%9c%e9%98%bf%e9%87%8c%e4%ba%91%e7%9a%84%e5%a4%87%e6%a1%88%e8%bf%87%e7%a8%8b%e7%9c%9f%e7%9a%84%e6%98%af%e6%8a%8a%e6%88%91%e7%bb%99%e6%95%b4%e5%90%90%e4%ba%86%ef%bc%8c%e5%a4%a7%e6%a6%82%e6%b5%81%e7%a8%8b%e5%b0%b1%e6%98%af%ef%bc%9a%e5%a1%ab%e7%bd%91%e7%ab%99%e4%bf%a1%e6%81%af%26raquo%3b%26gt%3b%e9%98%bf%e9%87%8c%e4%ba%91%e5%ae%a1%e6%a0%b8%e9%80%9a%e8%bf%87%26raquo%3b%26gt%3b%e5%b7%a5%e4%bf%a1%e9%83%a8%e5%ae%a1%e6%a0%b8%e3%80%82%e7%9c%8b%e4%bc%bc%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84%e8%bf%87%e7%a8%8b%ef%bc%8c%e6%88%91%e5%9c%a8%e9%98%bf%e9%87%8c%e4%ba%91%e5%ae%a1%e6%a0%b8%e9%82%a3%e5%b0%b1%e8%a2%ab%e5%8a%9d%e9%80%80%e4%ba%86%ef%bc%8c%e5%ae%98%e6%96%b9%e5%b0%8f%e6%94%b9%e6%94%b9%e5%85%88%e6%98%af%e8%b7%9f%e6%88%91%e8%af%b4%e5%a1%ab%e5%86%99%e4%bf%a1%e6%81%af%e4%b8%8d%e8%83%bd%e6%9c%89%e4%bb%80%e4%b9%88%e4%bb%80%e4%b9%88%e5%ad%97%e7%9c%bc%ef%bc%8c%e5%be%88%e8%80%90%e5%bf%83%e7%9a%84%e5%b8%ae%e6%88%91%e6%94%b9%e4%ba%86%e6%94%b9%ef%bc%8c%e7%84%b6%e5%90%8e%e8%ae%a9%e6%88%91%e6%8f%90%e4%be%9b%e9%92%89%e9%92%89%e5%8f%b7%ef%bc%8c%e8%af%b4%e4%b8%80%e4%bc%9a%e4%bc%9a%e6%9c%89%e5%ae%98%e6%96%b9%e5%8a%a0%e6%88%91%e5%a5%bd%e5%8f%8b%e8%b7%9f%e6%88%91%e8%a7%86%e9%a2%91%e8%ae%a4%e8%af%81%ef%bc%8c%e8%bf%99%e5%af%b9%e4%ba%8e%e7%a8%8d%e5%be%ae%e6%9c%89%e7%82%b9%e8%87%aa%e9%97%ad%e7%9a%84%e6%88%91%e6%9d%a5%e8%af%b4%e6%9c%89%e7%82%b9%e9%9a%be%e9%a1%b6%ef%bc%8c%e4%bd%86%e6%83%b3%e9%83%bd%e5%88%b0%e8%bf%99%e6%ad%a5%e4%ba%86%e7%a1%ac%e7%9d%80%e5%a4%b4%e7%9a%ae%e6%9d%a5%e5%90%a7%e3%80%82%e7%ad%89%e4%ba%86%e4%b8%80%e4%b8%aa%e5%a4%9a%e5%b0%8f%e6%97%b6%ef%bc%8c%e6%88%91%e7%9c%8b%e5%88%b0%e9%82%ae%e7%ae%b1%e9%87%8c%e6%9c%89%e5%b0%81%e9%82%ae%e4%bb%b6%e8%af%b4%e6%88%91%e6%8b%92%e7%bb%9d%e8%a7%86%e9%a2%91%e8%ae%a4%e8%af%81%ef%bc%8c%e5%ae%a1%e6%a0%b8%e5%a4%b1%e8%b4%a5%ef%bc%8c%e6%88%91tm%e7%9b%b4%e6%8e%a5%e5%bd%93%e5%9c%ba%ef%bc%9f%ef%bc%9f%ef%bc%9f%e7%9c%8b%e4%ba%86%e7%9c%8b%e9%92%89%e9%92%89%e7%94%b3%e8%af%b7%e5%92%8c%e5%ae%a1%e6%a0%b8%e5%a4%b1%e8%b4%a5%e7%9a%84%e9%82%ae%e4%bb%b6%ef%bc%8c%e4%b9%8b%e9%97%b4%e5%b0%b1%e7%9b%b8%e5%b7%ae%e4%ba%862%e5%88%86%e9%92%9f%e3%80%82%0a%e9%80%89%e6%8b%a9%e6%9c%8d%e5%8a%a1%e5%99%a8%20%e5%90%ac%e8%af%b4%e4%ba%86%e5%a4%87%e6%a1%88%e7%9a%84%e4%be%9d%e6%8d%ae%e6%98%af%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%9a%84%e5%9c%b0%e7%90%86%e4%bd%8d%e7%bd%ae%ef%bc%8c%e6%83%b3%e5%88%b0%e5%8e%bb%e4%b9%b0%e5%9b%bd%e5%a4%96%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%ef%bc%8c%e5%9c%a8%e7%9f%a5%e4%b9%8e%e3%80%81%e8%b0%b7%e6%ad%8c%e4%b8%8a%e6%90%9c%e4%ba%86%e4%b8%80%e5%a4%a7%e5%a0%86%e5%9b%bd%e5%a4%96%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%95%86%ef%bc%8c%e5%a4%a7%e8%87%b4%e6%8e%a8%e8%8d%90%e7%9a%84%e9%83%bd%e6%98%af%ef%bc%9avultr%e3%80%81%e6%90%ac%e7%93%a6%e5%b7%a5%e3%80%81blablablabal%ef%bc%8c%e7%9c%8b%e5%88%b0%e4%bb%b7%e6%a0%bc%e5%92%8c%e9%85%8d%e7%bd%ae%e9%83%bd%e7%89%b9%e5%88%ab%e5%bf%83%e5%8a%a8%ef%bc%8c%e4%bd%86%e6%98%af%e9%83%bd%e6%98%af%e5%be%88%e4%b9%85%e4%b9%8b%e5%89%8d%e7%9a%84%e4%bf%a1%e6%81%af%ef%bc%8c%e7%8e%b0%e5%9c%a8%e5%b7%b2%e7%bb%8f%e5%8f%98%e8%b4%b5%e4%ba%86%ef%bc%8c%e6%9c%80%e5%90%8e%e6%8c%91%e4%ba%86%e4%b8%80%e4%b8%aa%e7%8e%b0%e5%9c%a8%e6%9c%80%e4%be%bf%e5%ae%9c%e7%9a%84pacificrack%2c%e7%9c%8b%e8%af%84%e4%bb%b7%e8%af%b4%e4%be%bf%e5%ae%9c%e7%9a%84%e5%8e%9f%e5%9b%a0%e5%b0%b1%e6%98%af%e8%b6%85%e5%94%ae%ef%bc%8c%e8%80%8c%e4%b8%94%e6%9c%8d%e5%8a%a1%e5%95%86%e6%9c%89%e5%8f%af%e8%83%bd%e8%b7%91%e8%b7%afbalbabla%e7%9a%84%ef%bc%8c%e6%88%91%e7%8e%b0%e5%9c%a8%e5%b0%b1%e5%bf%83%e6%83%b3%e4%bd%93%e9%aa%8c%e4%b8%80%e7%95%aa%e7%ae%a1%e4%bb%96%e5%91%a2%ef%bc%8c%e6%9c%80%e5%90%8e%e4%b9%b0%e7%9a%84%e9%85%8d%e7%bd%ae1cpu%201G%2020GB%20100Mbps%e4%b8%80%e5%b9%b4%2412%ef%bc%8c%e8%a7%89%e5%be%97%e6%af%94%e9%98%bf%e9%87%8c%e4%ba%91%e9%82%a3%e4%b8%aa%e5%ad%a6%e7%94%9f%e4%ba%91%e9%a6%99%ef%bc%8c%e6%9c%80%e9%87%8d%e8%a6%81%e7%9a%84%e6%98%af%e4%b8%8d%e7%94%a8%e5%a4%87%e6%a1%88%ef%bc%81%ef%bc%81%ef%bc%81%ef%bc%81%0a%e5%9f%9f%e5%90%8d%e6%b3%a8%e5%86%8c%20%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%88%b0%e6%89%8b%e4%bb%a5%e5%90%8e%ef%bc%8c%e5%8f%88%e5%90%ac%e8%af%b4%e4%bb%80%e4%b9%88%e5%9b%bd%e5%a4%96%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%9c%89%e5%8f%af%e8%83%bd%e4%bc%9a%e8%a2%abQang%ef%bc%8c%e6%88%91%e4%b9%9f%e5%b0%bd%e9%87%8f%e5%b0%91%e9%80%89%e5%9b%bd%e5%86%85%e6%8f%90%e4%be%9b%e7%9a%84%e6%9c%8d%e5%8a%a1%ef%bc%8c%e9%9a%8f%e5%90%8e%e6%89%be%e5%88%b0%e4%ba%86%e5%9b%bd%e5%a4%96%e5%85%8d%e8%b4%b9%e7%9a%84%e5%9f%9f%e5%90%8d%e6%b3%a8%e5%86%8c%e5%95%86freenom%ef%bc%8c%e6%b3%a8%e5%86%8c%e4%ba%86%e5%9f%9f%e5%90%8dbraindanc.tk%ef%bc%8c%e6%8a%8a%e5%9f%9f%e5%90%8d%e8%a7%a3%e6%9e%90%e5%88%b0%e8%87%aa%e5%b7%b1%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%ef%bc%8c%e5%90%8e%e9%9d%a2%e8%a1%a5%e4%b8%80%e7%af%87%e6%b3%a8%e5%86%8c%e7%9a%84%e8%bf%87%e7%a8%8b%e5%90%a7%e3%80%82%0a%e5%88%b0%e8%bf%99%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%92%8c%e5%9f%9f%e5%90%8d%e9%83%bd%e6%90%9e%e5%ae%9a%e4%ba%86%e3%80%82" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&t=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
     </div>
-</header><header class="mobile print:!tw-hidden" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Braindance">Braindance</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                <div class="search mobile" id="search-mobile">
-                    <input type="text"
-                        placeholder="搜些什么"
-                        id="search-input-mobile">
-                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="搜索">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-                    </button>
-                    <button class="search-button search-clear" id="search-clear-mobile" title="清空">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
-                    </button>
-                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
-                    </span>
-                </div>
-                <button class="search-cancel" id="search-cancel-mobile">
-                    取消
-                </button>
-            </div><a class="menu-item" href="/posts/" title="文章" >文章</a><a class="menu-item" href="/tags/" title="标签" >标签</a><a class="menu-item" href="/categories/" title="分类" >分类</a><a class="menu-item" href="/about/" title="关于" >关于</a><a class="menu-item" href="/friend/" title="友链" >友链</a><a class="menu-item" href="https://travellings.cn" title="开往" 
-                rel="noopener noreferrer" target="_blank" >🚇开往</a><a class="menu-item" href="https://notion.braindance.top" title="同步notion笔记" 
-                rel="noopener noreferrer" target="_blank" ><img class='emoji' src='/img/notion.ico' width='20'>笔记</a><button class="menu-item theme-switch tw-w-full" aria-label="切换主题">
-                <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
-            </button></div>
+    
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
+    
+  </span>
 </div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div><main class="main">
-            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
-        <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents"></nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title">造窝过程(一)</h1><div class="post-meta">
-            <div class="post-meta-line">
-                <span class="post-author"><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src="https://www.gravatar.com/avatar/e318e42514d77554c5887e411e82cd40?s=240&amp;d=mp"   alt="Braindance avatar" height="16" width="16"><a href="/" title="Author" rel=" author" class="author">Braindance</a>
-                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>流水账</a></span></div>
-            <div class="post-meta-line"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2020-09-02">2020-09-02</time>&nbsp;<svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="2020-09-02">2020-09-02</time>&nbsp;<svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;约 669 字&nbsp;<svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/" class="leancloud_visitors" data-flag-title="造窝过程(一)">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span class="leancloud-visitors-count" id="twikoo_visitors"></span>&nbsp;次阅读
-                    </span>&nbsp;<span id="/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/" class="comment_count" data-flag-title="造窝过程(一)">
-                        <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M532 386.2c27.5-27.1 44-61.1 44-98.2 0-80-76.5-146.1-176.2-157.9C368.3 72.5 294.3 32 208 32 93.1 32 0 103.6 0 192c0 37 16.5 71 44 98.2-15.3 30.7-37.3 54.5-37.7 54.9-6.3 6.7-8.1 16.5-4.4 25 3.6 8.5 12 14 21.2 14 53.5 0 96.7-20.2 125.2-38.8 9.2 2.1 18.7 3.7 28.4 4.9C208.1 407.6 281.8 448 368 448c20.8 0 40.8-2.4 59.8-6.8C456.3 459.7 499.4 480 553 480c9.2 0 17.5-5.5 21.2-14 3.6-8.5 1.9-18.3-4.4-25-.4-.3-22.5-24.1-37.8-54.8zm-392.8-92.3L122.1 305c-14.1 9.1-28.5 16.3-43.1 21.4 2.7-4.7 5.4-9.7 8-14.8l15.5-31.1L77.7 256C64.2 242.6 48 220.7 48 192c0-60.7 73.3-112 160-112s160 51.3 160 112-73.3 112-160 112c-16.5 0-33-1.9-49-5.6l-19.8-4.5zM498.3 352l-24.7 24.4 15.5 31.1c2.6 5.1 5.3 10.1 8 14.8-14.6-5.1-29-12.3-43.1-21.4l-17.1-11.1-19.9 4.6c-16 3.7-32.5 5.6-49 5.6-54 0-102.2-20.1-131.3-49.7C338 339.5 416 272.9 416 192c0-3.4-.4-6.7-.7-10C479.7 196.5 528 238.8 528 288c0 28.7-16.2 50.6-29.7 64z"/></svg>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
-                    </span>&nbsp;</div>
-        </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>目录</span>
-                    <span class="details-icon"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><div class="details admonition warning open">
-    <div class="details-summary admonition-title">
-        <span class="icon"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></svg></span>警告<span class="details-icon"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content">本文最后更新于 <span class="timeago" datetime="2020-09-02T11:14:35" title="September 2, 2020">2020-09-02</span>，文中内容可能已过时。</div></div></div><ul>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        造窝过程(一)
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2020-09-02 11:14:35 &#43;0000 UTC" itemprop="datePublished">2020-09-02</time>
+          
+        </div>
+        
+        
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6">流水账</a>
+            
+        </div>
+        
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <ul>
 <li>备案劝退</li>
 </ul>
-<p>很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭建过一个，觉得IP访问太暴露了就想去备案，结果阿里云的备案过程真的是把我给整吐了，大概流程就是：填网站信息&raquo;&gt;阿里云审核通过&raquo;&gt;工信部审核。看似个简单的过程，我在阿里云审核那就被劝退了，官方小改改先是跟我说填写信息不能有什么什么字眼，很耐心的帮我改了改，然后让我提供钉钉号，说一会会有官方加我好友跟我视频认证，这对于稍微有点自闭的我来说有点难顶，但想都到这步了硬着头皮来吧。等了一个多小时，我看到邮箱里有封邮件说我拒绝视频认证，审核失败，我tm直接当场？？？<img class="tw-inline" loading="lazy" src="https://s1.ax1x.com/2020/10/29/BJ9L8g.jpg"   alt="BJ9L8g.jpg"  >看了看钉钉申请和审核失败的邮件，之间就相差了2分钟。</p>
+<p>很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭建过一个，觉得IP访问太暴露了就想去备案，结果阿里云的备案过程真的是把我给整吐了，大概流程就是：填网站信息&raquo;&gt;阿里云审核通过&raquo;&gt;工信部审核。看似个简单的过程，我在阿里云审核那就被劝退了，官方小改改先是跟我说填写信息不能有什么什么字眼，很耐心的帮我改了改，然后让我提供钉钉号，说一会会有官方加我好友跟我视频认证，这对于稍微有点自闭的我来说有点难顶，但想都到这步了硬着头皮来吧。等了一个多小时，我看到邮箱里有封邮件说我拒绝视频认证，审核失败，我tm直接当场？？？<img src="https://s1.ax1x.com/2020/10/29/BJ9L8g.jpg" alt="BJ9L8g.jpg">看了看钉钉申请和审核失败的邮件，之间就相差了2分钟。</p>
 <ul>
 <li>选择服务器</li>
 </ul>
-<p>听说了备案的依据是服务器的地理位置，想到去买国外的服务器，在知乎、谷歌上搜了一大堆国外的服务商，大致推荐的都是：<a href="https://www.vultr.com/" target="_blank" rel="noopener noreferrer">vultr</a>、<a href="https://bwh88.net/" target="_blank" rel="noopener noreferrer">搬瓦工</a>、blablablabal，看到价格和配置都特别心动，但是都是很久之前的信息，现在已经变贵了，最后挑了一个现在最便宜的<a href="https://www.pacificrack.com/" target="_blank" rel="noopener noreferrer">pacificrack</a>,看评价说便宜的原因就是超售，而且服务商有可能跑路balbabla的，我现在就心想体验一番管他呢，最后买的配置1cpu 1G 20GB 100Mbps一年$12，觉得比阿里云那个学生云香，最重要的是不用备案！！！！</p>
+<p>听说了备案的依据是服务器的地理位置，想到去买国外的服务器，在知乎、谷歌上搜了一大堆国外的服务商，大致推荐的都是：<a href="https://www.vultr.com/">vultr</a>、<a href="https://bwh88.net/">搬瓦工</a>、blablablabal，看到价格和配置都特别心动，但是都是很久之前的信息，现在已经变贵了，最后挑了一个现在最便宜的<a href="https://www.pacificrack.com/">pacificrack</a>,看评价说便宜的原因就是超售，而且服务商有可能跑路balbabla的，我现在就心想体验一番管他呢，最后买的配置1cpu 1G 20GB 100Mbps一年$12，觉得比阿里云那个学生云香，最重要的是不用备案！！！！</p>
 <ul>
 <li>域名注册</li>
 </ul>
-<p>服务器到手以后，又听说什么国外的服务器有可能会被Qang，我也尽量少选国内提供的服务，随后找到了国外免费的域名注册商<a href="http://www.freenom.com" target="_blank" rel="noopener noreferrer">freenom</a>，注册了域名braindanc.tk，把域名解析到自己的服务器，后面补一篇注册的过程吧。</p>
+<p>服务器到手以后，又听说什么国外的服务器有可能会被Qang，我也尽量少选国内提供的服务，随后找到了国外免费的域名注册商<a href="http://www.freenom.com">freenom</a>，注册了域名braindanc.tk，把域名解析到自己的服务器，后面补一篇注册的过程吧。</p>
 <p>到这服务器和域名都搞定了。</p>
-</div>
 
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  <div class="blog-post-comments">
+    
+      <div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
+<script>
+twikoo.init({
+  envId: "https:\/\/twikoo.braindance.top\/.netlify\/functions\/twikoo", 
+  el: '#tcomment', 
+  
+  
+  lang: 'zh-CN', 
+})
+</script>
+    
+  </div>
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/tags">Tags</a></li>
+         
+          <li><a href="/about">About</a></li>
+         
+          <li><a href="/friends">Friends</a></li>
+         
+          <li><a href="">开往</a></li>
         
-
-<div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>更新于 2020-09-02</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line print:!tw-hidden">
-            <div class="post-info-md"></div>
-            <div class="post-info-share"></div>
-        </div>
+      </ul>
     </div>
 
-    <div class="post-info-more">
-        <section class="post-tags"></section>
-        <section class="print:!tw-hidden">
-            <span><button class="tw-text-fgColor-link-muted hover:tw-text-fgColor-link-muted-hover" onclick="window.history.back();">返回</button></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
-        </section>
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
     </div>
+    
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="prev" rel="prev" title="第一篇文章"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>第一篇文章</a>
-            <a href="/posts/play_time/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="next" rel="next" title="Freenom域名注册解析到服务器">Freenom域名注册解析到服务器<svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
-</div>
-<div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="twikoo"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
-            </noscript></div></article></div>
-        </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">
-                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.133.1">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
-                </div><div class="footer-line"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2020 - 2024<span class="author">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Braindance</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
-            <div class="footer-line"></div>
-            <div class="footer-line">
-            </div>
-        </div></footer></div>
-
-    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button tw-transition-opacity tw-opacity-0" title="回到顶部">
-            <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
-        </a><a href="#comments" id="view-comments" class="fixed-button" title="查看评论">
-            <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
-        </a></div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript>
-<script>window.config={"autocomplete.min.js":"/lib/autocomplete/autocomplete.min.js","comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.braindance.top/","lang":"zh-cn"}},"fuse.min.js":"/lib/fuse/fuse.min.js","lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"table":{"sort":true},"twemoji":true};</script><script
-    src="/lib/tablesort/tablesort.min.js"
-    
-  ></script><script
-    src="/lib/twemoji/twemoji.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/js/twemoji.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/lib/lightgallery/lightgallery.min.js"
-    
-  ></script><script
-    src="/lib/lightgallery/lg-thumbnail.min.js"
-    
-  ></script><script
-    src="/lib/lightgallery/lg-zoom.min.js"
-    
-  ></script><script
-    src="/lib/katex/katex.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/lib/katex/auto-render.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/lib/katex/copy-tex.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/lib/katex/mhchem.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/js/katex.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/js/theme.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/lib/twikoo/twikoo.all.min.js"
-    
-      defer
-    
-  ></script><script
-    src="/js/twikoo.min.js"
-    
-      defer
-    
-  ></script><script type="text/javascript">
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'UA-176925141-1', { 'anonymize_ip': true });
-        </script><script
-    src="https://www.googletagmanager.com/gtag/js?id=UA-176925141-1"
-    async
-  ></script><script>
-			var _hmt = _hmt || [];
-			(function() {
-			  var hm = document.createElement("script");
-			  hm.src = "https://hm.baidu.com/hm.js?3b1ab845351bb3a8ee808b639bca6ce5";
-			  var s = document.getElementsByTagName("script")[0]; 
-			  s.parentNode.insertBefore(hm, s);
-			})();
-		</script>
-    
-    <script type="speculationrules">
-        {
-          "prerender": [
-            {
-              "where": { "href_matches": "/*" },
-              "eagerness": "moderate"
-            }
-          ]
-        }
-    </script>
+    <div id="share-footer" style="display: none">
       
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&text=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&title=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&is_video=false&description=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29&body=Check out this article: %2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&title=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&title=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&name=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29&description=%e5%a4%87%e6%a1%88%e5%8a%9d%e9%80%80%20%e5%be%88%e6%97%a9%e5%b0%b1%e6%9c%89%e6%83%b3%e6%90%ad%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%83%b3%e6%b3%95%e4%ba%86%ef%bc%8c%e8%b5%b7%e5%88%9d%e5%9c%a8%e9%98%bf%e9%87%8c%e4%ba%91%e4%b8%8a%e7%94%a8%e5%ae%9d%e5%a1%94%e9%9d%a2%e6%9d%bf%e6%90%ad%e5%bb%ba%e8%bf%87%e4%b8%80%e4%b8%aa%ef%bc%8c%e8%a7%89%e5%be%97IP%e8%ae%bf%e9%97%ae%e5%a4%aa%e6%9a%b4%e9%9c%b2%e4%ba%86%e5%b0%b1%e6%83%b3%e5%8e%bb%e5%a4%87%e6%a1%88%ef%bc%8c%e7%bb%93%e6%9e%9c%e9%98%bf%e9%87%8c%e4%ba%91%e7%9a%84%e5%a4%87%e6%a1%88%e8%bf%87%e7%a8%8b%e7%9c%9f%e7%9a%84%e6%98%af%e6%8a%8a%e6%88%91%e7%bb%99%e6%95%b4%e5%90%90%e4%ba%86%ef%bc%8c%e5%a4%a7%e6%a6%82%e6%b5%81%e7%a8%8b%e5%b0%b1%e6%98%af%ef%bc%9a%e5%a1%ab%e7%bd%91%e7%ab%99%e4%bf%a1%e6%81%af%26raquo%3b%26gt%3b%e9%98%bf%e9%87%8c%e4%ba%91%e5%ae%a1%e6%a0%b8%e9%80%9a%e8%bf%87%26raquo%3b%26gt%3b%e5%b7%a5%e4%bf%a1%e9%83%a8%e5%ae%a1%e6%a0%b8%e3%80%82%e7%9c%8b%e4%bc%bc%e4%b8%aa%e7%ae%80%e5%8d%95%e7%9a%84%e8%bf%87%e7%a8%8b%ef%bc%8c%e6%88%91%e5%9c%a8%e9%98%bf%e9%87%8c%e4%ba%91%e5%ae%a1%e6%a0%b8%e9%82%a3%e5%b0%b1%e8%a2%ab%e5%8a%9d%e9%80%80%e4%ba%86%ef%bc%8c%e5%ae%98%e6%96%b9%e5%b0%8f%e6%94%b9%e6%94%b9%e5%85%88%e6%98%af%e8%b7%9f%e6%88%91%e8%af%b4%e5%a1%ab%e5%86%99%e4%bf%a1%e6%81%af%e4%b8%8d%e8%83%bd%e6%9c%89%e4%bb%80%e4%b9%88%e4%bb%80%e4%b9%88%e5%ad%97%e7%9c%bc%ef%bc%8c%e5%be%88%e8%80%90%e5%bf%83%e7%9a%84%e5%b8%ae%e6%88%91%e6%94%b9%e4%ba%86%e6%94%b9%ef%bc%8c%e7%84%b6%e5%90%8e%e8%ae%a9%e6%88%91%e6%8f%90%e4%be%9b%e9%92%89%e9%92%89%e5%8f%b7%ef%bc%8c%e8%af%b4%e4%b8%80%e4%bc%9a%e4%bc%9a%e6%9c%89%e5%ae%98%e6%96%b9%e5%8a%a0%e6%88%91%e5%a5%bd%e5%8f%8b%e8%b7%9f%e6%88%91%e8%a7%86%e9%a2%91%e8%ae%a4%e8%af%81%ef%bc%8c%e8%bf%99%e5%af%b9%e4%ba%8e%e7%a8%8d%e5%be%ae%e6%9c%89%e7%82%b9%e8%87%aa%e9%97%ad%e7%9a%84%e6%88%91%e6%9d%a5%e8%af%b4%e6%9c%89%e7%82%b9%e9%9a%be%e9%a1%b6%ef%bc%8c%e4%bd%86%e6%83%b3%e9%83%bd%e5%88%b0%e8%bf%99%e6%ad%a5%e4%ba%86%e7%a1%ac%e7%9d%80%e5%a4%b4%e7%9a%ae%e6%9d%a5%e5%90%a7%e3%80%82%e7%ad%89%e4%ba%86%e4%b8%80%e4%b8%aa%e5%a4%9a%e5%b0%8f%e6%97%b6%ef%bc%8c%e6%88%91%e7%9c%8b%e5%88%b0%e9%82%ae%e7%ae%b1%e9%87%8c%e6%9c%89%e5%b0%81%e9%82%ae%e4%bb%b6%e8%af%b4%e6%88%91%e6%8b%92%e7%bb%9d%e8%a7%86%e9%a2%91%e8%ae%a4%e8%af%81%ef%bc%8c%e5%ae%a1%e6%a0%b8%e5%a4%b1%e8%b4%a5%ef%bc%8c%e6%88%91tm%e7%9b%b4%e6%8e%a5%e5%bd%93%e5%9c%ba%ef%bc%9f%ef%bc%9f%ef%bc%9f%e7%9c%8b%e4%ba%86%e7%9c%8b%e9%92%89%e9%92%89%e7%94%b3%e8%af%b7%e5%92%8c%e5%ae%a1%e6%a0%b8%e5%a4%b1%e8%b4%a5%e7%9a%84%e9%82%ae%e4%bb%b6%ef%bc%8c%e4%b9%8b%e9%97%b4%e5%b0%b1%e7%9b%b8%e5%b7%ae%e4%ba%862%e5%88%86%e9%92%9f%e3%80%82%0a%e9%80%89%e6%8b%a9%e6%9c%8d%e5%8a%a1%e5%99%a8%20%e5%90%ac%e8%af%b4%e4%ba%86%e5%a4%87%e6%a1%88%e7%9a%84%e4%be%9d%e6%8d%ae%e6%98%af%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%9a%84%e5%9c%b0%e7%90%86%e4%bd%8d%e7%bd%ae%ef%bc%8c%e6%83%b3%e5%88%b0%e5%8e%bb%e4%b9%b0%e5%9b%bd%e5%a4%96%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%ef%bc%8c%e5%9c%a8%e7%9f%a5%e4%b9%8e%e3%80%81%e8%b0%b7%e6%ad%8c%e4%b8%8a%e6%90%9c%e4%ba%86%e4%b8%80%e5%a4%a7%e5%a0%86%e5%9b%bd%e5%a4%96%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%95%86%ef%bc%8c%e5%a4%a7%e8%87%b4%e6%8e%a8%e8%8d%90%e7%9a%84%e9%83%bd%e6%98%af%ef%bc%9avultr%e3%80%81%e6%90%ac%e7%93%a6%e5%b7%a5%e3%80%81blablablabal%ef%bc%8c%e7%9c%8b%e5%88%b0%e4%bb%b7%e6%a0%bc%e5%92%8c%e9%85%8d%e7%bd%ae%e9%83%bd%e7%89%b9%e5%88%ab%e5%bf%83%e5%8a%a8%ef%bc%8c%e4%bd%86%e6%98%af%e9%83%bd%e6%98%af%e5%be%88%e4%b9%85%e4%b9%8b%e5%89%8d%e7%9a%84%e4%bf%a1%e6%81%af%ef%bc%8c%e7%8e%b0%e5%9c%a8%e5%b7%b2%e7%bb%8f%e5%8f%98%e8%b4%b5%e4%ba%86%ef%bc%8c%e6%9c%80%e5%90%8e%e6%8c%91%e4%ba%86%e4%b8%80%e4%b8%aa%e7%8e%b0%e5%9c%a8%e6%9c%80%e4%be%bf%e5%ae%9c%e7%9a%84pacificrack%2c%e7%9c%8b%e8%af%84%e4%bb%b7%e8%af%b4%e4%be%bf%e5%ae%9c%e7%9a%84%e5%8e%9f%e5%9b%a0%e5%b0%b1%e6%98%af%e8%b6%85%e5%94%ae%ef%bc%8c%e8%80%8c%e4%b8%94%e6%9c%8d%e5%8a%a1%e5%95%86%e6%9c%89%e5%8f%af%e8%83%bd%e8%b7%91%e8%b7%afbalbabla%e7%9a%84%ef%bc%8c%e6%88%91%e7%8e%b0%e5%9c%a8%e5%b0%b1%e5%bf%83%e6%83%b3%e4%bd%93%e9%aa%8c%e4%b8%80%e7%95%aa%e7%ae%a1%e4%bb%96%e5%91%a2%ef%bc%8c%e6%9c%80%e5%90%8e%e4%b9%b0%e7%9a%84%e9%85%8d%e7%bd%ae1cpu%201G%2020GB%20100Mbps%e4%b8%80%e5%b9%b4%2412%ef%bc%8c%e8%a7%89%e5%be%97%e6%af%94%e9%98%bf%e9%87%8c%e4%ba%91%e9%82%a3%e4%b8%aa%e5%ad%a6%e7%94%9f%e4%ba%91%e9%a6%99%ef%bc%8c%e6%9c%80%e9%87%8d%e8%a6%81%e7%9a%84%e6%98%af%e4%b8%8d%e7%94%a8%e5%a4%87%e6%a1%88%ef%bc%81%ef%bc%81%ef%bc%81%ef%bc%81%0a%e5%9f%9f%e5%90%8d%e6%b3%a8%e5%86%8c%20%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%88%b0%e6%89%8b%e4%bb%a5%e5%90%8e%ef%bc%8c%e5%8f%88%e5%90%ac%e8%af%b4%e4%bb%80%e4%b9%88%e5%9b%bd%e5%a4%96%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%9c%89%e5%8f%af%e8%83%bd%e4%bc%9a%e8%a2%abQang%ef%bc%8c%e6%88%91%e4%b9%9f%e5%b0%bd%e9%87%8f%e5%b0%91%e9%80%89%e5%9b%bd%e5%86%85%e6%8f%90%e4%be%9b%e7%9a%84%e6%9c%8d%e5%8a%a1%ef%bc%8c%e9%9a%8f%e5%90%8e%e6%89%be%e5%88%b0%e4%ba%86%e5%9b%bd%e5%a4%96%e5%85%8d%e8%b4%b9%e7%9a%84%e5%9f%9f%e5%90%8d%e6%b3%a8%e5%86%8c%e5%95%86freenom%ef%bc%8c%e6%b3%a8%e5%86%8c%e4%ba%86%e5%9f%9f%e5%90%8dbraindanc.tk%ef%bc%8c%e6%8a%8a%e5%9f%9f%e5%90%8d%e8%a7%a3%e6%9e%90%e5%88%b0%e8%87%aa%e5%b7%b1%e7%9a%84%e6%9c%8d%e5%8a%a1%e5%99%a8%ef%bc%8c%e5%90%8e%e9%9d%a2%e8%a1%a5%e4%b8%80%e7%af%87%e6%b3%a8%e5%86%8c%e7%9a%84%e8%bf%87%e7%a8%8b%e5%90%a7%e3%80%82%0a%e5%88%b0%e8%bf%99%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%92%8c%e5%9f%9f%e5%90%8d%e9%83%bd%e6%90%9e%e5%ae%9a%e4%ba%86%e3%80%82" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2fposts%2f%25E9%2580%25A0%25E7%25AA%259D%25E8%25BF%2587%25E7%25A8%258B-%25E4%25B8%2580%2f&t=%e9%80%a0%e7%aa%9d%e8%bf%87%e7%a8%8b%28%e4%b8%80%29" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2024   
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/tags">Tags</a></li>
+         
+        <li><a href="/about">About</a></li>
+         
+        <li><a href="/friends">Friends</a></li>
+         
+        <li><a href="">开往</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
 </body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
 </html>

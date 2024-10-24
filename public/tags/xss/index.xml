@@ -1,14 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>XSS - 标签 - Braindance</title>
-        <link>http://localhost:1313/tags/xss/</link>
-        <description>XSS - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 Nov 2020 10:13:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/xss/" rel="self" type="application/rss+xml" /><item>
-    <title>XSS-Lab (一)</title>
-    <link>http://localhost:1313/posts/ctf/xss-lab1/</link>
-    <pubDate>Tue, 03 Nov 2020 10:13:39 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/ctf/xss-lab1/</guid>
-    <description><![CDATA[头靶机地址：https://buuoj.cn/challen]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XSS on </title>
+    <link>/tags/xss/</link>
+    <description>Recent content in XSS on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Nov 2020 10:13:39 +0000</lastBuildDate>
+    <atom:link href="/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XSS-Lab (一)</title>
+      <link>/posts/ctf/xss-lab1/</link>
+      <pubDate>Tue, 03 Nov 2020 10:13:39 +0000</pubDate>
+      <guid>/posts/ctf/xss-lab1/</guid>
+      <description>头 靶机地址：https://buuoj.cn/challenges#XSS-Lab&#xA;level 1 ​&#x9;​&#x9;观察发现欢迎用户test与URL中的name=test字段对应，尝试修改发现可行。直接将name字段改为name=&amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt;，完工。&#xA;level 2 ​&#x9;在搜索栏中的输入会回显到页面，查看网页源代码，发现值在input的value属性中&#xA;​&#x9;构造闭合&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // ，构造以后的标签会变成.... value=&amp;quot;&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // &amp;quot;&amp;gt;。完工&#xA;level 3 ​&#x9;老样子构造value属性闭合，尝试&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // 构造闭合，查看网页源代码发现语句变成&amp;amp;quot;&amp;amp;gt; &amp;amp;lt;script&amp;amp;gt;alert()&amp;amp;lt;/script&amp;amp;gt; // ，说明把&amp;quot;、&amp;lt;、&amp;gt;、进行了html编码过滤，尝试构造onmouseover事件(鼠标移到事件)，构造语句&#39;onmouseover=&#39;alert()&#39;。完工&#xA;level 4 ​&#x9;构造闭合&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // ，查看源代码发现进行了&amp;gt;、&amp;lt;过滤，尝试构造事件&amp;quot; onmouseover=&#39;alert()&#39;。完工&#xA;​&#x9;说明一下标签的事件有很多类型，可以自己试试别的事件响应。&#xA;level 5 ​&#x9;检查一下都有什么过滤。发现有一下过滤&#xA;script &amp;ndash;&amp;gt; scr_ipt&#xA;onmouseover &amp;ndash;&amp;gt; o_nmouseover&#xA;无法采用事件，那么尝试构造一个标签 &amp;quot;&amp;gt; &amp;lt;a href=&#39;javascript:alert()&#39;&amp;gt;233&amp;lt;/a&amp;gt; //，发现javascript没有过滤，说明判断语句匹配值仅仅为script，点击构造的&amp;lt;a&amp;gt;标签内容。完工&#xA;​</description>
+    </item>
+  </channel>
 </rss>

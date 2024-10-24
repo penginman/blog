@@ -1,28 +1,33 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>图床 - 标签 - Braindance</title>
-        <link>http://localhost:1313/tags/%E5%9B%BE%E5%BA%8A/</link>
-        <description>图床 - 标签 - Braindance</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 01 May 2022 00:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%9B%BE%E5%BA%8A/" rel="self" type="application/rss+xml" /><item>
-    <title>博客图床迁移</title>
-    <link>http://localhost:1313/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
-    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
-    <description><![CDATA[起因原来博客的图片使用Jsdelivr和github的方式存]]></description>
-</item><item>
-    <title>PicGo复制自定义链接</title>
-    <link>http://localhost:1313/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
-    <pubDate>Mon, 30 Nov 2020 09:54:11 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
-    <description><![CDATA[2022年2月3日22:41:32 ！！！！！ 建议直接看文章末]]></description>
-</item><item>
-    <title>Chevereto-搭建一个自己的图床</title>
-    <link>http://localhost:1313/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
-    <pubDate>Sun, 20 Sep 2020 11:09:02 &#43;0800</pubDate><author>
-        <name>Braindance</name>
-    </author><guid>http://localhost:1313/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
-    <description><![CDATA[博客搭完了，自己选择的这个博客主题又是以图片为主要元素的，当]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图床 on </title>
+    <link>/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <description>Recent content in 图床 on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客图床迁移</title>
+      <link>/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
+      <description>起因 原来博客的图片使用Jsdelivr和github的方式存储访问，但是最近Jsdelivr频繁的被墙，感觉可能在未来的不久会失效，毕竟好多人用来当免费的CDN（比如我），也会有人使用其访问些zz敏感或其他的文件，被墙了也情有可原，而且github的仓库的作用也是用来存储代码而非图床，像我这样的人也导致了仓库的滥用，所以决定找个新的途径。&#xA;过程 当时在网上找了好久，最后在loc上找到了 一个帖子，感觉把目前行得通的方法都列出来了。&#xA;一、第三方存储&#xA;github+jsdelivr 或 gitee 可以搭配PicGo使用 茎肛互撸娃大佬的鸡霸图床 国内对象存储 使用Onedrive 或 Google Drive 搭建图床 二、自行搭建&#xA;（腾讯云轻量香港 or CDN） 反代 （本地 or 大盘鸡） 北岸域名+国内机器 国内机器非标准端口 家宽开通公网IP存在家里 三、直接嵌在文档中，图片转base64，markdown插入&#xA;最后我是选择了良心云的cos对象存储，新用户第一年便宜，就算以后续费一年差不多也70左右。之前自己有了解过对象存储这一技术，但是当时听闻的是有人被套路云的流量计费给掏空了，这次在良心云的计费方式中找到了按量计费，这也刚好满足了博客图片也不多的需求，更不怕被人把钱包给刷爆了。&#xA;上传的方式还是配合PicGo上传，又添加了一个rename-file插件实现上传路径的命名。因为感觉对象存储给的链接太长，国内没有备案的域名，使用了一个服务器直接域名重定向到对象存储给的域名。&#xA;结果 宣布从这篇文章开始往后的图片都会用对象存储，之前的文章如果有需要评论或者联系我再补上吧。&#xA;插曲（避坑） 期间使用对象存储测试图片的时候，发现过一阵子图片就访问不了了，去桶里一看发现空空如也，发生了两次清空也不知道啥原因，最后一次点了下清空存储桶，发现使用方式里有个生命周期管理，发现是这玩意自动删除文件，所以记得把生命周期规则修改一下。</description>
+    </item>
+    <item>
+      <title>PicGo复制自定义链接</title>
+      <link>/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+      <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
+      <guid>/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+      <description>2022年2月3日22:41:32&#xA;！！！！！&#xA;建议直接看文章末尾，我发现我就是个笨比。&#xA;前言 现在博客里面的图片使用的是github+jsdelivr+PicGo图床。PicGo是一个开源的上传图片的软件，支持大部分图床的上传，只需要设置对应的图床参数即可一键上传。github上PicGo的概述：&#xA;PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具&#xA;PicGo 本体支持如下图床：&#xA;七牛图床 v1.0 腾讯云 COS v4\v5 版本 v1.1 &amp;amp; v1.5.0 又拍云 v1.2.0 GitHub v1.5.0 SM.MS V2 v2.3.0-beta.0 阿里云 OSS v1.6.0 Imgur v1.6.0 本体不再增加默认的图床支持。你可以自行开发第三方图床插件。&#xA;项目地址：PicGo&#xA;软件界面：&#xA;起因 PicGo上传成功以后可以自动复制url，但是默认复制的图片链接是github提供的，github在国内又经常抽风，图片通常都是无法访问的，所以我使用了jsdelivr提供的链接访问图片，PicGo也提供了自定义链接，但是规定必须包含$url参数，也就是默认的url地址：&#xA;起初是把jsdelivr的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。&#xA;解决方法 在软件设置的配置文件里找到了customLink，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。&#xA;结语 软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了$filename变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是png格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接Crtl+Shift+i，把图片链接贴里面就彳亍了。白嫖真爽&#xA;2022-1-31 11:43:48&#xA;这时候发现自定义链接直接用markdown格式就更好了&#xA;![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png) 最简单修改 前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。&#xA;直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的&#xA;https://cdn.jsdelivr.net/gh/penginman/PicBed@master 然后返回的链接就会把原来的raw.github.com/xxxxxx给替代了。</description>
+    </item>
+    <item>
+      <title>Chevereto-搭建一个自己的图床</title>
+      <link>/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Sun, 20 Sep 2020 11:09:02 +0000</pubDate>
+      <guid>/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
+      <description>博客搭完了，自己选择的这个博客主题又是以图片为主要元素的，当然要考虑图片的使用问题了，原来打算直接放在服务器上，但是后来想了想，以后如果文章越写越多用的图太多服务器的流量也不够用，想到了图床这一托管图片的服务，但是放在别人的上面总怕会受到限制，正好发现了Chevereto这一图床系统，可以自己搭建一个图床服务器，正好自己还有一个阿里云学生云，那就开工。&#xA;Chevereto 说明 Chevereto是一个可以帮助你建立自己的图像分享网站（图床）的应用程序，我们的目标是可以让世界上的任何一个人都可以建立自己的图像共享平台。我们坚定不移的为那些想要可定制的白标图像共享服务的人建立一个真正的替代品。&#xA;Chevereto分为免费版和付费版，区别肯定就是大小什么的，我这个搭在学生云上肯定就不用想我会选择哪个了吧🤣&#xA;环境说明 因为Chevereto所需要的环境为&#xA;Apache/Nginx&#xA;PHP 5.5+&#xA;MySQL 5.0+&#xA;我太懒了不想动所以我选择使用宝塔面板为我们搭建web环境。&#xA;宝塔面板官网：https://www.bt.cn/&#xA;安装完成以后进入管理面板应该会直接提示你安装需要的环境&#xA;我的环境如下图&#xA;总结安装步骤 去github下载Chevereto的压缩包。 在宝塔面板上新建网站目录，创建一个存图片的数据库(自行创建)。 将Chevereto的压缩包上传到网站目录解压。 访问新建的网站就是Chevereto的管理面板，并进行初始配置。 无了。 开始 github下载地址&#xA;创建网站目录和数据库用户&#xA;因为我域名所以域名留空，提示默认使用80端口，访问地址就是服务器ip地址，剩下的自己随机发挥。&#xA;创建完成后需要配置一下网站配置文件才可以访问到配置页面。 在server{...}中添加&#xA;location / { try_files $uri $uri/ /index.php?$query_string; } 配置完成以后应该会自动保存并重启Nginx。&#xA;将在github上下载的Chevereto压缩包上传到刚刚创建的网站目录中（上图是/www/wwwroot）并解压。 之后就可以直接访问服务器ip:80（80端口可以省略），然后一步一步的进行配置。&#xA;可能会出现的错误&#xA;Chevereto can’t create the app/settings.php file. You must manually create this file&#xA;解决方法：这个错误就是没有找到setting.php配置文件，压缩包内似乎没有创建该文件，我们可以自行创建，在Chevereto的网站目录下的/app目录下执行命令创建文件，并修改文件权限&#xA;touch settings.php chmod +x settings.php 我自己还遇到了第二个错误，大概的意思就是访问权限不足blahbalhblahbla，我改了好久都不行。最后直接把整个网站目录的权限给改了访问成功。知道这样做不对，希望大佬能指点。&#xA;访问网站进行网站的初始化配置，大概就是填写数据库名称、数据库账号密码、管理员的账户和密码和一些信息。 完成以后就可以登陆管理员账号进入管理面板，我是首先去设置里找到语言设置把面板改成了中文。&#xA;完工 管理面板还有好多其他功能，我都还没研究过，大伙可以以后可以自己慢慢学习&#xA;然后我的图床地址：http://47.97.231.10/ (已失效) 🈚👇👻来丶se兔</description>
+    </item>
+  </channel>
 </rss>
