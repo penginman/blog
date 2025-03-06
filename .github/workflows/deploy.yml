@@ -37,14 +37,14 @@ jobs:
           publish_branch: master
           publish_dir: ./public
           
-      - name: pull github pages
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.KEY }}
-          script: |
-            cd ${{ secrets.REMOTE_DIR }}
-            git pull
+      # - name: pull github pages
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.REMOTE_HOST }}
+      #     username: ${{ secrets.REMOTE_USER }}
+      #     key: ${{ secrets.KEY }}
+      #     script: |
+      #       cd ${{ secrets.REMOTE_DIR }}
+      #       git pull
            
           
