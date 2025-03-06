@@ -6,8 +6,15 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ClawCloud使用体验</title>
+      <link>/posts/%E6%96%B0%E5%85%A5clawcloud/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/%E6%96%B0%E5%85%A5clawcloud/</guid>
+      <description>https://linux.do/t/topic/160305&#xA;https://linux.do/t/topic/207789&#xA;https://linux.do/t/topic/115839&#xA;前言 快毕业了忙的飞起，上个服务器到期了我都没来得及管，现在写这篇博客还是在github的pages上，又接触了一些项目，想买个便宜好使的服务器玩玩。&#xA;在论坛里搜到ClawCloud评价不错，刚好最近有活动优惠就入手了一台系统为Debian，之前一直用的ubuntu，这下也换个玩玩。记录一下机器怎么样和自己配置过程，也边以后自己看。&#xA;2C / 2G / 40G / 1T $25.20 USD 测评 部分测试结果：&#xA;VPS融合怪版本：2025.02.12&#xD;Shell项目地址：https://github.com/spiritLHLS/ecs&#xD;Go项目地址：https://github.com/oneclickvirt/ecs&#xD;---------------------基础信息查询--感谢所有开源项目---------------------&#xD;CPU 型号 : Intel(R) Xeon(R) Platinum&#xD;CPU 核心数 : 2&#xD;CPU 频率 : 2500.002 MHz&#xD;CPU 缓存 : L1: 32.00 KB / L2: 1.00 MB / L3: 33.00 MB&#xD;AES-NI指令集 : ✔ Enabled&#xD;VM-x/AMD-V支持 : ❌ Disabled&#xD;内存 : 130.84 MiB / 1.85 GiB&#xD;Swap : [ no swap partition or swap file detected ]&#xD;硬盘空间 : 911.</description>
+    </item>
     <item>
       <title>菜鸡解题1</title>
       <link>/posts/leetcode/2024_09_02/</link>
