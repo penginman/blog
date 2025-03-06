@@ -3,7 +3,6 @@ title: XSS-Lab (一)
 date: 2020-11-03 10:13:39
 tags: ['XSS']
 categories: ['CTF']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120856.jpg
 ---
 
 ## 头

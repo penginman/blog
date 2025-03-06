@@ -3,7 +3,6 @@ title: 极客大挑战 2019 FinalSQL
 date: 2021-04-18 19:11:51
 categories:  ['CTF']
 tags: ['sql注入']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232228.png
 ---
 
 还是同一场比赛的界面

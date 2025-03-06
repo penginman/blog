@@ -2,7 +2,6 @@
 title: PicGo复制自定义链接
 categories: ['瞎折腾']
 tags: ['PicGo上传','图床']
-cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116160027.jpg'
 date: 2020-11-30 09:54:11
 ---
 
@@ -52,7 +51,7 @@ PicGo上传成功以后可以自动复制url，但是默认复制的图片链接
 
 # 结语
 
-软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了`$filename`变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是`png`格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接<kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd>，把图片链接贴里面就彳亍了。<span class='heimu'>~~白嫖真爽~~</span>
+软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了`$filename`变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是`png`格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接`Crtl+Shift+i`，把图片链接贴里面就彳亍了。~~白嫖真爽~
 
 ---
 

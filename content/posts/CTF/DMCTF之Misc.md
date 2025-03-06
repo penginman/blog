@@ -2,7 +2,6 @@
 title: DMCTF之Misc
 categories: ['CTF']
 tags: ['DMCTF2020','Misc']
-cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232221.png'
 date: 2020-12-01 11:20:45
 ---
 

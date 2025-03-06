@@ -2,7 +2,6 @@
 title: Upload-Labs(三)
 categories: ['CTF']
 tags: ['文件上传漏洞']
-cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116160237.png'
 date: 2020-11-16 16:04:30
 ---
 

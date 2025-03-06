@@ -2,7 +2,6 @@
 title: Upload-Labs之Pass-16
 categories: ['CTF']
 tags: ['文件上传漏洞']
-cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116224711.jpg'
 date: 2020-11-16 22:50:25
 ---
 

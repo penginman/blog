@@ -3,13 +3,12 @@ title: BUUCTF寒假刷题-Web
 date: 2021-01-18 16:58:56
 categories: ['CTF']
 tags: ['web','BUUCTF_Web']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120223242.jpg
 ---
 
 寒假横向刷题（尽量）
 [BUUCTF](https://buuoj.cn/challenges#)
 💗🧡💛💚💙💜🤎🖤🤍
-**题都写这一个里面了，可以先用<kbd>Ctrl</kbd>+<kbd>F</kbd>搜索，还有部分是草稿还没有整理，不过我认为的思路已经整理出来了，看不懂还请大伙见谅。有问题了很乐意效劳💨** 
+**题都写这一个里面了，可以先用`Ctrl+F`搜索，还有部分是草稿还没有整理，不过我认为的思路已经整理出来了，看不懂还请大伙见谅。有问题了很乐意效劳💨** 
 
 # 2021.01.15
 
@@ -1136,7 +1135,7 @@ for ($i = 0;;) {
 ?>
 ```
 
-这个程序遍历数字进行md5加密，使用stripos匹配是否有`'or'`，这个函数有一个弊病就是如果是以`'or'`开头的不会匹配到，并且我们需要的是or后面以数字开头都可以，所以需要稍微做一些修改，使用正则表达式由`\'or\'`改为`'or'([1-9]+|0+[1-9])`<span class="heimu"> 不过我的方法自己还没跑出来🤣，回头加个多线程试一试</span>
+这个程序遍历数字进行md5加密，使用stripos匹配是否有`'or'`，这个函数有一个弊病就是如果是以`'or'`开头的不会匹配到，并且我们需要的是or后面以数字开头都可以，所以需要稍微做一些修改，使用正则表达式由`\'or\'`改为`'or'([1-9]+|0+[1-9])` ~~不过我的方法自己还没跑出来🤣，回头加个多线程试一试~~
 
 （更新）
 
@@ -3015,7 +3014,7 @@ Content-Type: application/xml;
 
 一个和unicode有关的网站：https://www.compart.com/en/unicode
 
-网站导航栏找到Character Categories分类，这个下有三个和数相关的：Decimal Number、Letter Number、Other Number，第一个里面都是正常数值的unicode，建议去后面两个找。怎么找：<kbd>Ctrl</kbd>+<kbd>F</kbd>搜索thousand，找1377以上的都可。
+网站导航栏找到Character Categories分类，这个下有三个和数相关的：Decimal Number、Letter Number、Other Number，第一个里面都是正常数值的unicode，建议去后面两个找。怎么找：`Ctrl+F`搜索thousand，找1377以上的都可。
 
 我选的是这个`፼`数值是1w，直接传传不过去，使用url编码一次再传。
 

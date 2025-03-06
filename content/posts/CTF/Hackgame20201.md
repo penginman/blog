@@ -3,7 +3,6 @@ title: Hackgame2020(一)
 categories: ['CTF']
 tags: ['web','Hackergame 2020','代码审计']
 date: 2020-11-01 18:33:40
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120831.png
 ---
 
 ## 前言

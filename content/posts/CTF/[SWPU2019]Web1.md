@@ -3,7 +3,6 @@ title: SWPU2019 Web1
 date: 2021-04-15 09:55:17
 categories: ['CTF']
 tags: ['sql注入','无列名注入']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201116160013.jpg
 ---
 
 一个登陆界面，再看下url地址为login.php，确认了使用的是php

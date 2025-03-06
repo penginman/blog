@@ -3,7 +3,6 @@ title: WUSTCTF2020 朴实无华
 date: 2021-04-16 15:33:32
 categories: ['CTF']
 tags: ['RCE']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232246.png
 ---
 
 进入页面直接报错

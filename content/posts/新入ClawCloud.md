@@ -7,14 +7,6 @@ tags: ['服务器']
 description: "新入了一台ClawCloud服务器，写一下使用感受"
 ---
 
-
-
-https://linux.do/t/topic/160305
-
-https://linux.do/t/topic/207789
-
-https://linux.do/t/topic/115839
-
 ## 前言
 
 快毕业了忙的飞起，上个服务器到期了我都没来得及管，现在写这篇博客还是在github的pages上，又接触了一些项目，想买个便宜好使的服务器玩玩。

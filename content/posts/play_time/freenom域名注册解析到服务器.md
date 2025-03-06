@@ -3,7 +3,6 @@ title: Freenom域名注册解析到服务器
 date: 2020-09-02 12:25:37
 categories: ['瞎折腾']
 tag: ['免费域名']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111120849.png
 ---
 
 ### **1.官网**

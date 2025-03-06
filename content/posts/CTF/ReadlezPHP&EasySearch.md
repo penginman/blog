@@ -3,7 +3,6 @@ title: ReadlezPHP&EasySearch
 date: 2021-04-20 17:12:43
 categories: ['CTF']
 tags: ['反序列化','SSI注入']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120223513.jpg
 ---
 
 # ReadlezPHP

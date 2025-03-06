@@ -3,7 +3,6 @@ title: DMCTF之Web
 date: 2020-11-29 23:17:50
 categories: ['CTF']
 tags: ['web','DMCTF2020','RCE']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232346.png
 ---
 
 # 前言

@@ -3,7 +3,6 @@ title: 极客大挑战 2019 RCE ME
 date: 2020-12-05 20:42:00
 categories: ['CTF']
 tags: ['Web','BUUCTF_Web','RCE','disable_function绕过']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201120232544.png
 ---
 
 # [极客大挑战 2019]RCE ME

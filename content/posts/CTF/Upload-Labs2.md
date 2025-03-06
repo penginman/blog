@@ -3,7 +3,6 @@ title: Upload-Labs(二)
 date: 2020-11-09 20:12:27
 tags:  ['文件上传漏洞']
 categories: ['CTF']
-cover: https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111104025.jpg
 ---
 
 ## 前言

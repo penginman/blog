@@ -2,7 +2,6 @@
 title: jsDelivr加速静态博客
 categories: ['瞎折腾']
 tags: ['jsdelivr']
-cover: 'https://cdn.jsdelivr.net/gh/penginman/PicBed@master/cover/20201111213620.jpg'
 date: 2020-11-11 21:37:53
 ---
 
