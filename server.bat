@@ -1,2 +1,2 @@
 hugo
-hugo serve --disableFastRender -e production -D
+hugo serve --disableFastRender -e production -D -O

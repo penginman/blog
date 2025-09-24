@@ -1,19 +1,98 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>PicGo上传 on </title>
-    <link>/tags/picgo%E4%B8%8A%E4%BC%A0/</link>
-    <description>Recent content in PicGo上传 on </description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 30 Nov 2020 09:54:11 +0000</lastBuildDate>
-    <atom:link href="/tags/picgo%E4%B8%8A%E4%BC%A0/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PicGo复制自定义链接</title>
-      <link>/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
-      <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
-      <guid>/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
-      <description>&lt;p&gt;2022年2月3日22:41:32&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;&#xA;&lt;p&gt;现在博客里面的图片使用的是github+jsdelivr+PicGo图床。PicGo是一个开源的上传图片的软件，支持大部分图床的上传，只需要设置对应的图床参数即可一键上传。github上PicGo的概述：&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;PicGo 本体支持如下图床：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;七牛图床&lt;/code&gt; v1.0&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;腾讯云 COS v4\v5 版本&lt;/code&gt; v1.1 &amp;amp; v1.5.0&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;又拍云&lt;/code&gt; v1.2.0&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;GitHub&lt;/code&gt; v1.5.0&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;SM.MS V2&lt;/code&gt; v2.3.0-beta.0&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;阿里云 OSS&lt;/code&gt; v1.6.0&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Imgur&lt;/code&gt; v1.6.0&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;本体不再增加默认的图床支持。你可以自行开发第三方图床插件。&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;项目地址：&lt;a href=&#34;https://github.com/Molunerfinn/PicGo&#34;&gt;PicGo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;软件界面：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;&#xA;&lt;p&gt;PicGo上传成功以后可以自动复制url，但是默认复制的图片链接是github提供的，github在国内又经常抽风，图片通常都是无法访问的，所以我使用了jsdelivr提供的链接访问图片，PicGo也提供了自定义链接，但是规定必须包含&lt;code&gt;$url&lt;/code&gt;参数，也就是默认的url地址：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;起初是把jsdelivr的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。&lt;/p&gt;&#xA;&lt;h1 id=&#34;解决方法&#34;&gt;解决方法&lt;/h1&gt;&#xA;&lt;p&gt;在软件设置的配置文件里找到了&lt;code&gt;customLink&lt;/code&gt;，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;结语&#34;&gt;结语&lt;/h1&gt;&#xA;&lt;p&gt;软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了&lt;code&gt;$filename&lt;/code&gt;变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是&lt;code&gt;png&lt;/code&gt;格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接&lt;code&gt;Crtl+Shift+i&lt;/code&gt;，把图片链接贴里面就彳亍了。~&lt;del&gt;白嫖真爽&lt;/del&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;2022-1-31 11:43:48&lt;/p&gt;&#xA;&lt;p&gt;这时候发现自定义链接直接用markdown格式就更好了&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;&#xA;&lt;h1 id=&#34;最简单修改&#34;&gt;最简单修改&lt;/h1&gt;&#xA;&lt;p&gt;前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png&#34; alt=&#34;image-20220203224558136&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;https://cdn.jsdelivr.net/gh/penginman/PicBed@master&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后返回的链接就会把原来的&lt;code&gt;raw.github.com/xxxxxx&lt;/code&gt;给替代了。&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>PicGo上传 on </title>
+        <link>//localhost:1313/tags/picgo%E4%B8%8A%E4%BC%A0/</link>
+        <description>Recent content in PicGo上传 on </description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 30 Nov 2020 09:54:11 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/picgo%E4%B8%8A%E4%BC%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PicGo复制自定义链接</title>
+        <link>//localhost:1313/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
+        
+        <guid>//localhost:1313/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;p&gt;2022年2月3日22:41:32&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;前言&#34;&gt;前言
+&lt;/h1&gt;&lt;p&gt;现在博客里面的图片使用的是github+jsdelivr+PicGo图床。PicGo是一个开源的上传图片的软件，支持大部分图床的上传，只需要设置对应的图床参数即可一键上传。github上PicGo的概述：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PicGo 本体支持如下图床：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;七牛图床&lt;/code&gt; v1.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;腾讯云 COS v4\v5 版本&lt;/code&gt; v1.1 &amp;amp; v1.5.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;又拍云&lt;/code&gt; v1.2.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GitHub&lt;/code&gt; v1.5.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SM.MS V2&lt;/code&gt; v2.3.0-beta.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;阿里云 OSS&lt;/code&gt; v1.6.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Imgur&lt;/code&gt; v1.6.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;本体不再增加默认的图床支持。你可以自行开发第三方图床插件。&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;项目地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Molunerfinn/PicGo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PicGo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;软件界面：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130095609.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;起因&#34;&gt;起因
+&lt;/h1&gt;&lt;p&gt;PicGo上传成功以后可以自动复制url，但是默认复制的图片链接是github提供的，github在国内又经常抽风，图片通常都是无法访问的，所以我使用了jsdelivr提供的链接访问图片，PicGo也提供了自定义链接，但是规定必须包含&lt;code&gt;$url&lt;/code&gt;参数，也就是默认的url地址：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;起初是把jsdelivr的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;解决方法
+&lt;/h1&gt;&lt;p&gt;在软件设置的配置文件里找到了&lt;code&gt;customLink&lt;/code&gt;，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;结语&#34;&gt;结语
+&lt;/h1&gt;&lt;p&gt;软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了&lt;code&gt;$filename&lt;/code&gt;变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是&lt;code&gt;png&lt;/code&gt;格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接&lt;code&gt;Crtl+Shift+i&lt;/code&gt;，把图片链接贴里面就彳亍了。~&lt;del&gt;白嫖真爽&lt;/del&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;2022-1-31 11:43:48&lt;/p&gt;
+&lt;p&gt;这时候发现自定义链接直接用markdown格式就更好了&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;最简单修改&#34;&gt;最简单修改
+&lt;/h1&gt;&lt;p&gt;前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220203224558136&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;https://cdn.jsdelivr.net/gh/penginman/PicBed@master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后返回的链接就会把原来的&lt;code&gt;raw.github.com/xxxxxx&lt;/code&gt;给替代了。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

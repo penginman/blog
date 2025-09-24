@@ -1,19 +1,183 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>代码审计 on </title>
-    <link>/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</link>
-    <description>Recent content in 代码审计 on </description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2020 18:33:40 +0000</lastBuildDate>
-    <atom:link href="/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hackgame2020(一)</title>
-      <link>/posts/ctf/hackgame20201/</link>
-      <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
-      <guid>/posts/ctf/hackgame20201/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;&#xA;&lt;h1 id=&#34;web&#34;&gt;web&lt;/h1&gt;&#xA;&lt;h3 id=&#34;签到题&#34;&gt;签到题&lt;/h3&gt;&#xA;&lt;p&gt;​&#x9;第一题是flag提取器，打开题目以后页面是一个提取器下面一个&lt;code&gt;进度条&lt;/code&gt;和一个&lt;code&gt;提取&lt;/code&gt;按钮。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwJbJs.png&#34; alt=&#34;BwJbJs.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;随便拉了拉进度条发现初始是&lt;code&gt;0&lt;/code&gt;末尾是&lt;code&gt;1.5&lt;/code&gt;，然后中间的数值都是小数&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwYAQx.png&#34; alt=&#34;BwYAQx.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;我猜的题目可能是想让数值为&lt;code&gt;1&lt;/code&gt;时能提取到flag。&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;F12查看源代码，定位到进度条的标签，查看属性&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwYoX6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;确实和猜测一样最大最小值分别是&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1.5&lt;/code&gt;，注意到&lt;code&gt;step&lt;/code&gt;值为&lt;code&gt;0.00001&lt;/code&gt;，就是这个属性让我们拖动进度条时，递增的值是小数，想精准得到&lt;code&gt;1&lt;/code&gt;个flag，就把网页上的&lt;code&gt;step&lt;/code&gt;值改为&lt;code&gt;1&lt;/code&gt;。然后随便拖动一下进度条得到&lt;code&gt;1&lt;/code&gt;，点击&lt;code&gt;提取&lt;/code&gt;按钮，完工。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwNVaD.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;2048&#34;&gt;2048&lt;/h3&gt;&#xA;&lt;p&gt;​&#x9;打开题目是一个&lt;code&gt;2048&lt;/code&gt;的小游戏，第一个想法就是玩&lt;code&gt;2048&lt;/code&gt;达到一定分数以后会获得flag（&lt;del&gt;可恶这个比赛怎么知道最近我天天在玩2048的&lt;/del&gt;）,但是想比赛不可能让选手在线玩游戏吧，尤其对于我这种&lt;del&gt;逃课废物&lt;/del&gt;是不可能努力哒！&lt;/p&gt;&#xA;&lt;p&gt;F12开始翻网页资源&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwUONF.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;还好上次&lt;del&gt;摸鱼&lt;/del&gt;课题做了一个网页版的2048，略微能看懂一点点结构，第一个&lt;code&gt;animframe_polyfill&lt;/code&gt;应该就是管动画效果的，&lt;code&gt;keynpard...&lt;/code&gt;这个肯定是相应按键的，&lt;code&gt;local_storage_manager&lt;/code&gt;应该是保存游戏的，&lt;code&gt;game_manager&lt;/code&gt;感觉就是管理整个游戏的主要文件。&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;打开&lt;code&gt;game_manager&lt;/code&gt;粗略的看了下变量，&lt;code&gt;score&lt;/code&gt; 分数、&lt;code&gt;over、won、keepPlaying&lt;/code&gt;游戏状态，想赢游戏肯定是和&lt;code&gt;score、won&lt;/code&gt;有关，直接Ctrl+F搜索整个文档这两个变量出现的位置。&lt;/p&gt;&#xA;&lt;p&gt;发现了&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwdGdK.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;只有这里修改了&lt;code&gt;won&lt;/code&gt;的状态，前面还有个&lt;code&gt;16384&lt;/code&gt;这个应该就是获得胜利需要得到的分数，这个分数对于我来说还是简简单单（&lt;del&gt;小声bb&lt;/del&gt;&lt;a href=&#34;https://s1.ax1x.com/2020/11/01/BwUdte.jpg&#34;&gt;截图为证&lt;/a&gt;），直接让&lt;code&gt;if&lt;/code&gt;里面的语句为真就可以获胜，直接修改&lt;code&gt;if(1) self.won = true&lt;/code&gt;，保存文件，按一个方向键让语句执行到，完工。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwwpTK.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;general&#34;&gt;general&lt;/h1&gt;&#xA;&lt;h3 id=&#34;猫咪问题&#34;&gt;猫咪问题++&lt;/h3&gt;&#xA;&lt;p&gt;​&#x9;秉着前面题都是简单题，试着做了一下，看到题目提示的有往年的问题题解&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwLtDs.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;题意思很明显的书考验同学的搜题技巧。那就开工。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwLD8U.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;第一题&#34;&gt;第一题&lt;/h4&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;以下编程语言、软件或组织对应标志是哺乳动物的有几个？&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Docker，Golang，Python，Plan 9，PHP，GNU，LLVM，Swift，Perl，GitHub，TortoiseSVN，FireFox，MySQL，PostgreSQL，MariaDB，Linux，OpenBSD，FreeDOS，Apache Tomcat，Squid，openSUSE，Kali，Xfce.&lt;/p&gt;&#xA;&lt;p&gt;提示：学术上一般认为龙不属于哺乳动物。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&#x9;本人只认识几个，那就一个一个搜呗。我的模式是：百度&lt;code&gt;xxx标志&lt;/code&gt;然后第二条就是百度图片的搜索结果，大致辨别一下，然后再百度&lt;code&gt;xxx是哺乳动物吗&lt;/code&gt;，妥妥的&lt;del&gt;胎儿&lt;/del&gt;教学。&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;一个比较有印象就是&lt;code&gt;FreeDOS&lt;/code&gt;这个标志就离谱，什么玩意&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;参考答案 ：12&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;第二题&#34;&gt;第二题&lt;/h4&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;第一个以信鸽为载体的 IP 网络标准的 RFC 文档中推荐使用的 MTU (Maximum Transmission Unit) 是多少毫克？&lt;/li&gt;&#xA;&lt;/ol&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;​&#x9;卡了我好一会，没听过信鸽传输，贴上最后找到答案的&lt;a href=&#34;https://blog.csdn.net/qq_31621387/article/details/77690642&#34;&gt;博客&lt;/a&gt;，以及一篇信鸽传输的&lt;a href=&#34;http://sohu.com/a/309403082_354973&#34;&gt;历史发展&lt;/a&gt;，长见识了。&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>代码审计 on </title>
+        <link>//localhost:1313/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</link>
+        <description>Recent content in 代码审计 on </description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 01 Nov 2020 18:33:40 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hackgame2020(一)</title>
+        <link>//localhost:1313/posts/ctf/hackgame20201/</link>
+        <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
+        
+        <guid>//localhost:1313/posts/ctf/hackgame20201/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;
+&lt;h1 id=&#34;web&#34;&gt;web
+&lt;/h1&gt;&lt;h3 id=&#34;签到题&#34;&gt;签到题
+&lt;/h3&gt;&lt;p&gt;​	第一题是flag提取器，打开题目以后页面是一个提取器下面一个&lt;code&gt;进度条&lt;/code&gt;和一个&lt;code&gt;提取&lt;/code&gt;按钮。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwJbJs.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BwJbJs.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;​	随便拉了拉进度条发现初始是&lt;code&gt;0&lt;/code&gt;末尾是&lt;code&gt;1.5&lt;/code&gt;，然后中间的数值都是小数&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwYAQx.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BwYAQx.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;​	我猜的题目可能是想让数值为&lt;code&gt;1&lt;/code&gt;时能提取到flag。&lt;/p&gt;
+&lt;p&gt;​	F12查看源代码，定位到进度条的标签，查看属性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwYoX6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;​	确实和猜测一样最大最小值分别是&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1.5&lt;/code&gt;，注意到&lt;code&gt;step&lt;/code&gt;值为&lt;code&gt;0.00001&lt;/code&gt;，就是这个属性让我们拖动进度条时，递增的值是小数，想精准得到&lt;code&gt;1&lt;/code&gt;个flag，就把网页上的&lt;code&gt;step&lt;/code&gt;值改为&lt;code&gt;1&lt;/code&gt;。然后随便拖动一下进度条得到&lt;code&gt;1&lt;/code&gt;，点击&lt;code&gt;提取&lt;/code&gt;按钮，完工。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwNVaD.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2048&#34;&gt;2048
+&lt;/h3&gt;&lt;p&gt;​	打开题目是一个&lt;code&gt;2048&lt;/code&gt;的小游戏，第一个想法就是玩&lt;code&gt;2048&lt;/code&gt;达到一定分数以后会获得flag（&lt;del&gt;可恶这个比赛怎么知道最近我天天在玩2048的&lt;/del&gt;）,但是想比赛不可能让选手在线玩游戏吧，尤其对于我这种&lt;del&gt;逃课废物&lt;/del&gt;是不可能努力哒！&lt;/p&gt;
+&lt;p&gt;F12开始翻网页资源&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwUONF.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;​	还好上次&lt;del&gt;摸鱼&lt;/del&gt;课题做了一个网页版的2048，略微能看懂一点点结构，第一个&lt;code&gt;animframe_polyfill&lt;/code&gt;应该就是管动画效果的，&lt;code&gt;keynpard...&lt;/code&gt;这个肯定是相应按键的，&lt;code&gt;local_storage_manager&lt;/code&gt;应该是保存游戏的，&lt;code&gt;game_manager&lt;/code&gt;感觉就是管理整个游戏的主要文件。&lt;/p&gt;
+&lt;p&gt;​	打开&lt;code&gt;game_manager&lt;/code&gt;粗略的看了下变量，&lt;code&gt;score&lt;/code&gt; 分数、&lt;code&gt;over、won、keepPlaying&lt;/code&gt;游戏状态，想赢游戏肯定是和&lt;code&gt;score、won&lt;/code&gt;有关，直接Ctrl+F搜索整个文档这两个变量出现的位置。&lt;/p&gt;
+&lt;p&gt;发现了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwdGdK.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;​	只有这里修改了&lt;code&gt;won&lt;/code&gt;的状态，前面还有个&lt;code&gt;16384&lt;/code&gt;这个应该就是获得胜利需要得到的分数，这个分数对于我来说还是简简单单（&lt;del&gt;小声bb&lt;/del&gt;&lt;a class=&#34;link&#34; href=&#34;https://s1.ax1x.com/2020/11/01/BwUdte.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;截图为证&lt;/a&gt;），直接让&lt;code&gt;if&lt;/code&gt;里面的语句为真就可以获胜，直接修改&lt;code&gt;if(1) self.won = true&lt;/code&gt;，保存文件，按一个方向键让语句执行到，完工。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwwpTK.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;general&#34;&gt;general
+&lt;/h1&gt;&lt;h3 id=&#34;猫咪问题&#34;&gt;猫咪问题++
+&lt;/h3&gt;&lt;p&gt;​	秉着前面题都是简单题，试着做了一下，看到题目提示的有往年的问题题解&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwLtDs.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;​	题意思很明显的书考验同学的搜题技巧。那就开工。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwLD8U.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第一题&#34;&gt;第一题
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;以下编程语言、软件或组织对应标志是哺乳动物的有几个？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Docker，Golang，Python，Plan 9，PHP，GNU，LLVM，Swift，Perl，GitHub，TortoiseSVN，FireFox，MySQL，PostgreSQL，MariaDB，Linux，OpenBSD，FreeDOS，Apache Tomcat，Squid，openSUSE，Kali，Xfce.&lt;/p&gt;
+&lt;p&gt;提示：学术上一般认为龙不属于哺乳动物。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;​	本人只认识几个，那就一个一个搜呗。我的模式是：百度&lt;code&gt;xxx标志&lt;/code&gt;然后第二条就是百度图片的搜索结果，大致辨别一下，然后再百度&lt;code&gt;xxx是哺乳动物吗&lt;/code&gt;，妥妥的&lt;del&gt;胎儿&lt;/del&gt;教学。&lt;/p&gt;
+&lt;p&gt;​	一个比较有印象就是&lt;code&gt;FreeDOS&lt;/code&gt;这个标志就离谱，什么玩意&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://src.onlinedown.net/supply/sup_logo/logo-1122/46778_g.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考答案 ：12&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二题&#34;&gt;第二题
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;第一个以信鸽为载体的 IP 网络标准的 RFC 文档中推荐使用的 MTU (Maximum Transmission Unit) 是多少毫克？&lt;/li&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;p&gt;​	卡了我好一会，没听过信鸽传输，贴上最后找到答案的&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_31621387/article/details/77690642&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博客&lt;/a&gt;，以及一篇信鸽传输的&lt;a class=&#34;link&#34; href=&#34;http://sohu.com/a/309403082_354973&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;历史发展&lt;/a&gt;，长见识了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考答案：256&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三题&#34;&gt;第三题
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;USTC Linux 用户协会在 2019 年 9 月 21 日自由软件日活动中介绍的开源游戏的名称共有几个字母？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;提示：活动记录会在哪里？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;​	搜索&lt;code&gt;USTC Linux 用户协会&lt;/code&gt;发现这个协会就是科大爱好者们创建的。那么直接摸到他们官网的&lt;a class=&#34;link&#34; href=&#34;https://lug.ustc.edu.cn/news/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;新闻版块&lt;/a&gt;（百度搜出来的是旧站，里面有新站的网址）。题目中还写道&lt;code&gt;2019年9月21日自由软件日活动&lt;/code&gt;，那么官网肯定有那天的新闻。&lt;/p&gt;
+&lt;p&gt;​	找到一篇当天的新闻&lt;a class=&#34;link&#34; href=&#34;https://lug.ustc.edu.cn/news/2019/09/2019-sfd-ustc/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2019 软件自由日中国科大站&lt;/a&gt;，进取直接找，文章末尾有&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最后一项是李文睿同学介绍了开源游戏 Teeworlds，由于底层代码开源，开发者可以做出自己的定制，可玩性非常高。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;​	答案就是&lt;code&gt;Teeworlds&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	我还摸到了他们当天活动的记录资料：&lt;a class=&#34;link&#34; href=&#34;https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.09.21_SFD/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;点我&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​	在&lt;code&gt;slides\闪电演讲\Teeworlds&lt;/code&gt;文件夹下有应该作者演讲的PPT和游戏的视频演示，有点心动了🤣&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考答案：9&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第四题&#34;&gt;第四题
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;中国科学技术大学西校区图书馆正前方（西南方向） 50 米 L 型灌木处共有几个连通的划线停车位？&lt;/li&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;p&gt;​	直接百度地图搜图书馆，然后全景地图房门口，视野拉到L型灌木那。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/01/BwvkdA.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考答案：9&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第五题&#34;&gt;第五题
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;中国科学技术大学第六届信息安全大赛所有人合计提交了多少次 flag？&lt;/li&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;p&gt;​	百度&lt;code&gt;中国科学技术大学第六届信息安全大赛&lt;/code&gt;有个&lt;code&gt;...圆满结束&lt;/code&gt;，就他了。点开第二行就是&lt;code&gt;经统计，在本次比赛中，总共有 2682 人注册，1904 人至少完成了一题。比赛期间所有人合计提交了 17098 次 flag&lt;/code&gt;。（看这个网站的标志似乎还是第三题搜的那个&lt;code&gt;USTC Linux 用户协会&lt;/code&gt;的官网新闻。嗷原来题目上已经说了是举办方👀）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考答案：17098&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;完工。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

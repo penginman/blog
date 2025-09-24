@@ -1,33 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>流水账 on </title>
-    <link>/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</link>
-    <description>Recent content in 流水账 on </description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 02 Sep 2020 22:05:34 +0000</lastBuildDate>
-    <atom:link href="/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>搭窝过程(二)</title>
-      <link>/posts/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</link>
-      <pubDate>Wed, 02 Sep 2020 22:05:34 +0000</pubDate>
-      <guid>/posts/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</guid>
-      <description>&lt;p&gt;​&#x9;服务器到手了肯定不能闲着，既然有了国外的服务器，第一个想法就是去整一个魔法，我姐也因为网络问题，经常让我帮忙下载国外的资料，这次整一个就能让我姐自己用了。&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;还是出于会被Qang的顾虑，自己对于这方面的知识也很少，普通的建设方法据说已经会被主动嗅探等给检测到，于是就花了很久找伪装的方法，结果在github上找到了一个&lt;a href=&#34;https://github.com/ShadowsocksR-Live/shadowsocksr-native&#34;&gt;项目&lt;/a&gt;，使用的技术大概就是反向代理+Https的协议，这里就不细讲了&lt;del&gt;主要是害怕&lt;/del&gt;，可以自己到项目去看看。&lt;/p&gt;&#xA;&lt;p&gt;​&#x9;在这里还学会了搞&lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;的SSL证书，主要是用来保证数据的加密传输，也就是Https协议，后面开一篇申请证书的过程文章，照着参阅的文章也踩了不少坑。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>造窝过程(一)</title>
-      <link>/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/</link>
-      <pubDate>Wed, 02 Sep 2020 11:14:35 +0000</pubDate>
-      <guid>/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;备案劝退&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭建过一个，觉得IP访问太暴露了就想去备案，结果阿里云的备案过程真的是把我给整吐了，大概流程就是：填网站信息&amp;raquo;&amp;gt;阿里云审核通过&amp;raquo;&amp;gt;工信部审核。看似个简单的过程，我在阿里云审核那就被劝退了，官方小改改先是跟我说填写信息不能有什么什么字眼，很耐心的帮我改了改，然后让我提供钉钉号，说一会会有官方加我好友跟我视频认证，这对于稍微有点自闭的我来说有点难顶，但想都到这步了硬着头皮来吧。等了一个多小时，我看到邮箱里有封邮件说我拒绝视频认证，审核失败，我tm直接当场？？？&lt;img src=&#34;https://s1.ax1x.com/2020/10/29/BJ9L8g.jpg&#34; alt=&#34;BJ9L8g.jpg&#34;&gt;看了看钉钉申请和审核失败的邮件，之间就相差了2分钟。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;选择服务器&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;听说了备案的依据是服务器的地理位置，想到去买国外的服务器，在知乎、谷歌上搜了一大堆国外的服务商，大致推荐的都是：&lt;a href=&#34;https://www.vultr.com/&#34;&gt;vultr&lt;/a&gt;、&lt;a href=&#34;https://bwh88.net/&#34;&gt;搬瓦工&lt;/a&gt;、blablablabal，看到价格和配置都特别心动，但是都是很久之前的信息，现在已经变贵了，最后挑了一个现在最便宜的&lt;a href=&#34;https://www.pacificrack.com/&#34;&gt;pacificrack&lt;/a&gt;,看评价说便宜的原因就是超售，而且服务商有可能跑路balbabla的，我现在就心想体验一番管他呢，最后买的配置1cpu 1G 20GB 100Mbps一年$12，觉得比阿里云那个学生云香，最重要的是不用备案！！！！&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;域名注册&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;服务器到手以后，又听说什么国外的服务器有可能会被Qang，我也尽量少选国内提供的服务，随后找到了国外免费的域名注册商&lt;a href=&#34;http://www.freenom.com&#34;&gt;freenom&lt;/a&gt;，注册了域名braindanc.tk，把域名解析到自己的服务器，后面补一篇注册的过程吧。&lt;/p&gt;&#xA;&lt;p&gt;到这服务器和域名都搞定了。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>第一篇文章</title>
-      <link>/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Wed, 26 Aug 2020 16:40:03 +0000</pubDate>
-      <guid>/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;第一篇文章的内容&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;刚把博客搭成，然后看了看markdown的语法，以后慢慢往上面加吧。&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>流水账 on </title>
+        <link>//localhost:1313/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</link>
+        <description>Recent content in 流水账 on </description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 02 Sep 2020 22:05:34 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>搭窝过程(二)</title>
+        <link>//localhost:1313/posts/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</link>
+        <pubDate>Wed, 02 Sep 2020 22:05:34 +0000</pubDate>
+        
+        <guid>//localhost:1313/posts/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</guid>
+        <description>&lt;p&gt;​	服务器到手了肯定不能闲着，既然有了国外的服务器，第一个想法就是去整一个魔法，我姐也因为网络问题，经常让我帮忙下载国外的资料，这次整一个就能让我姐自己用了。&lt;/p&gt;
+&lt;p&gt;​	还是出于会被Qang的顾虑，自己对于这方面的知识也很少，普通的建设方法据说已经会被主动嗅探等给检测到，于是就花了很久找伪装的方法，结果在github上找到了一个&lt;a class=&#34;link&#34; href=&#34;https://github.com/ShadowsocksR-Live/shadowsocksr-native&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;项目&lt;/a&gt;，使用的技术大概就是反向代理+Https的协议，这里就不细讲了&lt;del&gt;主要是害怕&lt;/del&gt;，可以自己到项目去看看。&lt;/p&gt;
+&lt;p&gt;​	在这里还学会了搞&lt;a class=&#34;link&#34; href=&#34;https://letsencrypt.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;的SSL证书，主要是用来保证数据的加密传输，也就是Https协议，后面开一篇申请证书的过程文章，照着参阅的文章也踩了不少坑。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>造窝过程(一)</title>
+        <link>//localhost:1313/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/</link>
+        <pubDate>Wed, 02 Sep 2020 11:14:35 +0000</pubDate>
+        
+        <guid>//localhost:1313/posts/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B-%E4%B8%80/</guid>
+        <description>&lt;ul&gt;
+&lt;li&gt;备案劝退&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很早就有想搭博客的想法了，起初在阿里云上用宝塔面板搭建过一个，觉得IP访问太暴露了就想去备案，结果阿里云的备案过程真的是把我给整吐了，大概流程就是：填网站信息&amp;raquo;&amp;gt;阿里云审核通过&amp;raquo;&amp;gt;工信部审核。看似个简单的过程，我在阿里云审核那就被劝退了，官方小改改先是跟我说填写信息不能有什么什么字眼，很耐心的帮我改了改，然后让我提供钉钉号，说一会会有官方加我好友跟我视频认证，这对于稍微有点自闭的我来说有点难顶，但想都到这步了硬着头皮来吧。等了一个多小时，我看到邮箱里有封邮件说我拒绝视频认证，审核失败，我tm直接当场？？？&lt;img src=&#34;https://s1.ax1x.com/2020/10/29/BJ9L8g.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BJ9L8g.jpg&#34;
+	
+	
+&gt;看了看钉钉申请和审核失败的邮件，之间就相差了2分钟。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;选择服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;听说了备案的依据是服务器的地理位置，想到去买国外的服务器，在知乎、谷歌上搜了一大堆国外的服务商，大致推荐的都是：&lt;a class=&#34;link&#34; href=&#34;https://www.vultr.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vultr&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://bwh88.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;搬瓦工&lt;/a&gt;、blablablabal，看到价格和配置都特别心动，但是都是很久之前的信息，现在已经变贵了，最后挑了一个现在最便宜的&lt;a class=&#34;link&#34; href=&#34;https://www.pacificrack.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pacificrack&lt;/a&gt;,看评价说便宜的原因就是超售，而且服务商有可能跑路balbabla的，我现在就心想体验一番管他呢，最后买的配置1cpu 1G 20GB 100Mbps一年$12，觉得比阿里云那个学生云香，最重要的是不用备案！！！！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;域名注册&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;服务器到手以后，又听说什么国外的服务器有可能会被Qang，我也尽量少选国内提供的服务，随后找到了国外免费的域名注册商&lt;a class=&#34;link&#34; href=&#34;http://www.freenom.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;freenom&lt;/a&gt;，注册了域名braindanc.tk，把域名解析到自己的服务器，后面补一篇注册的过程吧。&lt;/p&gt;
+&lt;p&gt;到这服务器和域名都搞定了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>第一篇文章</title>
+        <link>//localhost:1313/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+        <pubDate>Wed, 26 Aug 2020 16:40:03 +0000</pubDate>
+        
+        <guid>//localhost:1313/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;第一篇文章的内容&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;刚把博客搭成，然后看了看markdown的语法，以后慢慢往上面加吧。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

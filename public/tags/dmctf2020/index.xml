@@ -1,26 +1,351 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>DMCTF2020 on </title>
-    <link>/tags/dmctf2020/</link>
-    <description>Recent content in DMCTF2020 on </description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate>
-    <atom:link href="/tags/dmctf2020/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DMCTF之Misc</title>
-      <link>/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
-      <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
-      <guid>/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
-      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;&#xA;&lt;p&gt;这次比赛是第一次做Mics的题awa。&lt;/p&gt;&#xA;&lt;h1 id=&#34;misc&#34;&gt;Misc&lt;/h1&gt;&#xA;&lt;h2 id=&#34;check_in&#34;&gt;Check_in&lt;/h2&gt;&#xA;&lt;p&gt;真·有手就行&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;fakezip&#34;&gt;fakezip&lt;/h2&gt;&#xA;&lt;p&gt;看到题目&lt;strong&gt;fakezip&lt;/strong&gt;翻译：假的压缩包，所以猜应该是伪加密，贴一个原理的博客：&lt;a href=&#34;https://blog.csdn.net/u011377996/article/details/79286958&#34;&gt;zip伪加密&lt;/a&gt;，使用010 Editor打开压缩包，&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;找到01修改为00，再解压压缩包，虽然提示了压缩包错误但是直接无视，获得一个flag.txt&lt;/p&gt;&#xA;&lt;p&gt;打开以后内容是：&lt;code&gt;♬♩¶♯♬♭♬♫♫♪♬∮♬♭‖♭♬♭♬∮♬♭‖♭♬♭♫♫♯=&lt;/code&gt;，音符加密虽然是第一次听说，但是百度还是可以简单找到：&lt;a href=&#34;https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue&#34;&gt;文本加密为音乐符号&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;base-family&#34;&gt;Base family&lt;/h2&gt;&#xA;&lt;p&gt;题目给出了是base家族，所以base所有种类都试一遍。base常见的种类有：&lt;code&gt;base16&lt;/code&gt;、&lt;code&gt;base32&lt;/code&gt;、&lt;code&gt;base58&lt;/code&gt;、&lt;code&gt;base64&lt;/code&gt;、&lt;code&gt;base91&lt;/code&gt;。还有几种没听过的base种类可以在这个网站找到：&lt;a href=&#34;http://ctf.ssleye.com/&#34;&gt;CTF在线工具&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;原层&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;XUZbB{fp}U)=ql[n%GCbk9RZ7!XD$D)f1G{011LN(TSlXCJT:4nxQ[8Y#I:=k.Qi4t3/S!,N/%[I}^8jjP|0&amp;amp;whvi88gpQce(2lKt9ZHiT^g1.nZH,k=kjTT16pHJ_DrW,Td&amp;#34;^w$Q8+8T])e.llK?*z`gS:+C]llUG:z1=ekEN}8DmJf&amp;amp;GP&amp;lt;Rk:o_Jk&amp;lt;J.zp8%H0g7sYSTJ9p.&amp;#34;duRBGj`g0!I+xjm(fh)]IF:&amp;gt;omN8=m+Xp(X0:U*8Sj5|8p._o[i0:%.qu}%_=&amp;lt;D&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base91解码&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;3G6MzYGwFwTsqcb3MWzTdQBTHZWBZ2LUBprZ3P62T2nsbt1R7o6a7PEsXsBvSFvoexeZJEkhW9Wv1VusvpWK1nfWsVHDypW2j3MMEygzSYLmwxKV5kNwWomvXc5ohX2Jgj6bMRnu6JXkasXdbbw3Aw8Pvh6vWwPfTZ4mpkpNU9fDhyNi1bciCZMXeLiCWL67BVupHPobQcFWkpftgLPggB8wgwW&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base58解码&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;JZVFSMSZPJMXQTTKMMZVS2TDGVGXUQJTJZKFM3KONJCTEWL2MN4U26SNGJGVIWJQJZ5GWMK2NJNGSTTNKV5E2RDDGNHFOWJTJZCFSNCNPJGTCWTKKF4U42SFGNGXUWJRJZVFSMSNKRNGWTL2IUZFS6TDGVHDEUJ5&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base32解码&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;NjY2YzYxNjc3Yjc5MzA3NTVmNjE2YzcyMzM2MTY0Nzk1ZjZiNmUzMDc3NWY3NDY4MzM1ZjQyNjE3MzY1NjY2MTZkMzE2Yzc5N2Q=&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base64解码&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;666c61677b7930755f616c72336164795f6b6e30775f7468335f4261736566616d316c797d&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;hex解码&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;flag{y0u_alr3ady_kn0w_th3_Basefam1ly}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;slienteye&#34;&gt;SlientEye&lt;/h2&gt;&#xA;&lt;p&gt;根据题目直接百度&lt;strong&gt;SlientEye&lt;/strong&gt;，下载以后打开图片&amp;ndash;&amp;gt;decode：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;参数啥的都没动，密码为默认密码，直接Decode，得到一个flag.txt：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;amp;#102;&amp;amp;#108;&amp;amp;#97;&amp;amp;#103;&amp;amp;#123;&amp;amp;#110;&amp;amp;#49;&amp;amp;#95;&amp;amp;#98;&amp;amp;#117;&amp;amp;#95;&amp;amp;#106;&amp;amp;#49;&amp;amp;#97;&amp;amp;#110;&amp;amp;#103;&amp;amp;#95;&amp;amp;#119;&amp;amp;#117;&amp;amp;#95;&amp;amp;#100;&amp;amp;#51;&amp;amp;#125;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再去百度搜到一篇博客：&lt;a href=&#34;https://www.cnblogs.com/philipding/p/10153094.html&#34;&gt;&amp;amp;#x开头的是什么编码?&lt;/a&gt;，&lt;del&gt;我点开一看，哦，原来是&lt;/del&gt;entity code实体编码，&lt;del&gt;我啪的一下就&lt;/del&gt;把flag.txt改为flag.html，&lt;del&gt;很快啊，然后是一个左正蹬、一个右鞭腿、一个左刺拳&lt;/del&gt;打开flag.html获得flag：&lt;strong&gt;flag{n1_bu_j1ang_wu_d3}&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;编码之王&#34;&gt;编码之王&lt;/h2&gt;&#xA;&lt;p&gt;下载文件打开后一堆社会主义核心价值观，前面提到的：&lt;a href=&#34;http://ctf.ssleye.com/&#34;&gt;CTF在线工具&lt;/a&gt;就有核心价值观编码，下面放密文，上面是解码内容。&lt;/p&gt;&#xA;&lt;p&gt;解出来以后看到第一句：&lt;code&gt;如是我闻:&lt;/code&gt;，&amp;ndash;&amp;gt;&lt;a href=&#34;http://www.keyfc.net/bbs/tools/tudoucode.aspx&#34;&gt;与佛论禅&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;再解之后看第一句：&lt;code&gt;新佛曰：&lt;/code&gt;。&amp;ndash;&amp;gt;&lt;a href=&#34;http://hi.pcmoe.net/buddha.html&#34;&gt;新与佛论禅&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;解完以后直接出了一堆由：&lt;code&gt;[、]、!、+、(、)&lt;/code&gt;组成的符号，还是百度找到了这种编码叫JSfuck，可以直接浏览器控制台console输出获得flag&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;jpgsteg&#34;&gt;jpgsteg&lt;/h2&gt;&#xA;&lt;p&gt;题目即是用到的工具，百度下载软件，使用jphide.exe打开图片&lt;code&gt;Tap code.jpg&lt;/code&gt;，选择seek功能解密，密码为123456（我蒙的）：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;成功解密后获得一个文档，内容如下：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;... ....&#xD;&#xA;.. ...&#xD;&#xA;.. ...&#xD;&#xA;. .&#xD;&#xA;... ..&#xD;&#xA;. .&#xD;&#xA;..... .....&#xD;&#xA;.. ....&#xD;&#xA;... ...&#xD;&#xA;.. ..&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这里我思索了好久，刚开始以为是摩斯密码，但是又对不上号，最后找到了一个名为敲击码的，正好一行中的&lt;code&gt;.&lt;/code&gt;分成两部分代表坐标&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;解码得到：&lt;code&gt;ohhamazing&lt;/code&gt; ，加上括号就是：&lt;strong&gt;flag{ohhamazing}&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;事后多看了一眼图片命名：&lt;code&gt;Tap code.jpg&lt;/code&gt;。这用啥解密不就在脸上写着的&lt;del&gt;wosabi \0/&lt;/del&gt;。。。&lt;/p&gt;&#xA;&lt;h2 id=&#34;collision&#34;&gt;Collision&lt;/h2&gt;&#xA;&lt;p&gt;打开压缩包发现都是加密，但是原始大小都为4，只有CRC不一样：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;所以很有可能是四位数据的CRC32碰撞，就去网上找了一个python脚本：&lt;a href=&#34;https://blog.csdn.net/weixin_45396639/article/details/103393759&#34;&gt;crc32碰撞 ctf python&lt;/a&gt;作者原创的脚本：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DMCTF之Web</title>
-      <link>/posts/ctf/dmctf%E4%B9%8Bweb/</link>
-      <pubDate>Sun, 29 Nov 2020 23:17:50 +0000</pubDate>
-      <guid>/posts/ctf/dmctf%E4%B9%8Bweb/</guid>
-      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;&#xA;&lt;p&gt;比赛地址：&lt;a href=&#34;http://dmctf.vaala.cloud:81/&#34;&gt;http://dmctf.vaala.cloud:81&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;这次先写Web题目部分，我最后的排名：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130085338.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;web&#34;&gt;Web&lt;/h1&gt;&#xA;&lt;h2 id=&#34;weak_type&#34;&gt;weak_type&lt;/h2&gt;&#xA;&lt;p&gt;源码：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PHP&#xD;&#xA;&amp;lt;?php&#xD;&#xA;&#xD;&#xA;show_source(__FILE__);&#xD;&#xA;include(&amp;#39;class.php&amp;#39;);&#xD;&#xA;&#xD;&#xA;//level1 &#xD;&#xA;&#xD;&#xA;if(isset($_GET[&amp;#39;num&amp;#39;])){&#xD;&#xA;    $num = $_GET[&amp;#39;num&amp;#39;];&#xD;&#xA;    if($num===&amp;#34;202020020&amp;#34;){&#xD;&#xA;        die(&amp;#34;no no no!&amp;#34;);&#xD;&#xA;    }&#xD;&#xA;    if(intval($num,0)===202020020){&#xD;&#xA;        echo &amp;#34;&amp;lt;br&amp;gt; level 1 Ok &amp;lt;br&amp;gt;&amp;#34;;&#xD;&#xA;    }else{&#xD;&#xA;        die(&amp;#39;what are you doing?&amp;#39;);&#xD;&#xA;    }&#xD;&#xA;}else{&#xD;&#xA;    die();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;//level 2&#xD;&#xA;&#xD;&#xA;if(isset($_GET[&amp;#39;v1&amp;#39;]) &amp;amp;&amp;amp; isset($_GET[&amp;#39;v2&amp;#39;])){&#xD;&#xA;    $v1 = $_GET[&amp;#39;v1&amp;#39;];&#xD;&#xA;    $v2 = $_GET[&amp;#39;v2&amp;#39;];&#xD;&#xA;    if($v1 != $v2 &amp;amp;&amp;amp; md5($v1)==md5($v2)){&#xD;&#xA;        echo &amp;#34;&amp;lt;br&amp;gt; level 2 Ok &amp;lt;br&amp;gt;&amp;#34;;&#xD;&#xA;    }else{&#xD;&#xA;        die(&amp;#39;Are you kidding me ?&amp;#39;);&#xD;&#xA;    }&#xD;&#xA;}else{&#xD;&#xA;    die();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;//level 3 &#xD;&#xA;&#xD;&#xA;if (isset($_POST[&amp;#39;message&amp;#39;])) {&#xD;&#xA;    $message = json_decode($_POST[&amp;#39;message&amp;#39;]);&#xD;&#xA;    if ($message-&amp;gt;key == $key) {&#xD;&#xA;        echo &amp;#34;&amp;lt;br&amp;gt; Wow you got it !!! &amp;lt;br&amp;gt;&amp;#34;;&#xD;&#xA;        echo file_get_contents(&amp;#39;/flag&amp;#39;);&#xD;&#xA;    } &#xD;&#xA;    else {&#xD;&#xA;        die(&amp;#34;fail&amp;#34;);&#xD;&#xA;    }&#xD;&#xA; }&#xD;&#xA;else{&#xD;&#xA;     echo &amp;#34;~~~~&amp;#34;;&#xD;&#xA; }&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;第一关&lt;/strong&gt;利用intval()函数特性：直到遇上数字或正负符号才开始做转换。所以构造&lt;code&gt;num=202020020a&lt;/code&gt;，即可。&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>DMCTF2020 on </title>
+        <link>//localhost:1313/tags/dmctf2020/</link>
+        <description>Recent content in DMCTF2020 on </description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/dmctf2020/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DMCTF之Misc</title>
+        <link>//localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
+        <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
+        
+        <guid>//localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
+        <description>&lt;h1 id=&#34;前言&#34;&gt;前言
+&lt;/h1&gt;&lt;p&gt;这次比赛是第一次做Mics的题awa。&lt;/p&gt;
+&lt;h1 id=&#34;misc&#34;&gt;Misc
+&lt;/h1&gt;&lt;h2 id=&#34;check_in&#34;&gt;Check_in
+&lt;/h2&gt;&lt;p&gt;真·有手就行&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130102716.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;fakezip&#34;&gt;fakezip
+&lt;/h2&gt;&lt;p&gt;看到题目&lt;strong&gt;fakezip&lt;/strong&gt;翻译：假的压缩包，所以猜应该是伪加密，贴一个原理的博客：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/u011377996/article/details/79286958&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zip伪加密&lt;/a&gt;，使用010 Editor打开压缩包，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130103932.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;找到01修改为00，再解压压缩包，虽然提示了压缩包错误但是直接无视，获得一个flag.txt&lt;/p&gt;
+&lt;p&gt;打开以后内容是：&lt;code&gt;♬♩¶♯♬♭♬♫♫♪♬∮♬♭‖♭♬♭♬∮♬♭‖♭♬♭♫♫♯=&lt;/code&gt;，音符加密虽然是第一次听说，但是百度还是可以简单找到：&lt;a class=&#34;link&#34; href=&#34;https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;文本加密为音乐符号&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130104321.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;base-family&#34;&gt;Base family
+&lt;/h2&gt;&lt;p&gt;题目给出了是base家族，所以base所有种类都试一遍。base常见的种类有：&lt;code&gt;base16&lt;/code&gt;、&lt;code&gt;base32&lt;/code&gt;、&lt;code&gt;base58&lt;/code&gt;、&lt;code&gt;base64&lt;/code&gt;、&lt;code&gt;base91&lt;/code&gt;。还有几种没听过的base种类可以在这个网站找到：&lt;a class=&#34;link&#34; href=&#34;http://ctf.ssleye.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CTF在线工具&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原层&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;XUZbB{fp}U)=ql[n%GCbk9RZ7!XD$D)f1G{011LN(TSlXCJT:4nxQ[8Y#I:=k.Qi4t3/S!,N/%[I}^8jjP|0&amp;amp;whvi88gpQce(2lKt9ZHiT^g1.nZH,k=kjTT16pHJ_DrW,Td&amp;#34;^w$Q8+8T])e.llK?*z`gS:+C]llUG:z1=ekEN}8DmJf&amp;amp;GP&amp;lt;Rk:o_Jk&amp;lt;J.zp8%H0g7sYSTJ9p.&amp;#34;duRBGj`g0!I+xjm(fh)]IF:&amp;gt;omN8=m+Xp(X0:U*8Sj5|8p._o[i0:%.qu}%_=&amp;lt;D
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base91解码&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;3G6MzYGwFwTsqcb3MWzTdQBTHZWBZ2LUBprZ3P62T2nsbt1R7o6a7PEsXsBvSFvoexeZJEkhW9Wv1VusvpWK1nfWsVHDypW2j3MMEygzSYLmwxKV5kNwWomvXc5ohX2Jgj6bMRnu6JXkasXdbbw3Aw8Pvh6vWwPfTZ4mpkpNU9fDhyNi1bciCZMXeLiCWL67BVupHPobQcFWkpftgLPggB8wgwW
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base58解码&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;JZVFSMSZPJMXQTTKMMZVS2TDGVGXUQJTJZKFM3KONJCTEWL2MN4U26SNGJGVIWJQJZ5GWMK2NJNGSTTNKV5E2RDDGNHFOWJTJZCFSNCNPJGTCWTKKF4U42SFGNGXUWJRJZVFSMSNKRNGWTL2IUZFS6TDGVHDEUJ5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base32解码&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;NjY2YzYxNjc3Yjc5MzA3NTVmNjE2YzcyMzM2MTY0Nzk1ZjZiNmUzMDc3NWY3NDY4MzM1ZjQyNjE3MzY1NjY2MTZkMzE2Yzc5N2Q=
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;base64解码&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;666c61677b7930755f616c72336164795f6b6e30775f7468335f4261736566616d316c797d
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;hex解码&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;flag{y0u_alr3ady_kn0w_th3_Basefam1ly}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;slienteye&#34;&gt;SlientEye
+&lt;/h2&gt;&lt;p&gt;根据题目直接百度&lt;strong&gt;SlientEye&lt;/strong&gt;，下载以后打开图片&amp;ndash;&amp;gt;decode：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130105145.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;参数啥的都没动，密码为默认密码，直接Decode，得到一个flag.txt：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;amp;#102;&amp;amp;#108;&amp;amp;#97;&amp;amp;#103;&amp;amp;#123;&amp;amp;#110;&amp;amp;#49;&amp;amp;#95;&amp;amp;#98;&amp;amp;#117;&amp;amp;#95;&amp;amp;#106;&amp;amp;#49;&amp;amp;#97;&amp;amp;#110;&amp;amp;#103;&amp;amp;#95;&amp;amp;#119;&amp;amp;#117;&amp;amp;#95;&amp;amp;#100;&amp;amp;#51;&amp;amp;#125;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再去百度搜到一篇博客：&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/philipding/p/10153094.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;amp;#x开头的是什么编码?&lt;/a&gt;，&lt;del&gt;我点开一看，哦，原来是&lt;/del&gt;entity code实体编码，&lt;del&gt;我啪的一下就&lt;/del&gt;把flag.txt改为flag.html，&lt;del&gt;很快啊，然后是一个左正蹬、一个右鞭腿、一个左刺拳&lt;/del&gt;打开flag.html获得flag：&lt;strong&gt;flag{n1_bu_j1ang_wu_d3}&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编码之王&#34;&gt;编码之王
+&lt;/h2&gt;&lt;p&gt;下载文件打开后一堆社会主义核心价值观，前面提到的：&lt;a class=&#34;link&#34; href=&#34;http://ctf.ssleye.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CTF在线工具&lt;/a&gt;就有核心价值观编码，下面放密文，上面是解码内容。&lt;/p&gt;
+&lt;p&gt;解出来以后看到第一句：&lt;code&gt;如是我闻:&lt;/code&gt;，&amp;ndash;&amp;gt;&lt;a class=&#34;link&#34; href=&#34;http://www.keyfc.net/bbs/tools/tudoucode.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;与佛论禅&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再解之后看第一句：&lt;code&gt;新佛曰：&lt;/code&gt;。&amp;ndash;&amp;gt;&lt;a class=&#34;link&#34; href=&#34;http://hi.pcmoe.net/buddha.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;新与佛论禅&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;解完以后直接出了一堆由：&lt;code&gt;[、]、!、+、(、)&lt;/code&gt;组成的符号，还是百度找到了这种编码叫JSfuck，可以直接浏览器控制台console输出获得flag&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130110943.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;jpgsteg&#34;&gt;jpgsteg
+&lt;/h2&gt;&lt;p&gt;题目即是用到的工具，百度下载软件，使用jphide.exe打开图片&lt;code&gt;Tap code.jpg&lt;/code&gt;，选择seek功能解密，密码为123456（我蒙的）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111311.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;成功解密后获得一个文档，内容如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;... ....
+.. ...
+.. ...
+. .
+... ..
+. .
+..... .....
+.. ....
+... ...
+.. ..
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这里我思索了好久，刚开始以为是摩斯密码，但是又对不上号，最后找到了一个名为敲击码的，正好一行中的&lt;code&gt;.&lt;/code&gt;分成两部分代表坐标&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130111538.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;解码得到：&lt;code&gt;ohhamazing&lt;/code&gt; ，加上括号就是：&lt;strong&gt;flag{ohhamazing}&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;事后多看了一眼图片命名：&lt;code&gt;Tap code.jpg&lt;/code&gt;。这用啥解密不就在脸上写着的&lt;del&gt;wosabi \0/&lt;/del&gt;。。。&lt;/p&gt;
+&lt;h2 id=&#34;collision&#34;&gt;Collision
+&lt;/h2&gt;&lt;p&gt;打开压缩包发现都是加密，但是原始大小都为4，只有CRC不一样：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201102424.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;所以很有可能是四位数据的CRC32碰撞，就去网上找了一个python脚本：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_45396639/article/details/103393759&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;crc32碰撞 ctf python&lt;/a&gt;作者原创的脚本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; string
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; threading
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; binascii
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sys
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;crc&lt;/span&gt;(_crc):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    dic &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; string&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;printable
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    _input &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; _crc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    _input &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0X&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; _input
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; dic:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; dic:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; h &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; dic:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; dic:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; h &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; m
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; s&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;encode()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;# print(str(binascii.crc32(s)), _input)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; hex(binascii&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;crc32(s))&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;upper() &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; _input&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;upper():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        print(_crc, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;, s&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;decode())
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        print(l)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        sys&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exit()  &lt;span style=&#34;color:#75715e&#34;&gt;#直接退出，不进行接下来的碰撞了，一般在做题的时候，碰撞不会重复&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; l &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;crc32&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;四字节碰撞!!!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    num &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;你可能需要多个线程同时进行碰撞，请输入线程数：&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    _thread &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    _args &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;输入参数&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(num):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, end&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        _args&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(input())
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# print(_args)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(num):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        t &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; threading&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Thread(target&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;crc, args&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(_args[i],))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        _thread&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(t) &lt;span style=&#34;color:#75715e&#34;&gt;#如果在这里开始线程会出一点小bug，虽然不要紧，但是不好看，不信的话你们自己试试&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# print(_thread)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(num):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        _thread[i]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(num):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        _thread[i]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    input()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    crc32()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用python的多线程，因为是5个文件，开了5个线程，然后分别输入CRC码，压缩文件原来的CRC码为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ff92876d
+6c4a558b
+77e8fd00
+1e59a66e
+d1f4eb9a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;碰撞以后获得的明文：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1on}
+32co
+llis
+flag
+{crc
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;根据flag的结构拼接一下：&lt;strong&gt;flag{crc32collis1on}&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;kaomoji&#34;&gt;kaomoji
+&lt;/h2&gt;&lt;p&gt;题目的压缩包解压以后得到一个&lt;strong&gt;flag.zip&lt;/strong&gt;压缩包和&lt;strong&gt;secret.txt&lt;/strong&gt;，flag.zip中也含有secret.txt，将外面没有加密的secret.txt使用&lt;strong&gt;winrar&lt;/strong&gt;压缩（需要和原来的压缩软件一致哒）以后对比flag.zip里的文件发现CRC码相同的：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201103227.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;配合ARCHPR使用明文攻击，获得加密密钥： &lt;strong&gt;[b00df998 5bdbbde6 485fa1f8]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我在进行明文攻击时虽然没有跑出来压缩包的密码，但是获得了上面的密钥，也是可以解压加密的压缩包的（具体原理不清楚）。解压明文攻击解开获得的压缩包&lt;strong&gt;flag_decrypted.zip&lt;/strong&gt;，打开flag.txt是颜文字表情加密，直接复制到浏览器console控制台运行获得flag：flag{kaomoj1_1s_cut3}&lt;/p&gt;
+&lt;h2 id=&#34;archpr&#34;&gt;ARCHPR
+&lt;/h2&gt;&lt;p&gt;题目根据提示：&lt;strong&gt;This file was encrypted by me with a four-digit password, try to crack it!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;密码只是用了4位数字加密，可以使用ARCHPR 进行爆破，获得一个flag.png和hint.txt，hint.txt如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-hint.txt&#34; data-lang=&#34;hint.txt&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The flag is hidden by a kind of magic called LSB. Try to find it if you can find it. The key is given to you. After decryption, change it to lowercase.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;key: .--. .- ... ... .-- --- .-. -..
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;提示中提到了使用LSB隐写，密码是一段摩斯密码，摩斯密码解密后得到密文：&lt;code&gt;password&lt;/code&gt;，使用LSB（&lt;a class=&#34;link&#34; href=&#34;https://github.com/livz/cloacked-pixel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;项目地址&lt;/a&gt;）脚本执行：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python lsb.py extract flag.png 1.txt password
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;1.txt&lt;/strong&gt;中就包含了解密以后的flag：&lt;strong&gt;flag{th1s_15_f1agggggg}&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;outguess&#34;&gt;outguess
+&lt;/h2&gt;&lt;p&gt;​	看题目找工具，使用outguess参考&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_43877387/article/details/103123858&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;隐写工具outguess 的下载安装及使用&lt;/a&gt;，在kali中安装以后执行&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;outguess -r flag.jpg hide.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;获得hide.txt文件的内容：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Qb lbh xabj NRF? Gur xrl vf f3phe1gl, tb naq penpx vg!
+
+
+Encrypted data: U2FsdGVkX1/nmu9u2Ho1dD9kQWv7L5a6bsUrWxBkVp68txdFL4v/givGGYy7dBU+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面一段使用&lt;strong&gt;凯撒密码&lt;/strong&gt;移动13位获得：&lt;strong&gt;Do you know AES? The key is s3cur1ty, go and crack it!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;其实这里和别人讨论以后才知道他们使用的是叫ROT13，相应的还搜到了ROT5、ROT13、ROT18、ROT47，百度百科看了以后就是凯撒密码的变种。所以下面一段的密文使用AES进行解密，密码是&lt;code&gt;s3cur1ty&lt;/code&gt;，获得flag：&lt;strong&gt;flag{y0u_ar3_awes0m3}&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;解密网站：https://tool.oschina.net/encrypt&lt;/p&gt;
+&lt;h2 id=&#34;whitespace&#34;&gt;Whitespace
+&lt;/h2&gt;&lt;p&gt;题目即提示，Whitespace进行一波搜索以后了解到是一种用空白符编程的语言，在压缩包里面摸了好久，在注释里发现空白编码：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201104847.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这也让我想到自己在网上下工具的压缩包时，网站经常在注释里附上密码，通常都是网站的网址。&lt;/p&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://vii5ard.github.io/whitespace&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;whitespace&lt;/a&gt;网站中粘贴密文点上面的&lt;code&gt;run&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105235.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;解密获得：&lt;strong&gt;password is BlindWaterMark!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;输入解压以后获得两张看着相同的罗翔老师.png图片和一个hint.txt：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-hint.txt&#34; data-lang=&#34;hint.txt&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Do you see any difference between the two pictures?
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get to know its secrets and tell you quietly that you need to know a knowledge called Manchester coding.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;上传文档
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;你看这两幅画有什么不同吗？
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;了解它的秘密，悄悄地告诉你，你需要知道一门叫做曼彻斯特编码的知识。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;根据提示找出图片的不同和曼切斯特编码。图片看着相同但是经过加密，在网上搜索了一波了解到了&lt;strong&gt;盲水印&lt;/strong&gt;技术，使用盲水印解密图片，项目地址：https://github.com/chishaxie/BlindWaterMark，执行：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python bwn.py decode 2.png 1.png 3.png 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;获得解密图片：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105728.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;图片中的内容为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;296969a5695
+6696a6a9a69
+5669595a566
+965696666aa
+69596a9666a
+a6a6569955a
+5a66aa69a56
+9566a6a6aa6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;就百度曼切斯特编码解码，找到一篇博客：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_30416871/article/details/98566881&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一些CTF编码脚本&lt;/a&gt;，在里面找到了这两段：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201105901.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;心里一顿狂喜，因为都是&lt;code&gt;2965a&lt;/code&gt;这个几个字符组成的，应该就是找对了。根据博客代码自行修改脚本&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import sys
+s = &amp;#39;296969a56956696a6a9a695669595a566965696666aa69596a9666aa6a6569955a5a66aa69a569566a6a6aa6&amp;#39;  #这是前面图片里的内容
+
+s=bin(int(s,16))
+r=&amp;#34;&amp;#34;
+for i in range(len(s)/2):
+    if s[i*2:i*2+2] == &amp;#39;10&amp;#39;:
+        r += &amp;#39;1&amp;#39;
+    else:
+        r += &amp;#39;0&amp;#39;
+print hex(int(r,2))[2:-1].decode(&amp;#39;hex&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行脚本后获得flag：&lt;strong&gt;flag{ab1de_by_th3_law}&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;steghide&#34;&gt;Steghide
+&lt;/h2&gt;&lt;p&gt;题目即工具。参考博客&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/c3679f805a0c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;隐写工具Steghide&lt;/a&gt;，在kali中安装Steghide后执行：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;steghide.exe extract -sf trump.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;会提示&lt;code&gt;Enter passphrase:&lt;/code&gt;直接回车表示空密码，获得flag.txt，打开以后里面都是由&lt;code&gt;¿ ¡ .&lt;/code&gt;组成的密文，和&lt;strong&gt;Ook&lt;/strong&gt;的另一种编码：&lt;strong&gt;short Ook&lt;/strong&gt;类似也是只用&lt;code&gt;? ! .&lt;/code&gt;组成，把叹号和问号全部替换反过来&lt;code&gt;¡---&amp;gt;!  ¿---&amp;gt;?&lt;/code&gt;，替换之后在线解码：https://www.splitbrain.org/services/ook，获得flag：&lt;strong&gt;flag{y0u_ar3_clev3r}&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sstv&#34;&gt;SSTV
+&lt;/h2&gt;&lt;p&gt;题目既是工具。搜索SSTV百度百科：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;慢扫描电视（Slow-scan television）是业余无线电爱好者的一种主要图片传输方法，慢扫描电视通过无线电传输和接收单色或彩色静态图片。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;了解到是一种无线电传递图片的方法，搜到的博客&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zkf0100007/article/details/83387790&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;慢扫描电视 SSTV&lt;/a&gt;和B站的视频&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1ea4y1J787&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;慢扫描电视SSTV&lt;/a&gt;，下载MMSSTV软件，把output.wav音频调制麦克风输出，我使用的方法是在声音设置里把立体声混音打开并且设为默认设备，然后电脑里播放的声音就会被录制到。等待图片绘制成功，获得flag：&lt;strong&gt;DMCTF{SSTV,yyds?}&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201201111538.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;simpleqrcode&#34;&gt;SimpleQrcode
+&lt;/h2&gt;&lt;p&gt;​	下载题目是一个gif图片都是二维码，使用使用stegSovle中的Frame Browser功能，一帧一帧播放，一帧一扫，有几帧图片是少了二维码的上边，有一张是少了右边，可以参考第一张完整的图片，把上面截取拼接上去，扫码后17张图片对应的内容（根据代码行号）：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;DM
+CT
+F{
+Qr
+Co
+de
+_1
+s_
+so
+_i
+nt
+er
+es
+ti
+ng
+!!
+!}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;参考下题目标题和flag格式，拼接后获得flag：&lt;strong&gt;DMCTF{QrCode_1s_so_interesting!!!}&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

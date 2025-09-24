@@ -1,0 +1,80 @@
+theme: hugo-theme-stack
+defaultContentLanguage: zh-cn
+params:
+  description: 为世界上所有的美好而战
+  mainSections: posts
+  favicon: /favicon.ico
+  Sidebar:
+    compact: false
+    emoji: 🥸
+    subtitle: 兴趣使然
+    avatar:
+      enabled: true
+      src: img/avatar.png
+  Footer:
+    since: 2020
+  Article:
+    toc: true # 这个没实现
+    readingTime: true
+    license:
+      enabled: true
+  Comments:
+    enabled: true
+    provider: twikoo
+    twikoo:
+      envId: https://twikoo.braindance.top/.netlify/functions/twikoo 
+  colorScheme:
+    toggle: true
+    default: auto
+  widgets:
+    homepage:
+        - type: search
+        - type: archives
+          params:
+              limit: 5
+        - type: categories
+          params:
+              limit: 10
+        - type: tag-cloud
+          params:
+              limit: 10
+    page:
+        - type: toc
+
+social:
+  - identifier: github
+    name: GitHub
+    url: https://github.com/penginman
+    params:
+      icon: brand-github
+      newTab: true
+
+
+menu:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 1
+      params:
+        icon: home
+    - name: Archives
+      pageRef: /posts
+      weight: 2
+      params:
+        icon: archives
+    - name: Tags
+      pageRef: /tags
+      weight: 3
+      params:
+        icon: tag
+    - name: Friends
+      pageRef: /friends
+      weight: 4
+      params:
+        icon: friends
+    - name: Travelling
+      url: https://www.travellings.cn/go.html
+      weight: 5
+      params:
+        icon: travelling-light
+        newTab: true
