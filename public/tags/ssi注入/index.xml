@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>SSI注入 on </title>
-        <link>//localhost:1313/tags/ssi%E6%B3%A8%E5%85%A5/</link>
+        <link>/tags/ssi%E6%B3%A8%E5%85%A5/</link>
         <description>Recent content in SSI注入 on </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 20 Apr 2021 17:12:43 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/ssi%E6%B3%A8%E5%85%A5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 20 Apr 2021 17:12:43 +0000</lastBuildDate><atom:link href="/tags/ssi%E6%B3%A8%E5%85%A5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ReadlezPHP&amp;EasySearch</title>
-        <link>//localhost:1313/posts/ctf/readlezphpeasysearch/</link>
+        <link>/posts/ctf/readlezphpeasysearch/</link>
         <pubDate>Tue, 20 Apr 2021 17:12:43 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/readlezphpeasysearch/</guid>
+        <guid>/posts/ctf/readlezphpeasysearch/</guid>
         <description>&lt;h1 id=&#34;readlezphp&#34;&gt;ReadlezPHP
 &lt;/h1&gt;&lt;p&gt;源码找到&lt;code&gt;time.php?source&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210420175641.png&#34;

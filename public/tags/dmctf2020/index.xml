@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>DMCTF2020 on </title>
-        <link>//localhost:1313/tags/dmctf2020/</link>
+        <link>/tags/dmctf2020/</link>
         <description>Recent content in DMCTF2020 on </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/dmctf2020/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate><atom:link href="/tags/dmctf2020/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>DMCTF之Misc</title>
-        <link>//localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
+        <link>/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
         <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
+        <guid>/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;这次比赛是第一次做Mics的题awa。&lt;/p&gt;
 &lt;h1 id=&#34;misc&#34;&gt;Misc

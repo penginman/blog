@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Web on </title>
-        <link>//localhost:1313/tags/web/</link>
+        <link>/tags/web/</link>
         <description>Recent content in Web on </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CISCN线上赛库存</title>
-        <link>//localhost:1313/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+        <link>/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
         <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+        <guid>/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
         <description>&lt;h1 id=&#34;easy_sql&#34;&gt;easy_sql
 &lt;/h1&gt;&lt;p&gt;在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是&lt;strong&gt;括号单引号闭合&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -170,10 +170,10 @@
         </item>
         <item>
         <title>BUUCTF寒假刷题-Web</title>
-        <link>//localhost:1313/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+        <link>/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
         <pubDate>Mon, 18 Jan 2021 16:58:56 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+        <guid>/posts/ctf/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
         <description>&lt;p&gt;寒假横向刷题（尽量）
 &lt;a class=&#34;link&#34; href=&#34;https://buuoj.cn/challenges#&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;BUUCTF&lt;/a&gt;
@@ -3015,10 +3015,10 @@ Content-Type: application/xml;
         </item>
         <item>
         <title>极客大挑战 2019 RCE ME</title>
-        <link>//localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+        <link>/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
         <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+        <guid>/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
         <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
 &lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php
@@ -3137,10 +3137,10 @@ else{
         </item>
         <item>
         <title>GXYCTF2019 Ping Ping Ping</title>
-        <link>//localhost:1313/posts/ctf/gxyctf2019ping-ping-ping/</link>
+        <link>/posts/ctf/gxyctf2019ping-ping-ping/</link>
         <pubDate>Fri, 04 Dec 2020 20:24:50 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/gxyctf2019ping-ping-ping/</guid>
+        <guid>/posts/ctf/gxyctf2019ping-ping-ping/</guid>
         <description>&lt;h1 id=&#34;gxyctf2019ping-ping-ping&#34;&gt;[GXYCTF2019]Ping Ping Ping
 &lt;/h1&gt;&lt;p&gt;题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping&lt;/p&gt;
 &lt;p&gt;和DMCTF做的那道&lt;strong&gt;pingpingping&lt;/strong&gt;类似，同样是使用管道符构造payload，先使用：&lt;/p&gt;
@@ -3228,10 +3228,10 @@ $IFS$1 //$1改成$加其他数字貌似都行
         </item>
         <item>
         <title>Hackgame2020(一)</title>
-        <link>//localhost:1313/posts/ctf/hackgame20201/</link>
+        <link>/posts/ctf/hackgame20201/</link>
         <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/hackgame20201/</guid>
+        <guid>/posts/ctf/hackgame20201/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;
 &lt;h1 id=&#34;web&#34;&gt;web

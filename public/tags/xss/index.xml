@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>XSS on </title>
-        <link>//localhost:1313/tags/xss/</link>
+        <link>/tags/xss/</link>
         <description>Recent content in XSS on </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 03 Nov 2020 10:13:39 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/xss/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Nov 2020 10:13:39 +0000</lastBuildDate><atom:link href="/tags/xss/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>XSS-Lab (一)</title>
-        <link>//localhost:1313/posts/ctf/xss-lab1/</link>
+        <link>/posts/ctf/xss-lab1/</link>
         <pubDate>Tue, 03 Nov 2020 10:13:39 +0000</pubDate>
         
-        <guid>//localhost:1313/posts/ctf/xss-lab1/</guid>
+        <guid>/posts/ctf/xss-lab1/</guid>
         <description>&lt;h2 id=&#34;头&#34;&gt;头
 &lt;/h2&gt;&lt;p&gt;靶机地址：https://buuoj.cn/challenges#XSS-Lab&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/03/BsmJ5n.png&#34;

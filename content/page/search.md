@@ -1,4 +1,5 @@
 ---
 layout: search
+comment: false
 ---
 
