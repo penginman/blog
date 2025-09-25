@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <lastBuildDate>Fri, 20 Nov 2020 22:02:46 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/jsdelivr/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>jsdelivr 缓存刷新</title>
-        <link>https://www.braindance.top/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
+        <link>https://www.braindance.top/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
         <pubDate>Fri, 20 Nov 2020 22:02:46 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	上一篇修改了黑幕，但是使用了jsdelivr加速的静态资源，所以照常更新下github上的资源，但是github上查看已经上传成功了，jsdelivr访问的依然是之前的资源，说白了就是缓存的问题。即使本地浏览器端的缓存已经清理，也会因为CDN周围的节点没有同步数据而导致用户端未能及时更新。&lt;/p&gt;
 &lt;h2 id=&#34;缓存刷新&#34;&gt;缓存刷新
@@ -33,10 +33,10 @@
         </item>
         <item>
         <title>jsDelivr加速静态博客</title>
-        <link>https://www.braindance.top/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://www.braindance.top/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 11 Nov 2020 21:37:53 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -67,11 +67,21 @@
     &gt;Git简介&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;3-上传需要加速的资源&#34;&gt;3. 上传需要加速的资源
 &lt;/h2&gt;&lt;p&gt;​	把需要上传的资源整理到刚刚拉下来的本地git仓库，上传。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git status                    //查看状态
-git add .                     //添加所有文件到暂存区
-git commit -m &amp;#39;第一次提交&amp;#39;      //把文件提交到仓库
-git push                      //推送至远程仓库
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​	这里我说一下是怎么加速自己的博客的，因为博客加载的时候需要加载主题的各种js和css文件，然后因为服务器网渣所以加载时间很慢，使用加速的话就会加载的快。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git status                    //查看状态
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .                     //添加所有文件到暂存区
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#39;第一次提交&amp;#39;      //把文件提交到仓库
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push                      //推送至远程仓库
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;​	这里我说一下是怎么加速自己的博客的，因为博客加载的时候需要加载主题的各种js和css文件，然后因为服务器网渣所以加载时间很慢，使用加速的话就会加载的快。&lt;/p&gt;
 &lt;p&gt;​	接下来是要上传哪些文件，我使用的是&lt;code&gt;butterfly&lt;/code&gt;这个主题，&lt;a class=&#34;link&#34; href=&#34;https://github.com/jerryc127/hexo-theme-butterfly&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;主题github&lt;/a&gt;支持一下作者，直接在主题&lt;code&gt;theme/butterfly&lt;/code&gt;文件夹下面找到资源文件夹&lt;code&gt;source&lt;/code&gt;发现里面都是一些零碎的文件，但是在发布文件夹&lt;code&gt;public&lt;/code&gt;下是一个完整的js和css，所以猜测生成的时候会把零碎的文件进行整合，然后主题配置文件里作者也写的很清楚&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed/artical/20201111205045.png&#34;

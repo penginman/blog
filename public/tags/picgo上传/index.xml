@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <lastBuildDate>Mon, 30 Nov 2020 09:54:11 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/picgo%E4%B8%8A%E4%BC%A0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>PicGo复制自定义链接</title>
-        <link>https://www.braindance.top/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+        <link>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;2022年2月3日22:41:32&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
@@ -74,8 +74,15 @@
 &lt;hr&gt;
 &lt;p&gt;2022-1-31 11:43:48&lt;/p&gt;
 &lt;p&gt;这时候发现自定义链接直接用markdown格式就更好了&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
 &lt;h1 id=&#34;最简单修改&#34;&gt;最简单修改
 &lt;/h1&gt;&lt;p&gt;前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png&#34;
@@ -89,8 +96,15 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;https://cdn.jsdelivr.net/gh/penginman/PicBed@master
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后返回的链接就会把原来的&lt;code&gt;raw.github.com/xxxxxx&lt;/code&gt;给替代了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://cdn.jsdelivr.net/gh/penginman/PicBed@master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后返回的链接就会把原来的&lt;code&gt;raw.github.com/xxxxxx&lt;/code&gt;给替代了。&lt;/p&gt;
 </description>
         </item>
         

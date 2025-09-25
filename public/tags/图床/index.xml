@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>博客图床迁移</title>
-        <link>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
+        <link>https://www.braindance.top/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
         <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
+        <guid>https://www.braindance.top/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
         <description>&lt;h2 id=&#34;起因&#34;&gt;起因
 &lt;/h2&gt;&lt;p&gt;原来博客的图片使用Jsdelivr和github的方式存储访问，但是最近Jsdelivr频繁的被墙，感觉可能在未来的不久会失效，毕竟好多人用来当免费的CDN（&lt;del&gt;比如我&lt;/del&gt;），也会有人使用其访问些zz敏感或其他的文件，被墙了也情有可原，而且github的仓库的作用也是用来存储代码而非图床，像我这样的人也导致了仓库的滥用，所以决定找个新的途径。&lt;/p&gt;
 &lt;h2 id=&#34;过程&#34;&gt;过程
@@ -43,10 +43,10 @@
         </item>
         <item>
         <title>PicGo复制自定义链接</title>
-        <link>https://www.braindance.top/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+        <link>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;2022年2月3日22:41:32&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
@@ -109,8 +109,15 @@
 &lt;hr&gt;
 &lt;p&gt;2022-1-31 11:43:48&lt;/p&gt;
 &lt;p&gt;这时候发现自定义链接直接用markdown格式就更好了&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
 &lt;h1 id=&#34;最简单修改&#34;&gt;最简单修改
 &lt;/h1&gt;&lt;p&gt;前面的都是我在改自定义链接，至少明白了可以绕过自定义链接必须包含变量名称这个限制。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png&#34;
@@ -124,16 +131,23 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-other&#34; data-lang=&#34;other&#34;&gt;https://cdn.jsdelivr.net/gh/penginman/PicBed@master
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后返回的链接就会把原来的&lt;code&gt;raw.github.com/xxxxxx&lt;/code&gt;给替代了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://cdn.jsdelivr.net/gh/penginman/PicBed@master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后返回的链接就会把原来的&lt;code&gt;raw.github.com/xxxxxx&lt;/code&gt;给替代了。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Chevereto-搭建一个自己的图床</title>
-        <link>https://www.braindance.top/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
+        <link>https://www.braindance.top/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
         <pubDate>Sun, 20 Sep 2020 11:09:02 +0000</pubDate>
         
-        <guid>https://www.braindance.top/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
+        <guid>https://www.braindance.top/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
         <description>&lt;p&gt;博客搭完了，自己选择的这个博客主题又是以图片为主要元素的，当然要考虑图片的使用问题了，原来打算直接放在服务器上，但是后来想了想，以后如果文章&lt;del&gt;越写越多&lt;/del&gt;用的图太多服务器的流量也不够用，想到了图床这一托管图片的服务，但是放在别人的上面总怕会受到&lt;del&gt;限制&lt;/del&gt;，正好发现了&lt;code&gt;Chevereto&lt;/code&gt;这一图床系统，可以自己搭建一个图床服务器，正好自己还有一个阿里云学生云，那就开工。&lt;/p&gt;
 &lt;h3 id=&#34;chevereto-说明&#34;&gt;Chevereto 说明
 &lt;/h3&gt;&lt;blockquote&gt;
@@ -219,10 +233,19 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;server{...}&lt;/code&gt;中添加&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;/&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;try_files&lt;/span&gt; $uri $uri/ &lt;span style=&#34;color:#e6db74&#34;&gt;/index.php?&lt;/span&gt;$query_string;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置完成以后应该会自动保存并重启&lt;code&gt;Nginx&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;try_files&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$uri/&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/index.php?&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$query_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置完成以后应该会自动保存并重启&lt;code&gt;Nginx&lt;/code&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;将在github上下载的&lt;code&gt;Chevereto&lt;/code&gt;压缩包上传到刚刚创建的网站目录中（上图是&lt;code&gt;/www/wwwroot&lt;/code&gt;）并解压。&lt;/li&gt;
 &lt;/ul&gt;
@@ -231,9 +254,17 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;Chevereto can’t create the app/settings.php file. You must manually create this file&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;解决方法：这个错误就是没有找到&lt;code&gt;setting.php&lt;/code&gt;配置文件，压缩包内似乎没有创建该文件，我们可以自行创建，在&lt;code&gt;Chevereto&lt;/code&gt;的网站目录下的&lt;code&gt;/app&lt;/code&gt;目录下执行命令创建文件，并修改文件权限&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch settings.php
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod +x settings.php
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch settings.php
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x settings.php
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;我自己还遇到了第二个错误，大概的意思就是访问权限不足blahbalhblahbla，我改了好久都不行。最后直接把整个网站目录的权限给改了访问成功。知道这样做不对，希望大佬能指点。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;访问网站进行网站的初始化配置，大概就是填写数据库名称、数据库账号密码、管理员的账户和密码和一些信息。&lt;/li&gt;

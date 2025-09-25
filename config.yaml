@@ -2,6 +2,20 @@ theme: hugo-theme-stack
 defaultContentLanguage: zh-cn
 title: Braindance
 baseURL: https://www.braindance.top
+
+services:
+  # GA Tracking ID
+  googleAnalytics:
+    id: G-0CQLT1ENWK
+
+pagination:
+  pagerSize: 5
+
+permalinks:
+  page:
+    posts: /articles/:year/:month/:slug/
+    page: /:slug/
+
 params:
   description: 为世界上所有的美好而战
   mainSections: posts
@@ -13,6 +27,7 @@ params:
     avatar:
       enabled: true
       src: img/avatar.png
+      local: true
   Footer:
     since: 2020
   Article:
@@ -42,6 +57,11 @@ params:
           limit: 5
     page:
       - type: toc
+  # imageProcessing:
+  #   cover:
+  #     enabled: true
+  #   content:
+  #     enabled: true
 
 social:
   - identifier: github
@@ -68,8 +88,8 @@ menu:
       weight: 3
       params:
         icon: tag
-    - name: Friends
-      pageRef: /friends
+    - name: Links
+      pageRef: /links
       weight: 4
       params:
         icon: friends
@@ -84,3 +104,44 @@ outputs:
     - HTML
     - RSS
     - JSON
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+
+    - name: categories
+      weight: 200
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - - \[
+              - \]
+            - - $$
+              - $$
+          inline:
+            - - \(
+              - \)
+    renderer:
+      ## Set to true if you have HTML content inside Markdown
+      unsafe: true
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
