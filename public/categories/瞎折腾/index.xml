@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>瞎折腾 on </title>
-        <link>/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
-        <description>Recent content in 瞎折腾 on </description>
+        <title>瞎折腾 on Braindance</title>
+        <link>https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
+        <description>Recent content in 瞎折腾 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>自建Vaultwarden并备份同步</title>
-        <link>/posts/play_time/%E8%87%AA%E5%BB%BAvaultwarden%E5%B9%B6%E5%A4%87%E4%BB%BD%E5%90%8C%E6%AD%A5/</link>
+        <link>https://www.braindance.top/posts/play_time/%E8%87%AA%E5%BB%BAvaultwarden%E5%B9%B6%E5%A4%87%E4%BB%BD%E5%90%8C%E6%AD%A5/</link>
         <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>/posts/play_time/%E8%87%AA%E5%BB%BAvaultwarden%E5%B9%B6%E5%A4%87%E4%BB%BD%E5%90%8C%E6%AD%A5/</guid>
+        <guid>https://www.braindance.top/posts/play_time/%E8%87%AA%E5%BB%BAvaultwarden%E5%B9%B6%E5%A4%87%E4%BB%BD%E5%90%8C%E6%AD%A5/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;新买服务器，密码很多，保存密码，为了安全，防止被打，备份保底。&lt;/p&gt;
 &lt;h2 id=&#34;前置步骤&#34;&gt;前置步骤
@@ -104,17 +104,90 @@
     &gt;https://linux.do/t/topic/238502&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;根据帖子配置网盘：https://linux.do/t/topic/481620。最后代码修改为如下，后台挂载。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rclone mount onedrive:/backup/ /mnt/onedrive --allow-non-empty --vfs-cache-mode full --daemon
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用crontab @reboot，记得加+x权限&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-apt-get install sqlite3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;配置开机自动挂载&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法1：编辑 &lt;code&gt;~/.config/autostart/rclone-onedrive.desktop&lt;/code&gt; 添加以下内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Desktop Entry]
+Type=Application
+Name=Mount OneDrive with rclone
+Exec=rclone mount onedrive:/backup/ /mnt/onedrive --allow-non-empty --vfs-cache-mode full --daemon writes &amp;amp;
+Terminal=false
+Hidden=false
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;方法2：直接把挂载命令写成一个 sh 脚本文件，在 crontab 中添加配置每次开机后自动执行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@reboot /path/to/rclone-onedrive.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;自动备份&#34;&gt;自动备份
+&lt;/h3&gt;&lt;p&gt;采用 sqlite3 先热备数据库，然后打包。备份计划每天一个日备份，保存在daily文件夹下，保留30份，循环覆写。每个月一个月备份，保存在monthly文件夹下，保留12份，循环覆写。注意安装依赖环境&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt-get install sqlite3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;脚本文件如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
+
+# 定义路径
+# 数据地址
+DATA_DIR=&amp;#34;/vw-data&amp;#34;
+# 网盘挂载的地址
+BACKUP_DIR=&amp;#34;/mnt/onedrive&amp;#34;
+DAILY_BACKUP_DIR=&amp;#34;${BACKUP_DIR}/daily&amp;#34;
+MONTHLY_BACKUP_DIR=&amp;#34;${BACKUP_DIR}/monthly&amp;#34;
+WORK_DIR=&amp;#34;${BACKUP_DIR}/work&amp;#34;
+DATE=$(date +%Y%m%d)
+DAILY_BACKUP_RETENTION=30
+MONTHLY_BACKUP_RETENTION=12
+
+# 定义加密密码
+GPG_PASSPHRASE=&amp;#34;your_secret_passphrase_here&amp;#34;  # 你的加密密码
+
+# 确保目标目录存在
+mkdir -p &amp;#34;$DAILY_BACKUP_DIR&amp;#34; &amp;#34;$MONTHLY_BACKUP_DIR&amp;#34; &amp;#34;$WORK_DIR&amp;#34;
+
+# Step 1: 执行SQLite3热备份
+sqlite3 &amp;#34;${DATA_DIR}/db.sqlite3&amp;#34; &amp;#34;.backup &amp;#39;${WORK_DIR}/db_${DATE}.sqlite3&amp;#39;&amp;#34;
+
+# Step 2: 打包备份文件
+tar -czf &amp;#34;${WORK_DIR}/backup_${DATE}.tar.gz&amp;#34; -C &amp;#34;${WORK_DIR}&amp;#34; &amp;#34;db_${DATE}.sqlite3&amp;#34;
+
+# Step 3: 加密备份文件
+echo &amp;#34;$GPG_PASSPHRASE&amp;#34; | gpg --batch --yes --passphrase-fd 0 --symmetric --cipher-algo AES256 --output &amp;#34;${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg&amp;#34; &amp;#34;${WORK_DIR}/backup_${DATE}.tar.gz&amp;#34;
+
+# Step 4: 删除临时文件
+rm &amp;#34;${WORK_DIR}/db_${DATE}.sqlite3&amp;#34; &amp;#34;${WORK_DIR}/backup_${DATE}.tar.gz&amp;#34;
+
+# Step 5: 每月备份逻辑（每月第一天执行）
+if [ &amp;#34;$(date +%d)&amp;#34; -eq 1 ]; then
+  cp &amp;#34;${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg&amp;#34; &amp;#34;${MONTHLY_BACKUP_DIR}/&amp;#34;
+fi
+
+# Step 6: 保留最近的30份每日备份
+cd &amp;#34;${DAILY_BACKUP_DIR}&amp;#34;
+ls -tp | grep -v &amp;#39;/$&amp;#39; | tail -n +$((${DAILY_BACKUP_RETENTION}+1)) | xargs -I {} rm -- {}
+
+# Step 7: 保留最近12个月的备份
+cd &amp;#34;${MONTHLY_BACKUP_DIR}&amp;#34;
+ls -tp | grep -v &amp;#39;/$&amp;#39; | tail -n +$((${MONTHLY_BACKUP_RETENTION}+1)) | xargs -I {} rm -- {}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;修改脚本权限&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chmod 700 /path/to/backup.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建定时任务每天凌晨 2 点自动备份。使用crontab @reboot，记得加+x权限&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;0 2 * * * /path/to/backup.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可以手动运行一次脚本，检查云盘中是否有备份文件，同时重启一下服务器查看网盘是否自动挂载。&lt;/p&gt;
+&lt;h3 id=&#34;恢复备份&#34;&gt;恢复备份
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;可以同样用管道符传入密码。（&lt;strong&gt;不推荐，安全问题&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;$GPG_PASSPHRASE&amp;#34; | gpg --batch --yes --passphrase-fd 0 --decrypt --output &amp;#34;${WORK_DIR}/backup_${DATE}.tar.gz&amp;#34; &amp;#34;${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;交互式输入密码，执行命令后会弹窗输出密码。（&lt;strong&gt;推荐&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --decrypt --output &amp;#34;${WORK_DIR}/backup_${DATE}.tar.gz&amp;#34; &amp;#34;${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;</description>
         </item>
         <item>
         <title>ClawCloud使用体验</title>
-        <link>/posts/vps_setup_clawcloud/</link>
+        <link>https://www.braindance.top/posts/vps_setup_clawcloud/</link>
         <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>/posts/vps_setup_clawcloud/</guid>
+        <guid>https://www.braindance.top/posts/vps_setup_clawcloud/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;快毕业了忙的飞起，上个服务器到期了我都没来得及管，现在写这篇博客还是在github的pages上，又接触了一些项目，想买个便宜好使的服务器玩玩。&lt;/p&gt;
 &lt;p&gt;在论坛里搜到&lt;a class=&#34;link&#34; href=&#34;https://claw.cloud/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -275,10 +348,10 @@ sudo sh get-docker.sh
         </item>
         <item>
         <title>JetBrains 全家桶破解</title>
-        <link>/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
+        <link>https://www.braindance.top/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
         <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
         
-        <guid>/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
+        <guid>https://www.braindance.top/posts/play_time/jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
         <description>&lt;p&gt;&lt;del&gt;突然想开发了我的 IDEA 还是 2021 的，IDEA 和 Pycharm 还在机械硬盘，装个最新的到固态里面。教育邮箱懒得申请了，失效了又要麻烦续杯。写出来记录一下以后自己参考。&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;所提供的内容仅供学习交流使用,严禁用于商业用途,请于下载后24小时内删除。&lt;/p&gt;&lt;/blockquote&gt;
@@ -466,10 +539,10 @@ EQUAL,68882739393071192851227554969829307066568614651696605265594123140487044197
         </item>
         <item>
         <title>软路由日记(一)</title>
-        <link>/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
+        <link>https://www.braindance.top/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
         <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</guid>
+        <guid>https://www.braindance.top/posts/play_time/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在学校疫情期间买了一个 j4125 的软路由，一直等到回家过了很久才到手，因为买的是裸机，还有些配件是在别的店买的，回家以后发现地址只能在区以内修改，只能取消订单重新下了单。&lt;/p&gt;
 &lt;p&gt;最后的配件列表如下：&lt;/p&gt;
@@ -628,10 +701,10 @@ vfio_virqfd
         </item>
         <item>
         <title>中国联通SK-D748光猫超级密码获取</title>
-        <link>/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
+        <link>https://www.braindance.top/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
         <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
         
-        <guid>/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</guid>
+        <guid>https://www.braindance.top/posts/play_time/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</guid>
         <description>&lt;p&gt;折腾软路由百忙之中抽时间来简单&lt;del&gt;水&lt;/del&gt;一篇。&lt;/p&gt;
 &lt;p&gt;有这个需求是因为目前在家里是用另一个无线路由器桥接联通的光猫的，但是在dhcp 里死活找不到桥接路由器分配的 ip，然后插上软路由竟然又把 ip 分配给软路由了，真是不服不行。&lt;/p&gt;
 &lt;p&gt;之前装联通宽带的时候尝试过找师傅要超级管理员的密码，但是师傅给我打哈哈糊弄过去了，给的一个普通 user 用户并没有静态 ip 的权限，所以就去网上找教程了，自己记录一下。&lt;/p&gt;
@@ -678,10 +751,10 @@ vfio_virqfd
         </item>
         <item>
         <title>ZUT 使用路由器连接校园网</title>
-        <link>/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
+        <link>https://www.braindance.top/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
         <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
         
-        <guid>/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
+        <guid>https://www.braindance.top/posts/play_time/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;我们学校的校园网不光每个月要宽带费 20/月，而且要绑定一个校园卡，我的一个月月租下来要 49/月，而且校园网还限制设备数量只能连接一个，我一般都是电脑连校园网，手机用流量，但是教职工的校园网就可以两个设备连接，寝室里目前有6+个设备也需要联网，商量以后打算搞个路由器贡献一个账号连校园网开 wifi，之前就见贴吧有老哥已经成功了，所以自己也尝试一下做个记录，给以后的同学看也不错。由于我已经连好路由器了，所以部分图片取自网络图片作为参考，我也尽量说的详细些。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1141,10 +1214,10 @@ chmod 777 /usr/bin/dogcom
         </item>
         <item>
         <title>KKapi&#43;ISpeak说说页面部署</title>
-        <link>/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</link>
+        <link>https://www.braindance.top/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</link>
         <pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate>
         
-        <guid>/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</guid>
+        <guid>https://www.braindance.top/posts/play_time/kkapi&#43;ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;感觉原来的 Artitalk 说说不好康，在开往里发现好多博客都用的说说功能叫叨叨点啥，看了看作者的&lt;a class=&#34;link&#34; href=&#34;https://www.antmoe.com/speak/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;说说页面&lt;/a&gt;，可以插入图片和标签分类，还有仅自己可见的功能，感觉挺不错的（实际是自己想折腾）所以就整一个。自己在部署过程中实在是踩了不少的坑，而且作者的文档感觉写的也不算完善，所以打算自己记录一下。&lt;/p&gt;
@@ -1336,10 +1409,10 @@ chmod 777 /usr/bin/dogcom
         </item>
         <item>
         <title>博客图床迁移</title>
-        <link>/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
+        <link>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
         <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
+        <guid>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
         <description>&lt;h2 id=&#34;起因&#34;&gt;起因
 &lt;/h2&gt;&lt;p&gt;原来博客的图片使用Jsdelivr和github的方式存储访问，但是最近Jsdelivr频繁的被墙，感觉可能在未来的不久会失效，毕竟好多人用来当免费的CDN（&lt;del&gt;比如我&lt;/del&gt;），也会有人使用其访问些zz敏感或其他的文件，被墙了也情有可原，而且github的仓库的作用也是用来存储代码而非图床，像我这样的人也导致了仓库的滥用，所以决定找个新的途径。&lt;/p&gt;
 &lt;h2 id=&#34;过程&#34;&gt;过程
@@ -1371,10 +1444,10 @@ chmod 777 /usr/bin/dogcom
         </item>
         <item>
         <title>博客搬迁</title>
-        <link>/posts/play_time/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
+        <link>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
         <pubDate>Mon, 31 Jan 2022 11:31:54 +0800</pubDate>
         
-        <guid>/posts/play_time/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
+        <guid>https://www.braindance.top/posts/play_time/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202201311142110.jpg&#34;
 	
 	
@@ -1430,10 +1503,10 @@ chmod 777 /usr/bin/dogcom
         </item>
         <item>
         <title>PicGo复制自定义链接</title>
-        <link>/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+        <link>https://www.braindance.top/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
         
-        <guid>/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://www.braindance.top/posts/play_time/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;2022年2月3日22:41:32&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
@@ -1517,10 +1590,10 @@ chmod 777 /usr/bin/dogcom
         </item>
         <item>
         <title>jsdelivr 缓存刷新</title>
-        <link>/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
+        <link>https://www.braindance.top/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
         <pubDate>Fri, 20 Nov 2020 22:02:46 +0000</pubDate>
         
-        <guid>/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
+        <guid>https://www.braindance.top/posts/play_time/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	上一篇修改了黑幕，但是使用了jsdelivr加速的静态资源，所以照常更新下github上的资源，但是github上查看已经上传成功了，jsdelivr访问的依然是之前的资源，说白了就是缓存的问题。即使本地浏览器端的缓存已经清理，也会因为CDN周围的节点没有同步数据而导致用户端未能及时更新。&lt;/p&gt;
 &lt;h2 id=&#34;缓存刷新&#34;&gt;缓存刷新
@@ -1542,10 +1615,10 @@ chmod 777 /usr/bin/dogcom
         </item>
         <item>
         <title>萌娘百科黑幕实现</title>
-        <link>/posts/play_time/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</link>
+        <link>https://www.braindance.top/posts/play_time/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</link>
         <pubDate>Fri, 20 Nov 2020 10:13:07 +0000</pubDate>
         
-        <guid>/posts/play_time/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</guid>
+        <guid>https://www.braindance.top/posts/play_time/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	老早就觉得&lt;a class=&#34;link&#34; href=&#34;https://zh.moegirl.org.cn/Mainpage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;萌娘百科&lt;/a&gt;里的&lt;code&gt;&amp;lt;span class=&#39;heimu&#39;&amp;gt;黑幕&amp;lt;/span&amp;gt;&lt;/code&gt;很好玩，所以摸索着给自己博客加了一个。参考博客&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/send-off-a-friend/p/12355387.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1624,10 +1697,10 @@ chmod 777 /usr/bin/dogcom
         </item>
         <item>
         <title>jsDelivr加速静态博客</title>
-        <link>/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://www.braindance.top/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 11 Nov 2020 21:37:53 +0000</pubDate>
         
-        <guid>/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>https://www.braindance.top/posts/play_time/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	这几天总感觉博客访问特别慢，最先是找到了CDN加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1700,10 +1773,10 @@ git push                      //推送至远程仓库
         </item>
         <item>
         <title>Chevereto-搭建一个自己的图床</title>
-        <link>/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
+        <link>https://www.braindance.top/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
         <pubDate>Sun, 20 Sep 2020 11:09:02 +0000</pubDate>
         
-        <guid>/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
+        <guid>https://www.braindance.top/posts/play_time/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
         <description>&lt;p&gt;博客搭完了，自己选择的这个博客主题又是以图片为主要元素的，当然要考虑图片的使用问题了，原来打算直接放在服务器上，但是后来想了想，以后如果文章&lt;del&gt;越写越多&lt;/del&gt;用的图太多服务器的流量也不够用，想到了图床这一托管图片的服务，但是放在别人的上面总怕会受到&lt;del&gt;限制&lt;/del&gt;，正好发现了&lt;code&gt;Chevereto&lt;/code&gt;这一图床系统，可以自己搭建一个图床服务器，正好自己还有一个阿里云学生云，那就开工。&lt;/p&gt;
 &lt;h3 id=&#34;chevereto-说明&#34;&gt;Chevereto 说明
 &lt;/h3&gt;&lt;blockquote&gt;
@@ -1836,10 +1909,10 @@ git push                      //推送至远程仓库
         </item>
         <item>
         <title>Let_s_Encrypt 免费Https证书</title>
-        <link>/posts/play_time/lets-encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</link>
+        <link>https://www.braindance.top/posts/play_time/lets-encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</link>
         <pubDate>Thu, 03 Sep 2020 15:30:37 +0000</pubDate>
         
-        <guid>/posts/play_time/lets-encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</guid>
+        <guid>https://www.braindance.top/posts/play_time/lets-encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</guid>
         <description>&lt;p&gt;参考文章:&lt;a class=&#34;link&#34; href=&#34;https://imququ.com/post/letsencrypt-certificate.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Let&amp;rsquo;s Encrypt，免费好用的 HTTPS 证书&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;先放官网&#34;&gt;先放官网
@@ -1974,10 +2047,10 @@ git push                      //推送至远程仓库
         </item>
         <item>
         <title>Freenom域名注册解析到服务器</title>
-        <link>/posts/play_time/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <link>https://www.braindance.top/posts/play_time/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
         <pubDate>Wed, 02 Sep 2020 12:25:37 +0000</pubDate>
         
-        <guid>/posts/play_time/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <guid>https://www.braindance.top/posts/play_time/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
         <description>&lt;h3 id=&#34;1官网&#34;&gt;&lt;strong&gt;1.官网&lt;/strong&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.freenom.com/zh/index.html?lang=zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Freenom - 人人都熟悉的名字&lt;/a&gt;&lt;/p&gt;

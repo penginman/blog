@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Disable_function绕过 on </title>
-        <link>/tags/disable_function%E7%BB%95%E8%BF%87/</link>
-        <description>Recent content in Disable_function绕过 on </description>
+        <title>Disable_function绕过 on Braindance</title>
+        <link>https://www.braindance.top/tags/disable_function%E7%BB%95%E8%BF%87/</link>
+        <description>Recent content in Disable_function绕过 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 05 Dec 2020 20:42:00 +0000</lastBuildDate><atom:link href="/tags/disable_function%E7%BB%95%E8%BF%87/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Dec 2020 20:42:00 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/disable_function%E7%BB%95%E8%BF%87/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>极客大挑战 2019 RCE ME</title>
-        <link>/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
+        <link>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</link>
         <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
         
-        <guid>/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
+        <guid>https://www.braindance.top/posts/ctf/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019rce-me/</guid>
         <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
 &lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?php

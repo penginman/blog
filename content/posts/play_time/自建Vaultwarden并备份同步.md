@@ -98,12 +98,109 @@ https://linux.do/t/topic/238502
 rclone mount onedrive:/backup/ /mnt/onedrive --allow-non-empty --vfs-cache-mode full --daemon
 ```
 
+**配置开机自动挂载**。
 
-
-使用crontab @reboot，记得加+x权限
+* 方法1：编辑 `~/.config/autostart/rclone-onedrive.desktop` 添加以下内容
 
 ```
+[Desktop Entry]
+Type=Application
+Name=Mount OneDrive with rclone
+Exec=rclone mount onedrive:/backup/ /mnt/onedrive --allow-non-empty --vfs-cache-mode full --daemon writes &
+Terminal=false
+Hidden=false
+```
 
+* 方法2：直接把挂载命令写成一个 sh 脚本文件，在 crontab 中添加配置每次开机后自动执行。
+
+```
+@reboot /path/to/rclone-onedrive.sh
+```
+
+### 自动备份
+
+采用 sqlite3 先热备数据库，然后打包。备份计划每天一个日备份，保存在daily文件夹下，保留30份，循环覆写。每个月一个月备份，保存在monthly文件夹下，保留12份，循环覆写。注意安装依赖环境
+
+```
 apt-get install sqlite3
 ```
+
+脚本文件如下：
+
+```
+#!/bin/bash
+
+# 定义路径
+# 数据地址
+DATA_DIR="/vw-data"
+# 网盘挂载的地址
+BACKUP_DIR="/mnt/onedrive"
+DAILY_BACKUP_DIR="${BACKUP_DIR}/daily"
+MONTHLY_BACKUP_DIR="${BACKUP_DIR}/monthly"
+WORK_DIR="${BACKUP_DIR}/work"
+DATE=$(date +%Y%m%d)
+DAILY_BACKUP_RETENTION=30
+MONTHLY_BACKUP_RETENTION=12
+
+# 定义加密密码
+GPG_PASSPHRASE="your_secret_passphrase_here"  # 你的加密密码
+
+# 确保目标目录存在
+mkdir -p "$DAILY_BACKUP_DIR" "$MONTHLY_BACKUP_DIR" "$WORK_DIR"
+
+# Step 1: 执行SQLite3热备份
+sqlite3 "${DATA_DIR}/db.sqlite3" ".backup '${WORK_DIR}/db_${DATE}.sqlite3'"
+
+# Step 2: 打包备份文件
+tar -czf "${WORK_DIR}/backup_${DATE}.tar.gz" -C "${WORK_DIR}" "db_${DATE}.sqlite3"
+
+# Step 3: 加密备份文件
+echo "$GPG_PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 --symmetric --cipher-algo AES256 --output "${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg" "${WORK_DIR}/backup_${DATE}.tar.gz"
+
+# Step 4: 删除临时文件
+rm "${WORK_DIR}/db_${DATE}.sqlite3" "${WORK_DIR}/backup_${DATE}.tar.gz"
+
+# Step 5: 每月备份逻辑（每月第一天执行）
+if [ "$(date +%d)" -eq 1 ]; then
+  cp "${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg" "${MONTHLY_BACKUP_DIR}/"
+fi
+
+# Step 6: 保留最近的30份每日备份
+cd "${DAILY_BACKUP_DIR}"
+ls -tp | grep -v '/$' | tail -n +$((${DAILY_BACKUP_RETENTION}+1)) | xargs -I {} rm -- {}
+
+# Step 7: 保留最近12个月的备份
+cd "${MONTHLY_BACKUP_DIR}"
+ls -tp | grep -v '/$' | tail -n +$((${MONTHLY_BACKUP_RETENTION}+1)) | xargs -I {} rm -- {}
+```
+
+修改脚本权限
+
+```
+chmod 700 /path/to/backup.sh
+```
+
+创建定时任务每天凌晨 2 点自动备份。使用crontab @reboot，记得加+x权限
+
+```
+0 2 * * * /path/to/backup.sh
+```
+
+可以手动运行一次脚本，检查云盘中是否有备份文件，同时重启一下服务器查看网盘是否自动挂载。
+
+### 恢复备份
+
+1. 可以同样用管道符传入密码。（**不推荐，安全问题**）
+
+```
+echo "$GPG_PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 --decrypt --output "${WORK_DIR}/backup_${DATE}.tar.gz" "${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg"
+```
+
+2. 交互式输入密码，执行命令后会弹窗输出密码。（**推荐**）
+
+```
+gpg --decrypt --output "${WORK_DIR}/backup_${DATE}.tar.gz" "${DAILY_BACKUP_DIR}/backup_${DATE}.tar.gz.gpg"
+```
+
+
 

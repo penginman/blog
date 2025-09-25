@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Misc on </title>
-        <link>/tags/misc/</link>
-        <description>Recent content in Misc on </description>
+        <title>Misc on Braindance</title>
+        <link>https://www.braindance.top/tags/misc/</link>
+        <description>Recent content in Misc on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate><atom:link href="/tags/misc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/misc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>DMCTF之Misc</title>
-        <link>/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
+        <link>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bmisc/</link>
         <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
         
-        <guid>/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
+        <guid>https://www.braindance.top/posts/ctf/dmctf%E4%B9%8Bmisc/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;这次比赛是第一次做Mics的题awa。&lt;/p&gt;
 &lt;h1 id=&#34;misc&#34;&gt;Misc

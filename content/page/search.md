@@ -1,5 +1,7 @@
 ---
-layout: search
-comment: false
+title: "search"
+layout: "search"
+hidden: true
+comments: false
 ---
 

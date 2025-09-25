@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on </title>
-        <link>/categories/</link>
-        <description>Recent content in Categories on </description>
+        <title>Categories on Braindance</title>
+        <link>https://www.braindance.top/categories/</link>
+        <description>Recent content in Categories on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.braindance.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>瞎折腾</title>
-        <link>/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
+        <link>https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
         <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</guid>
+        <guid>https://www.braindance.top/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</guid>
         <description></description>
         </item>
         <item>
         <title>Leetcode</title>
-        <link>/categories/leetcode/</link>
+        <link>https://www.braindance.top/categories/leetcode/</link>
         <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>/categories/leetcode/</guid>
+        <guid>https://www.braindance.top/categories/leetcode/</guid>
         <description></description>
         </item>
         <item>
         <title>学习笔记</title>
-        <link>/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <link>https://www.braindance.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://www.braindance.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
         <description></description>
         </item>
         <item>
         <title>年度总结</title>
-        <link>/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+        <link>https://www.braindance.top/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
         
-        <guid>/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://www.braindance.top/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
         <description></description>
         </item>
         <item>
         <title>CTF</title>
-        <link>/categories/ctf/</link>
+        <link>https://www.braindance.top/categories/ctf/</link>
         <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
         
-        <guid>/categories/ctf/</guid>
+        <guid>https://www.braindance.top/categories/ctf/</guid>
         <description></description>
         </item>
         <item>
         <title>流水账</title>
-        <link>/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</link>
+        <link>https://www.braindance.top/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</link>
         <pubDate>Wed, 02 Sep 2020 22:05:34 +0000</pubDate>
         
-        <guid>/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</guid>
+        <guid>https://www.braindance.top/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</guid>
         <description></description>
         </item>
         

@@ -1,5 +1,7 @@
 theme: hugo-theme-stack
 defaultContentLanguage: zh-cn
+title: Braindance
+baseURL: https://www.braindance.top
 params:
   description: 为世界上所有的美好而战
   mainSections: posts
@@ -14,7 +16,7 @@ params:
   Footer:
     since: 2020
   Article:
-    toc: true # 这个没实现
+    toc: true
     readingTime: true
     license:
       enabled: true
@@ -22,24 +24,24 @@ params:
     enabled: true
     provider: twikoo
     twikoo:
-      envId: https://twikoo.braindance.top/.netlify/functions/twikoo 
+      envId: https://twikoo.braindance.top/.netlify/functions/twikoo
   colorScheme:
     toggle: true
     default: auto
   widgets:
     homepage:
-        - type: search
-        - type: archives
-          params:
-              limit: 5
-        - type: categories
-          params:
-              limit: 10
-        - type: tag-cloud
-          params:
-              limit: 10
+      - type: search
+      - type: archives
+        params:
+          limit: 3
+      - type: categories
+        params:
+          limit: 5
+      - type: tag-cloud
+        params:
+          limit: 5
     page:
-        - type: toc
+      - type: toc
 
 social:
   - identifier: github
@@ -48,7 +50,6 @@ social:
     params:
       icon: brand-github
       newTab: true
-
 
 menu:
   main:
@@ -78,3 +79,8 @@ menu:
       params:
         icon: travelling-light
         newTab: true
+outputs:
+  page:
+    - HTML
+    - RSS
+    - JSON
