@@ -1,22 +1,20 @@
 ---
-title: 'ZUT 使用路由器连接校园网'
-tags: ['校园网']
-categories: ['瞎折腾']
+title: "ZUT 使用路由器连接校园网"
+tags: ["校园网"]
+categories: ["Play"]
 date: 2022-10-11
 lastmod: 2022-10-31
-
-
 ---
 
 ## 前言
-我们学校的校园网不光每个月要宽带费 20/月，而且要绑定一个校园卡，我的一个月月租下来要 49/月，而且校园网还限制设备数量只能连接一个，我一般都是电脑连校园网，手机用流量，但是教职工的校园网就可以两个设备连接，寝室里目前有6+个设备也需要联网，商量以后打算搞个路由器贡献一个账号连校园网开 wifi，之前就见贴吧有老哥已经成功了，所以自己也尝试一下做个记录，给以后的同学看也不错。由于我已经连好路由器了，所以部分图片取自网络图片作为参考，我也尽量说的详细些。
+
+我们学校的校园网不光每个月要宽带费 20/月，而且要绑定一个校园卡，我的一个月月租下来要 49/月，而且校园网还限制设备数量只能连接一个，我一般都是电脑连校园网，手机用流量，但是教职工的校园网就可以两个设备连接，寝室里目前有 6+个设备也需要联网，商量以后打算搞个路由器贡献一个账号连校园网开 wifi，之前就见贴吧有老哥已经成功了，所以自己也尝试一下做个记录，给以后的同学看也不错。由于我已经连好路由器了，所以部分图片取自网络图片作为参考，我也尽量说的详细些。
 
 > 1. 对于任何硬件、软件的损坏，本人没有赔偿的责任，哪怕这样的后果是因教程中的错误造成的。也请认真对待每一步操作，也许因为你的操作不当硬件因此变成一块砖。另外本教程的操作会使你的路由器失去保修。
 > 2. 本篇文章仅起指导性的作用，在操作的过程中遇到的问题也许我也没有遇到过，请先自行尝试解决，如果我有空也会尽量帮助。
 > 3. 学校明令禁止安装路由器，本人绝对没有怂恿或建议任何同学安装路由器，本人安装路由器的行为完全属于个人意志，仅仅作为个人的学习技术交流，请读者在安装好路由器之后 24 小时内再将之拆除，请按照学校指明的方式连接到互联网。如果学校根据校规等文件追究责任，与本人无关。
 
 叠甲过
-
 
 ## 前置知识
 
@@ -26,28 +24,29 @@ zut 的校园网认证格式为账号：`\r\n你的学号@[unicom|telecom|cmcc]`
 
 zut 校园网的客户端版本为：6.0.0（P）
 
-校园网的防检测插件原理还没有写，自己用的 小米4C 是社区固件资源中自带的。想看原理可以看最后挖坑部分
+校园网的防检测插件原理还没有写，自己用的 小米 4C 是社区固件资源中自带的。想看原理可以看最后挖坑部分
 
 ## 需要的材料
 
-本教程使用的路由器型号 `Xiaomi router 4c` pdd二手35，安装的系统 `openwrt`。**请注意**：路由器的选择直接影响到你后面的操作，我专门在网上挑了好久选的这个路由器，但是，**唯独这个路由器的社区资源最特殊**，本人也是经过各种尝试才成功。如果选择其他路由器，本教程中的主要安装思路相同，但是需要自行寻找适合自己路由器的固件资源。
+本教程使用的路由器型号 `Xiaomi router 4c` pdd 二手 35，安装的系统 `openwrt`。**请注意**：路由器的选择直接影响到你后面的操作，我专门在网上挑了好久选的这个路由器，但是，**唯独这个路由器的社区资源最特殊**，本人也是经过各种尝试才成功。如果选择其他路由器，本教程中的主要安装思路相同，但是需要自行寻找适合自己路由器的固件资源。
 
-* 路由器。
-* 网线两根。一根我买的8m的，因为宿舍AP在门上面，另一根需要连接路由器和电脑，长度自己看。
-* 开通校园网的账号。
-* 自己思考的能力。
-* 需要的软件压缩包：[zut_Xiaomi_router_4c.zip](https://wwn.lanzouy.com/igsaW0dn0k3a)。其中包含
-	* dogcom.zip。用来进行校园网模拟拨号，定时发送心跳包的工具。
-	* R3GV2 patches.zip。刷机的主要部分包含了：R3GV2 patches（前期连接路由器的工具）、Mi4C.bin（小米 4c 的 openwrt 固件自带防检测插件）、breed.bin（breed web 恢复控制台）
-	* MobaXterm_Portable.zip。用来连接路由器和传输文件的软件
-	* 小米路由器4C恢复官方固件工具包.zip。刷成砖的[官方补救措施](https://web.vip.miui.com/page/info/mio/mio/detail?postId=19134127&app_version=dev.20051)
+- 路由器。
+- 网线两根。一根我买的 8m 的，因为宿舍 AP 在门上面，另一根需要连接路由器和电脑，长度自己看。
+- 开通校园网的账号。
+- 自己思考的能力。
+- 需要的软件压缩包：[zut_Xiaomi_router_4c.zip](https://wwn.lanzouy.com/igsaW0dn0k3a)。其中包含
+  - dogcom.zip。用来进行校园网模拟拨号，定时发送心跳包的工具。
+  - R3GV2 patches.zip。刷机的主要部分包含了：R3GV2 patches（前期连接路由器的工具）、Mi4C.bin（小米 4c 的 openwrt 固件自带防检测插件）、breed.bin（breed web 恢复控制台）
+  - MobaXterm_Portable.zip。用来连接路由器和传输文件的软件
+  - 小米路由器 4C 恢复官方固件工具包.zip。刷成砖的[官方补救措施](https://web.vip.miui.com/page/info/mio/mio/detail?postId=19134127&app_version=dev.20051)
 
 ## 教程参考的网站或资料
-* 贴吧老哥的教程：[https://tieba.baidu.com/p/7760362347](https://tieba.baidu.com/p/7760362347)
-* 广东工业大学在 github 上的教程：[https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt](https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt)
-* 【记录】小米路由器 4C 刷机过程：[https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt/issues/27](https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt/issues/27)
-* R4CM，说说我的小米路由器4C刷机过程：不用Linux也不用虚拟机…… ：[https://www.right.com.cn/FORUM/thread-4047571-1-1.html](https://www.right.com.cn/FORUM/thread-4047571-1-1.html)
-* 路由器认证校园网drcom：[https://www.brothereye.cn/router/669/](https://www.brothereye.cn/router/669/)
+
+- 贴吧老哥的教程：[https://tieba.baidu.com/p/7760362347](https://tieba.baidu.com/p/7760362347)
+- 广东工业大学在 github 上的教程：[https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt](https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt)
+- 【记录】小米路由器 4C 刷机过程：[https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt/issues/27](https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt/issues/27)
+- R4CM，说说我的小米路由器 4C 刷机过程：不用 Linux 也不用虚拟机…… ：[https://www.right.com.cn/FORUM/thread-4047571-1-1.html](https://www.right.com.cn/FORUM/thread-4047571-1-1.html)
+- 路由器认证校园网 drcom：[https://www.brothereye.cn/router/669/](https://www.brothereye.cn/router/669/)
 
 ## 开工
 
@@ -62,7 +61,6 @@ zut 校园网的客户端版本为：6.0.0（P）
 > Breed 是国内个人 hackpascal 开发的闭源 Bootloader（引导加载器，即为用于加载操作系统的程序），也被称为“不死鸟”。
 > 因为有些官方升级固件自带 bootloader，如果从官方固件升级，会导致现有 bootloader 被覆盖。而当 Breed 更新固件时，它会自动删除固件附带的引导加载程序，因此可以防止 Breed 被覆盖。
 
-
 刷入 Breed 的作用就是为后面刷固件做个保险，失败以后可以进行 reset 复位，防止路由器刷成一块砖。
 
 ### 开启路由器 telnet 和 ftp
@@ -70,6 +68,7 @@ zut 校园网的客户端版本为：6.0.0（P）
 打开前面下载的压缩包中的 `R3GV2 patches` 文件夹，运行其中的 `0.start_main.bat`，这个批处理的命令主要是运行了文件夹中的 `main.py` ，而 `main.py` 做的事情就是尝试发现你的路由器后台地址，然后需要输入**管理后台的密码**，然后执行一些 exploit 在路由器中写入后门，界面中出现 `Done` 字样就算成功。
 
 这里遇到过扫描不到管理后台的情况，如果遇到了可以参考以下步骤。修改 `main.py` 文件中的第 10 行到 15 行，删掉
+
 ```python
 line4 = subprocess.check_output(["cmd","/c","chcp","437","&","tracert","-d","-h","1","1.1.1.1"]).decode().split("\r\n")[4].strip().split(" ")
 
@@ -80,10 +79,10 @@ for data in line4:
 ```
 
 添加 `router_ip_address` 变量为你的管理后台地址，通常为 `192.168.31.1`
+
 ```python
 router_ip_address = '192.168.31.1'
 ```
-
 
 接下来使用 MobaXterm 连接路由器，新建一个 session 类型选择 telnet，这时的路由器地址就是管理后台的地址应该是 `192.168.31.1`，用户为 `root`。
 
@@ -92,6 +91,7 @@ router_ip_address = '192.168.31.1'
 ps：如果连接不成功就多运行几次 `0.start_main.bat`。
 
 ### 备份原路由器信息
+
 **以下步骤请注意！！！**
 最好备份以下路由器原本分区文件，以防不备之需，其中`eeprom.bin` 是最重要的，因为刷入 breed 以后可能会导致 MAC 地址全 0，需要刷入一次这个文件才会恢复。执行以下命令，`of` 后面的就是文件输出的路径
 
@@ -107,7 +107,7 @@ dd if=/dev/mtd3 of=/tmp/eeprom.bin
 
 找到 `tmp` 文件夹其中的三个文件：`all.bin` 、`bootloader.bin` 和 `eeprom.bin`，复制到本地做备份，下载以后一定要看清楚三个文件的大小分别是 `16MB` 、`64k` 和 `64k`，如果大小是 `1k` 那就是错误的，再备份几次，也有可能是后门没写牢再执行 `0.start_main.bat` 试试。
 
-### 上传 Breed  文件并刷入
+### 上传 Breed 文件并刷入
 
 在资源管理器的 ftp 中把 `breed.bin` 文件上传到 `/tmp` 文件夹下，在 telnet 中执行指令刷入引导加载器
 
@@ -127,11 +127,11 @@ mtd write /tmp/breed.bin Bootloader
 
 ### 检查 MAC 地址
 
-进入 MAC 地址修改，通常你应该看到的前三个 MAC 地址应该是全0，这就需要刷入 一次之前的 `eeprom.bin`。（网络图片仅供参考）
+进入 MAC 地址修改，通常你应该看到的前三个 MAC 地址应该是全 0，这就需要刷入 一次之前的 `eeprom.bin`。（网络图片仅供参考）
 
 ![MAC 地址修改](https://img.braindance.top/article/2022/10/11/6345201b6c592.png)
 
-进入**固件更新** （界面同下面），勾选 **EEPORM**，选择文件  `eeprom.bin`，其他的都不要动，然后上传，根据提示更新，之后会重新回到 Breed 控制台。
+进入**固件更新** （界面同下面），勾选 **EEPORM**，选择文件 `eeprom.bin`，其他的都不要动，然后上传，根据提示更新，之后会重新回到 Breed 控制台。
 
 ## 刷入 openwrt
 
@@ -139,15 +139,15 @@ mtd write /tmp/breed.bin Bootloader
 
 ![固件更新](https://img.braindance.top/article/2022/10/11/634527710db18.png)
 
-之后路由器灯会全灭，然后电源灯进入**黄色闪烁**的状态，就是正在安装，等待安装成功以后等会变成**蓝色**，之后就可以访问 `192.168.1.1` 进入openwrt 管理后台页面，默认密码为 `password` 。
+之后路由器灯会全灭，然后电源灯进入**黄色闪烁**的状态，就是正在安装，等待安装成功以后等会变成**蓝色**，之后就可以访问 `192.168.1.1` 进入 openwrt 管理后台页面，默认密码为 `password` 。
 
 ![openwrt 界面](https://img.braindance.top/article/2022/10/11/634524441d739.png)
 
-说一下 `Mi4C.bin` 这个openw 的固件。这个固件来自前面提到的广东工业大学项目中的 [issue](https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt/issues/27)，是一位同学自己找人定制的一份固件并且免费分享出来了，其中已经内置了 Dr.com 插件（用来发送心跳包）及防检测插件（ttl，ipid，cookieflash，ua2f 最新版），非常感谢这位同学的分享。
+说一下 `Mi4C.bin` 这个 openw 的固件。这个固件来自前面提到的广东工业大学项目中的 [issue](https://github.com/shengqiangzhang/Drcom-GDUT-HC5661A-OpenWrt/issues/27)，是一位同学自己找人定制的一份固件并且免费分享出来了，其中已经内置了 Dr.com 插件（用来发送心跳包）及防检测插件（ttl，ipid，cookieflash，ua2f 最新版），非常感谢这位同学的分享。
 
 ### 配置 PPPoE 拨号
 
-**前置条件**：宿舍上面的AP接口插入路由器的 WAN 口
+**前置条件**：宿舍上面的 AP 接口插入路由器的 WAN 口
 
 选择 网络 ---> 接口，点击 `WAN` 接口对应的 编辑（Edit）按钮。
 
@@ -156,8 +156,9 @@ mtd write /tmp/breed.bin Bootloader
 ![网络接口配置](https://img.braindance.top/article/2022/10/11/63452a57015e9.png)
 
 通信协议选择 `PPPoE` 然后点击出现的**切换协议**按钮。然后根据下表填入信息
-* PAP/CHAP 用户名。校园网账号，前置知识中的`\r\n****@***`格式。
-* PAP/CHAP 密码。校园网密码。
+
+- PAP/CHAP 用户名。校园网账号，前置知识中的`\r\n****@***`格式。
+- PAP/CHAP 密码。校园网密码。
 
 其他的不用动，请仔细检查校园网账号和密码是否正确。之后点击保存退出后，点击界面右下角的**保存并应用**。
 
@@ -176,6 +177,7 @@ PPPoE 部分配置完成。但是校园网目前还不能用。
 ![无线网密码配置](https://img.braindance.top/article/2022/10/11/63452e93b28bc.png)
 
 无线网络部分配置完成。
+
 ### 配置管理后台密码
 
 `192.168.1.1` 管理后台默认密码 `password` 容易被进入，进入 系统 ---> 管理权，可以更改访问后台管理员的密码。
@@ -212,19 +214,16 @@ dogcom 安装方式有两种， 一种是使用 openwrt 版本的通过 opkg 软
 
 1. 方法一：使用 opkg 软件包安装
 
-	还是在系统 ---> 软件包界面，有一个上传软件包按钮，点击上传下载的压缩包 `dogcom.zip` 中的 `dogcom_v1.6.2-1_mipsel_24kc.ipk`，之后执行安装即可。
+   还是在系统 ---> 软件包界面，有一个上传软件包按钮，点击上传下载的压缩包 `dogcom.zip` 中的 `dogcom_v1.6.2-1_mipsel_24kc.ipk`，之后执行安装即可。
 
-	也可以通过 ftp 把文件上传到 `/tmp` 文件夹中，然后在控制台执行
+   也可以通过 ftp 把文件上传到 `/tmp` 文件夹中，然后在控制台执行
 
 ```
 opkg install /tmp/dogcom_v1.6.2-1_mipsel_24kc.ipk
 ```
 
-
 2. 方法二：通过 ssh 上传到指定目录
-在左侧的 ftp 界面上面路径输入 `/usr/bin` 进入文件夹，然后拖动名为 **dogcom** 的文件上传到该目录。
-
-
+   在左侧的 ftp 界面上面路径输入 `/usr/bin` 进入文件夹，然后拖动名为 **dogcom** 的文件上传到该目录。
 
 通过以上方法两个方法上传安装 dogcom 以后，可以在控制台执行
 
@@ -233,6 +232,7 @@ opkg install /tmp/dogcom_v1.6.2-1_mipsel_24kc.ipk
 ```
 
 测试软件是否可用，软件输出为
+
 ```
 root@iapp:~# /usr/bin/dogcom
 
@@ -293,22 +293,21 @@ sleep 10 && /usr/bin/dogcom -m pppoe -c /usr/drcom.conf -e -d &
 
 ### 查看校园网是否成功认证
 
-配置完成后，重启路由器，并请耐心等待若干分钟（3分钟内），重新回到 openwrt 管理页面的 网络 ---> 接口中，查看 `WAN` 接口 PPPoE 是否拨号成功，如果运行时间、发送、接受均有数据，并且 IPv4 获得的一个地址，则说明路由器已经可以上网了。
+配置完成后，重启路由器，并请耐心等待若干分钟（3 分钟内），重新回到 openwrt 管理页面的 网络 ---> 接口中，查看 `WAN` 接口 PPPoE 是否拨号成功，如果运行时间、发送、接受均有数据，并且 IPv4 获得的一个地址，则说明路由器已经可以上网了。
 
 ![拨号成功](https://img.braindance.top/article/2022/10/11/63453da03857e.png)
 
-> wan中，学号密码输入错误。
-> 
-> 路由器的wan没有与校园网端口连接
-> 
+> wan 中，学号密码输入错误。
+>
+> 路由器的 wan 没有与校园网端口连接
+>
 > 网线断了，或者路由器坏了
-> 
+>
 > 压根没开通校园网
-> 
+>
 > dogcom 插件中，校园网心跳配置已经更改
-> 
+>
 > 端口被学校网络中心拉黑了
-
 
 ## 挖个坑
 
@@ -316,12 +315,12 @@ sleep 10 && /usr/bin/dogcom -m pppoe -c /usr/drcom.conf -e -d &
 
 常见的四种检测：
 
-* 基于 IPv4 数据包包头内的 TTL 字段的检测（固定TTL）
-* 基于 HTTP 数据包请求头内的 User-Agent 字段的检测(UA2F)
-* DPI (Deep Packet Inspection) 深度包检测技术）（不常用）
-* 基于 IPv4 数据包包头内的 Identification 字段的检测（rkp-ipid 设置 IPID）
-* 基于网络协议栈时钟偏移的检测技术（防时钟偏移检测）
-* Flash Cookie 检测技术（iptables 拒绝 AC 进行 Flash 检测 不常用）
+- 基于 IPv4 数据包包头内的 TTL 字段的检测（固定 TTL）
+- 基于 HTTP 数据包请求头内的 User-Agent 字段的检测(UA2F)
+- DPI (Deep Packet Inspection) 深度包检测技术）（不常用）
+- 基于 IPv4 数据包包头内的 Identification 字段的检测（rkp-ipid 设置 IPID）
+- 基于网络协议栈时钟偏移的检测技术（防时钟偏移检测）
+- Flash Cookie 检测技术（iptables 拒绝 AC 进行 Flash 检测 不常用）
 
 大佬讲解文章：https://catalog.chn.moe/
 
@@ -332,10 +331,12 @@ sleep 10 && /usr/bin/dogcom -m pppoe -c /usr/drcom.conf -e -d &
 2022.10.31 更新
 
 自己从网上找了一个检测断网并自动重新拨号的脚本，配合定时任务每天凌晨 4 点重启，已经用了 20 多天了感觉还不错，分享一波代码。可以在任意目录下创建一个 ping 文件夹（但是需要自己改下某些配置路径），下面的例子是在 /root/ping 目录里放的脚本。脚本包括产生的日志有三个文件：
-* ping.sh。每间隔 `SLEEP_SEC` 时间测试两个外网地址能否访问，超过 `PING_SUM` 次数无法访问判断为拨号掉线，重启 wan 口进行拨号。产生的日志文件存放到 `/root/ping/log.txt`
-* daemon.sh。检测 ping.sh 进程是否存活，如果不存在进程则重启进程；判断日志文件超过 50MB 清空日志文件。
+
+- ping.sh。每间隔 `SLEEP_SEC` 时间测试两个外网地址能否访问，超过 `PING_SUM` 次数无法访问判断为拨号掉线，重启 wan 口进行拨号。产生的日志文件存放到 `/root/ping/log.txt`
+- daemon.sh。检测 ping.sh 进程是否存活，如果不存在进程则重启进程；判断日志文件超过 50MB 清空日志文件。
 
 `ping.sh`
+
 ```shell
 #!/bin/sh
 
@@ -436,14 +437,17 @@ exit 0
 ```
 
 之后在 openwrt 的管理后台 ---> 系统 ---> 计划任务中添加
+
 ```shell
 0 4 * * * reboot
 0 */1 * * * /root/ping/daemon.sh
 
 ```
+
 第一行是每天 4 点重启路由器，第二行是启动检测存活脚本（看好文件路径别错），可以自行设置计划运行时间。
 
 ---
+
 分割线，以下是旧内容
 
 ---
@@ -453,11 +457,6 @@ exit 0
 https://blog.csdn.net/weixin_35251837/article/details/119553540
 
 在 `/etc/ppp/options` 文件中添加 `persist`
-
-
-
-
-
 
 ## 完工
 

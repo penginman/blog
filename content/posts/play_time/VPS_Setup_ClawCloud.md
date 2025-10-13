@@ -2,7 +2,7 @@
 title: "ClawCloud使用体验"
 date: 2025-03-05
 draft: false
-categories: ['瞎折腾']
+categories: ['Play']
 tags: ['服务器']
 description: "新入了一台ClawCloud服务器，写一下使用感受"
 ---

@@ -1,11 +1,11 @@
 ---
 title: PicGo复制自定义链接
-categories: ['瞎折腾']
-tags: ['PicGo上传','图床']
+categories: ["Play"]
+tags: ["PicGo上传", "图床"]
 date: 2020-11-30 09:54:11
 ---
 
-2022年2月3日22:41:32
+2022 年 2 月 3 日 22:41:32
 
 **！！！！！**
 
@@ -13,7 +13,7 @@ date: 2020-11-30 09:54:11
 
 # 前言
 
-现在博客里面的图片使用的是github+jsdelivr+PicGo图床。PicGo是一个开源的上传图片的软件，支持大部分图床的上传，只需要设置对应的图床参数即可一键上传。github上PicGo的概述：
+现在博客里面的图片使用的是 github+jsdelivr+PicGo 图床。PicGo 是一个开源的上传图片的软件，支持大部分图床的上传，只需要设置对应的图床参数即可一键上传。github 上 PicGo 的概述：
 
 > **PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具**
 >
@@ -37,11 +37,11 @@ date: 2020-11-30 09:54:11
 
 # 起因
 
-PicGo上传成功以后可以自动复制url，但是默认复制的图片链接是github提供的，github在国内又经常抽风，图片通常都是无法访问的，所以我使用了jsdelivr提供的链接访问图片，PicGo也提供了自定义链接，但是规定必须包含`$url`参数，也就是默认的url地址：
+PicGo 上传成功以后可以自动复制 url，但是默认复制的图片链接是 github 提供的，github 在国内又经常抽风，图片通常都是无法访问的，所以我使用了 jsdelivr 提供的链接访问图片，PicGo 也提供了自定义链接，但是规定必须包含`$url`参数，也就是默认的 url 地址：
 
 ![](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png)
 
-起初是把jsdelivr的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。
+起初是把 jsdelivr 的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。
 
 # 解决方法
 
@@ -51,13 +51,13 @@ PicGo上传成功以后可以自动复制url，但是默认复制的图片链接
 
 # 结语
 
-软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了`$filename`变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是`png`格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接`Crtl+Shift+i`，把图片链接贴里面就彳亍了。~~白嫖真爽~
+软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了`$filename`变量，然后博客中的图片大部分都是使用 QQ 的截屏功能，出来的截图后缀都是`png`格式，这个可以根据需要自己设定拼接，然后使用的 markdown 编辑器是 typora，想要添加图片直接`Crtl+Shift+i`，把图片链接贴里面就彳亍了。~~白嫖真爽~
 
 ---
 
 2022-1-31 11:43:48
 
-这时候发现自定义链接直接用markdown格式就更好了
+这时候发现自定义链接直接用 markdown 格式就更好了
 
 ```other
 ![$fileName](https://cdn.jsdelivr.net/gh/username/repo@master/artical/$fileName.png)
@@ -71,7 +71,7 @@ PicGo上传成功以后可以自动复制url，但是默认复制的图片链接
 
 ![image-20220203224558136](https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202202032246055.png)
 
-直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的
+直接在自定义域名那里修改成 jsDeliver 对应的仓库路径，比如我的
 
 ```other
 https://cdn.jsdelivr.net/gh/penginman/PicBed@master

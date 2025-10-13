@@ -1,8 +1,8 @@
 ---
 title: lede 编译
 date: 2023-09-15
-categories: ['瞎折腾']
-tags: ['软路由']
+categories: ["Play"]
+tags: ["软路由"]
 draft: true
 ---
 
@@ -38,8 +38,6 @@ git pull
 make menuconfig
 ```
 
-
-
 theme
 
 LuCI --> Themes
@@ -63,4 +61,3 @@ Network --> Firewall -->
 - iptables-mod-filter
 - iptables-mod-ipopt
 - iptables-mod-u32
-

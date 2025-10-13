@@ -1,6 +1,6 @@
 ---
 title: '自建Vaultwarden并备份同步'
-categories: ['瞎折腾']
+categories: ['Play']
 slug: vaultwarden-build
 date: 2025-04-13
 description: '自托管密码管理器Vaultwarden的部署、配置、同步备份和恢复'

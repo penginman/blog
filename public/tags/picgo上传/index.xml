@@ -12,11 +12,11 @@
         <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
         
         <guid>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
-        <description>&lt;p&gt;2022年2月3日22:41:32&lt;/p&gt;
+        <description>&lt;p&gt;2022 年 2 月 3 日 22:41:32&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;前言&#34;&gt;前言
-&lt;/h1&gt;&lt;p&gt;现在博客里面的图片使用的是github+jsdelivr+PicGo图床。PicGo是一个开源的上传图片的软件，支持大部分图床的上传，只需要设置对应的图床参数即可一键上传。github上PicGo的概述：&lt;/p&gt;
+&lt;/h1&gt;&lt;p&gt;现在博客里面的图片使用的是 github+jsdelivr+PicGo 图床。PicGo 是一个开源的上传图片的软件，支持大部分图床的上传，只需要设置对应的图床参数即可一键上传。github 上 PicGo 的概述：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;PicGo 本体支持如下图床：&lt;/p&gt;
@@ -42,7 +42,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;起因&#34;&gt;起因
-&lt;/h1&gt;&lt;p&gt;PicGo上传成功以后可以自动复制url，但是默认复制的图片链接是github提供的，github在国内又经常抽风，图片通常都是无法访问的，所以我使用了jsdelivr提供的链接访问图片，PicGo也提供了自定义链接，但是规定必须包含&lt;code&gt;$url&lt;/code&gt;参数，也就是默认的url地址：&lt;/p&gt;
+&lt;/h1&gt;&lt;p&gt;PicGo 上传成功以后可以自动复制 url，但是默认复制的图片链接是 github 提供的，github 在国内又经常抽风，图片通常都是无法访问的，所以我使用了 jsdelivr 提供的链接访问图片，PicGo 也提供了自定义链接，但是规定必须包含&lt;code&gt;$url&lt;/code&gt;参数，也就是默认的 url 地址：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130093835.png&#34;
 	
 	
@@ -51,7 +51,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;起初是把jsdelivr的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。&lt;/p&gt;
+&lt;p&gt;起初是把 jsdelivr 的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。&lt;/p&gt;
 &lt;h1 id=&#34;解决方法&#34;&gt;解决方法
 &lt;/h1&gt;&lt;p&gt;在软件设置的配置文件里找到了&lt;code&gt;customLink&lt;/code&gt;，和之前自己设置的链接对照了一下，认为这个就是实际的自定义链接，直接在此处修改，再上传自动复制的链接就正确了，而且绕过了必须包含$url。&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094455.png&#34;
 	
@@ -70,10 +70,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;结语&#34;&gt;结语
-&lt;/h1&gt;&lt;p&gt;软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了&lt;code&gt;$filename&lt;/code&gt;变量，然后博客中的图片大部分都是使用QQ的截屏功能，出来的截图后缀都是&lt;code&gt;png&lt;/code&gt;格式，这个可以根据需要自己设定拼接，然后使用的markdown编辑器是typora，想要添加图片直接&lt;code&gt;Crtl+Shift+i&lt;/code&gt;，把图片链接贴里面就彳亍了。~&lt;del&gt;白嫖真爽&lt;/del&gt;&lt;/p&gt;
+&lt;/h1&gt;&lt;p&gt;软件提供了自动使用时间戳重命名，所以我自定义链接中还是使用了&lt;code&gt;$filename&lt;/code&gt;变量，然后博客中的图片大部分都是使用 QQ 的截屏功能，出来的截图后缀都是&lt;code&gt;png&lt;/code&gt;格式，这个可以根据需要自己设定拼接，然后使用的 markdown 编辑器是 typora，想要添加图片直接&lt;code&gt;Crtl+Shift+i&lt;/code&gt;，把图片链接贴里面就彳亍了。~&lt;del&gt;白嫖真爽&lt;/del&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;2022-1-31 11:43:48&lt;/p&gt;
-&lt;p&gt;这时候发现自定义链接直接用markdown格式就更好了&lt;/p&gt;
+&lt;p&gt;这时候发现自定义链接直接用 markdown 格式就更好了&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -95,7 +95,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;直接在自定义域名那里修改成jsDeliver对应的仓库路径，比如我的&lt;/p&gt;
+&lt;p&gt;直接在自定义域名那里修改成 jsDeliver 对应的仓库路径，比如我的&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

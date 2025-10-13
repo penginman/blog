@@ -13,9 +13,9 @@
         
         <guid>https://www.braindance.top/articles/2020/11/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
-&lt;/h2&gt;&lt;p&gt;​	老早就觉得&lt;a class=&#34;link&#34; href=&#34;https://zh.moegirl.org.cn/Mainpage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h2&gt;&lt;p&gt;​ 老早就觉得&lt;a class=&#34;link&#34; href=&#34;https://zh.moegirl.org.cn/Mainpage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;萌娘百科&lt;/a&gt;里的&lt;code&gt;&amp;lt;span class=&#39;heimu&#39;&amp;gt;黑幕&amp;lt;/span&amp;gt;&lt;/code&gt;很好玩，所以摸索着给自己博客加了一个。参考博客&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/send-off-a-friend/p/12355387.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Re：萌娘百科上的黑幕实现&lt;/a&gt;。不过我改的方法有稍稍有点不同，是把hexo渲染markdown文章中的删除线&lt;code&gt;~~ ~~&lt;/code&gt;标签修改了。我回来又想到了更好的方法，markdown支持文章中的&lt;strong&gt;自定义标签&lt;/strong&gt;，自己增加一个&lt;code&gt;&amp;lt;span class=&#39;heimu&#39;&amp;gt;...&amp;lt;/span&amp;gt;&lt;/code&gt;标签更好。那么两种都记一下吧。当然用&lt;strong&gt;自定义标签&lt;/strong&gt;的话还可以保留&lt;strong&gt;删除线&lt;/strong&gt;。&lt;/p&gt;
+    &gt;Re：萌娘百科上的黑幕实现&lt;/a&gt;。不过我改的方法有稍稍有点不同，是把 hexo 渲染 markdown 文章中的删除线&lt;code&gt;~~ ~~&lt;/code&gt;标签修改了。我回来又想到了更好的方法，markdown 支持文章中的&lt;strong&gt;自定义标签&lt;/strong&gt;，自己增加一个&lt;code&gt;&amp;lt;span class=&#39;heimu&#39;&amp;gt;...&amp;lt;/span&amp;gt;&lt;/code&gt;标签更好。那么两种都记一下吧。当然用&lt;strong&gt;自定义标签&lt;/strong&gt;的话还可以保留&lt;strong&gt;删除线&lt;/strong&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;示例&#34;&gt;示例
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -45,8 +45,8 @@
 &lt;p&gt;萌娘百科&lt;a class=&#34;link&#34; href=&#34;https://zh.moegirl.org.cn/Template:%E9%BB%91%E5%B9%95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;官方介绍&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;准备工作&#34;&gt;准备工作
-&lt;/h2&gt;&lt;p&gt;​	先进入主题的资源文件夹&lt;code&gt;themes\butterfly\source\&lt;/code&gt;，修改需要用到的文件&lt;code&gt;css\_global\index.styl&lt;/code&gt;、&lt;code&gt;js/main.js&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;​	说明一下两个文件的作用：主题的总样式表&lt;code&gt;index.css&lt;/code&gt;是经过整合形成的，而**.styl文件是基于Node.js的CSS的预处理框架**，我们会在这个里面添加黑幕的样式。&lt;code&gt;main.js&lt;/code&gt;里面使用选择器为标签添加&lt;code&gt;title=&#39;你知道的太多了&#39;&lt;/code&gt;，这个可以修改成自己喜欢的。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;​ 先进入主题的资源文件夹&lt;code&gt;themes\butterfly\source\&lt;/code&gt;，修改需要用到的文件&lt;code&gt;css\_global\index.styl&lt;/code&gt;、&lt;code&gt;js/main.js&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;​ 说明一下两个文件的作用：主题的总样式表&lt;code&gt;index.css&lt;/code&gt;是经过整合形成的，而**.styl 文件是基于 Node.js 的 CSS 的预处理框架**，我们会在这个里面添加黑幕的样式。&lt;code&gt;main.js&lt;/code&gt;里面使用选择器为标签添加&lt;code&gt;title=&#39;你知道的太多了&#39;&lt;/code&gt;，这个可以修改成自己喜欢的。&lt;/p&gt;
 &lt;h2 id=&#34;修改自定义标签&#34;&gt;修改自定义标签
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;在&lt;code&gt;index.styl&lt;/code&gt;文件末尾添加&lt;/li&gt;
@@ -76,7 +76,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;hover&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;hover&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;py&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;white&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;!important&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;hover&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;hover&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;py&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;lightblue&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;!important&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;hover&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;hover&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;hover&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;heimu&lt;/span&gt;
@@ -96,14 +96,14 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;//你知道的太多了
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;addheimuTitle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;123&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.heimu&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;attr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;你知道的太多了&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//你知道的太多了
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;addheimuTitle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;123&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;.heimu&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;attr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;你知道的太多了&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以&lt;code&gt;ctrl+f&lt;/code&gt;搜索上面那两个&lt;code&gt;..refreshFn&lt;/code&gt;函数，发现是整个JS中函数调用的入口，所以我们也需要把自己定义的&lt;code&gt;addheimuTitle&lt;/code&gt;函数在这里面调用。我盲猜的嗷&lt;code&gt;refreshFn&lt;/code&gt;这个函数是在载入页面会调用，直接在里面第二行加上&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;可以&lt;code&gt;ctrl+f&lt;/code&gt;搜索上面那两个&lt;code&gt;..refreshFn&lt;/code&gt;函数，发现是整个 JS 中函数调用的入口，所以我们也需要把自己定义的&lt;code&gt;addheimuTitle&lt;/code&gt;函数在这里面调用。我盲猜的嗷&lt;code&gt;refreshFn&lt;/code&gt;这个函数是在载入页面会调用，直接在里面第二行加上&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201120173713.png&#34;
 	
 	
@@ -113,7 +113,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;修改删除线&#34;&gt;修改删除线
-&lt;/h2&gt;&lt;p&gt;​	修改&lt;code&gt;css\_layout\post.styl&lt;/code&gt;文件，在文件中找到id为&lt;code&gt;#article-container&lt;/code&gt;的元素，这个元素是文章页面中最外层的元素，我们需要在它里面添加&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;​ 修改&lt;code&gt;css\_layout\post.styl&lt;/code&gt;文件，在文件中找到 id 为&lt;code&gt;#article-container&lt;/code&gt;的元素，这个元素是文章页面中最外层的元素，我们需要在它里面添加&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -128,7 +128,7 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-stylus&#34; data-lang=&#34;stylus&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;container&lt;/span&gt; 
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-stylus&#34; data-lang=&#34;stylus&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;container&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;.....&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;.....&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;del&lt;/span&gt;
@@ -140,9 +140,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;py&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;white&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;!important&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​	因为文章中的删除线被渲染以后页面的标签为&lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt;，选中id为&lt;code&gt;article-container&lt;/code&gt;下的所有&lt;code&gt;del&lt;/code&gt;标签添加样式，剩下的还有在&lt;code&gt;main.js&lt;/code&gt;中添加&lt;code&gt;title&lt;/code&gt;和上面的方法差不多，只需要把选择器修改为&lt;code&gt;$(&#39;#article-container del&#39;).attr(&#39;title&#39;,&#39;你知道的太多了&#39;)&lt;/code&gt;。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;​ 因为文章中的删除线被渲染以后页面的标签为&lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt;，选中 id 为&lt;code&gt;article-container&lt;/code&gt;下的所有&lt;code&gt;del&lt;/code&gt;标签添加样式，剩下的还有在&lt;code&gt;main.js&lt;/code&gt;中添加&lt;code&gt;title&lt;/code&gt;和上面的方法差不多，只需要把选择器修改为&lt;code&gt;$(&#39;#article-container del&#39;).attr(&#39;title&#39;,&#39;你知道的太多了&#39;)&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;完工&#34;&gt;完工
-&lt;/h2&gt;&lt;p&gt;​	两种方法比较下，第一种方法可以保留删除线，但是在写文章时需要再手打一遍标签，第二种方法直接借用删除线，能省事但是删除线就用不了了。我用的第一种。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;​ 两种方法比较下，第一种方法可以保留删除线，但是在写文章时需要再手打一遍标签，第二种方法直接借用删除线，能省事但是删除线就用不了了。我用的第一种。&lt;/p&gt;
 </description>
         </item>
         
