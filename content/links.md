@@ -7,6 +7,10 @@ links:
     description: 为世界上所有的美好而战.
     website: https://www.braindance.top
     image: https://www.braindance.top/avatar.png
+  - title: Rooted & Rising
+    description: 编程 · 学习 · 分享 · 成长
+    website: https://tonlp.fun/
+    image: https://tonlp.fun/avatar/avatar.webp
 ---
 
 
