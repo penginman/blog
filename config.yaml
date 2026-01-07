@@ -39,7 +39,7 @@ params:
     enabled: true
     provider: twikoo
     twikoo:
-      envId: https://twikoo.braindance.top/.netlify/functions/twikoo
+      envId: https://twikoo.braindance.top/
   colorScheme:
     toggle: true
     default: auto
