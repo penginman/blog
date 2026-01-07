@@ -4,7 +4,6 @@ date: 2026-01-07T10:50:42+08:00
 slug: code-completion-for-vscode
 categories: 'Play'
 tag: ['VS Code','效率工具']
-draft: true
 ---
 
 之前用的 Windsurf 的免费代码补全最近用的很闹心，于是乎去找新的替代品，发现效果不错，记录一下（~~才不是为了把年度总结刷下去~~）。
