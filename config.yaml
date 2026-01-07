@@ -26,7 +26,7 @@ params:
     subtitle: 兴趣使然
     avatar:
       enabled: true
-      src: img/avatar.png
+      src: /avatar.png
       local: false
   Footer:
     since: 2020
