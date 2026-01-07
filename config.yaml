@@ -27,7 +27,7 @@ params:
     avatar:
       enabled: true
       src: img/avatar.png
-      local: true
+      local: false
   Footer:
     since: 2020
   Article:
