@@ -1,2 +1,2 @@
 hugo
-hugo serve --disableFastRender -e production -D -O
+hugo serve --disableFastRender -e production -D -O --buildDrafts
