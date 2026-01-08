@@ -1,7 +1,7 @@
 ---
-title: "search"
-layout: "search"
-hidden: true
+title: search
+layout: search
 comments: false
+hidden: true
 ---
 

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hackergame 2020 on Braindance</title>
-        <link>http://localhost:3001/tags/hackergame-2020/</link>
+        <link>http://localhost:1313/tags/hackergame-2020/</link>
         <description>Recent content in Hackergame 2020 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 05 Nov 2020 09:29:22 +0000</lastBuildDate><atom:link href="http://localhost:3001/tags/hackergame-2020/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 05 Nov 2020 09:29:22 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hackergame-2020/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hackgame2020(二)</title>
-        <link>http://localhost:3001/articles/2020/11/hackgame2020%E4%BA%8C/</link>
+        <link>http://localhost:1313/articles/2020/11/hackgame2020%E4%BA%8C/</link>
         <pubDate>Thu, 05 Nov 2020 09:29:22 +0000</pubDate>
         
-        <guid>http://localhost:3001/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
+        <guid>http://localhost:1313/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
         <description>&lt;h3 id=&#34;一闪而过的flag&#34;&gt;一闪而过的Flag
 &lt;/h3&gt;&lt;p&gt;​	根据题目信息&lt;strong&gt;程序每次运行时隐约可见黑色控制台上有 flag 一闪而过&lt;/strong&gt;，我想到了应该能看程序的代码啥的找到，但是&lt;del&gt;天下武功，唯快不破&lt;/del&gt;，下载 运行 截图一气呵成。&lt;/p&gt;
 &lt;p&gt;​	&lt;img src=&#34;https://s1.ax1x.com/2020/11/09/B7TOUA.png&#34;
@@ -271,10 +271,10 @@
         </item>
         <item>
         <title>Hackgame2020(一)</title>
-        <link>http://localhost:3001/articles/2020/11/hackgame2020%E4%B8%80/</link>
+        <link>http://localhost:1313/articles/2020/11/hackgame2020%E4%B8%80/</link>
         <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
         
-        <guid>http://localhost:3001/articles/2020/11/hackgame2020%E4%B8%80/</guid>
+        <guid>http://localhost:1313/articles/2020/11/hackgame2020%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;
 &lt;h1 id=&#34;web&#34;&gt;web

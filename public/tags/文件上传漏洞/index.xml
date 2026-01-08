@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>文件上传漏洞 on Braindance</title>
-        <link>http://localhost:3001/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/</link>
+        <link>http://localhost:1313/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/</link>
         <description>Recent content in 文件上传漏洞 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 19 Nov 2020 08:47:19 +0000</lastBuildDate><atom:link href="http://localhost:3001/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 19 Nov 2020 08:47:19 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Upload-Labs的最后几道题</title>
-        <link>http://localhost:3001/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
+        <link>http://localhost:1313/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
         <pubDate>Thu, 19 Nov 2020 08:47:19 +0000</pubDate>
         
-        <guid>http://localhost:3001/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
+        <guid>http://localhost:1313/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
         <description>&lt;h2 id=&#34;pass-17&#34;&gt;Pass-17
 &lt;/h2&gt;&lt;p&gt;​	（windows环境，php版本5.2.17，题号是18题）&lt;/p&gt;
 &lt;p&gt;源码：&lt;/p&gt;
@@ -324,10 +324,10 @@
         </item>
         <item>
         <title>Upload-Labs之Pass-16</title>
-        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
+        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
         <pubDate>Mon, 16 Nov 2020 22:50:25 +0000</pubDate>
         
-        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
+        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	我在这道题上花了快一天的时间，但是也学到了不少姿势，觉得东西应该足够多，而且参考了的博客发现这道题算是有歧义的，不知道作者想要考察的点是哪一个，所以算是有两种解法吧，可惜的是两种方法都不算是大成功，只有部分成功执行了。&lt;/p&gt;
 &lt;p&gt;​	参考博客：&lt;a class=&#34;link&#34; href=&#34;https://xz.aliyun.com/t/2657#toc-4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -982,10 +982,10 @@
         </item>
         <item>
         <title>Upload-Labs(三)</title>
-        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%89/</link>
+        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%89/</link>
         <pubDate>Mon, 16 Nov 2020 16:04:30 +0000</pubDate>
         
-        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%89/</guid>
+        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%89/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	继续接着上一次的&lt;code&gt;Upload-labs&lt;/code&gt;往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久的关，不过也学到了感觉很牛的姿势，所以到时候专门开一篇只讲16。&lt;/p&gt;
 &lt;p&gt;​	在线靶机地址：&lt;/p&gt;
@@ -1143,10 +1143,10 @@
         </item>
         <item>
         <title>Upload-Labs(二)</title>
-        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%BA%8C/</link>
+        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%BA%8C/</link>
         <pubDate>Mon, 09 Nov 2020 20:12:27 +0000</pubDate>
         
-        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%BA%8C/</guid>
+        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%BA%8C/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1614,10 +1614,10 @@
         </item>
         <item>
         <title>Upload-Labs(一)</title>
-        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%80/</link>
+        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%80/</link>
         <pubDate>Sun, 08 Nov 2020 19:23:16 +0000</pubDate>
         
-        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%80/</guid>
+        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;大部分的网站和应用系统都有上传功能，而程序员在开发任意文件上传功能时，并未考虑文件格式后缀的合法性校验或者是否只在前端通过js进行后缀检验。这时攻击者可以上传一个与网站脚本语言相对应的恶意代码动态脚本，例如(jsp、asp、php、aspx文件后缀)到服务器上，从而访问这些恶意脚本中包含的恶意代码，进行动态解析最终达到执行恶意代码的效果，进一步影响服务器安全。&lt;/p&gt;&lt;/blockquote&gt;
