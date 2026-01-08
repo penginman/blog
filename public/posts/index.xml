@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Braindance</title>
-        <link>https://www.braindance.top/posts/</link>
+        <link>http://localhost:3001/posts/</link>
         <description>Recent content in Posts on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 07 Jan 2026 10:50:42 +0800</lastBuildDate><atom:link href="https://www.braindance.top/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 07 Jan 2026 10:50:42 +0800</lastBuildDate><atom:link href="http://localhost:3001/posts/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>为VSCode加上Cursor的代码补全</title>
-        <link>https://www.braindance.top/articles/2026/01/code-completion-for-vscode/</link>
+        <link>http://localhost:3001/articles/2026/01/code-completion-for-vscode/</link>
         <pubDate>Wed, 07 Jan 2026 10:50:42 +0800</pubDate>
         
-        <guid>https://www.braindance.top/articles/2026/01/code-completion-for-vscode/</guid>
+        <guid>http://localhost:3001/articles/2026/01/code-completion-for-vscode/</guid>
         <description>&lt;p&gt;之前用的 Windsurf 的免费代码补全最近用的很闹心，于是乎去找新的替代品，发现效果不错，记录一下（&lt;del&gt;才不是为了把年度总结刷下去&lt;/del&gt;）。&lt;/p&gt;
 &lt;h2 id=&#34;下载插件扩展&#34;&gt;下载插件扩展
 &lt;/h2&gt;&lt;p&gt;相关项目：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Haleclipse/Cometix-Tab&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -55,10 +55,10 @@
         </item>
         <item>
         <title>2025年度总结</title>
-        <link>https://www.braindance.top/articles/2025/12/2025%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+        <link>http://localhost:3001/articles/2025/12/2025%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
         <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2025/12/2025%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+        <guid>http://localhost:3001/articles/2025/12/2025%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;p&gt;上一次写年度总结还是22年底，真快啊过了两年了，最后的学生时代也结束了，没想到今年没耽误事顺利的找到了工作，一切都措手不及，一切也都恰到好处。&lt;/p&gt;
 &lt;h2 id=&#34;学业&#34;&gt;学业
 &lt;/h2&gt;&lt;p&gt;现在还想起来我在研一的某天给一年后的一天订了日历，内容大概是：如果有一天早上醒来以后发现论文的事情都结束了以后该有多好。当时写日历的时候好像是因为实验跑不出结果，而且思路也是碰壁，各种郁闷。一年后早上看到这个日历的时候心里微微一笑，那个时候研二下半年，也差不多论文创新点和实验结果都差不多了，正在写论文，当时感觉就是心疼一秒一年前的自己并且想穿越回去把这个好消息告诉他。当然当时的我写下这个日历可能也是知道未来的我应该能解决这个问题的hhh。&lt;/p&gt;
@@ -87,10 +87,10 @@
         </item>
         <item>
         <title>Linux上运行Firefox浏览器</title>
-        <link>https://www.braindance.top/articles/2025/10/docker-firefox-build/</link>
+        <link>http://localhost:3001/articles/2025/10/docker-firefox-build/</link>
         <pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2025/10/docker-firefox-build/</guid>
+        <guid>http://localhost:3001/articles/2025/10/docker-firefox-build/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;有一个网页游戏挂机的需求，遂找到了这个东西。项目地址：https://github.com/jlesage/docker-firefox&lt;/p&gt;
 &lt;h2 id=&#34;一键启动&#34;&gt;一键启动
@@ -130,10 +130,10 @@
         </item>
         <item>
         <title>自建Vaultwarden并备份同步</title>
-        <link>https://www.braindance.top/articles/2025/04/vaultwarden-build/</link>
+        <link>http://localhost:3001/articles/2025/04/vaultwarden-build/</link>
         <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2025/04/vaultwarden-build/</guid>
+        <guid>http://localhost:3001/articles/2025/04/vaultwarden-build/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;新买服务器，密码很多，保存密码，为了安全，防止被打，备份保底。&lt;/p&gt;
 &lt;h2 id=&#34;前置步骤&#34;&gt;前置步骤
@@ -448,10 +448,10 @@
         </item>
         <item>
         <title>ClawCloud使用体验</title>
-        <link>https://www.braindance.top/articles/2025/03/clawcloud%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+        <link>http://localhost:3001/articles/2025/03/clawcloud%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
         <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2025/03/clawcloud%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+        <guid>http://localhost:3001/articles/2025/03/clawcloud%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;快毕业了忙的飞起，上个服务器到期了我都没来得及管，现在写这篇博客还是在github的pages上，又接触了一些项目，想买个便宜好使的服务器玩玩。&lt;/p&gt;
 &lt;p&gt;在论坛里搜到&lt;a class=&#34;link&#34; href=&#34;https://claw.cloud/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -839,10 +839,10 @@
         </item>
         <item>
         <title>菜鸡解题1</title>
-        <link>https://www.braindance.top/articles/2024/09/%E8%8F%9C%E9%B8%A1%E8%A7%A3%E9%A2%981/</link>
+        <link>http://localhost:3001/articles/2024/09/%E8%8F%9C%E9%B8%A1%E8%A7%A3%E9%A2%981/</link>
         <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2024/09/%E8%8F%9C%E9%B8%A1%E8%A7%A3%E9%A2%981/</guid>
+        <guid>http://localhost:3001/articles/2024/09/%E8%8F%9C%E9%B8%A1%E8%A7%A3%E9%A2%981/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1301,11 +1301,89 @@
 </description>
         </item>
         <item>
+        <title>lede 编译</title>
+        <link>http://localhost:3001/articles/2023/09/lede-%E7%BC%96%E8%AF%91/</link>
+        <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:3001/articles/2023/09/lede-%E7%BC%96%E8%AF%91/</guid>
+        <description>&lt;p&gt;主题&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd package
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir openwrt-packages
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd openwrt-packages
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/jerrykuku/luci-theme-argon.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/thinktip/luci-theme-neobird.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/rosywrt/luci-theme-rosy.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/gngpp/luci-theme-design.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;软件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/Zxilly/UA2F.git package/UA2F
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/mchome/openwrt-dogcom.git package/dogcom
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/UnblockNeteaseMusic
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;修改源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &amp;#39;$a src-git kenzo https://github.com/kenzok8/openwrt-packages&amp;#39; feeds.conf.default
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &amp;#39;$a src-git small https://github.com/kenzok8/small&amp;#39; feeds.conf.default
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./scripts/feeds update -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./scripts/feeds install -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make menuconfig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;theme&lt;/p&gt;
+&lt;p&gt;LuCI &amp;ndash;&amp;gt; Themes&lt;/p&gt;
+&lt;p&gt;UnblockNeteaseMusic&lt;/p&gt;
+&lt;p&gt;LuCI &amp;ndash;&amp;gt; Applications &amp;ndash;&amp;gt; ua2f&lt;/p&gt;
+&lt;p&gt;UA2F&lt;/p&gt;
+&lt;p&gt;Network &amp;ndash;&amp;gt; Routing and Redirection &amp;ndash;&amp;gt; luci-app-unblockneteasemusic&lt;/p&gt;
+&lt;p&gt;dogcom&lt;/p&gt;
+&lt;p&gt;Network &amp;gt; dogcom&lt;/p&gt;
+&lt;p&gt;配置编译 iptables 模块（没配也照样用了）&lt;/p&gt;
+&lt;p&gt;Network &amp;ndash;&amp;gt; Firewall &amp;ndash;&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;iptables-mod-filter&lt;/li&gt;
+&lt;li&gt;iptables-mod-ipopt&lt;/li&gt;
+&lt;li&gt;iptables-mod-u32&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>JetBrains 全家桶破解</title>
-        <link>https://www.braindance.top/articles/2023/08/jetbrains-%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
+        <link>http://localhost:3001/articles/2023/08/jetbrains-%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</link>
         <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2023/08/jetbrains-%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
+        <guid>http://localhost:3001/articles/2023/08/jetbrains-%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%A0%B4%E8%A7%A3/</guid>
         <description>&lt;p&gt;&lt;del&gt;突然想开发了我的 IDEA 还是 2021 的，IDEA 和 Pycharm 还在机械硬盘，装个最新的到固态里面。教育邮箱懒得申请了，失效了又要麻烦续杯。写出来记录一下以后自己参考。&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;所提供的内容仅供学习交流使用,严禁用于商业用途,请于下载后24小时内删除。&lt;/p&gt;&lt;/blockquote&gt;
@@ -1686,10 +1764,10 @@
         </item>
         <item>
         <title>LaTex数学公式</title>
-        <link>https://www.braindance.top/articles/2023/05/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
+        <link>http://localhost:3001/articles/2023/05/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
         <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2023/05/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
+        <guid>http://localhost:3001/articles/2023/05/latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/m0_55746113/article/details/122728673&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://blog.csdn.net/m0_55746113/article/details/122728673&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;标注符号&#34;&gt;标注符号
@@ -1778,10 +1856,10 @@ $$</description>
         </item>
         <item>
         <title>软路由日记(一)</title>
-        <link>https://www.braindance.top/articles/2023/02/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2023/02/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</link>
         <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2023/02/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2023/02/%E8%BD%AF%E8%B7%AF%E7%94%B1%E6%97%A5%E8%AE%B0%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在学校疫情期间买了一个 j4125 的软路由，一直等到回家过了很久才到手，因为买的是裸机，还有些配件是在别的店买的，回家以后发现地址只能在区以内修改，只能取消订单重新下了单。&lt;/p&gt;
 &lt;p&gt;最后的配件列表如下：&lt;/p&gt;
@@ -1976,10 +2054,10 @@ $$</description>
         </item>
         <item>
         <title>中国联通SK-D748光猫超级密码获取</title>
-        <link>https://www.braindance.top/articles/2023/01/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
+        <link>http://localhost:3001/articles/2023/01/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</link>
         <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2023/01/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</guid>
+        <guid>http://localhost:3001/articles/2023/01/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Ask-d748%E5%85%89%E7%8C%AB%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81%E8%8E%B7%E5%8F%96/</guid>
         <description>&lt;p&gt;折腾软路由百忙之中抽时间来简单&lt;del&gt;水&lt;/del&gt;一篇。&lt;/p&gt;
 &lt;p&gt;有这个需求是因为目前在家里是用另一个无线路由器桥接联通的光猫的，但是在dhcp 里死活找不到桥接路由器分配的 ip，然后插上软路由竟然又把 ip 分配给软路由了，真是不服不行。&lt;/p&gt;
 &lt;p&gt;之前装联通宽带的时候尝试过找师傅要超级管理员的密码，但是师傅给我打哈哈糊弄过去了，给的一个普通 user 用户并没有静态 ip 的权限，所以就去网上找教程了，自己记录一下。&lt;/p&gt;
@@ -2026,10 +2104,10 @@ $$</description>
         </item>
         <item>
         <title>2022年度总结</title>
-        <link>https://www.braindance.top/articles/2022/12/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+        <link>http://localhost:3001/articles/2022/12/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/12/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+        <guid>http://localhost:3001/articles/2022/12/2022%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;p&gt;今年过得可真是太快了，不知道从哪开始写。前几天不小心点开微博，首页一句话想想只能苦笑一下，所有人应该都过得差不多吧。今年我乱过的，明年我一定好好过。&lt;/p&gt;
 &lt;h2 id=&#34;学业&#34;&gt;学业
 &lt;/h2&gt;&lt;p&gt;可能到现在也不知道当时为了什么考研，可能就是觉得听了大环境下找工作不容易，自己觉得在本科学校体验不太好，想上个像样的大学，考前一阵子还记得说过：XXX（自己学校）狗都不来，现在调剂回本校了，到考前一天所有的书可能连一遍都没过完，数学只能说本科那几门都没整明白。本来目标也没多高，到调剂的时候一降再降，算了，有学上就行不挑了。&lt;/p&gt;
@@ -2056,10 +2134,10 @@ $$</description>
         </item>
         <item>
         <title>ZUT 使用路由器连接校园网</title>
-        <link>https://www.braindance.top/articles/2022/10/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
+        <link>http://localhost:3001/articles/2022/10/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</link>
         <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/10/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
+        <guid>http://localhost:3001/articles/2022/10/zut-%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;我们学校的校园网不光每个月要宽带费 20/月，而且要绑定一个校园卡，我的一个月月租下来要 49/月，而且校园网还限制设备数量只能连接一个，我一般都是电脑连校园网，手机用流量，但是教职工的校园网就可以两个设备连接，寝室里目前有 6+个设备也需要联网，商量以后打算搞个路由器贡献一个账号连校园网开 wifi，之前就见贴吧有老哥已经成功了，所以自己也尝试一下做个记录，给以后的同学看也不错。由于我已经连好路由器了，所以部分图片取自网络图片作为参考，我也尽量说的详细些。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2734,10 +2812,10 @@ $$</description>
         </item>
         <item>
         <title>KKapi&#43;ISpeak说说页面部署</title>
-        <link>https://www.braindance.top/articles/2022/10/kkapi-ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</link>
+        <link>http://localhost:3001/articles/2022/10/kkapi-ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</link>
         <pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/10/kkapi-ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</guid>
+        <guid>http://localhost:3001/articles/2022/10/kkapi-ispeak%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%83%A8%E7%BD%B2/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;感觉原来的 Artitalk 说说不好康，在开往里发现好多博客都用的说说功能叫叨叨点啥，看了看作者的&lt;a class=&#34;link&#34; href=&#34;https://www.antmoe.com/speak/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;说说页面&lt;/a&gt;，可以插入图片和标签分类，还有仅自己可见的功能，感觉挺不错的（实际是自己想折腾）所以就整一个。自己在部署过程中实在是踩了不少的坑，而且作者的文档感觉写的也不算完善，所以打算自己记录一下。&lt;/p&gt;
@@ -3021,10 +3099,10 @@ $$</description>
         </item>
         <item>
         <title>近期总结</title>
-        <link>https://www.braindance.top/articles/2022/08/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</link>
+        <link>http://localhost:3001/articles/2022/08/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</link>
         <pubDate>Wed, 10 Aug 2022 18:39:26 +0800</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/08/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</guid>
+        <guid>http://localhost:3001/articles/2022/08/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;p&gt;水一篇文章，写写最近干了啥&lt;/p&gt;
 &lt;h2 id=&#34;onenav&#34;&gt;Onenav
 &lt;/h2&gt;&lt;p&gt;一直想找一个导航页的网站，自己天天用书签栏用的找不到太烦了。之前用过webstack主题的网站，本来是直接写源码上的，后来自己做了一个用js读配置文件加载的，但是加网站的时候要手改数据文件。
@@ -3115,11 +3193,212 @@ $$</description>
 </description>
         </item>
         <item>
+        <title>Javascript学习笔记</title>
+        <link>http://localhost:3001/articles/2022/07/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Fri, 01 Jul 2022 09:14:16 +0800</pubDate>
+        
+        <guid>http://localhost:3001/articles/2022/07/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;h2 id=&#34;面向对象&#34;&gt;面向对象
+&lt;/h2&gt;&lt;p&gt;对象是引用类型和其他四种基本类型不同。JS中，可以将对象分为“&lt;strong&gt;内部对象&lt;/strong&gt;”、“&lt;strong&gt;宿主对象&lt;/strong&gt;”和“&lt;strong&gt;自定义对象&lt;/strong&gt;”三种。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;内部对象&lt;/strong&gt;
+js中的内部对象包括Array、Boolean、Date、Function、Global、Math、Number、Object、RegExp、String。
+以及各种错误类对象，包括Error、EvalError、RangeError、ReferenceError、SyntaxError、TypeError。&lt;/p&gt;
+&lt;p&gt;其中Global和Math这两个对象又被称为“内置对象”，这两个对象在脚本程序初始化时被创建，不必实例化这两个对象。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;宿主对象&lt;/strong&gt;
+宿主对象就是执行JS脚本的环境提供的对象。对于嵌入到网页中的JS来说，其宿主对象就是浏览器提供的对象，所以又称为浏览器对象，如IE、Firefox等浏览器提供的对象。不同的浏览器提供的宿主对象可能不同，即使提供的对象相同，其实现方式也大相径庭！这会带来浏览器兼容问题，增加开发难度。浏览器对象有很多，如Window和Document等等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自定义对象&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;顾名思义，就是开发人员自己定义的对象。JS允许使用自定义对象，使JS应用及功能得到扩充&lt;/p&gt;
+&lt;h3 id=&#34;对象字面量&#34;&gt;对象字面量
+&lt;/h3&gt;&lt;p&gt;使用大括号直接创建&lt;code&gt;object&lt;/code&gt;类型的对象&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;obj&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;函数对象&#34;&gt;函数对象
+&lt;/h3&gt;&lt;p&gt;函数也是一个对象，使用typeof检查一个函数对象返回的是function。创建函数对象的三个方法：&lt;/p&gt;
+&lt;p&gt;使用构造函数。返回的结果是一个包含代码的对象类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fun1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;console.log(&amp;#39;Hello World&amp;#39;)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;func1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;声明函数，并调用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fun2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;func2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;使用参数接受一个匿名函数。匿名函数可以进行输出，内容是函数整段代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fun3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fun3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;函数参数&#34;&gt;函数参数
+&lt;/h3&gt;&lt;p&gt;多余参数不会被赋值。&lt;/p&gt;
+&lt;p&gt;如果实参的数量少于形参的数量，则没有对应实参的形参是undefined。&lt;/p&gt;
+&lt;h3 id=&#34;立即执行函数&#34;&gt;立即执行函数
+&lt;/h3&gt;&lt;p&gt;函数定义以后，立即执行，只会执行一次&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;全局作用域&#34;&gt;全局作用域
+&lt;/h3&gt;&lt;p&gt;直接编写在&lt;strong&gt;script&lt;/strong&gt;标签中的JS代码都在全局作用域，在页面打开时创建，关闭页面时销毁，全局作用域中有一个全局对象&lt;code&gt;window&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在全局作用域中所有的变量都会作为&lt;code&gt;window&lt;/code&gt;对象的属性保存&lt;/p&gt;
+&lt;p&gt;在全局作用域中的所有函数都会作为&lt;code&gt;window&lt;/code&gt;对象的方法保存&lt;/p&gt;
+&lt;h3 id=&#34;变量声明提前&#34;&gt;变量声明提前
+&lt;/h3&gt;&lt;p&gt;变量的声明提前。使用var关键字声明变量，会在所有代码执行之前声明（但是不会赋值，赋值还需执行到代码）&lt;/p&gt;
+&lt;p&gt;函数的声明提前。使用&lt;strong&gt;函数声明形式&lt;/strong&gt;创建的函数，会在代码执行之前就被创建。使用&lt;strong&gt;函数表达式形式&lt;/strong&gt;创建的函数，不会被声明提前，所以不能再声明提前创建。&lt;/p&gt;
+&lt;h3 id=&#34;函数作用域&#34;&gt;函数作用域
+&lt;/h3&gt;&lt;p&gt;在函数中使用变量，如果函数为声明则会往上一层作用域找，直到找到全局作用域，如果都没有找到会报&lt;code&gt;ReferenceError&lt;/code&gt;错误。每一次调用函数都会创建一个作用域，并且是独立互不影响的。&lt;/p&gt;
+&lt;p&gt;在局部函数中访问全局变量可以使用window对象。&lt;/p&gt;
+&lt;p&gt;在函数中，不使用var关键字声明的变量都会成为全局变量。&lt;/p&gt;
+&lt;h3 id=&#34;this&#34;&gt;this
+&lt;/h3&gt;&lt;p&gt;解释器在每次调用函数的时候都会传入一个隐含参数，这个隐含参数就是&lt;code&gt;this&lt;/code&gt;对象，该对象称为函数的上下文对象，根据函数的调用方式不同，this指向的对象也不同：以函数形式调用时，this永远都是window；以对象方法形式调用时，this是对象本身。&lt;/p&gt;
+&lt;h3 id=&#34;跳过若干&#34;&gt;跳过若干
+&lt;/h3&gt;&lt;h3 id=&#34;构造函数&#34;&gt;构造函数
+&lt;/h3&gt;&lt;p&gt;构造函数和普通函数的区别就是调用方法不同，构造函数需要使用&lt;code&gt;new&lt;/code&gt;关键词创建，并且构造函数的返回类型为&lt;strong&gt;Object&lt;/strong&gt;类型。构造函数名通常为首字母大写。构造函数执行流程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;立刻创建一个新对象&lt;/li&gt;
+&lt;li&gt;将新对象（新建的那个对象）设置为对象中的this *&lt;/li&gt;
+&lt;li&gt;逐行执行代码&lt;/li&gt;
+&lt;li&gt;将新对象作为返回值&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;instanceof&lt;/code&gt;可以用来检查一个对象是否是一个类的实例。所有的对象都是Object的后代&lt;/p&gt;
+&lt;h3 id=&#34;原型对象&#34;&gt;原型对象
+&lt;/h3&gt;&lt;p&gt;我们创建的每一个函数，构造器都会向方法中添加一个属性&lt;code&gt;prototype&lt;/code&gt;，这个属性对应一个对象，这个对象就是&lt;strong&gt;原型对象&lt;/strong&gt;。如果函数作为普通函数调用，原型对象没有任何作用；如果作为构造函数调用，会为该构造函数创建一个唯一的原型对象。&lt;/p&gt;
+&lt;p&gt;原型对象相当于一个类的公共区域，这个类的所有实例都能访问这个原型对象。不同的类拥有不同的原型对象。我们可以将类共有的属性或方法添加到其中。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;prototype&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;123&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;per&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//per.__proto__ == Person.prototype
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;per&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//123
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果访问一个对象中的属性或方法，它会首先在自身中寻找，如果未找到则会去原型对象中寻找。原型对象也有原型，这是一个&lt;strong&gt;原型链&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;垃圾回收&#34;&gt;垃圾回收
+&lt;/h3&gt;&lt;p&gt;把不用的对象设置为&lt;code&gt;null&lt;/code&gt;。&lt;del&gt;详细以后填坑&lt;/del&gt;&lt;/p&gt;
+&lt;h3 id=&#34;call和apply&#34;&gt;call和apply
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;call()&lt;/code&gt;和&lt;code&gt;apply()&lt;/code&gt;是函数对象的一个调用方法，这两个方法都会调用函数执行。可以将一个对象指定为第一个参数，则该对象成为函数执行时的this。&lt;/p&gt;
+&lt;p&gt;其他区别：call方法可以将实参在对象之后依次传递；apply方法需要将参数封装到一个数组中传递&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;obj&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;obj&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;argument对象&#34;&gt;argument对象
+&lt;/h3&gt;&lt;p&gt;调用函数时，浏览器每次都会传递两个隐含参数&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;函数上下文对象this&lt;/li&gt;
+&lt;li&gt;封装实参的&lt;code&gt;argument&lt;/code&gt;对象&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;argument对象是一个类似数组的对象，可以通过索引操作，函数调用时的所有实参都会在argument中保存，即使不定义形参，也可以通过argument对象使用实参。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;fun&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;argument&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;instanceof&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//false
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;argument&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//true
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;argument&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;lenght&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;argument&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;callee&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//会打印当前正在执行的函数对象
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fun&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;callee属性可以留意一下&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;dom&#34;&gt;DOM
+&lt;/h2&gt;&lt;p&gt;document object model&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Python-Day-100 笔记</title>
-        <link>https://www.braindance.top/articles/2022/06/python-day-100-%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:3001/articles/2022/06/python-day-100-%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/06/python-day-100-%E7%AC%94%E8%AE%B0/</guid>
+        <guid>http://localhost:3001/articles/2022/06/python-day-100-%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h2 id=&#34;函数&#34;&gt;函数
 &lt;/h2&gt;&lt;h3 id=&#34;函数的参数&#34;&gt;函数的参数
 &lt;/h3&gt;&lt;p&gt;可以使用可变参数&lt;code&gt;def func(*args)&lt;/code&gt;，参数前面的&lt;code&gt;*&lt;/code&gt;代表&lt;code&gt;args&lt;/code&gt;是一个可变参数。&lt;/p&gt;
@@ -4007,11 +4286,159 @@ Python 3.6以后提供了语法糖表示，在字符串前使用&lt;code&gt;f&lt
 </description>
         </item>
         <item>
+        <title>获取京东CK教程</title>
+        <link>http://localhost:3001/articles/2022/05/%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Cck%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Mon, 09 May 2022 21:40:49 +0800</pubDate>
+        
+        <guid>http://localhost:3001/articles/2022/05/%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Cck%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;p&gt;获取京东 CK(cookie)并提交到上车面板。教程分为不啰嗦版本和详细版本。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;提交的 cookie 的格式为：pt_key=XXX; pt_pin=XXX;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;CK 提交地址：&lt;a class=&#34;link&#34; href=&#34;http://42.192.83.222:2332&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://42.192.83.222:2332&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;最新方式看这个&#34;&gt;最新方式（看这个！！）
+&lt;/h2&gt;&lt;p&gt;访问&lt;a class=&#34;link&#34; href=&#34;http://jd.braindance.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://jd.braindance.top&lt;/a&gt;，使用手机验证码登陆，系统自动添加、更新失效 cookie，登陆成功以后扫码关注通知应用。&lt;/p&gt;
+&lt;h2 id=&#34;不啰嗦版本&#34;&gt;不啰嗦版本
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://m.jd.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;多快好省，购物上京东！&lt;/a&gt;登录，验证码能通过的！！实在折磨请用下面&lt;a class=&#34;link&#34; href=&#34;#Android%e6%89%8b%e6%9c%ba%e7%ab%af%e8%8e%b7%e5%8f%96CK&#34; &gt;Android 方法&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你要登陆&lt;strong&gt;多个号&lt;/strong&gt;请使用浏览器无痕模式（谷歌浏览器快捷键&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;），不要退出登录！！不要退出登录！！不要退出登录！！&lt;strong&gt;退出登录会使 cookie 失效&lt;/strong&gt;！！抓完直接关掉再打开个无痕即可&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;F12 打开开发者工具。按照以下步骤抓 CK&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/a6de8b0d47c1f9e6da9901fa6302b9d1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;获取&lt;a class=&#34;link&#34; href=&#34;#%e4%b8%80%e5%af%b9%e4%b8%80%e9%80%9a%e7%9f%a5&#34; &gt;一对一通知(点我跳转)&lt;/a&gt;UID 进行通知，可以多个账号对应一个 UID，自行琢磨。晚上 21.30 消息通知。&lt;/li&gt;
+&lt;li&gt;在页面中第一行提交 CK。第二行提交备注格式为&lt;code&gt;备注@@获取的UID&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;说明一下中间的&lt;code&gt;@@&lt;/code&gt;不能去掉，是分隔符。备注是用来标注你的哪个京东号，比如&lt;code&gt;小号1@@UUUIIIIDDDD1&lt;/code&gt;、&lt;code&gt;小号2@UUUIIIDDD2&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/95099e1284b0a1f8468ab07484669b73.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果在操作中遇到其他问题，看看详细版本。&lt;/p&gt;
+&lt;h2 id=&#34;详细版本&#34;&gt;详细版本
+&lt;/h2&gt;&lt;h3 id=&#34;pc-端获取-ck&#34;&gt;PC 端获取 CK
+&lt;/h3&gt;&lt;p&gt;登陆地址：&lt;a class=&#34;link&#34; href=&#34;http://plogin.m.jd.com/login/login&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;多快好省，购物上京东！&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先告知。&lt;/p&gt;
+&lt;p&gt;如果你有&lt;strong&gt;多个号&lt;/strong&gt;登陆，请使用浏览器的无痕浏览，或是更换浏览器抓取，因为京东的 cookie 在登出以后就会失效。&lt;/p&gt;
+&lt;p&gt;使用无痕浏览登陆抓完直接关闭，再打开新的无痕浏览抓下一个。&lt;/p&gt;
+&lt;p&gt;京东 cookie 手机登陆方式有效期为一个月左右。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/60ca438912915bd3d85e120c7ff2b3c9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;输入手机号，获取验证码登陆。如果是手势验证码，失败很多次别灰心，&lt;del&gt;手稳一点&lt;/del&gt;，是可以验证通过的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/158385932aae43828c986635aca1640b.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;登陆成功以后&lt;/p&gt;
+&lt;p&gt;按 F12 打开开发者工具选择&lt;strong&gt;Network&lt;/strong&gt;（网络），请注意要拦截所有的请求（只要能找到 cookie 就可），在下方&lt;strong&gt;Name&lt;/strong&gt;（名称）里随便选一个找有完整 cookie 的。在右边&lt;strong&gt;header&lt;/strong&gt;（标头）下的 cookie 中找到如&lt;code&gt;pt_key=XXX; pt_pin=XXX;&lt;/code&gt;格式的就是需要的 cookie。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如果你的名称列表里面是空的&lt;/strong&gt;，随便点一个页面中的其他按钮，浏览器就会捕获请求&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/a6de8b0d47c1f9e6da9901fa6302b9d1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后在&lt;a class=&#34;link&#34; href=&#34;http://42.192.83.222:2332&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://42.192.83.222:2332&lt;/a&gt;中提交 CK，服务器建议&lt;code&gt;腾讯云&lt;/code&gt;，变量组为&lt;code&gt;JD_COOKIE&lt;/code&gt;，备注可以选择下方的&lt;a class=&#34;link&#34; href=&#34;#%e4%b8%80%e5%af%b9%e4%b8%80%e9%80%9a%e7%9f%a5&#34; &gt;一对一通知&lt;/a&gt;方式，CK 失效的时候我会根据这个通知你，或者你自己记得一个月要来提交一次。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/95099e1284b0a1f8468ab07484669b73.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;完工。&lt;/p&gt;
+&lt;p&gt;补充：如果不想在一堆 cookie 里找需要的那两个，可以把 cookie 完全复制下来。然后按 F12 开发者工具的控制台（console）中执行以下代码：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CV&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;这里面放你拿到的完整cookie&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CookieValue&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/pt_key=.+?;/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/pt_pin=.+?;/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CookieValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;copy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CookieValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;控制台里有输出就算成功了，会直接复制到剪切板。&lt;/p&gt;
+&lt;p&gt;如果看不懂我说的，看看这篇文章方法更全：&lt;a class=&#34;link&#34; href=&#34;https://w37fhy.cn/2379.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://w37fhy.cn/2379.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;android-手机端获取-ck&#34;&gt;Android 手机端获取 CK
+&lt;/h3&gt;&lt;p&gt;下载 apk：&lt;a class=&#34;link&#34; href=&#34;https://www.aliyundrive.com/s/rbjgkpBY9eb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.aliyundrive.com/s/rbjgkpBY9eb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开以后直接登陆，登陆完成以后会直接弹出抓取结果，然后复制 CK 提交到网页&lt;a class=&#34;link&#34; href=&#34;http://42.192.83.222:2332&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://42.192.83.222:2332&lt;/a&gt;中，别忘了备注。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/1652107556707QQ%E6%88%AA%E5%9B%BE20220509224405.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;完工。&lt;/p&gt;
+&lt;h2 id=&#34;一对一通知&#34;&gt;一对一通知
+&lt;/h2&gt;&lt;p&gt;可以每天看自己的资产，有商品领取提醒，cookie 失效的时候可以及时收到通知。&lt;/p&gt;
+&lt;p&gt;以下内容使用微信打开，或者复制到浏览器打开（里面虽然是二维码，但是会动态刷新，所以自行打开）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;//wxpusher.zjiecode.com/api/qrcode/cLY05MLHiHj7JXD7sXMjISKV5C85yhgGDupknmwqFevgvPGzS1xpiiRj0LCX8Xtj.jpg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;关注微信公众号&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.braindance.top/article/2022/05/23/0a327072bd48649d1d45835d577d6812.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;扫码关注以后，提示已经&lt;strong&gt;订阅应用京东&lt;/strong&gt;，然后点击下面我的&amp;mdash;&amp;gt;我的 UID，会返回你唯一的 UID，我只能通过这个 UID 来通知你你的账号信息。请提交的时候附上备注，格式如&lt;code&gt;备注@@获取的UID&lt;/code&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果觉得我说的很啰嗦就是因为最近在写毕业论文，废话文学了属于是。&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>博客图床迁移</title>
-        <link>https://www.braindance.top/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
+        <link>http://localhost:3001/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
         <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
+        <guid>http://localhost:3001/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
         <description>&lt;h2 id=&#34;起因&#34;&gt;起因
 &lt;/h2&gt;&lt;p&gt;原来博客的图片使用 Jsdelivr 和 github 的方式存储访问，但是最近 Jsdelivr 频繁的被墙，感觉可能在未来的不久会失效，毕竟好多人用来当免费的 CDN（&lt;del&gt;比如我&lt;/del&gt;），也会有人使用其访问些 zz 敏感或其他的文件，被墙了也情有可原，而且 github 的仓库的作用也是用来存储代码而非图床，像我这样的人也导致了仓库的滥用，所以决定找个新的途径。&lt;/p&gt;
 &lt;h2 id=&#34;过程&#34;&gt;过程
@@ -4042,11 +4469,41 @@ Python 3.6以后提供了语法糖表示，在字符串前使用&lt;code&gt;f&lt
 </description>
         </item>
         <item>
+        <title>英语问答</title>
+        <link>http://localhost:3001/articles/2022/04/%E8%8B%B1%E8%AF%AD%E9%97%AE%E7%AD%94/</link>
+        <pubDate>Mon, 04 Apr 2022 08:54:55 +0800</pubDate>
+        
+        <guid>http://localhost:3001/articles/2022/04/%E8%8B%B1%E8%AF%AD%E9%97%AE%E7%AD%94/</guid>
+        <description>&lt;h1 id=&#34;please-introduce-yourself&#34;&gt;Please introduce yourself
+&lt;/h1&gt;&lt;p&gt;​	Good morning/afternoon/,dear teachers/professors! It’s my great honor to be here for this interview. My name is XXX, 22 years old and I come from Luoyang, a city with a long history, I am a senior student in Zhongyuan University of Technology, and my major is software engineering.&lt;/p&gt;
+&lt;p&gt;​	 After entering the University, I have always maintained curiosity and enthusiasm for all kinds of new knowledge. Although I have never been in contact with programming, I found its charm in a period of study. During my freshman year, I entered the excellent class established by the school because of my outstanding grades in the examination. I also took part in many competition for professional skills held in our school, which stimulated [ˈstɪmjuleɪtɪd]  my academic passion. When I was a junior, my teammates and I participated in the national college student information security contest, and won the third National Prize, which not only strengthened our friendship, but also deepened our professional knowledge.&lt;/p&gt;
+&lt;p&gt;​    Next, I want to talk about my future plans. I chose to apply for your school because it has a large number of professional teachers for my dream major and enjoys a high reputation. I hope I can have a more systematic and professional understanding of it through three years of study, and contribute more research results to this field out of my work.&lt;/p&gt;
+&lt;p&gt;​    If I am admitted, I will be very delighted and honored. The above is my self-introduction. Thank you&lt;/p&gt;
+&lt;h1 id=&#34;what-are-you-interested-in&#34;&gt;What are you interested in?
+&lt;/h1&gt;&lt;p&gt;I have been passionate about reading since I was a child. I love reading because reading exposes me many kinds of excellent works and allows me to learn many valuable qualities from different characters. I think these qualities can make me more decisive[dɪˈsaɪsɪv]  in facing challenges. Even if sometimes I am busy with my studies, I will still insist on reading. I believe reading would be my lifelong hobby.&lt;/p&gt;
+&lt;h1 id=&#34;what-is-your-favorite-book&#34;&gt;What is your favorite book?
+&lt;/h1&gt;&lt;p&gt;My favorite book is Water Margin written by Shi Naian. This book mainly describes the great story of Liangshan hero&amp;rsquo;s resistance to oppression [əˈpreʃn], Finally, with Song Jiang being recruited by the imperial[ɪmˈpɪəriəl] court, the uprising[ˈʌpraɪzɪŋ] ended in failure.&lt;/p&gt;
+&lt;h1 id=&#34;please-tell-me-something-about-your-hometown&#34;&gt;Please tell me something about your hometown
+&lt;/h1&gt;&lt;p&gt;My hometown is XXX, I grow up there together with my families and friends. XXX is a small county with beautiful environment, and the scenery there is also really attractive. Another important reason for my fascination [ˌfæsɪˈneɪʃn] with XXX is its slow pace of life. If you have the chance to take a walk with me on the streets of XXX, you would surely fall in love with this county&lt;/p&gt;
+&lt;h1 id=&#34;please-give-a-brief-introduction-of-your-college&#34;&gt;Please give a brief introduction of your college
+&lt;/h1&gt;&lt;p&gt;My undergraduate school is Zhongyuan University of Technology. During the past three years, many things in campus has left me deep impressions. Because it is located in the center of Henan, many competitions are often held here, and I also participated in some of them. The learning atmosphere in this University also attracts me very much. I often saw students reciting English words or reading aloud in some corners in the morning. Although many people maybe don&amp;rsquo;t know much about Zhongyuan University of Technology, it indeed brought me a lot of precious memories and made me who am I now.&lt;/p&gt;
+&lt;h1 id=&#34;why-do-you-choose-our-university-and-this-major&#34;&gt;Why do you choose our university and this major
+&lt;/h1&gt;&lt;p&gt;The reason why I choose this major of 学校 is very simple: I want to become a excellent programmer after three/two years&amp;rsquo; study. I am interested in this field because after learning computer programming I can write some software to help myself or others in daily work&lt;/p&gt;
+&lt;p&gt;I majored in Software engineering now, spent almost four years to learn the basic knowledge in this field. During my postgraduate period, I hope to equip myself more practical skills thought the three/two year&amp;rsquo;s study.&lt;/p&gt;
+&lt;h1 id=&#34;can-you-talk-about-your-plans-in-the-postgraduate-study&#34;&gt;Can you talk about your plans in the postgraduate study？
+&lt;/h1&gt;&lt;p&gt;If I am luckily admitted, I will achieve the following goals during the next three/two -year study. First of all, I will try my best to finish all the courses for my graduation, pass all the exam and get all the credits[ˈkredɪts] in the first year. Then, in the second year, I am going to start reading papers and periodicals[ˌpɪəriˈɒdɪkl] as well as doing some academic  research with the seniors and my mentor. At last I will finish my graduation thesis[ˈθiːsɪs] in third year, take part in interships, and prepare for my future employment. I believe my post-graduate life would be enriched and meaningful.&lt;/p&gt;
+&lt;h1 id=&#34;tell-us-something-about-your-family&#34;&gt;Tell us something about your family.
+&lt;/h1&gt;&lt;p&gt;There are four members in my family : my father , mother , my sister and me. Father is a reporter , and my mother is a teacher. My sister is a doctoral student in a school .I love my parents so much , they give me whatever they have . more importantly, they give me their love and support without a request of return. I am so lucky to grow in such a family with love.&lt;/p&gt;
+&lt;h1 id=&#34;杂句子口语&#34;&gt;杂句子口语
+&lt;/h1&gt;&lt;p&gt;has a long history of studying computer technology&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Vue学习笔记</title>
-        <link>https://www.braindance.top/articles/2022/03/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:3001/articles/2022/03/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Mon, 07 Mar 2022 18:16:47 +0800</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/03/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+        <guid>http://localhost:3001/articles/2022/03/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h2 id=&#34;理解mvvm&#34;&gt;理解MVVM
 &lt;/h2&gt;&lt;p&gt;Vue参考的MVVM模型&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/16466499314121646649931302.png&#34;
@@ -4498,10 +4955,10 @@ key是虚拟DoM对象的标识，当数据发生变化时，Vue会根据&lt;stro
         </item>
         <item>
         <title>CSS学习</title>
-        <link>https://www.braindance.top/articles/2022/02/css%E5%AD%A6%E4%B9%A0/</link>
+        <link>http://localhost:3001/articles/2022/02/css%E5%AD%A6%E4%B9%A0/</link>
         <pubDate>Tue, 15 Feb 2022 09:28:06 +0800</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/02/css%E5%AD%A6%E4%B9%A0/</guid>
+        <guid>http://localhost:3001/articles/2022/02/css%E5%AD%A6%E4%B9%A0/</guid>
         <description>&lt;h3 id=&#34;选择器&#34;&gt;选择器
 &lt;/h3&gt;&lt;table&gt;
   &lt;thead&gt;
@@ -4897,10 +5354,10 @@ margin:0 auto;&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>2021年度总结</title>
-        <link>https://www.braindance.top/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+        <link>http://localhost:3001/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
         <pubDate>Mon, 07 Feb 2022 11:04:02 +0800</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+        <guid>http://localhost:3001/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;p&gt;已经二月才写年度总结的估计只有我把，纯纯的懒狗一条。&lt;/p&gt;
 &lt;h1 id=&#34;个人总结&#34;&gt;个人总结
 &lt;/h1&gt;&lt;h2 id=&#34;学业&#34;&gt;学业
@@ -4921,10 +5378,10 @@ margin:0 auto;&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>2021年度日记</title>
-        <link>https://www.braindance.top/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</link>
+        <link>http://localhost:3001/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</link>
         <pubDate>Thu, 03 Feb 2022 09:47:43 +0800</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</guid>
+        <guid>http://localhost:3001/articles/2022/02/2021%E5%B9%B4%E5%BA%A6%E6%97%A5%E8%AE%B0/</guid>
         <description>&lt;h1 id=&#34;新年快乐&#34;&gt;新年快乐🤗
 &lt;/h1&gt;&lt;p&gt;年度总结被拖到了农历的年。。。确实是自己懒得离谱（确实懒嗷，这篇文章写了四天了）。年前想写但是又想迁移博客，所以没干，年后家里又置办年货要搭把手，现在咣里咣当就到初二了，属实过太快了。&lt;/p&gt;
 &lt;p&gt;本来打算写年度总结，但是觉得太长了就改成年度日记吧。我看着手机相册，想起来什么写什么吧。（多图警告⚠️⚠️⚠️）&lt;/p&gt;
@@ -5366,10 +5823,10 @@ margin:0 auto;&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>博客搬迁</title>
-        <link>https://www.braindance.top/articles/2022/01/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
+        <link>http://localhost:3001/articles/2022/01/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</link>
         <pubDate>Mon, 31 Jan 2022 11:31:54 +0800</pubDate>
         
-        <guid>https://www.braindance.top/articles/2022/01/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
+        <guid>http://localhost:3001/articles/2022/01/%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%BF%81/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/202201311142110.jpg&#34;
 	
 	
@@ -5425,10 +5882,10 @@ margin:0 auto;&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>CISCN线上赛库存</title>
-        <link>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+        <link>http://localhost:3001/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
         <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+        <guid>http://localhost:3001/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
         <description>&lt;h1 id=&#34;easy_sql&#34;&gt;easy_sql
 &lt;/h1&gt;&lt;p&gt;在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是&lt;strong&gt;括号单引号闭合&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5749,10 +6206,10 @@ margin:0 auto;&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>ReadlezPHP&amp;EasySearch</title>
-        <link>https://www.braindance.top/articles/2021/04/readlezphpeasysearch/</link>
+        <link>http://localhost:3001/articles/2021/04/readlezphpeasysearch/</link>
         <pubDate>Tue, 20 Apr 2021 17:12:43 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/readlezphpeasysearch/</guid>
+        <guid>http://localhost:3001/articles/2021/04/readlezphpeasysearch/</guid>
         <description>&lt;h1 id=&#34;readlezphp&#34;&gt;ReadlezPHP
 &lt;/h1&gt;&lt;p&gt;源码找到&lt;code&gt;time.php?source&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210420175641.png&#34;
@@ -6007,10 +6464,10 @@ margin:0 auto;&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>极客大挑战 2019 FinalSQL</title>
-        <link>https://www.braindance.top/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</link>
+        <link>http://localhost:3001/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</link>
         <pubDate>Sun, 18 Apr 2021 19:11:51 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</guid>
+        <guid>http://localhost:3001/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</guid>
         <description>&lt;p&gt;还是同一场比赛的界面&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416224503.png&#34;
 	
@@ -6089,10 +6546,10 @@ margin:0 auto;&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>WUSTCTF2020 朴实无华</title>
-        <link>https://www.braindance.top/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
+        <link>http://localhost:3001/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
         <pubDate>Fri, 16 Apr 2021 15:33:32 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
+        <guid>http://localhost:3001/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
         <description>&lt;p&gt;进入页面直接报错&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416103737.png&#34;
 	
@@ -6239,10 +6696,10 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>SWPU2019 Web1</title>
-        <link>https://www.braindance.top/articles/2021/04/swpu2019-web1/</link>
+        <link>http://localhost:3001/articles/2021/04/swpu2019-web1/</link>
         <pubDate>Thu, 15 Apr 2021 09:55:17 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/swpu2019-web1/</guid>
+        <guid>http://localhost:3001/articles/2021/04/swpu2019-web1/</guid>
         <description>&lt;p&gt;一个登陆界面，再看下url地址为login.php，确认了使用的是php&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png&#34;
 	
@@ -6361,10 +6818,10 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>BUUCTF寒假刷题-Web</title>
-        <link>https://www.braindance.top/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+        <link>http://localhost:3001/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
         <pubDate>Mon, 18 Jan 2021 16:58:56 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+        <guid>http://localhost:3001/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
         <description>&lt;p&gt;寒假横向刷题（尽量）
 &lt;a class=&#34;link&#34; href=&#34;https://buuoj.cn/challenges#&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;BUUCTF&lt;/a&gt;
@@ -11730,10 +12187,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>极客大挑战 2019 RCE ME</title>
-        <link>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
+        <link>http://localhost:3001/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
         <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
+        <guid>http://localhost:3001/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
         <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
 &lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -11908,10 +12365,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>GXYCTF2019 Ping Ping Ping</title>
-        <link>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
+        <link>http://localhost:3001/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
         <pubDate>Fri, 04 Dec 2020 20:24:50 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
+        <guid>http://localhost:3001/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
         <description>&lt;h1 id=&#34;gxyctf2019ping-ping-ping&#34;&gt;[GXYCTF2019]Ping Ping Ping
 &lt;/h1&gt;&lt;p&gt;题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping&lt;/p&gt;
 &lt;p&gt;和DMCTF做的那道&lt;strong&gt;pingpingping&lt;/strong&gt;类似，同样是使用管道符构造payload，先使用：&lt;/p&gt;
@@ -12093,10 +12550,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>DMCTF之Misc</title>
-        <link>https://www.braindance.top/articles/2020/12/dmctf%E4%B9%8Bmisc/</link>
+        <link>http://localhost:3001/articles/2020/12/dmctf%E4%B9%8Bmisc/</link>
         <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/12/dmctf%E4%B9%8Bmisc/</guid>
+        <guid>http://localhost:3001/articles/2020/12/dmctf%E4%B9%8Bmisc/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;这次比赛是第一次做Mics的题awa。&lt;/p&gt;
 &lt;h1 id=&#34;misc&#34;&gt;Misc
@@ -12688,10 +13145,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>PicGo复制自定义链接</title>
-        <link>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+        <link>http://localhost:3001/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+        <guid>http://localhost:3001/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;2022 年 2 月 3 日 22:41:32&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
@@ -12789,10 +13246,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>jsdelivr 缓存刷新</title>
-        <link>https://www.braindance.top/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
+        <link>http://localhost:3001/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
         <pubDate>Fri, 20 Nov 2020 22:02:46 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
+        <guid>http://localhost:3001/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​ 上一篇修改了黑幕，但是使用了 jsdelivr 加速的静态资源，所以照常更新下 github 上的资源，但是 github 上查看已经上传成功了，jsdelivr 访问的依然是之前的资源，说白了就是缓存的问题。即使本地浏览器端的缓存已经清理，也会因为 CDN 周围的节点没有同步数据而导致用户端未能及时更新。&lt;/p&gt;
 &lt;h2 id=&#34;缓存刷新&#34;&gt;缓存刷新
@@ -12814,10 +13271,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>萌娘百科黑幕实现</title>
-        <link>https://www.braindance.top/articles/2020/11/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</link>
+        <link>http://localhost:3001/articles/2020/11/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</link>
         <pubDate>Fri, 20 Nov 2020 10:13:07 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</guid>
+        <guid>http://localhost:3001/articles/2020/11/%E8%90%8C%E5%A8%98%E7%99%BE%E7%A7%91%E9%BB%91%E5%B9%95%E5%AE%9E%E7%8E%B0/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​ 老早就觉得&lt;a class=&#34;link&#34; href=&#34;https://zh.moegirl.org.cn/Mainpage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;萌娘百科&lt;/a&gt;里的&lt;code&gt;&amp;lt;span class=&#39;heimu&#39;&amp;gt;黑幕&amp;lt;/span&amp;gt;&lt;/code&gt;很好玩，所以摸索着给自己博客加了一个。参考博客&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/send-off-a-friend/p/12355387.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -12953,10 +13410,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs的最后几道题</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
         <pubDate>Thu, 19 Nov 2020 08:47:19 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
         <description>&lt;h2 id=&#34;pass-17&#34;&gt;Pass-17
 &lt;/h2&gt;&lt;p&gt;​	（windows环境，php版本5.2.17，题号是18题）&lt;/p&gt;
 &lt;p&gt;源码：&lt;/p&gt;
@@ -13269,10 +13726,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs之Pass-16</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
         <pubDate>Mon, 16 Nov 2020 22:50:25 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	我在这道题上花了快一天的时间，但是也学到了不少姿势，觉得东西应该足够多，而且参考了的博客发现这道题算是有歧义的，不知道作者想要考察的点是哪一个，所以算是有两种解法吧，可惜的是两种方法都不算是大成功，只有部分成功执行了。&lt;/p&gt;
 &lt;p&gt;​	参考博客：&lt;a class=&#34;link&#34; href=&#34;https://xz.aliyun.com/t/2657#toc-4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -13927,10 +14384,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs(三)</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%89/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%89/</link>
         <pubDate>Mon, 16 Nov 2020 16:04:30 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%89/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%89/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	继续接着上一次的&lt;code&gt;Upload-labs&lt;/code&gt;往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久的关，不过也学到了感觉很牛的姿势，所以到时候专门开一篇只讲16。&lt;/p&gt;
 &lt;p&gt;​	在线靶机地址：&lt;/p&gt;
@@ -14088,10 +14545,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>jsDelivr加速静态博客</title>
-        <link>https://www.braindance.top/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+        <link>http://localhost:3001/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 11 Nov 2020 21:37:53 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>http://localhost:3001/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​ 这几天总感觉博客访问特别慢，最先是找到了 CDN 加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -14174,10 +14631,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs(二)</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%BA%8C/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%BA%8C/</link>
         <pubDate>Mon, 09 Nov 2020 20:12:27 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%BA%8C/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%BA%8C/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -14645,10 +15102,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs(一)</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%80/</link>
         <pubDate>Sun, 08 Nov 2020 19:23:16 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;大部分的网站和应用系统都有上传功能，而程序员在开发任意文件上传功能时，并未考虑文件格式后缀的合法性校验或者是否只在前端通过js进行后缀检验。这时攻击者可以上传一个与网站脚本语言相对应的恶意代码动态脚本，例如(jsp、asp、php、aspx文件后缀)到服务器上，从而访问这些恶意脚本中包含的恶意代码，进行动态解析最终达到执行恶意代码的效果，进一步影响服务器安全。&lt;/p&gt;&lt;/blockquote&gt;
@@ -15043,10 +15500,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Hackgame2020(二)</title>
-        <link>https://www.braindance.top/articles/2020/11/hackgame2020%E4%BA%8C/</link>
+        <link>http://localhost:3001/articles/2020/11/hackgame2020%E4%BA%8C/</link>
         <pubDate>Thu, 05 Nov 2020 09:29:22 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
+        <guid>http://localhost:3001/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
         <description>&lt;h3 id=&#34;一闪而过的flag&#34;&gt;一闪而过的Flag
 &lt;/h3&gt;&lt;p&gt;​	根据题目信息&lt;strong&gt;程序每次运行时隐约可见黑色控制台上有 flag 一闪而过&lt;/strong&gt;，我想到了应该能看程序的代码啥的找到，但是&lt;del&gt;天下武功，唯快不破&lt;/del&gt;，下载 运行 截图一气呵成。&lt;/p&gt;
 &lt;p&gt;​	&lt;img src=&#34;https://s1.ax1x.com/2020/11/09/B7TOUA.png&#34;
@@ -15306,10 +15763,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>XSS-Lab (一)</title>
-        <link>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/11/xss-lab-%E4%B8%80/</link>
         <pubDate>Tue, 03 Nov 2020 10:13:39 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/11/xss-lab-%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;头&#34;&gt;头
 &lt;/h2&gt;&lt;p&gt;靶机地址：https://buuoj.cn/challenges#XSS-Lab&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/03/BsmJ5n.png&#34;
@@ -15389,10 +15846,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Hackgame2020(一)</title>
-        <link>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/11/hackgame2020%E4%B8%80/</link>
         <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/11/hackgame2020%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;
 &lt;h1 id=&#34;web&#34;&gt;web
@@ -15561,10 +16018,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>sql-labs(一)</title>
-        <link>https://www.braindance.top/articles/2020/09/sql-labs%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/09/sql-labs%E4%B8%80/</link>
         <pubDate>Tue, 22 Sep 2020 10:50:08 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/sql-labs%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/09/sql-labs%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在线靶机地址：https://buuoj.cn/challenges#sqli-labs&lt;/p&gt;
 &lt;h2 id=&#34;less-1&#34;&gt;less-1
@@ -15647,10 +16104,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Chevereto-搭建一个自己的图床</title>
-        <link>https://www.braindance.top/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
+        <link>http://localhost:3001/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
         <pubDate>Sun, 20 Sep 2020 11:09:02 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
+        <guid>http://localhost:3001/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
         <description>&lt;p&gt;博客搭完了，自己选择的这个博客主题又是以图片为主要元素的，当然要考虑图片的使用问题了，原来打算直接放在服务器上，但是后来想了想，以后如果文章&lt;del&gt;越写越多&lt;/del&gt;用的图太多服务器的流量也不够用，想到了图床这一托管图片的服务，但是放在别人的上面总怕会受到&lt;del&gt;限制&lt;/del&gt;，正好发现了&lt;code&gt;Chevereto&lt;/code&gt;这一图床系统，可以自己搭建一个图床服务器，正好自己还有一个阿里云学生云，那就开工。&lt;/p&gt;
 &lt;h3 id=&#34;chevereto-说明&#34;&gt;Chevereto 说明
 &lt;/h3&gt;&lt;blockquote&gt;
@@ -15800,10 +16257,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Let_s_Encrypt 免费Https证书</title>
-        <link>https://www.braindance.top/articles/2020/09/let_s_encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</link>
+        <link>http://localhost:3001/articles/2020/09/let_s_encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</link>
         <pubDate>Thu, 03 Sep 2020 15:30:37 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/let_s_encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</guid>
+        <guid>http://localhost:3001/articles/2020/09/let_s_encrypt-%E5%85%8D%E8%B4%B9https%E8%AF%81%E4%B9%A6/</guid>
         <description>&lt;p&gt;参考文章:&lt;a class=&#34;link&#34; href=&#34;https://imququ.com/post/letsencrypt-certificate.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Let&amp;rsquo;s Encrypt，免费好用的 HTTPS 证书&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;先放官网&#34;&gt;先放官网
@@ -16087,10 +16544,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>搭窝过程(二)</title>
-        <link>https://www.braindance.top/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</link>
+        <link>http://localhost:3001/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</link>
         <pubDate>Wed, 02 Sep 2020 22:05:34 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</guid>
+        <guid>http://localhost:3001/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</guid>
         <description>&lt;p&gt;​	服务器到手了肯定不能闲着，既然有了国外的服务器，第一个想法就是去整一个魔法，我姐也因为网络问题，经常让我帮忙下载国外的资料，这次整一个就能让我姐自己用了。&lt;/p&gt;
 &lt;p&gt;​	还是出于会被Qang的顾虑，自己对于这方面的知识也很少，普通的建设方法据说已经会被主动嗅探等给检测到，于是就花了很久找伪装的方法，结果在github上找到了一个&lt;a class=&#34;link&#34; href=&#34;https://github.com/ShadowsocksR-Live/shadowsocksr-native&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;项目&lt;/a&gt;，使用的技术大概就是反向代理+Https的协议，这里就不细讲了&lt;del&gt;主要是害怕&lt;/del&gt;，可以自己到项目去看看。&lt;/p&gt;
@@ -16100,10 +16557,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Freenom域名注册解析到服务器</title>
-        <link>https://www.braindance.top/articles/2020/09/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <link>http://localhost:3001/articles/2020/09/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
         <pubDate>Wed, 02 Sep 2020 12:25:37 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <guid>http://localhost:3001/articles/2020/09/freenom%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E8%A7%A3%E6%9E%90%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
         <description>&lt;h3 id=&#34;1官网&#34;&gt;&lt;strong&gt;1.官网&lt;/strong&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.freenom.com/zh/index.html?lang=zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Freenom - 人人都熟悉的名字&lt;/a&gt;&lt;/p&gt;
@@ -16214,10 +16671,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>造窝过程(一)</title>
-        <link>https://www.braindance.top/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</link>
         <pubDate>Wed, 02 Sep 2020 11:14:35 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;备案劝退&lt;/li&gt;
 &lt;/ul&gt;
@@ -16248,10 +16705,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>第一篇文章</title>
-        <link>https://www.braindance.top/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+        <link>http://localhost:3001/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
         <pubDate>Wed, 26 Aug 2020 16:40:03 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
+        <guid>http://localhost:3001/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
         <description>&lt;p&gt;&lt;strong&gt;第一篇文章的内容&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;刚把博客搭成，然后看了看markdown的语法，以后慢慢往上面加吧。&lt;/p&gt;
 </description>

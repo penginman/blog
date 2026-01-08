@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>流水账 on Braindance</title>
-        <link>https://www.braindance.top/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</link>
+        <link>http://localhost:3001/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/</link>
         <description>Recent content in 流水账 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 02 Sep 2020 22:05:34 +0000</lastBuildDate><atom:link href="https://www.braindance.top/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 02 Sep 2020 22:05:34 +0000</lastBuildDate><atom:link href="http://localhost:3001/categories/%E6%B5%81%E6%B0%B4%E8%B4%A6/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>搭窝过程(二)</title>
-        <link>https://www.braindance.top/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</link>
+        <link>http://localhost:3001/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</link>
         <pubDate>Wed, 02 Sep 2020 22:05:34 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</guid>
+        <guid>http://localhost:3001/articles/2020/09/%E6%90%AD%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%BA%8C/</guid>
         <description>&lt;p&gt;​	服务器到手了肯定不能闲着，既然有了国外的服务器，第一个想法就是去整一个魔法，我姐也因为网络问题，经常让我帮忙下载国外的资料，这次整一个就能让我姐自己用了。&lt;/p&gt;
 &lt;p&gt;​	还是出于会被Qang的顾虑，自己对于这方面的知识也很少，普通的建设方法据说已经会被主动嗅探等给检测到，于是就花了很久找伪装的方法，结果在github上找到了一个&lt;a class=&#34;link&#34; href=&#34;https://github.com/ShadowsocksR-Live/shadowsocksr-native&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;项目&lt;/a&gt;，使用的技术大概就是反向代理+Https的协议，这里就不细讲了&lt;del&gt;主要是害怕&lt;/del&gt;，可以自己到项目去看看。&lt;/p&gt;
@@ -21,10 +21,10 @@
         </item>
         <item>
         <title>造窝过程(一)</title>
-        <link>https://www.braindance.top/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</link>
         <pubDate>Wed, 02 Sep 2020 11:14:35 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/09/%E9%80%A0%E7%AA%9D%E8%BF%87%E7%A8%8B%E4%B8%80/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;备案劝退&lt;/li&gt;
 &lt;/ul&gt;
@@ -55,10 +55,10 @@
         </item>
         <item>
         <title>第一篇文章</title>
-        <link>https://www.braindance.top/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+        <link>http://localhost:3001/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
         <pubDate>Wed, 26 Aug 2020 16:40:03 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
+        <guid>http://localhost:3001/articles/2020/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
         <description>&lt;p&gt;&lt;strong&gt;第一篇文章的内容&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;刚把博客搭成，然后看了看markdown的语法，以后慢慢往上面加吧。&lt;/p&gt;
 </description>

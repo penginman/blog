@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CTF on Braindance</title>
-        <link>https://www.braindance.top/categories/ctf/</link>
+        <link>http://localhost:3001/categories/ctf/</link>
         <description>Recent content in CTF on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="https://www.braindance.top/categories/ctf/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="http://localhost:3001/categories/ctf/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CISCN线上赛库存</title>
-        <link>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+        <link>http://localhost:3001/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
         <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+        <guid>http://localhost:3001/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
         <description>&lt;h1 id=&#34;easy_sql&#34;&gt;easy_sql
 &lt;/h1&gt;&lt;p&gt;在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是&lt;strong&gt;括号单引号闭合&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -332,10 +332,10 @@
         </item>
         <item>
         <title>ReadlezPHP&amp;EasySearch</title>
-        <link>https://www.braindance.top/articles/2021/04/readlezphpeasysearch/</link>
+        <link>http://localhost:3001/articles/2021/04/readlezphpeasysearch/</link>
         <pubDate>Tue, 20 Apr 2021 17:12:43 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/readlezphpeasysearch/</guid>
+        <guid>http://localhost:3001/articles/2021/04/readlezphpeasysearch/</guid>
         <description>&lt;h1 id=&#34;readlezphp&#34;&gt;ReadlezPHP
 &lt;/h1&gt;&lt;p&gt;源码找到&lt;code&gt;time.php?source&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210420175641.png&#34;
@@ -590,10 +590,10 @@
         </item>
         <item>
         <title>极客大挑战 2019 FinalSQL</title>
-        <link>https://www.braindance.top/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</link>
+        <link>http://localhost:3001/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</link>
         <pubDate>Sun, 18 Apr 2021 19:11:51 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</guid>
+        <guid>http://localhost:3001/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</guid>
         <description>&lt;p&gt;还是同一场比赛的界面&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416224503.png&#34;
 	
@@ -672,10 +672,10 @@
         </item>
         <item>
         <title>WUSTCTF2020 朴实无华</title>
-        <link>https://www.braindance.top/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
+        <link>http://localhost:3001/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
         <pubDate>Fri, 16 Apr 2021 15:33:32 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
+        <guid>http://localhost:3001/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
         <description>&lt;p&gt;进入页面直接报错&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416103737.png&#34;
 	
@@ -822,10 +822,10 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>SWPU2019 Web1</title>
-        <link>https://www.braindance.top/articles/2021/04/swpu2019-web1/</link>
+        <link>http://localhost:3001/articles/2021/04/swpu2019-web1/</link>
         <pubDate>Thu, 15 Apr 2021 09:55:17 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/04/swpu2019-web1/</guid>
+        <guid>http://localhost:3001/articles/2021/04/swpu2019-web1/</guid>
         <description>&lt;p&gt;一个登陆界面，再看下url地址为login.php，确认了使用的是php&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png&#34;
 	
@@ -944,10 +944,10 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>BUUCTF寒假刷题-Web</title>
-        <link>https://www.braindance.top/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+        <link>http://localhost:3001/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
         <pubDate>Mon, 18 Jan 2021 16:58:56 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+        <guid>http://localhost:3001/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
         <description>&lt;p&gt;寒假横向刷题（尽量）
 &lt;a class=&#34;link&#34; href=&#34;https://buuoj.cn/challenges#&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;BUUCTF&lt;/a&gt;
@@ -6313,10 +6313,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>极客大挑战 2019 RCE ME</title>
-        <link>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
+        <link>http://localhost:3001/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
         <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
+        <guid>http://localhost:3001/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
         <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
 &lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -6491,10 +6491,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>GXYCTF2019 Ping Ping Ping</title>
-        <link>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
+        <link>http://localhost:3001/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
         <pubDate>Fri, 04 Dec 2020 20:24:50 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
+        <guid>http://localhost:3001/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
         <description>&lt;h1 id=&#34;gxyctf2019ping-ping-ping&#34;&gt;[GXYCTF2019]Ping Ping Ping
 &lt;/h1&gt;&lt;p&gt;题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping&lt;/p&gt;
 &lt;p&gt;和DMCTF做的那道&lt;strong&gt;pingpingping&lt;/strong&gt;类似，同样是使用管道符构造payload，先使用：&lt;/p&gt;
@@ -6676,10 +6676,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>DMCTF之Misc</title>
-        <link>https://www.braindance.top/articles/2020/12/dmctf%E4%B9%8Bmisc/</link>
+        <link>http://localhost:3001/articles/2020/12/dmctf%E4%B9%8Bmisc/</link>
         <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/12/dmctf%E4%B9%8Bmisc/</guid>
+        <guid>http://localhost:3001/articles/2020/12/dmctf%E4%B9%8Bmisc/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;这次比赛是第一次做Mics的题awa。&lt;/p&gt;
 &lt;h1 id=&#34;misc&#34;&gt;Misc
@@ -7271,10 +7271,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs的最后几道题</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
         <pubDate>Thu, 19 Nov 2020 08:47:19 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
         <description>&lt;h2 id=&#34;pass-17&#34;&gt;Pass-17
 &lt;/h2&gt;&lt;p&gt;​	（windows环境，php版本5.2.17，题号是18题）&lt;/p&gt;
 &lt;p&gt;源码：&lt;/p&gt;
@@ -7587,10 +7587,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs之Pass-16</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
         <pubDate>Mon, 16 Nov 2020 22:50:25 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	我在这道题上花了快一天的时间，但是也学到了不少姿势，觉得东西应该足够多，而且参考了的博客发现这道题算是有歧义的，不知道作者想要考察的点是哪一个，所以算是有两种解法吧，可惜的是两种方法都不算是大成功，只有部分成功执行了。&lt;/p&gt;
 &lt;p&gt;​	参考博客：&lt;a class=&#34;link&#34; href=&#34;https://xz.aliyun.com/t/2657#toc-4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -8245,10 +8245,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs(三)</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%89/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%89/</link>
         <pubDate>Mon, 16 Nov 2020 16:04:30 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%89/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%89/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	继续接着上一次的&lt;code&gt;Upload-labs&lt;/code&gt;往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久的关，不过也学到了感觉很牛的姿势，所以到时候专门开一篇只讲16。&lt;/p&gt;
 &lt;p&gt;​	在线靶机地址：&lt;/p&gt;
@@ -8406,10 +8406,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs(二)</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%BA%8C/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%BA%8C/</link>
         <pubDate>Mon, 09 Nov 2020 20:12:27 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%BA%8C/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%BA%8C/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -8877,10 +8877,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Upload-Labs(一)</title>
-        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%80/</link>
         <pubDate>Sun, 08 Nov 2020 19:23:16 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/11/upload-labs%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;大部分的网站和应用系统都有上传功能，而程序员在开发任意文件上传功能时，并未考虑文件格式后缀的合法性校验或者是否只在前端通过js进行后缀检验。这时攻击者可以上传一个与网站脚本语言相对应的恶意代码动态脚本，例如(jsp、asp、php、aspx文件后缀)到服务器上，从而访问这些恶意脚本中包含的恶意代码，进行动态解析最终达到执行恶意代码的效果，进一步影响服务器安全。&lt;/p&gt;&lt;/blockquote&gt;
@@ -9275,10 +9275,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Hackgame2020(二)</title>
-        <link>https://www.braindance.top/articles/2020/11/hackgame2020%E4%BA%8C/</link>
+        <link>http://localhost:3001/articles/2020/11/hackgame2020%E4%BA%8C/</link>
         <pubDate>Thu, 05 Nov 2020 09:29:22 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
+        <guid>http://localhost:3001/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
         <description>&lt;h3 id=&#34;一闪而过的flag&#34;&gt;一闪而过的Flag
 &lt;/h3&gt;&lt;p&gt;​	根据题目信息&lt;strong&gt;程序每次运行时隐约可见黑色控制台上有 flag 一闪而过&lt;/strong&gt;，我想到了应该能看程序的代码啥的找到，但是&lt;del&gt;天下武功，唯快不破&lt;/del&gt;，下载 运行 截图一气呵成。&lt;/p&gt;
 &lt;p&gt;​	&lt;img src=&#34;https://s1.ax1x.com/2020/11/09/B7TOUA.png&#34;
@@ -9538,10 +9538,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>XSS-Lab (一)</title>
-        <link>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/11/xss-lab-%E4%B8%80/</link>
         <pubDate>Tue, 03 Nov 2020 10:13:39 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/11/xss-lab-%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;头&#34;&gt;头
 &lt;/h2&gt;&lt;p&gt;靶机地址：https://buuoj.cn/challenges#XSS-Lab&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/03/BsmJ5n.png&#34;
@@ -9621,10 +9621,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Hackgame2020(一)</title>
-        <link>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/11/hackgame2020%E4%B8%80/</link>
         <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/11/hackgame2020%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;
 &lt;h1 id=&#34;web&#34;&gt;web
@@ -9793,10 +9793,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>sql-labs(一)</title>
-        <link>https://www.braindance.top/articles/2020/09/sql-labs%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/09/sql-labs%E4%B8%80/</link>
         <pubDate>Tue, 22 Sep 2020 10:50:08 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/09/sql-labs%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/09/sql-labs%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在线靶机地址：https://buuoj.cn/challenges#sqli-labs&lt;/p&gt;
 &lt;h2 id=&#34;less-1&#34;&gt;less-1

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>XSS on Braindance</title>
-        <link>https://www.braindance.top/tags/xss/</link>
+        <link>http://localhost:3001/tags/xss/</link>
         <description>Recent content in XSS on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 03 Nov 2020 10:13:39 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/xss/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Nov 2020 10:13:39 +0000</lastBuildDate><atom:link href="http://localhost:3001/tags/xss/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>XSS-Lab (一)</title>
-        <link>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</link>
+        <link>http://localhost:3001/articles/2020/11/xss-lab-%E4%B8%80/</link>
         <pubDate>Tue, 03 Nov 2020 10:13:39 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</guid>
+        <guid>http://localhost:3001/articles/2020/11/xss-lab-%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;头&#34;&gt;头
 &lt;/h2&gt;&lt;p&gt;靶机地址：https://buuoj.cn/challenges#XSS-Lab&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/03/BsmJ5n.png&#34;

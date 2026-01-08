@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Jsdelivr on Braindance</title>
-        <link>https://www.braindance.top/tags/jsdelivr/</link>
+        <link>http://localhost:3001/tags/jsdelivr/</link>
         <description>Recent content in Jsdelivr on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 20 Nov 2020 22:02:46 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/jsdelivr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 20 Nov 2020 22:02:46 +0000</lastBuildDate><atom:link href="http://localhost:3001/tags/jsdelivr/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>jsdelivr 缓存刷新</title>
-        <link>https://www.braindance.top/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
+        <link>http://localhost:3001/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</link>
         <pubDate>Fri, 20 Nov 2020 22:02:46 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
+        <guid>http://localhost:3001/articles/2020/11/jsdelivr-%E7%BC%93%E5%AD%98%E5%88%B7%E6%96%B0/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​ 上一篇修改了黑幕，但是使用了 jsdelivr 加速的静态资源，所以照常更新下 github 上的资源，但是 github 上查看已经上传成功了，jsdelivr 访问的依然是之前的资源，说白了就是缓存的问题。即使本地浏览器端的缓存已经清理，也会因为 CDN 周围的节点没有同步数据而导致用户端未能及时更新。&lt;/p&gt;
 &lt;h2 id=&#34;缓存刷新&#34;&gt;缓存刷新
@@ -33,10 +33,10 @@
         </item>
         <item>
         <title>jsDelivr加速静态博客</title>
-        <link>https://www.braindance.top/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+        <link>http://localhost:3001/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 11 Nov 2020 21:37:53 +0000</pubDate>
         
-        <guid>https://www.braindance.top/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>http://localhost:3001/articles/2020/11/jsdelivr%E5%8A%A0%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​ 这几天总感觉博客访问特别慢，最先是找到了 CDN 加速，但是在国内加速的话域名都是要备案的，又看了看境外加速。&lt;/p&gt;
 &lt;blockquote&gt;
