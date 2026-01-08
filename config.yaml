@@ -99,6 +99,28 @@ menu:
       params:
         icon: travelling-light
         newTab: true
+  social:
+    - name: mail
+      url: mailto:braindance258@outlook.com
+      weight: 1
+      params:
+        icon: mail
+    - name: github
+      url: https://github.com/penginman
+      weight: 2
+      params:
+        icon: brand-github-copilot
+    - name: steam
+      url: https://steamcommunity.com/profiles/76561198087453995/
+      weight: 3
+      params:
+        icon: brand-steam
+    - name: bilibili
+      url: https://space.bilibili.com/15218027
+      weight: 4
+      params:
+        icon: brand-bilibili
+
 outputs:
   page:
     - HTML
