@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>文件上传漏洞 on Braindance</title>
-        <link>http://localhost:1313/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/</link>
+        <link>https://www.braindance.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/</link>
         <description>Recent content in 文件上传漏洞 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 19 Nov 2020 08:47:19 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 19 Nov 2020 08:47:19 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Upload-Labs的最后几道题</title>
-        <link>http://localhost:1313/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
+        <link>https://www.braindance.top/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</link>
         <pubDate>Thu, 19 Nov 2020 08:47:19 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E7%9A%84%E6%9C%80%E5%90%8E%E5%87%A0%E9%81%93%E9%A2%98/</guid>
         <description>&lt;h2 id=&#34;pass-17&#34;&gt;Pass-17
 &lt;/h2&gt;&lt;p&gt;​	（windows环境，php版本5.2.17，题号是18题）&lt;/p&gt;
 &lt;p&gt;源码：&lt;/p&gt;
@@ -118,6 +118,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;pass-18失手&#34;&gt;Pass-18（失手）
@@ -193,6 +194,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	同样是命名为&lt;code&gt;phpa&lt;/code&gt;方便在十六进制表里修改为&lt;code&gt;00&lt;/code&gt;&lt;/p&gt;
@@ -202,6 +204,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	打开图片把url链接&lt;code&gt;http://upload-labs/upload/upload-19.php�&lt;/code&gt;修改一下即可。完工&lt;/p&gt;
@@ -211,6 +214,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	其实这道题还有一个思路，因为题目使用了&lt;strong&gt;黑名单验证&lt;/strong&gt;，分析源码没有设置大小写过滤，所以也可以使用大小写方法通过如&lt;code&gt;Php&lt;/code&gt;，不演示了。&lt;/p&gt;
@@ -297,6 +301,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	数组[2]用于绕过白名单，文件名为：&lt;code&gt;数组[0].数组[1]&lt;/code&gt;，但是数组[1]是空的所以只剩下&lt;code&gt;数组[0].&lt;/code&gt;（后面有个点）&lt;/p&gt;
@@ -307,6 +312,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201119172415.png&#34;
@@ -315,6 +321,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;完工&lt;/p&gt;
@@ -324,10 +331,10 @@
         </item>
         <item>
         <title>Upload-Labs之Pass-16</title>
-        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
+        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</link>
         <pubDate>Mon, 16 Nov 2020 22:50:25 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B9%8Bpass-16/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	我在这道题上花了快一天的时间，但是也学到了不少姿势，觉得东西应该足够多，而且参考了的博客发现这道题算是有歧义的，不知道作者想要考察的点是哪一个，所以算是有两种解法吧，可惜的是两种方法都不算是大成功，只有部分成功执行了。&lt;/p&gt;
 &lt;p&gt;​	参考博客：&lt;a class=&#34;link&#34; href=&#34;https://xz.aliyun.com/t/2657#toc-4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -449,6 +456,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;文件包含验证&#34;&gt;文件包含验证
@@ -459,6 +467,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;其他格式&#34;&gt;其他格式
@@ -476,6 +485,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;文件比较&#34;&gt;文件比较
@@ -488,6 +498,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	为了验证我们的想法，我们可以刚刚把上传的图片再下载下载，查看插入的代码是否逃过了二次渲染（废话执行成功了代码肯定在）。&lt;/p&gt;
@@ -499,6 +510,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	这不同还是一段一段的，根本不可能模仿gif的方法，上面那一段相同的还是图片的&lt;strong&gt;头标识&lt;/strong&gt;部分，修改的话就不是png格式图片，更过不了。&lt;/p&gt;
@@ -963,6 +975,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	执行的目录下会多出一个名为&lt;code&gt;payload_1.jpg&lt;/code&gt;的文件，这就是制作好的图片马。大佬的源码我是修改了一下的，可以修改上面的第25行代码，自定义插入想要的代码。&lt;/p&gt;
@@ -974,6 +987,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	如果如图所示，我们的图片马就上传成功了。&lt;strong&gt;需要提醒：有些图片不行可能需要多换几个图片试一试！！！&lt;/strong&gt;&lt;/p&gt;
@@ -982,10 +996,10 @@
         </item>
         <item>
         <title>Upload-Labs(三)</title>
-        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%89/</link>
+        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%89/</link>
         <pubDate>Mon, 16 Nov 2020 16:04:30 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%89/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%89/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	继续接着上一次的&lt;code&gt;Upload-labs&lt;/code&gt;往下写。这记下第11-15题，目前进度是20题都已经完成正在抽时间写博客，然后16题是我卡的最久的关，不过也学到了感觉很牛的姿势，所以到时候专门开一篇只讲16。&lt;/p&gt;
 &lt;p&gt;​	在线靶机地址：&lt;/p&gt;
@@ -1054,6 +1068,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	文件成功上传，然后访问的时候记得改一下路径，因为文件名已经截断，所以访问路径由&lt;code&gt;..../upload/233.php�/5120201115205501.jpg&lt;/code&gt;变为&lt;code&gt;..../upload/233.php&lt;/code&gt;。完工&lt;/p&gt;
@@ -1066,6 +1081,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	这里我命名为&lt;code&gt;233.phpa&lt;/code&gt;是因为方便我在Hex表中找到这句话的位置和修改数据。&lt;code&gt;a&lt;/code&gt;的16进制是&lt;code&gt;61&lt;/code&gt;，需要改成截断的值：&lt;code&gt;00&lt;/code&gt;&lt;/p&gt;
@@ -1075,6 +1091,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	上传成功以后打开图片，和上一题一样，需要把路径中已经截断的后面删除掉。完工&lt;/p&gt;
@@ -1097,6 +1114,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	题目说道需要&lt;strong&gt;上传图片马&lt;/strong&gt;，然后使用&lt;strong&gt;文件包含漏洞&lt;/strong&gt;进行测试，那么我们就先制作图片马。&lt;/p&gt;
@@ -1114,6 +1132,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;pass-14&#34;&gt;Pass-14
@@ -1127,6 +1146,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	因为是拼接的，所以要直接摸到图片最底部查看成功。完工&lt;/p&gt;
@@ -1143,10 +1163,10 @@
         </item>
         <item>
         <title>Upload-Labs(二)</title>
-        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%BA%8C/</link>
+        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%BA%8C/</link>
         <pubDate>Mon, 09 Nov 2020 20:12:27 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%BA%8C/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%BA%8C/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;​	这次彻底的从头到尾分析了一下源码的执行过程，大致的写一下，以防以后再看的时候不知道题目是什么情况。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1315,6 +1335,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	上传以后访问文件执行成功。完工&lt;/p&gt;
@@ -1324,6 +1345,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	这里说明一下，我前面是在&lt;a class=&#34;link&#34; href=&#34;https://buuoj.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1396,6 +1418,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	我又参考了其他博客，讲到windows环境下可以利用系统会自动删除后缀中最后的一个&amp;rdquo;.&amp;quot;，尝试在windows靶机上测试&lt;strong&gt;只添加一个点&lt;/strong&gt;，访问的文件名为&lt;code&gt;2333.php、2333.php.&lt;/code&gt;都可以，因为windows会删除最后一个点。&lt;/p&gt;
@@ -1405,6 +1428,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/09/BbKXq0.png&#34;
@@ -1413,6 +1437,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	两种方式第一个在linux环境下的php服务器上，第二个在windows环境下的php服务器上，上传后都可以成功访问文件。完工&lt;/p&gt;
@@ -1486,6 +1511,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	上传访问。完工&lt;/p&gt;
@@ -1607,6 +1633,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;上传并访问文件。完工&lt;/p&gt;
@@ -1614,10 +1641,10 @@
         </item>
         <item>
         <title>Upload-Labs(一)</title>
-        <link>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%80/</link>
+        <link>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%80/</link>
         <pubDate>Sun, 08 Nov 2020 19:23:16 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/upload-labs%E4%B8%80/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/upload-labs%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;大部分的网站和应用系统都有上传功能，而程序员在开发任意文件上传功能时，并未考虑文件格式后缀的合法性校验或者是否只在前端通过js进行后缀检验。这时攻击者可以上传一个与网站脚本语言相对应的恶意代码动态脚本，例如(jsp、asp、php、aspx文件后缀)到服务器上，从而访问这些恶意脚本中包含的恶意代码，进行动态解析最终达到执行恶意代码的效果，进一步影响服务器安全。&lt;/p&gt;&lt;/blockquote&gt;
@@ -1636,6 +1663,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	提示只能上传&lt;code&gt;jpg、png、gif&lt;/code&gt;类型的图片。查看源码发现是一个前端的后缀过滤，那么我们尝试绕过前端的JS代码。&lt;/p&gt;
@@ -1687,6 +1715,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	然后右键打开图片，代码成功执行。完工&lt;/p&gt;
@@ -1696,6 +1725,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	注：后面题目的php代码都使用&lt;code&gt;2333.php&lt;/code&gt;：&lt;/p&gt;
@@ -1763,6 +1793,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	打开图片，php代码成功执行。完工&lt;/p&gt;
@@ -1836,6 +1867,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;pass-04&#34;&gt;Pass-04
@@ -1918,6 +1950,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/09/BTqqc6.png&#34;
@@ -1926,6 +1959,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	完工&lt;/p&gt;
@@ -2005,6 +2039,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	打开图片成功执行。完工&lt;/p&gt;

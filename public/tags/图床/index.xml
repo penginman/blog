@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>图床 on Braindance</title>
-        <link>http://localhost:1313/tags/%E5%9B%BE%E5%BA%8A/</link>
+        <link>https://www.braindance.top/tags/%E5%9B%BE%E5%BA%8A/</link>
         <description>Recent content in 图床 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>博客图床迁移</title>
-        <link>http://localhost:1313/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
+        <link>https://www.braindance.top/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</link>
         <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
+        <guid>https://www.braindance.top/articles/2022/05/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB/</guid>
         <description>&lt;h2 id=&#34;起因&#34;&gt;起因
 &lt;/h2&gt;&lt;p&gt;原来博客的图片使用 Jsdelivr 和 github 的方式存储访问，但是最近 Jsdelivr 频繁的被墙，感觉可能在未来的不久会失效，毕竟好多人用来当免费的 CDN（&lt;del&gt;比如我&lt;/del&gt;），也会有人使用其访问些 zz 敏感或其他的文件，被墙了也情有可原，而且 github 的仓库的作用也是用来存储代码而非图床，像我这样的人也导致了仓库的滥用，所以决定找个新的途径。&lt;/p&gt;
 &lt;h2 id=&#34;过程&#34;&gt;过程
@@ -43,10 +43,10 @@
         </item>
         <item>
         <title>PicGo复制自定义链接</title>
-        <link>http://localhost:1313/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+        <link>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;2022 年 2 月 3 日 22:41:32&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
@@ -74,6 +74,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;起因&#34;&gt;起因
@@ -84,6 +85,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;起初是把 jsdelivr 的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。&lt;/p&gt;
@@ -94,6 +96,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png&#34;
@@ -102,6 +105,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;结语&#34;&gt;结语
@@ -128,6 +132,7 @@
 	
 		alt=&#34;image-20220203224558136&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;直接在自定义域名那里修改成 jsDeliver 对应的仓库路径，比如我的&lt;/p&gt;
@@ -144,10 +149,10 @@
         </item>
         <item>
         <title>Chevereto-搭建一个自己的图床</title>
-        <link>http://localhost:1313/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
+        <link>https://www.braindance.top/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</link>
         <pubDate>Sun, 20 Sep 2020 11:09:02 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
+        <guid>https://www.braindance.top/articles/2020/09/chevereto-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/</guid>
         <description>&lt;p&gt;博客搭完了，自己选择的这个博客主题又是以图片为主要元素的，当然要考虑图片的使用问题了，原来打算直接放在服务器上，但是后来想了想，以后如果文章&lt;del&gt;越写越多&lt;/del&gt;用的图太多服务器的流量也不够用，想到了图床这一托管图片的服务，但是放在别人的上面总怕会受到&lt;del&gt;限制&lt;/del&gt;，正好发现了&lt;code&gt;Chevereto&lt;/code&gt;这一图床系统，可以自己搭建一个图床服务器，正好自己还有一个阿里云学生云，那就开工。&lt;/p&gt;
 &lt;h3 id=&#34;chevereto-说明&#34;&gt;Chevereto 说明
 &lt;/h3&gt;&lt;blockquote&gt;
@@ -178,6 +183,7 @@
 	
 		alt=&#34;BJ9TVP.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;总结安装步骤&#34;&gt;总结安装步骤
@@ -206,6 +212,7 @@
 	
 		alt=&#34;BJ9H58.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;因为我域名所以域名留空，提示默认使用&lt;code&gt;80&lt;/code&gt;端口，访问地址就是服务器 ip 地址，剩下的自己随机发挥。&lt;/p&gt;
@@ -220,6 +227,7 @@
 	
 		alt=&#34;BJ9Ibt.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/29/BJ9qPS.png&#34;
@@ -230,6 +238,7 @@
 	
 		alt=&#34;BJ9qPS.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;server{...}&lt;/code&gt;中添加&lt;/p&gt;
@@ -277,6 +286,7 @@
 	
 		alt=&#34;BJ97Uf.jpg&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/10/29/BJ9O2Q.jpg&#34;
@@ -287,6 +297,7 @@
 	
 		alt=&#34;BJ9O2Q.jpg&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;完成以后就可以登陆管理员账号进入管理面板，我是首先去设置里找到语言设置把面板改成了中文。&lt;/p&gt;

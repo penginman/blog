@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>DMCTF2020 on Braindance</title>
-        <link>http://localhost:1313/tags/dmctf2020/</link>
+        <link>https://www.braindance.top/tags/dmctf2020/</link>
         <description>Recent content in DMCTF2020 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/dmctf2020/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 01 Dec 2020 11:20:45 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/dmctf2020/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>DMCTF之Misc</title>
-        <link>http://localhost:1313/articles/2020/12/dmctf%E4%B9%8Bmisc/</link>
+        <link>https://www.braindance.top/articles/2020/12/dmctf%E4%B9%8Bmisc/</link>
         <pubDate>Tue, 01 Dec 2020 11:20:45 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/12/dmctf%E4%B9%8Bmisc/</guid>
+        <guid>https://www.braindance.top/articles/2020/12/dmctf%E4%B9%8Bmisc/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;这次比赛是第一次做Mics的题awa。&lt;/p&gt;
 &lt;h1 id=&#34;misc&#34;&gt;Misc
@@ -23,6 +23,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;fakezip&#34;&gt;fakezip
@@ -34,6 +35,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;找到01修改为00，再解压压缩包，虽然提示了压缩包错误但是直接无视，获得一个flag.txt&lt;/p&gt;
@@ -45,6 +47,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;base-family&#34;&gt;Base family
@@ -112,6 +115,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;参数啥的都没动，密码为默认密码，直接Decode，得到一个flag.txt：&lt;/p&gt;
@@ -139,6 +143,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;jpgsteg&#34;&gt;jpgsteg
@@ -149,6 +154,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;成功解密后获得一个文档，内容如下：&lt;/p&gt;
@@ -185,6 +191,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;解码得到：&lt;code&gt;ohhamazing&lt;/code&gt; ，加上括号就是：&lt;strong&gt;flag{ohhamazing}&lt;/strong&gt;&lt;/p&gt;
@@ -197,6 +204,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;所以很有可能是四位数据的CRC32碰撞，就去网上找了一个python脚本：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_45396639/article/details/103393759&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -346,6 +354,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;配合ARCHPR使用明文攻击，获得加密密钥： &lt;strong&gt;[b00df998 5bdbbde6 485fa1f8]&lt;/strong&gt;&lt;/p&gt;
@@ -413,6 +422,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这也让我想到自己在网上下工具的压缩包时，网站经常在注释里附上密码，通常都是网站的网址。&lt;/p&gt;
@@ -424,6 +434,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;解密获得：&lt;strong&gt;password is BlindWaterMark!&lt;/strong&gt;&lt;/p&gt;
@@ -464,6 +475,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;图片中的内容为：&lt;/p&gt;
@@ -497,6 +509,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;心里一顿狂喜，因为都是&lt;code&gt;2965a&lt;/code&gt;这个几个字符组成的，应该就是找对了。根据博客代码自行修改脚本&lt;/p&gt;
@@ -554,6 +567,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;simpleqrcode&#34;&gt;SimpleQrcode

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Sql注入 on Braindance</title>
-        <link>http://localhost:1313/tags/sql%E6%B3%A8%E5%85%A5/</link>
+        <link>https://www.braindance.top/tags/sql%E6%B3%A8%E5%85%A5/</link>
         <description>Recent content in Sql注入 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/sql%E6%B3%A8%E5%85%A5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/sql%E6%B3%A8%E5%85%A5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CISCN线上赛库存</title>
-        <link>http://localhost:1313/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+        <link>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
         <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+        <guid>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
         <description>&lt;h1 id=&#34;easy_sql&#34;&gt;easy_sql
 &lt;/h1&gt;&lt;p&gt;在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是&lt;strong&gt;括号单引号闭合&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -332,10 +332,10 @@
         </item>
         <item>
         <title>极客大挑战 2019 FinalSQL</title>
-        <link>http://localhost:1313/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</link>
+        <link>https://www.braindance.top/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</link>
         <pubDate>Sun, 18 Apr 2021 19:11:51 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</guid>
+        <guid>https://www.braindance.top/articles/2021/04/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-finalsql/</guid>
         <description>&lt;p&gt;还是同一场比赛的界面&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416224503.png&#34;
 	
@@ -343,6 +343,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这次测试了下面的登陆框已经不能用了，无论怎么输入都是同一个回显：&lt;strong&gt;你可别被我逮住了，臭弟弟&lt;/strong&gt;，测试上面的序号，注意此时的url中有&lt;code&gt;?id=&lt;/code&gt;猜测是一个注入点，输入单引号一直报错，但是输入2-1时成功回显，判断是一个&lt;strong&gt;数字型&lt;/strong&gt;注入，数字型注入最多遇到的就是结合盲注，接下来是测试盲注的过滤。&lt;/p&gt;
@@ -414,10 +415,10 @@
         </item>
         <item>
         <title>SWPU2019 Web1</title>
-        <link>http://localhost:1313/articles/2021/04/swpu2019-web1/</link>
+        <link>https://www.braindance.top/articles/2021/04/swpu2019-web1/</link>
         <pubDate>Thu, 15 Apr 2021 09:55:17 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2021/04/swpu2019-web1/</guid>
+        <guid>https://www.braindance.top/articles/2021/04/swpu2019-web1/</guid>
         <description>&lt;p&gt;一个登陆界面，再看下url地址为login.php，确认了使用的是php&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210415091617.png&#34;
 	
@@ -425,6 +426,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;直接查看源码，在源码中找到了register.php。先注册一个进去看一看。&lt;/p&gt;
@@ -434,6 +436,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;是一个发布广告的信息页，发布广告时需要输入广告的标题和内容，联想一下之前做过的发布文章的，应该是sql注入，输入广告标题输入一个单引号&lt;code&gt;&#39;&lt;/code&gt;试一试&lt;/p&gt;
@@ -443,6 +446,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;广告详情中出现了数据库报错&lt;/p&gt;
@@ -452,6 +456,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;猜测应该是二次注入，发布时加上一些转义字符没有出现错误，但是查看详情时再次从数据库中取出带有payload的数据，可以执行sql语句。而且上面的单引号测试出来了是&lt;strong&gt;字符型单引号闭合&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;接下来是尝试过滤。我试出来的有空格（使用&lt;code&gt;/**/&lt;/code&gt;绕过）、or，and（可以使用&amp;amp;&amp;amp;，||），同时or被过滤，就说明保存数据库表名的库&lt;strong&gt;information_schema&lt;/strong&gt;没有办法查询，并且&lt;strong&gt;orderby&lt;/strong&gt;也不能使用，需要使用其他办法获取表内容。&lt;/p&gt;
@@ -470,6 +475,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;说明回显位是2和3。&lt;/p&gt;
@@ -492,6 +498,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我们知道在sql语句查询的时候，可以给列名起别名形如&lt;/p&gt;
@@ -501,6 +508,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;使用联合查询的时候，只要前后表的字段数相同，前面查询的就会成为表名&lt;/p&gt;
@@ -510,6 +518,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;所以当我们不知道flag表的字段，并且想要查询里面的内容时，比如我想查询flag表的flag字段，可以构造&lt;/p&gt;
@@ -519,6 +528,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;需要为子查询的结果再起一个别名（图中为&lt;code&gt;x&lt;/code&gt;），这样我们就不用列名查询到了字段。总结一下思路就是：自己构造一个表名并且联合查询想要查询的表名，再使用&lt;code&gt;group_concat&lt;/code&gt;函数输出自己构造的表名。&lt;/p&gt;
@@ -536,10 +546,10 @@
         </item>
         <item>
         <title>sql-labs(一)</title>
-        <link>http://localhost:1313/articles/2020/09/sql-labs%E4%B8%80/</link>
+        <link>https://www.braindance.top/articles/2020/09/sql-labs%E4%B8%80/</link>
         <pubDate>Tue, 22 Sep 2020 10:50:08 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/09/sql-labs%E4%B8%80/</guid>
+        <guid>https://www.braindance.top/articles/2020/09/sql-labs%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在线靶机地址：https://buuoj.cn/challenges#sqli-labs&lt;/p&gt;
 &lt;h2 id=&#34;less-1&#34;&gt;less-1
@@ -557,6 +567,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	通过后面的报错语句&lt;code&gt;1&#39;&#39; LIMIT 0,1&lt;/code&gt;的分析，我们的单引号被数据库解析，那么说明我们也可以使用连接查询&lt;code&gt;union&lt;/code&gt;插入我们想要查询的语句。&lt;/p&gt;
@@ -568,6 +579,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	说明数据库的字段值只有四个。&lt;/p&gt;
@@ -579,6 +591,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	说明查询语句的&lt;code&gt;2,3&lt;/code&gt;是回显位，之后就可以将查询的语句进行替换。如：&lt;/p&gt;
@@ -591,6 +604,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	利用元数据库来爆表、爆数据&lt;/p&gt;
@@ -607,6 +621,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;less-4&#34;&gt;less-4

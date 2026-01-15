@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>代码审计 on Braindance</title>
-        <link>http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</link>
+        <link>https://www.braindance.top/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</link>
         <description>Recent content in 代码审计 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 01 Nov 2020 18:33:40 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 01 Nov 2020 18:33:40 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hackgame2020(一)</title>
-        <link>http://localhost:1313/articles/2020/11/hackgame2020%E4%B8%80/</link>
+        <link>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</link>
         <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/hackgame2020%E4%B8%80/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;
 &lt;h1 id=&#34;web&#34;&gt;web
@@ -25,6 +25,7 @@
 	
 		alt=&#34;BwJbJs.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	随便拉了拉进度条发现初始是&lt;code&gt;0&lt;/code&gt;末尾是&lt;code&gt;1.5&lt;/code&gt;，然后中间的数值都是小数&lt;/p&gt;
@@ -36,6 +37,7 @@
 	
 		alt=&#34;BwYAQx.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	我猜的题目可能是想让数值为&lt;code&gt;1&lt;/code&gt;时能提取到flag。&lt;/p&gt;
@@ -46,6 +48,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	确实和猜测一样最大最小值分别是&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1.5&lt;/code&gt;，注意到&lt;code&gt;step&lt;/code&gt;值为&lt;code&gt;0.00001&lt;/code&gt;，就是这个属性让我们拖动进度条时，递增的值是小数，想精准得到&lt;code&gt;1&lt;/code&gt;个flag，就把网页上的&lt;code&gt;step&lt;/code&gt;值改为&lt;code&gt;1&lt;/code&gt;。然后随便拖动一下进度条得到&lt;code&gt;1&lt;/code&gt;，点击&lt;code&gt;提取&lt;/code&gt;按钮，完工。&lt;/p&gt;
@@ -55,6 +58,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;2048&#34;&gt;2048
@@ -66,6 +70,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	还好上次&lt;del&gt;摸鱼&lt;/del&gt;课题做了一个网页版的2048，略微能看懂一点点结构，第一个&lt;code&gt;animframe_polyfill&lt;/code&gt;应该就是管动画效果的，&lt;code&gt;keynpard...&lt;/code&gt;这个肯定是相应按键的，&lt;code&gt;local_storage_manager&lt;/code&gt;应该是保存游戏的，&lt;code&gt;game_manager&lt;/code&gt;感觉就是管理整个游戏的主要文件。&lt;/p&gt;
@@ -77,6 +82,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	只有这里修改了&lt;code&gt;won&lt;/code&gt;的状态，前面还有个&lt;code&gt;16384&lt;/code&gt;这个应该就是获得胜利需要得到的分数，这个分数对于我来说还是简简单单（&lt;del&gt;小声bb&lt;/del&gt;&lt;a class=&#34;link&#34; href=&#34;https://s1.ax1x.com/2020/11/01/BwUdte.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -87,6 +93,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;general&#34;&gt;general
@@ -98,6 +105,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	题意思很明显的书考验同学的搜题技巧。那就开工。&lt;/p&gt;
@@ -107,6 +115,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;第一题&#34;&gt;第一题
@@ -124,6 +133,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;参考答案 ：12&lt;/strong&gt;&lt;/p&gt;
@@ -165,6 +175,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;参考答案：9&lt;/strong&gt;&lt;/p&gt;

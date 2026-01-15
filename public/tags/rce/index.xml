@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>RCE on Braindance</title>
-        <link>http://localhost:1313/tags/rce/</link>
+        <link>https://www.braindance.top/tags/rce/</link>
         <description>Recent content in RCE on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 16 Apr 2021 15:33:32 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/rce/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 16 Apr 2021 15:33:32 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/rce/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>WUSTCTF2020 朴实无华</title>
-        <link>http://localhost:1313/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
+        <link>https://www.braindance.top/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</link>
         <pubDate>Fri, 16 Apr 2021 15:33:32 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
+        <guid>https://www.braindance.top/articles/2021/04/wustctf2020-%E6%9C%B4%E5%AE%9E%E6%97%A0%E5%8D%8E/</guid>
         <description>&lt;p&gt;进入页面直接报错&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210416103737.png&#34;
 	
@@ -19,6 +19,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;试试其他的地方，我的习惯是git泄露、请求头、robots.txt、hint.txt都看看。果然在robots下有内容&lt;/p&gt;
@@ -32,6 +33,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;访问&lt;code&gt;fl4g.php&lt;/code&gt;才正式开始，源码如下：&lt;/p&gt;
@@ -158,10 +160,10 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>极客大挑战 2019 RCE ME</title>
-        <link>http://localhost:1313/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
+        <link>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
         <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
+        <guid>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
         <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
 &lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -256,6 +258,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;搜索了一波，原来是是&lt;strong&gt;disable_function&lt;/strong&gt;搞的鬼，这个表可以在phpinfo()中查看：&lt;/p&gt;
@@ -265,6 +268,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;因为&lt;code&gt;system&lt;/code&gt;、&lt;code&gt;exec&lt;/code&gt;、&lt;code&gt;shell_exec&lt;/code&gt;等命令执行的函数都被禁止了，目前我理解的webshell就是通过这些函数才能在终端执行命令的，所以终端基本是个废的，所以就是寻找绕过&lt;strong&gt;disable_function&lt;/strong&gt;的方法，网上有很多其他方法，其中一个方法：&lt;/p&gt;
@@ -280,6 +284,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;插件的工作原理是自动上传几个绕过的文件，然后再用蚁剑连接上传的文件即可实现绕过，但是一开始的&lt;code&gt;/var/www/html&lt;/code&gt;目录是没有上传权限的，我右键以后发现能修改权限，改成0777：&lt;/p&gt;
@@ -289,6 +294,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -311,6 +317,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;进入shell，目录下面多了一个名为**.antproxy.php**的文件：&lt;/p&gt;
@@ -320,6 +327,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;再使用蚁剑连接**.antproxy.php**，密码是运行插件的那个shell的密码，这时候就可以开开心心的去根目录下执行readflag获得flag辣。&lt;/p&gt;
@@ -329,6 +337,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;flag{a216900e-2427-48f7-9323-f65d0a3abdbf}&lt;/p&gt;
@@ -336,10 +345,10 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>GXYCTF2019 Ping Ping Ping</title>
-        <link>http://localhost:1313/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
+        <link>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
         <pubDate>Fri, 04 Dec 2020 20:24:50 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
+        <guid>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
         <description>&lt;h1 id=&#34;gxyctf2019ping-ping-ping&#34;&gt;[GXYCTF2019]Ping Ping Ping
 &lt;/h1&gt;&lt;p&gt;题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping&lt;/p&gt;
 &lt;p&gt;和DMCTF做的那道&lt;strong&gt;pingpingping&lt;/strong&gt;类似，同样是使用管道符构造payload，先使用：&lt;/p&gt;
@@ -440,6 +449,7 @@ Disallow: /fAke_f1agggg.php&lt;/p&gt;&lt;/blockquote&gt;
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;最后记录下学到的姿势和这道题目的其他思路&lt;/strong&gt;：&lt;/p&gt;

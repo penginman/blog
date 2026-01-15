@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>PicGo上传 on Braindance</title>
-        <link>http://localhost:1313/tags/picgo%E4%B8%8A%E4%BC%A0/</link>
+        <link>https://www.braindance.top/tags/picgo%E4%B8%8A%E4%BC%A0/</link>
         <description>Recent content in PicGo上传 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 30 Nov 2020 09:54:11 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/picgo%E4%B8%8A%E4%BC%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 30 Nov 2020 09:54:11 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/picgo%E4%B8%8A%E4%BC%A0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>PicGo复制自定义链接</title>
-        <link>http://localhost:1313/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
+        <link>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 30 Nov 2020 09:54:11 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/picgo%E5%A4%8D%E5%88%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;2022 年 2 月 3 日 22:41:32&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;建议直接看文章末尾，我发现我就是个笨比。&lt;/strong&gt;&lt;/p&gt;
@@ -39,6 +39,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;起因&#34;&gt;起因
@@ -49,6 +50,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;起初是把 jsdelivr 的链接直接拼在后面，每次使用的时候都再删一次。直到昨晚受不了了就尝试去修改软件试图绕过判断。&lt;/p&gt;
@@ -59,6 +61,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20201130094651.png&#34;
@@ -67,6 +70,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;结语&#34;&gt;结语
@@ -93,6 +97,7 @@
 	
 		alt=&#34;image-20220203224558136&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;直接在自定义域名那里修改成 jsDeliver 对应的仓库路径，比如我的&lt;/p&gt;

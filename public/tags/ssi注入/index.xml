@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>SSI注入 on Braindance</title>
-        <link>http://localhost:1313/tags/ssi%E6%B3%A8%E5%85%A5/</link>
+        <link>https://www.braindance.top/tags/ssi%E6%B3%A8%E5%85%A5/</link>
         <description>Recent content in SSI注入 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 20 Apr 2021 17:12:43 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ssi%E6%B3%A8%E5%85%A5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 20 Apr 2021 17:12:43 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/ssi%E6%B3%A8%E5%85%A5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ReadlezPHP&amp;EasySearch</title>
-        <link>http://localhost:1313/articles/2021/04/readlezphpeasysearch/</link>
+        <link>https://www.braindance.top/articles/2021/04/readlezphpeasysearch/</link>
         <pubDate>Tue, 20 Apr 2021 17:12:43 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2021/04/readlezphpeasysearch/</guid>
+        <guid>https://www.braindance.top/articles/2021/04/readlezphpeasysearch/</guid>
         <description>&lt;h1 id=&#34;readlezphp&#34;&gt;ReadlezPHP
 &lt;/h1&gt;&lt;p&gt;源码找到&lt;code&gt;time.php?source&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210420175641.png&#34;
@@ -20,6 +20,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -120,6 +121,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;easysearch&#34;&gt;EasySearch
@@ -129,6 +131,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;进入页面以后试了试sql注入发现没用。第一步是看了wp找到的：使用扫描器扫描到&lt;code&gt;index.php.swp&lt;/code&gt;文件：&lt;/p&gt;
@@ -246,6 +249,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;看了看文件后缀是一格没有见过的：&lt;code&gt;shtml&lt;/code&gt;，然后学到到了shtml有一种漏洞：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_40657585/article/details/84260844&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>XSS on Braindance</title>
-        <link>http://localhost:1313/tags/xss/</link>
+        <link>https://www.braindance.top/tags/xss/</link>
         <description>Recent content in XSS on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 03 Nov 2020 10:13:39 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/xss/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 03 Nov 2020 10:13:39 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/xss/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>XSS-Lab (一)</title>
-        <link>http://localhost:1313/articles/2020/11/xss-lab-%E4%B8%80/</link>
+        <link>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</link>
         <pubDate>Tue, 03 Nov 2020 10:13:39 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/xss-lab-%E4%B8%80/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/xss-lab-%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;头&#34;&gt;头
 &lt;/h2&gt;&lt;p&gt;靶机地址：https://buuoj.cn/challenges#XSS-Lab&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/11/03/BsmJ5n.png&#34;
@@ -20,6 +20,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;level-1&#34;&gt;level 1
@@ -29,6 +30,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	观察发现&lt;code&gt;欢迎用户test&lt;/code&gt;与URL中的&lt;code&gt;name=test&lt;/code&gt;字段对应，尝试修改发现可行。直接将&lt;code&gt;name&lt;/code&gt;字段改为&lt;code&gt;name=&amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt;&lt;/code&gt;，完工。&lt;/p&gt;
@@ -39,6 +41,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	在搜索栏中的输入会回显到页面，查看网页源代码，发现值在&lt;code&gt;input&lt;/code&gt;的&lt;code&gt;value&lt;/code&gt;属性中&lt;/p&gt;
@@ -48,6 +51,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	构造闭合&lt;code&gt;&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // &lt;/code&gt;，构造以后的标签会变成&lt;code&gt;.... value=&amp;quot;&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // &amp;quot;&amp;gt;&lt;/code&gt;。完工&lt;/p&gt;
@@ -58,6 +62,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	老样子构造&lt;code&gt;value&lt;/code&gt;属性闭合，尝试&lt;code&gt;&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // &lt;/code&gt;构造闭合，查看网页源代码发现语句变成&lt;code&gt;&amp;amp;quot;&amp;amp;gt; &amp;amp;lt;script&amp;amp;gt;alert()&amp;amp;lt;/script&amp;amp;gt; // &lt;/code&gt;，说明把&lt;code&gt;&amp;quot;、&amp;lt;、&amp;gt;、&lt;/code&gt;进行了html编码过滤，尝试构造&lt;code&gt;onmouseover&lt;/code&gt;事件(鼠标移到事件)，构造语句&lt;code&gt;&#39;onmouseover=&#39;alert()&#39;&lt;/code&gt;。完工&lt;/p&gt;
@@ -68,6 +73,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	构造闭合&lt;code&gt;&amp;quot;&amp;gt; &amp;lt;script&amp;gt;alert()&amp;lt;/script&amp;gt; // &lt;/code&gt;，查看源代码发现进行了&lt;code&gt;&amp;gt;、&amp;lt;&lt;/code&gt;过滤，尝试构造事件&lt;code&gt;&amp;quot; onmouseover=&#39;alert()&#39;&lt;/code&gt;。完工&lt;/p&gt;
@@ -79,6 +85,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	检查一下都有什么过滤。发现有一下过滤&lt;/p&gt;

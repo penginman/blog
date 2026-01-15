@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Web on Braindance</title>
-        <link>http://localhost:1313/tags/web/</link>
+        <link>https://www.braindance.top/tags/web/</link>
         <description>Recent content in Web on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Aug 2021 17:21:24 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/web/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CISCN线上赛库存</title>
-        <link>http://localhost:1313/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
+        <link>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</link>
         <pubDate>Wed, 18 Aug 2021 17:21:24 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
+        <guid>https://www.braindance.top/articles/2021/08/ciscn%E7%BA%BF%E4%B8%8A%E8%B5%9B%E5%BA%93%E5%AD%98/</guid>
         <description>&lt;h1 id=&#34;easy_sql&#34;&gt;easy_sql
 &lt;/h1&gt;&lt;p&gt;在用户名处，尝试sql注入，加上单引号报错，测试闭合，随便添加几个符号在password的报错附近中注意到了是&lt;strong&gt;括号单引号闭合&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -332,10 +332,10 @@
         </item>
         <item>
         <title>BUUCTF寒假刷题-Web</title>
-        <link>http://localhost:1313/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
+        <link>https://www.braindance.top/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</link>
         <pubDate>Mon, 18 Jan 2021 16:58:56 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
+        <guid>https://www.braindance.top/articles/2021/01/buuctf%E5%AF%92%E5%81%87%E5%88%B7%E9%A2%98-web/</guid>
         <description>&lt;p&gt;寒假横向刷题（尽量）
 &lt;a class=&#34;link&#34; href=&#34;https://buuoj.cn/challenges#&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;BUUCTF&lt;/a&gt;
@@ -350,6 +350,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -498,6 +499,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;根据题目尝试sql注入，单引号报错，单引号加注释无报错，说明存在sql注入，当测试输入select时返回过滤的黑名单：&lt;/p&gt;
@@ -527,6 +529,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;查看当前库下的表&lt;/p&gt;
@@ -544,6 +547,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;查看两张表字段&lt;/p&gt;
@@ -561,6 +565,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;还有一种查看表的语句，在windows系统下，反单引号（`）是数据库、表、索引、列和别名用的引用符&lt;/p&gt;
@@ -578,6 +583,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;找到了flag在的字段，接下来就是如何获取该字段的值。顺带一提，根据表的结构，初步判断默认查询的是&lt;strong&gt;word&lt;/strong&gt;表中的字段，而flag在&lt;strong&gt;1919810931114514&lt;/strong&gt;表中。&lt;/p&gt;
@@ -670,6 +676,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;用户名密码，尝试万能密码。&lt;/p&gt;
@@ -692,6 +699,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;直接源码找到php代码。payload&lt;/p&gt;
@@ -711,6 +719,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;单引号无报错，尝试堆叠注入可以回显。&lt;/p&gt;
@@ -809,6 +818,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;查看源码，又一个背景是黑色的超链接跳转到 Archive_room.php。&lt;/p&gt;
@@ -818,6 +828,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;查看源码SECRET跳转的是action.php。&lt;/p&gt;
@@ -827,6 +838,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;但是跳转以后是url地址为end.php，所以中间跳过了一个页面，使用bp抓包查看。&lt;/p&gt;
@@ -836,6 +848,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;stristr()函数返回字符串中子串第一次出现位置之后的内容，简而言之还是过滤。&lt;/p&gt;
@@ -866,6 +879,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;尝试万能密码（其实没卵用）&lt;/p&gt;
@@ -941,6 +955,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;肯定是尝试管道符&lt;/p&gt;
@@ -994,6 +1009,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;获得cookie_secret的值为&lt;/p&gt;
@@ -1012,6 +1028,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;选中的蓝色部分是&lt;code&gt;/hints.txt&lt;/code&gt;加密后的md5值。推断出filehash格式以后直接访问flag文件，payload：&lt;/p&gt;
@@ -1031,6 +1048,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一句话直接连。&lt;/p&gt;
@@ -1042,6 +1060,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一个计算器随便试一试，当输入字母时会报错。查看网页源码，在script中发现了运行计算器的php文件：&lt;strong&gt;calc.php&lt;/strong&gt;，但是也有一句很重要的注释&lt;/p&gt;
@@ -1059,6 +1078,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;php的正则表达式中并没有过滤字母的条件，所以我们输入字母被过滤是因为&lt;strong&gt;WAF&lt;/strong&gt;，接下来是参考网上的wp自己的理解&lt;/p&gt;
@@ -1099,6 +1119,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;查看源码在&amp;quot;氛围&amp;quot;这两个字上有隐藏的跳转Secret.php。进入以后页面显示&lt;/p&gt;
@@ -1165,6 +1186,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;源码备份在&lt;code&gt;www.zip&lt;/code&gt;中。下载以后有五个文件&lt;/p&gt;
@@ -1327,6 +1349,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;先尝试上传一个gif图片马内容为&lt;/p&gt;
@@ -1361,6 +1384,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -1372,6 +1396,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;尝试万能密码，发现报错了：1=1#&amp;rsquo; and password=&amp;lsquo;123&amp;rsquo;，也许是or被过滤了或者删掉了，尝试大小写无果，但是尝试双写通过了。需要注意的是爆表，爆数据库的语句中有&lt;strong&gt;information&lt;/strong&gt;这个词，其中的&lt;strong&gt;for&lt;/strong&gt;也会被过滤。其他过滤的词我遇到的有：union，select、from、where、and。&lt;/p&gt;
@@ -1410,6 +1435,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;指针放在灯泡上护显示上传文件的，图片马&lt;/p&gt;
@@ -1556,6 +1582,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;可以在注释里找到&lt;/p&gt;
@@ -1573,6 +1600,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;感觉并没有什么下手的地方，唯一的就是session可能和身份有关。&lt;/p&gt;
@@ -1784,6 +1812,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;解法二unicode欺骗&#34;&gt;解法二：Unicode欺骗
@@ -1808,6 +1837,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;网站题直接去看源码，在源码也搜索php有两个：index.php、pay.php。前者是首页，直接看后面的那个，打开就有提示&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1886,6 +1916,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;知识点&lt;/p&gt;
@@ -1930,6 +1961,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;参考：&lt;/p&gt;
@@ -1995,6 +2027,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210201113839.png&#34;
@@ -2003,6 +2036,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;所以真正的解法是只要sql语句的格式为password=&amp;lsquo;xxxxxxxx&amp;rsquo; or &amp;lsquo;1xxxx&amp;rsquo;，即hex包含字符串&amp;quot;276f722731&amp;quot;（&amp;lsquo;or&#39;1），其实or后面开头只要是数字即可，1-9的hex范围为31-39。&lt;/p&gt;
@@ -2038,6 +2072,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2386,6 +2421,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;很明显的sql注入，随便尝试一些语句有&lt;/p&gt;
@@ -2467,6 +2503,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;还是sql注入题。尝试在输入框里输入&lt;code&gt;#&lt;/code&gt;、&lt;code&gt;--+&lt;/code&gt;时被拦下了，但是在url中使用%23通过了。尝试了union但是被过滤了，使用双写也不通过，和这道题同类型的题前面有Baby SQL、Easy SQL，考点还剩下的有盲注、报错注入、堆叠注入。尝试报错注入可以使用，我参考的&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/wocalieshenmegui/p/5917967.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2528,6 +2565,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;是一个展示自己博客网址的列表，先随便注册一个&lt;/p&gt;
@@ -2537,6 +2575,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我填的是baidu的网址23333。这时的url是：&lt;/p&gt;
@@ -2566,6 +2605,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;找的了位置2的回显点，可以把函数替换在2的位置上。&lt;/p&gt;
@@ -2668,6 +2708,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;最下面有对于payload的限制：&lt;/p&gt;
@@ -2782,6 +2823,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;测试后缀，php、phtml都被过滤了，htaccess可以，先传上特供的&lt;code&gt;.htaccess&lt;/code&gt;&lt;/p&gt;
@@ -2799,6 +2841,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;传图片马，我一直用的是GIF马，几次尝试都没通过，后来修改了&lt;code&gt;Content-Type: image/jpeg&lt;/code&gt;可以了，说明Content-Type是GIF还不行，接下来直接传图片码&lt;/p&gt;
@@ -2808,6 +2851,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;根据地址访问图片马的地址，使用system读文件还没成，用蚁剑连了执行执行ret=127,disable_function了&lt;/p&gt;
@@ -2817,6 +2861,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;不过根目录下的flag文件还是可以正常读取，至于disable_function可以参考&lt;a class=&#34;link&#34; href=&#34;https://braindance.tk/2020/%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DRCE%20ME/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2829,6 +2874,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;就一个输入框，随便输入一个去看看，跳转以后&lt;/p&gt;
@@ -2838,6 +2884,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;注释里有提示ssti，应该是模板注入，就在网上搜一个ssti的payload试试&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_40657585/article/details/83657220&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2857,6 +2904,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -2867,6 +2915,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;sql注入，先试一试堆叠注入，可以执行，尝试select的时候返回了过滤内容&lt;/p&gt;
@@ -2919,6 +2968,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -2929,6 +2979,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;下载源码以后一堆不可读的源码，但是里面有很多shell，看不懂所以找了wp，思路就是用脚本匹配文件中的shell，然后传参试一试每一个shell是否能用，抄脚本&lt;/p&gt;
@@ -3313,6 +3364,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -3329,6 +3381,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -3340,6 +3393,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;考点是&lt;strong&gt;WEB-INF/web.xml泄露&lt;/strong&gt;&lt;/p&gt;
@@ -3358,6 +3412,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;首先尝试去读web.xml文档，添加POST请求&lt;/p&gt;
@@ -3486,6 +3541,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我选中的那段就是flag在的地方，看到了&lt;code&gt;==&lt;/code&gt;就应该意识到是base64编码，但是base64编码里没有&lt;code&gt;&amp;lt;&lt;/code&gt;这个字符，所以flag的密文就是&lt;/p&gt;
@@ -5043,6 +5099,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;把路径改为/flag，获得flag&lt;/p&gt;
@@ -5064,6 +5121,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -5074,6 +5132,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这道题和The mystery of ip的网站一样，还有可能是ssti，hint.php的注释里有&lt;/p&gt;
@@ -5119,6 +5178,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;然后payload的具体原理在的&lt;code&gt;Environment.php&lt;/code&gt;中,贴一下和payload相关部分：&lt;/p&gt;
@@ -5128,6 +5188,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -5143,6 +5204,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/penginman/PicBed@master/artical/20210302163636.png&#34;
@@ -5151,6 +5213,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;挺草的记一下。&lt;/p&gt;
@@ -5301,6 +5364,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;注册成功就跳转到update.php界面了，是个修改信息的，查看源码，修改信息有手机号&lt;/p&gt;
@@ -5438,6 +5502,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;报错是因为nickname我们传入的是数组形式的，源代码里直接对数组进行操作肯定是报错的，但是我们需要的只有photo正常即可，可以看到后面我们文件更新成功了。&lt;/p&gt;
@@ -5448,6 +5513,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;base64解码&lt;/p&gt;
@@ -5457,6 +5523,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -5467,6 +5534,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;整理一下源码&lt;/p&gt;
@@ -5524,6 +5592,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我选出的是这个字符&lt;code&gt;𝐬&lt;/code&gt;，我们先使用url编码一下防止参数出现错误，尝试读一下passwd：&lt;/p&gt;
@@ -5541,6 +5610,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;flag并不在其中，并且也不再根目录下，根据题目中有&lt;code&gt;nginx&lt;/code&gt;应该是一个指路的，去读一读nginx的配置文件。从师傅那学到的nginx配置文件所在位置，以后说不定自己也用得到：&lt;/p&gt;
@@ -5567,6 +5637,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;读flag&lt;/p&gt;
@@ -5584,6 +5655,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;参考的博客链接：&lt;/p&gt;
@@ -5613,6 +5685,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;只能有&lt;code&gt;woofers&lt;/code&gt;和&lt;code&gt;meowers&lt;/code&gt;可以通过，尝试了下php的&lt;code&gt;filter&lt;/code&gt;伪协议读文件&lt;/p&gt;
@@ -5622,6 +5695,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;读出来了，但是解密以后狗狗和猫猫这两个网页没啥作用：&lt;/p&gt;
@@ -5685,6 +5759,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;搜索的时候学到了一个其他的截断&lt;/p&gt;
@@ -5701,10 +5776,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>极客大挑战 2019 RCE ME</title>
-        <link>http://localhost:1313/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
+        <link>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</link>
         <pubDate>Sat, 05 Dec 2020 20:42:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
+        <guid>https://www.braindance.top/articles/2020/12/%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98-2019-rce-me/</guid>
         <description>&lt;h1 id=&#34;极客大挑战-2019rce-me&#34;&gt;[极客大挑战 2019]RCE ME
 &lt;/h1&gt;&lt;p&gt;源码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -5799,6 +5874,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;搜索了一波，原来是是&lt;strong&gt;disable_function&lt;/strong&gt;搞的鬼，这个表可以在phpinfo()中查看：&lt;/p&gt;
@@ -5808,6 +5884,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;因为&lt;code&gt;system&lt;/code&gt;、&lt;code&gt;exec&lt;/code&gt;、&lt;code&gt;shell_exec&lt;/code&gt;等命令执行的函数都被禁止了，目前我理解的webshell就是通过这些函数才能在终端执行命令的，所以终端基本是个废的，所以就是寻找绕过&lt;strong&gt;disable_function&lt;/strong&gt;的方法，网上有很多其他方法，其中一个方法：&lt;/p&gt;
@@ -5823,6 +5900,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;插件的工作原理是自动上传几个绕过的文件，然后再用蚁剑连接上传的文件即可实现绕过，但是一开始的&lt;code&gt;/var/www/html&lt;/code&gt;目录是没有上传权限的，我右键以后发现能修改权限，改成0777：&lt;/p&gt;
@@ -5832,6 +5910,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5854,6 +5933,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;进入shell，目录下面多了一个名为**.antproxy.php**的文件：&lt;/p&gt;
@@ -5863,6 +5943,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;再使用蚁剑连接**.antproxy.php**，密码是运行插件的那个shell的密码，这时候就可以开开心心的去根目录下执行readflag获得flag辣。&lt;/p&gt;
@@ -5872,6 +5953,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;flag{a216900e-2427-48f7-9323-f65d0a3abdbf}&lt;/p&gt;
@@ -5879,10 +5961,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>GXYCTF2019 Ping Ping Ping</title>
-        <link>http://localhost:1313/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
+        <link>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</link>
         <pubDate>Fri, 04 Dec 2020 20:24:50 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
+        <guid>https://www.braindance.top/articles/2020/12/gxyctf2019-ping-ping-ping/</guid>
         <description>&lt;h1 id=&#34;gxyctf2019ping-ping-ping&#34;&gt;[GXYCTF2019]Ping Ping Ping
 &lt;/h1&gt;&lt;p&gt;题目链接：https://buuoj.cn/challenges#[GXYCTF2019]Ping%20Ping%20Ping&lt;/p&gt;
 &lt;p&gt;和DMCTF做的那道&lt;strong&gt;pingpingping&lt;/strong&gt;类似，同样是使用管道符构造payload，先使用：&lt;/p&gt;
@@ -5983,6 +6065,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;最后记录下学到的姿势和这道题目的其他思路&lt;/strong&gt;：&lt;/p&gt;
@@ -6064,10 +6147,10 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
         </item>
         <item>
         <title>Hackgame2020(一)</title>
-        <link>http://localhost:1313/articles/2020/11/hackgame2020%E4%B8%80/</link>
+        <link>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</link>
         <pubDate>Sun, 01 Nov 2020 18:33:40 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/hackgame2020%E4%B8%80/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/hackgame2020%E4%B8%80/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;比赛地址：https://hack.lug.ustc.edu.cn/&lt;/p&gt;
 &lt;h1 id=&#34;web&#34;&gt;web
@@ -6081,6 +6164,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 		alt=&#34;BwJbJs.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	随便拉了拉进度条发现初始是&lt;code&gt;0&lt;/code&gt;末尾是&lt;code&gt;1.5&lt;/code&gt;，然后中间的数值都是小数&lt;/p&gt;
@@ -6092,6 +6176,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 		alt=&#34;BwYAQx.png&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	我猜的题目可能是想让数值为&lt;code&gt;1&lt;/code&gt;时能提取到flag。&lt;/p&gt;
@@ -6102,6 +6187,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	确实和猜测一样最大最小值分别是&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1.5&lt;/code&gt;，注意到&lt;code&gt;step&lt;/code&gt;值为&lt;code&gt;0.00001&lt;/code&gt;，就是这个属性让我们拖动进度条时，递增的值是小数，想精准得到&lt;code&gt;1&lt;/code&gt;个flag，就把网页上的&lt;code&gt;step&lt;/code&gt;值改为&lt;code&gt;1&lt;/code&gt;。然后随便拖动一下进度条得到&lt;code&gt;1&lt;/code&gt;，点击&lt;code&gt;提取&lt;/code&gt;按钮，完工。&lt;/p&gt;
@@ -6111,6 +6197,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;2048&#34;&gt;2048
@@ -6122,6 +6209,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	还好上次&lt;del&gt;摸鱼&lt;/del&gt;课题做了一个网页版的2048，略微能看懂一点点结构，第一个&lt;code&gt;animframe_polyfill&lt;/code&gt;应该就是管动画效果的，&lt;code&gt;keynpard...&lt;/code&gt;这个肯定是相应按键的，&lt;code&gt;local_storage_manager&lt;/code&gt;应该是保存游戏的，&lt;code&gt;game_manager&lt;/code&gt;感觉就是管理整个游戏的主要文件。&lt;/p&gt;
@@ -6133,6 +6221,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	只有这里修改了&lt;code&gt;won&lt;/code&gt;的状态，前面还有个&lt;code&gt;16384&lt;/code&gt;这个应该就是获得胜利需要得到的分数，这个分数对于我来说还是简简单单（&lt;del&gt;小声bb&lt;/del&gt;&lt;a class=&#34;link&#34; href=&#34;https://s1.ax1x.com/2020/11/01/BwUdte.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -6143,6 +6232,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;general&#34;&gt;general
@@ -6154,6 +6244,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	题意思很明显的书考验同学的搜题技巧。那就开工。&lt;/p&gt;
@@ -6163,6 +6254,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;第一题&#34;&gt;第一题
@@ -6180,6 +6272,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;参考答案 ：12&lt;/strong&gt;&lt;/p&gt;
@@ -6221,6 +6314,7 @@ array(5) { [0]=&amp;gt; string(1) &amp;ldquo;.&amp;rdquo; [1]=&amp;gt; string(2)
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;参考答案：9&lt;/strong&gt;&lt;/p&gt;

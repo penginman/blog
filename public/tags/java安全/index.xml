@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Java安全 on Braindance</title>
-        <link>http://localhost:1313/tags/java%E5%AE%89%E5%85%A8/</link>
+        <link>https://www.braindance.top/tags/java%E5%AE%89%E5%85%A8/</link>
         <description>Recent content in Java安全 on Braindance</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 05 Nov 2020 09:29:22 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/java%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 05 Nov 2020 09:29:22 +0000</lastBuildDate><atom:link href="https://www.braindance.top/tags/java%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hackgame2020(二)</title>
-        <link>http://localhost:1313/articles/2020/11/hackgame2020%E4%BA%8C/</link>
+        <link>https://www.braindance.top/articles/2020/11/hackgame2020%E4%BA%8C/</link>
         <pubDate>Thu, 05 Nov 2020 09:29:22 +0000</pubDate>
         
-        <guid>http://localhost:1313/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
+        <guid>https://www.braindance.top/articles/2020/11/hackgame2020%E4%BA%8C/</guid>
         <description>&lt;h3 id=&#34;一闪而过的flag&#34;&gt;一闪而过的Flag
 &lt;/h3&gt;&lt;p&gt;​	根据题目信息&lt;strong&gt;程序每次运行时隐约可见黑色控制台上有 flag 一闪而过&lt;/strong&gt;，我想到了应该能看程序的代码啥的找到，但是&lt;del&gt;天下武功，唯快不破&lt;/del&gt;，下载 运行 截图一气呵成。&lt;/p&gt;
 &lt;p&gt;​	&lt;img src=&#34;https://s1.ax1x.com/2020/11/09/B7TOUA.png&#34;
@@ -20,6 +20,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	接下来让我康康哪一位是&lt;del&gt;瞎子&lt;/del&gt;，包括答案里也是满满的嘲讽。&lt;/p&gt;
@@ -32,6 +33,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	原来是搞这个大小写金额的转换，没见过Excel有这种操作就去百度，转了一大圈，网上只有数字转大写金额的，没有反过来的。还去了github上找代码，发现运行的结果和自己想要的还是有些出入。卡了有足足半天，之后自己写了一个Java代码跑了一遍，代码如下：&lt;/p&gt;
@@ -142,6 +144,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	Java渣轻喷。&lt;/p&gt;
@@ -156,6 +159,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	一个人用石头模拟了一整个宇宙，斯巴拉西。&lt;/p&gt;
@@ -167,6 +171,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;，题目中&lt;/p&gt;
 &lt;blockquote&gt;
@@ -180,6 +185,7 @@
 	
 	loading=&#34;lazy&#34;
 	
+	data-zoomable
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;​	大师我悟了，就是提供一个初始的&lt;strong&gt;15*15矩阵&lt;/strong&gt;，根据&lt;strong&gt;生命游戏&lt;/strong&gt;的规则进行演算，然后去消除黑框框。我臭屁完了直接贴图形&lt;/p&gt;
